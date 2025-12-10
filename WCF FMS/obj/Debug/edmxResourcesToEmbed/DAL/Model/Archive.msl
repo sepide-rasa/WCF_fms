@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RasaNewFMSModel1StoreContainer" CdmEntityContainer="ArchiveEntities">
+    <FunctionImportMapping FunctionImportName="spr_tblArchiveTreeDelete" FunctionName="RasaNewFMSModel1.Store.spr_tblArchiveTreeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblArchiveTreeInsert" FunctionName="RasaNewFMSModel1.Store.spr_tblArchiveTreeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblArchiveTreeSelect" FunctionName="RasaNewFMSModel1.Store.spr_tblArchiveTreeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel1.spr_tblArchiveTreeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldPID" ColumnName="fldPID" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldFileUpload" ColumnName="fldFileUpload" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldModuleId" ColumnName="fldModuleId" />
+          <ScalarProperty Name="fldMaduleName" ColumnName="fldMaduleName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblArchiveTreeUpdate" FunctionName="RasaNewFMSModel1.Store.spr_tblArchiveTreeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblFileMojazDelete" FunctionName="RasaNewFMSModel1.Store.spr_tblFileMojazDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblFileMojazInsert" FunctionName="RasaNewFMSModel1.Store.spr_tblFileMojazInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblFileMojazSelect" FunctionName="RasaNewFMSModel1.Store.spr_tblFileMojazSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel1.spr_tblFileMojazSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldArchiveTreeId" ColumnName="fldArchiveTreeId" />
+          <ScalarProperty Name="fldFormatFileId" ColumnName="fldFormatFileId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldFormatName" ColumnName="fldFormatName" />
+          <ScalarProperty Name="fldPassvand" ColumnName="fldPassvand" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblFileMojazUpdate" FunctionName="RasaNewFMSModel1.Store.spr_tblFileMojazUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblParticularPropertiesDelete" FunctionName="RasaNewFMSModel1.Store.spr_tblParticularPropertiesDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblParticularPropertiesInsert" FunctionName="RasaNewFMSModel1.Store.spr_tblParticularPropertiesInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblParticularPropertiesSelect" FunctionName="RasaNewFMSModel1.Store.spr_tblParticularPropertiesSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel1.spr_tblParticularPropertiesSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldArchiveTreeId" ColumnName="fldArchiveTreeId" />
+          <ScalarProperty Name="fldPropertiesId" ColumnName="fldPropertiesId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldNameFn" ColumnName="fldNameFn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblParticularPropertiesUpdate" FunctionName="RasaNewFMSModel1.Store.spr_tblParticularPropertiesUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblPropertiesDelete" FunctionName="RasaNewFMSModel1.Store.spr_tblPropertiesDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblPropertiesInsert" FunctionName="RasaNewFMSModel1.Store.spr_tblPropertiesInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblPropertiesSelect" FunctionName="RasaNewFMSModel1.Store.spr_tblPropertiesSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel1.spr_tblPropertiesSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldType" ColumnName="fldType" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldNameFn" ColumnName="fldNameFn" />
+          <ScalarProperty Name="fldNameEn" ColumnName="fldNameEn" />
+          <ScalarProperty Name="fldTypeName" ColumnName="fldTypeName" />
+          <ScalarProperty Name="fldFormulId" ColumnName="fldFormulId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblPropertiesUpdate" FunctionName="RasaNewFMSModel1.Store.spr_tblPropertiesUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblPropertiesValuesDelete" FunctionName="RasaNewFMSModel1.Store.spr_tblPropertiesValuesDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblPropertiesValuesInsert" FunctionName="RasaNewFMSModel1.Store.spr_tblPropertiesValuesInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblPropertiesValuesSelect" FunctionName="RasaNewFMSModel1.Store.spr_tblPropertiesValuesSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel1.spr_tblPropertiesValuesSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldParticularId" ColumnName="fldParticularId" />
+          <ScalarProperty Name="fldValue" ColumnName="fldValue" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldNameFn" ColumnName="fldNameFn" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblPropertiesValuesUpdate" FunctionName="RasaNewFMSModel1.Store.spr_tblPropertiesValuesUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_SelectArchiveTree_Module" FunctionName="RasaNewFMSModel1.Store.spr_SelectArchiveTree_Module">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel1.spr_SelectArchiveTree_Module">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldPID" ColumnName="fldPID" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldFileUpload" ColumnName="fldFileUpload" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldModuleId" ColumnName="fldModuleId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RasaNewFMSModel3" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ContracttEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="spr_tblRegistrationContractDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRegistrationContractInsert">
+      <Parameter Name="fldWarrantyId" Mode="In" Type="Int32" />
+      <Parameter Name="fldRoleOrgan" Mode="In" Type="Byte" />
+      <Parameter Name="fldTitleContract" Mode="In" Type="String" />
+      <Parameter Name="fldAshkhasId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSuplyMaterialsType" Mode="In" Type="Byte" />
+      <Parameter Name="fldAmountContract" Mode="In" Type="Int64" />
+      <Parameter Name="fldNumber" Mode="In" Type="String" />
+      <Parameter Name="fldTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldShobeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSepamNum" Mode="In" Type="String" />
+      <Parameter Name="fldTarikhEtmam" Mode="In" Type="String" />
+      <Parameter Name="fldStartContract" Mode="In" Type="String" />
+      <Parameter Name="fldEndContract" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRegistrationContractUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldWarrantyId" Mode="In" Type="Int32" />
+      <Parameter Name="fldRoleOrgan" Mode="In" Type="Byte" />
+      <Parameter Name="fldTitleContract" Mode="In" Type="String" />
+      <Parameter Name="fldAshkhasId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSuplyMaterialsType" Mode="In" Type="Byte" />
+      <Parameter Name="fldAmountContract" Mode="In" Type="Int64" />
+      <Parameter Name="fldNumber" Mode="In" Type="String" />
+      <Parameter Name="fldTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldShobeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSepamNum" Mode="In" Type="String" />
+      <Parameter Name="fldTarikhEtmam" Mode="In" Type="String" />
+      <Parameter Name="fldStartContract" Mode="In" Type="String" />
+      <Parameter Name="fldEndContract" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRegistrationContractSelect" ReturnType="Collection(RasaNewFMSModel3.spr_tblRegistrationContractSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="spr_tblRegistrationContractSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldWarrantyId" Nullable="false" />
+    <Property Type="String" Name="fldWarranty_Name" Nullable="true" MaxLength="17" />
+    <Property Type="Byte" Name="fldRoleOrgan" Nullable="false" />
+    <Property Type="String" Name="fldRoleOrgan_Name" Nullable="true" MaxLength="7" />
+    <Property Type="String" Name="fldTitleContract" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="fldAshkhasId" Nullable="false" />
+    <Property Type="Byte" Name="fldSuplyMaterialsType" Nullable="false" />
+    <Property Type="String" Name="fldSuplyMaterialsType_Name" Nullable="true" MaxLength="7" />
+    <Property Type="Int64" Name="fldAmountContract" Nullable="false" />
+    <Property Type="String" Name="fldNumber" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldTarikh" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="fldShobeId" Nullable="true" />
+    <Property Type="String" Name="fldSepamNum" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldTarikhEtmam" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldStartContract" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldEndContract" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIp" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldWarentytype_Name" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldCodeMelli" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldName_Shakhs" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="fldName_Shobe" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldCodeSHobe" Nullable="false" />
+    <Property Type="Int32" Name="fldBankId" Nullable="true" />
+    <Property Type="String" Name="fldBankName" Nullable="false" MaxLength="100" />
+  </ComplexType>
+</Schema>

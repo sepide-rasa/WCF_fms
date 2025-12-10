@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ContractModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ContractEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="spr_tblRegistrationContractDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRegistrationContractInsert">
+      <Parameter Name="fldWarrantyId" Mode="In" Type="Int32" />
+      <Parameter Name="fldRoleOrgan" Mode="In" Type="Byte" />
+      <Parameter Name="fldTitleContract" Mode="In" Type="String" />
+      <Parameter Name="fldAshkhasId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSuplyMaterialsType" Mode="In" Type="Byte" />
+      <Parameter Name="fldAmountContract" Mode="In" Type="Int64" />
+      <Parameter Name="fldNumber" Mode="In" Type="String" />
+      <Parameter Name="fldTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldShobeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSepamNum" Mode="In" Type="String" />
+      <Parameter Name="fldTarikhEtmam" Mode="In" Type="String" />
+      <Parameter Name="fldStartContract" Mode="In" Type="String" />
+      <Parameter Name="fldEndContract" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRegistrationContractUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldWarrantyId" Mode="In" Type="Int32" />
+      <Parameter Name="fldRoleOrgan" Mode="In" Type="Byte" />
+      <Parameter Name="fldTitleContract" Mode="In" Type="String" />
+      <Parameter Name="fldAshkhasId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSuplyMaterialsType" Mode="In" Type="Byte" />
+      <Parameter Name="fldAmountContract" Mode="In" Type="Int64" />
+      <Parameter Name="fldNumber" Mode="In" Type="String" />
+      <Parameter Name="fldTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldShobeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSepamNum" Mode="In" Type="String" />
+      <Parameter Name="fldTarikhEtmam" Mode="In" Type="String" />
+      <Parameter Name="fldStartContract" Mode="In" Type="String" />
+      <Parameter Name="fldEndContract" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

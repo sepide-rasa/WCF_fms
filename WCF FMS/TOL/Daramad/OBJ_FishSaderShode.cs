@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WCF_FMS.TOL.Daramad
+{
+    public class OBJ_FishSaderShode
+    {
+        public int fldId { get; set; }
+        public int fldElamAvarezId { get; set; }
+        public int fldShomareHesabId { get; set; }
+        public string fldShenaseGhabz { get; set; }
+        public string fldShenasePardakht { get; set; }
+        public long fldMablaghAvarezGerdShode { get; set; }
+        public byte fldShorooShenaseGhabz { get; set; }
+        public int fldUserId { get; set; }
+        public string fldDesc { get; set; }
+        public long fldJamKol { get; set; }
+        public string fldBarcode { get; set; }
+        public int fldAshakhasID { get; set; }
+        public string fldNameShakhs { get; set; }
+        public string fldNoeShakhs { get; set; }
+        public string fldFather_ShomareSabt { get; set; }
+        public string fldTypeAvarez { get; set; }
+        public string fldTarikh { get; set; }
+        public string fldNationalCode { get; set; }
+        public string fldMashmool { get; set; }
+        public string fldPardakhFish { get; set; }
+        public int fldPcposUser { get; set; }
+        public string fldShomareHesab { get; set; }
+        public string fldShomareSheba { get; set; }
+        public string fldTarikhPardakhFish { get; set; }
+    }
+}

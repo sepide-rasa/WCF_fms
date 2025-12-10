@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ChekModelStoreContainer" CdmEntityContainer="ChekEntities">
+    <FunctionImportMapping FunctionImportName="spr_tblOlgoCheckDelete" FunctionName="ChekModel.Store.spr_tblOlgoCheckDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblOlgoCheckInsert" FunctionName="ChekModel.Store.spr_tblOlgoCheckInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblOlgoCheckUpdate" FunctionName="ChekModel.Store.spr_tblOlgoCheckUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblDasteCheckDelete" FunctionName="ChekModel.Store.spr_tblDasteCheckDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblDasteCheckInsert" FunctionName="ChekModel.Store.spr_tblDasteCheckInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblDasteCheckUpdate" FunctionName="ChekModel.Store.spr_tblDasteCheckUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblSodorCheckDelete" FunctionName="ChekModel.Store.spr_tblSodorCheckDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblSodorCheckInsert" FunctionName="ChekModel.Store.spr_tblSodorCheckInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblSodorCheckSelect" FunctionName="ChekModel.Store.spr_tblSodorCheckSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChekModel.spr_tblSodorCheckSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldIdDasteCheck" ColumnName="fldIdDasteCheck" />
+          <ScalarProperty Name="fldTarikhVosol" ColumnName="fldTarikhVosol" />
+          <ScalarProperty Name="fldDarVajh" ColumnName="fldDarVajh" />
+          <ScalarProperty Name="fldCodeSerialCheck" ColumnName="fldCodeSerialCheck" />
+          <ScalarProperty Name="fldBabat" ColumnName="fldBabat" />
+          <ScalarProperty Name="fldBabatFlag" ColumnName="fldBabatFlag" />
+          <ScalarProperty Name="fldMablagh" ColumnName="fldMablagh" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldMoshakhaseDasteCheck" ColumnName="fldMoshakhaseDasteCheck" />
+          <ScalarProperty Name="fldBankName" ColumnName="fldBankName" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="TarikhSabt" ColumnName="TarikhSabt" />
+          <ScalarProperty Name="NameShobe" ColumnName="NameShobe" />
+          <ScalarProperty Name="Name_Family" ColumnName="Name_Family" />
+          <ScalarProperty Name="ShomareMeli" ColumnName="ShomareMeli" />
+          <ScalarProperty Name="fldShomareHesab" ColumnName="fldShomareHesab" />
+          <ScalarProperty Name="AshkhasId" ColumnName="AshkhasId" />
+          <ScalarProperty Name="BabatText" ColumnName="BabatText" />
+          <ScalarProperty Name="TarikhShamsi" ColumnName="TarikhShamsi" />
+          <ScalarProperty Name="MablaghBeHorof" ColumnName="MablaghBeHorof" />
+          <ScalarProperty Name="fldvaziat" ColumnName="fldvaziat" />
+          <ScalarProperty Name="NameVaziat" ColumnName="NameVaziat" />
+          <ScalarProperty Name="fldTarikhVaziat" ColumnName="fldTarikhVaziat" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldTankhahGroupId" ColumnName="fldTankhahGroupId" />
+          <ScalarProperty Name="fldFactorId" ColumnName="fldFactorId" />
+          <ScalarProperty Name="fldContractId" ColumnName="fldContractId" />
+          <ScalarProperty Name="Check_FactorId" ColumnName="Check_FactorId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblSodorCheckUpdate" FunctionName="ChekModel.Store.spr_tblSodorCheckUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblOlgoCheckSelect" FunctionName="ChekModel.Store.spr_tblOlgoCheckSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChekModel.spr_tblOlgoCheckSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldIdFile" ColumnName="fldIdFile" />
+          <ScalarProperty Name="fldIdBank" ColumnName="fldIdBank" />
+          <ScalarProperty Name="fldUserID" ColumnName="fldUserID" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldBankName" ColumnName="fldBankName" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblDasteCheckSelect" FunctionName="ChekModel.Store.spr_tblDasteCheckSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChekModel.spr_tblDasteCheckSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldIdOlgoCheck" ColumnName="fldIdOlgoCheck" />
+          <ScalarProperty Name="fldMoshakhaseDasteCheck" ColumnName="fldMoshakhaseDasteCheck" />
+          <ScalarProperty Name="fldTedadBarg" ColumnName="fldTedadBarg" />
+          <ScalarProperty Name="fldShoroeSeriyal" ColumnName="fldShoroeSeriyal" />
+          <ScalarProperty Name="fldUserID" ColumnName="fldUserID" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldOlgu" ColumnName="fldOlgu" />
+          <ScalarProperty Name="fldIdShomareHesab" ColumnName="fldIdShomareHesab" />
+          <ScalarProperty Name="fldShomareHesab" ColumnName="fldShomareHesab" />
+          <ScalarProperty Name="fldShobeName" ColumnName="fldShobeName" />
+          <ScalarProperty Name="fldBankName" ColumnName="fldBankName" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblAghsatCheckAmaniDelete" FunctionName="ChekModel.Store.spr_tblAghsatCheckAmaniDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblAghsatCheckAmaniInsert" FunctionName="ChekModel.Store.spr_tblAghsatCheckAmaniInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblAghsatCheckAmaniSelect" FunctionName="ChekModel.Store.spr_tblAghsatCheckAmaniSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChekModel.spr_tblAghsatCheckAmaniSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldMablagh" ColumnName="fldMablagh" />
+          <ScalarProperty Name="fldTarikh" ColumnName="fldTarikh" />
+          <ScalarProperty Name="fldNobat" ColumnName="fldNobat" />
+          <ScalarProperty Name="fldIdCheckHayeVarede" ColumnName="fldIdCheckHayeVarede" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="NameVaziat" ColumnName="NameVaziat" />
+          <ScalarProperty Name="fldvaziat" ColumnName="fldvaziat" />
+          <ScalarProperty Name="fldTarikhVaziat" ColumnName="fldTarikhVaziat" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblAghsatCheckAmaniUpdate" FunctionName="ChekModel.Store.spr_tblAghsatCheckAmaniUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblCheckHayeVaredeDelete" FunctionName="ChekModel.Store.spr_tblCheckHayeVaredeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblCheckHayeVaredeInsert" FunctionName="ChekModel.Store.spr_tblCheckHayeVaredeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblCheckHayeVaredeUpdate" FunctionName="ChekModel.Store.spr_tblCheckHayeVaredeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_UpdateStatusAghsatCheckAmani" FunctionName="ChekModel.Store.spr_UpdateStatusAghsatCheckAmani" />
+    <FunctionImportMapping FunctionImportName="spr_AghsatCheckAmaniDelete_CheckHayeVaredeId" FunctionName="ChekModel.Store.spr_AghsatCheckAmaniDelete_CheckHayeVaredeId" />
+    <FunctionImportMapping FunctionImportName="spr_tblCheckStatusInsert" FunctionName="ChekModel.Store.spr_tblCheckStatusInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblCheckStatusSelect" FunctionName="ChekModel.Store.spr_tblCheckStatusSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChekModel.spr_tblCheckStatusSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldSodorCheckId" ColumnName="fldSodorCheckId" />
+          <ScalarProperty Name="fldCheckVaredeId" ColumnName="fldCheckVaredeId" />
+          <ScalarProperty Name="fldAghsatId" ColumnName="fldAghsatId" />
+          <ScalarProperty Name="fldvaziat" ColumnName="fldvaziat" />
+          <ScalarProperty Name="fldTarikh" ColumnName="fldTarikh" />
+          <ScalarProperty Name="fldUserID" ColumnName="fldUserID" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCheckHayeVaredeSelect" FunctionName="ChekModel.Store.spr_tblCheckHayeVaredeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChekModel.spr_tblCheckHayeVaredeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldIdShobe" ColumnName="fldIdShobe" />
+          <ScalarProperty Name="fldMablagh" ColumnName="fldMablagh" />
+          <ScalarProperty Name="fldAshkhasId" ColumnName="fldAshkhasId" />
+          <ScalarProperty Name="fldTarikhVosolCheck" ColumnName="fldTarikhVosolCheck" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldTarikhDaryaftCheck" ColumnName="fldTarikhDaryaftCheck" />
+          <ScalarProperty Name="fldShenaseKamelCheck" ColumnName="fldShenaseKamelCheck" />
+          <ScalarProperty Name="fldBabat" ColumnName="fldBabat" />
+          <ScalarProperty Name="fldNoeeCheck" ColumnName="fldNoeeCheck" />
+          <ScalarProperty Name="NoeeCheckName" ColumnName="NoeeCheckName" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="TarikhSabt" ColumnName="TarikhSabt" />
+          <ScalarProperty Name="fldShobeName" ColumnName="fldShobeName" />
+          <ScalarProperty Name="fldBankName" ColumnName="fldBankName" />
+          <ScalarProperty Name="fldBankId" ColumnName="fldBankId" />
+          <ScalarProperty Name="NameFamily" ColumnName="NameFamily" />
+          <ScalarProperty Name="fldvaziat" ColumnName="fldvaziat" />
+          <ScalarProperty Name="NameVaziat" ColumnName="NameVaziat" />
+          <ScalarProperty Name="fldTarikhVaziat" ColumnName="fldTarikhVaziat" />
+          <ScalarProperty Name="fldStatus" ColumnName="fldStatus" />
+          <ScalarProperty Name="fldCodemeli" ColumnName="fldCodemeli" />
+          <ScalarProperty Name="fldTypeShakhs" ColumnName="fldTypeShakhs" />
+          <ScalarProperty Name="fldSaderKonandeh" ColumnName="fldSaderKonandeh" />
+          <ScalarProperty Name="fldReceive" ColumnName="fldReceive" />
+          <ScalarProperty Name="fldReceiveName" ColumnName="fldReceiveName" />
+          <ScalarProperty Name="fldElamAvarezId" ColumnName="fldElamAvarezId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCheck_FactorSelect" FunctionName="ChekModel.Store.spr_tblCheck_FactorSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChekModel.spr_tblCheck_FactorSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldCheckSadereId" ColumnName="fldCheckSadereId" />
+          <ScalarProperty Name="fldFactorId" ColumnName="fldFactorId" />
+          <ScalarProperty Name="fldContractId" ColumnName="fldContractId" />
+          <ScalarProperty Name="fldTankhahGroupId" ColumnName="fldTankhahGroupId" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_SelectSumCheckSadere" FunctionName="ChekModel.Store.spr_SelectSumCheckSadere">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ChekModel.spr_SelectSumCheckSadere">
+          <ScalarProperty Name="fldMablagh" ColumnName="fldMablagh" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

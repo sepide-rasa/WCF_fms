@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RasaNewFMSModel3StoreContainer" CdmEntityContainer="ContracttEntities">
+    <FunctionImportMapping FunctionImportName="spr_tblRegistrationContractDelete" FunctionName="RasaNewFMSModel3.Store.spr_tblRegistrationContractDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblRegistrationContractInsert" FunctionName="RasaNewFMSModel3.Store.spr_tblRegistrationContractInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblRegistrationContractUpdate" FunctionName="RasaNewFMSModel3.Store.spr_tblRegistrationContractUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblRegistrationContractSelect" FunctionName="RasaNewFMSModel3.Store.spr_tblRegistrationContractSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel3.spr_tblRegistrationContractSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldWarrantyId" ColumnName="fldWarrantyId" />
+          <ScalarProperty Name="fldWarranty_Name" ColumnName="fldWarranty_Name" />
+          <ScalarProperty Name="fldRoleOrgan" ColumnName="fldRoleOrgan" />
+          <ScalarProperty Name="fldRoleOrgan_Name" ColumnName="fldRoleOrgan_Name" />
+          <ScalarProperty Name="fldTitleContract" ColumnName="fldTitleContract" />
+          <ScalarProperty Name="fldAshkhasId" ColumnName="fldAshkhasId" />
+          <ScalarProperty Name="fldSuplyMaterialsType" ColumnName="fldSuplyMaterialsType" />
+          <ScalarProperty Name="fldSuplyMaterialsType_Name" ColumnName="fldSuplyMaterialsType_Name" />
+          <ScalarProperty Name="fldAmountContract" ColumnName="fldAmountContract" />
+          <ScalarProperty Name="fldNumber" ColumnName="fldNumber" />
+          <ScalarProperty Name="fldTarikh" ColumnName="fldTarikh" />
+          <ScalarProperty Name="fldShobeId" ColumnName="fldShobeId" />
+          <ScalarProperty Name="fldSepamNum" ColumnName="fldSepamNum" />
+          <ScalarProperty Name="fldTarikhEtmam" ColumnName="fldTarikhEtmam" />
+          <ScalarProperty Name="fldStartContract" ColumnName="fldStartContract" />
+          <ScalarProperty Name="fldEndContract" ColumnName="fldEndContract" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIp" ColumnName="fldIp" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldWarentytype_Name" ColumnName="fldWarentytype_Name" />
+          <ScalarProperty Name="fldCodeMelli" ColumnName="fldCodeMelli" />
+          <ScalarProperty Name="fldName_Shakhs" ColumnName="fldName_Shakhs" />
+          <ScalarProperty Name="fldName_Shobe" ColumnName="fldName_Shobe" />
+          <ScalarProperty Name="fldCodeSHobe" ColumnName="fldCodeSHobe" />
+          <ScalarProperty Name="fldBankId" ColumnName="fldBankId" />
+          <ScalarProperty Name="fldBankName" ColumnName="fldBankName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

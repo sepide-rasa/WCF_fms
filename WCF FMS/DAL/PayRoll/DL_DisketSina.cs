@@ -1,0 +1,211 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using WCF_FMS.DAL.Model;
+using WCF_FMS.TOL.PayRoll;
+
+namespace WCF_FMS.DAL.PayRoll
+{
+    public class DL_DisketSina
+    {
+        #region Select
+        public List<OBJ_DisketSina> Select(short Year, byte Mah, byte Nobat, int OrganId, int typeEstekhdam)
+        {
+            using (RasaFMSPayRollDBEntities p = new RasaFMSPayRollDBEntities())
+            {
+                var k = p.spr_Pay_DisketSina(Year, Mah, Nobat, OrganId, typeEstekhdam)
+                    .Select(q => new OBJ_DisketSina()
+                    {
+                        fldCodemeli = q.fldCodemeli,
+                        fldSathPost = q.fldSathPost,
+                        OnvanPost = q.OrganPost,
+                        fldMadrakId = q.fldMadrakId,
+                        fldTypeEstekhdamSina =Convert.ToInt32( q.fldTypeEstekhdamSina),
+                        fldTabaghe = q.fldTabaghe,
+                        s_rasmi = Convert.ToInt32(q.s_rasmi),
+                        mozdGroup = 0,
+                        h_paye = q.h_paye,
+                        SayerAhkam = 0,
+                        paye = q.paye,
+                        HadeghalDastmozd = q.HadeghalDastmozd,
+                        sakhtikar = q.sakhtikar,
+                        fogh_isar = q.fogh_isar,
+                        fogh_NeshanDolati = 0,
+                        ayelemandi = q.ayelemandi,
+                        olad = q.olad,
+                        maskan = q.maskan,
+                        bon = q.bon,
+                        modiryati = q.modiryati,
+                        jazb = q.jazb,
+                        MonateghMahroom = 0,
+                        marzi = 0,
+                        abohava = q.abohava,
+                        MonateghJangZadde = 0,
+                        fogh_isarmade51 = 0,
+                        nobatkari = q.nobatkari,
+                        ashae = 0,
+                        ghazai = q.ghazai,
+                        tatbigh1 = q.tatbigh1,
+                        jozB = 0,
+                        tatbigh = q.tatbigh,
+                        masrafi = q.masrafi,
+                        tarmim = q.tarmim,
+                        haghzahme = 0,
+                        TafavotHokm = 0,
+                        takhasosi = q.takhasosi,
+                        ezafekar = q.ezafekar,
+                        BagreVari = 0,
+                        karaee = 0,
+                        EshteghalKharej = 0,
+                        mamoriatKharej = 0,
+                        kasrSaghf = 0,
+                        mamoriat = q.mamoriat,
+                        HemayatGHazaii = 0,
+                        ShabKari = 0,
+                        kahesh124 = 0,
+                        Takhalofat = 0,
+                        padash = 0,
+                        eydi = q.eydi,
+                        sanavat = q.sanavat,
+                        padash11 = 0,
+                        s_payankhedmat = q.s_payankhedmat,
+                        morakhasi = 0,
+                        kharobar = 0,
+                        ayabZahab = 0,
+                        KomakMaskan = 0,
+                        Rezayat = 0,
+                        riali = q.riali,
+                        Monasebat = q.Monasebat,
+                        javani = q.javani,
+                        mahdeKodak = q.mahdeKodak,
+                        refahi = q.refahi,
+                        ghaza = 0,
+                        khoraki = q.khoraki,
+                        car = 0,
+                        service = 0,
+                        card = 0,
+                        fldBimeTakmily = q.fldBimeTakmily,
+                        fldBimeOmr = q.fldBimeOmr,
+                        kalaBehdashti = q.kalaBehdashti,
+                        bonKala = 0,
+                        amaken = 0,
+                        mazaya = 0,
+                        diun = 0,
+                        fldMablaghMoavagheHokm = q.fldMablaghMoavagheHokm,
+                        fldMablaghGheirMoavagheHokm = 0,
+                        fldMaliyat = q.fldMaliyat,
+                        fldSandoghBazneshastegi = q.fldSandoghBazneshastegi,
+                        fldBimePersonalTamin = q.fldBimePersonalTamin,
+                        fldBimePersonalDarman = q.fldBimePersonalDarman,
+                        fldMogharari = q.fldMogharari,
+                        fldSandoghBazneshastegiSayer = 0,
+                        KosuratGheirNaghdi = 0,
+                        Kosurat = q.Kosurat
+                    }).ToList();
+                return k;
+            }
+        }
+        #endregion
+        #region SelectKarmandi
+        public List<OBJ_DisketSinaKarmandi> SelectKarmandi(short Year, byte Mah, byte Nobat, int OrganId, int typeEstekhdam)
+        {
+            using (RasaFMSPayRollDBEntities p = new RasaFMSPayRollDBEntities())
+            {
+                var k = p.spr_Pay_DisketSina(Year, Mah, Nobat, OrganId, typeEstekhdam)
+                    .Select(q => new OBJ_DisketSinaKarmandi()
+                    {
+                        fldCodemeli = q.fldCodemeli,
+                        fldSathPost = q.fldSathPost,
+                        OnvanPost = q.OrganPost,
+                        fldMadrakId = q.fldMadrakId,
+                        fldTypeEstekhdamSina = Convert.ToInt32(q.fldTypeEstekhdamSina),
+                        fldTabaghe = q.fldTabaghe,
+                        s_rasmi = Convert.ToInt32(q.s_rasmi),
+                        h_paye = q.h_paye,
+                        sanavat = q.sanavat,
+                        Tabsare12 = 0,
+                        foghshoghl = q.foghshoghl,
+                        sakhtikar = q.sakhtikar,
+                        modiryati = q.modiryati,
+                        MonateghJangZadde = 0,
+                        fogh_NeshanDolati = 0,
+                        made28 = 0,
+                        Vije=q.vije,
+                        ayelemandi=q.ayelemandi,
+                        olad = q.olad,
+                        jazb = q.jazb,
+                        khas = q.khas,
+                        nobatkari = q.nobatkari,
+                        mahalKhedmat = 0,
+                        tashilat = q.tashilat,
+                        abohava = q.abohava,
+                        jazbKarshenas = 0,
+                        jazbAza = 0,
+                        jazbNegahdasht = 0,
+                        paziraee = 0,
+                        fogh_isarmade51 = 0,
+                        jazbb = 0,
+                        TafavotTanazol = 0,
+                        ghazai = q.ghazai,
+                        ashae = 0,
+                        tarmim = q.tarmim,
+                        pardakhti = 0,
+                        takhasosi = q.takhasosi,
+                        tatbigh = q.tatbigh,
+                        TafavotHokm = 0,
+                        Tarjome = 0,
+                        tafavotTarmim=0,
+                        ezafekar = q.ezafekar,
+                        tadris=0,
+                        haghzahme = 0,
+                        EshteghalKharej = 0,
+                        mamoriatKharej = 0,
+                        HemayatGHazaii = 0,
+                        mamoriat = q.mamoriat,
+                        tahghigh=0,
+                        karane=q.karane,
+                        takhalofat=0, 
+                        padash = 0,
+                        eydi = q.eydi,
+                        padash11 = 0,
+                        s_payankhedmat = q.s_payankhedmat,
+                        morakhasi = 0,
+                        kharobar = 0,
+                        ayabZahab = 0,
+                        maskan = q.maskan,                       
+                        Rezayat = 0,
+                        riali = q.riali,
+                        Monasebat = q.Monasebat,
+                        javani = q.javani,
+                        mahdeKodak = q.mahdeKodak,
+                        refahi = q.refahi,
+                        ghaza = 0,
+                        khoraki = q.khoraki,
+                        car = 0,
+                        service = 0,
+                        card = 0,
+                        fldBimeTakmily = q.fldBimeTakmily,
+                        fldBimeOmr = q.fldBimeOmr,
+                        kalaBehdashti = q.kalaBehdashti,
+                        bonKala = 0,
+                        amaken = 0,
+                        mazaya = 0,
+                        fldMablaghMoavagheHokm = q.fldMablaghMoavagheHokm,
+                        diun = 0,
+                        fldMablaghGheirMoavagheHokm = 0,
+                        fldMaliyat = q.fldMaliyat,
+                        fldSandoghBazneshastegi = q.fldSandoghBazneshastegi,
+                        fldBimePersonalTamin = q.fldBimePersonalTamin,
+                        fldBimePersonalDarman = q.fldBimePersonalDarman,
+                        fldMogharari = q.fldMogharari,
+                        fldSandoghBazneshastegiSayer = 0,
+                        KosuratGheirNaghdi = 0,
+                        Kosurat = q.Kosurat                        
+                    }).ToList();
+                return k;
+            }
+        }
+        #endregion
+    }
+}

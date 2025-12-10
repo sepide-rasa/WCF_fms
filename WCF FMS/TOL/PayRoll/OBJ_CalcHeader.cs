@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WCF_FMS.TOL.PayRoll
+{
+    public class OBJ_CalcHeader
+    {
+        public int fldId { get; set; }
+        public short fldYear { get; set; }
+        public byte fldMonth { get; set; }
+        public int fldNobatPardakhtId { get; set; }
+        public int fldOrganId { get; set; }
+        public byte fldStatus { get; set; }
+        public string fldIp { get; set; }
+        public int fldUserId { get; set; }
+        public System.DateTime fldDate { get; set; }
+        public string fldStatusName { get; set; }
+        public Nullable<int> fldQueue { get; set; }
+        public string fldNameOrgan { get; set; }
+        public string fldName { get; set; }
+        public string fldMonthName { get; set; }
+        public string fldTarikh { get; set; }
+        public Nullable<byte> fldCalcType { get; set; }
+        public string fldCalcTypeName { get; set; }
+        public Nullable<int> fldQueueTime { get; set; }
+    }
+}

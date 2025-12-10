@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WCF_FMS.TOL.PayRoll
+{
+    public class OBJ_KomakGheyerNaghdi
+    {
+        public int fldId { get; set; }
+        public int fldPersonalId { get; set; }
+        public short fldYear { get; set; }
+        public byte fldMonth { get; set; }
+        public bool fldNoeMostamer { get; set; }
+        public int fldMablagh { get; set; }
+        public int fldKhalesPardakhti { get; set; }
+        public int fldMaliyat { get; set; }
+        public int fldUserId { get; set; }
+        public string fldDesc { get; set; }
+        public System.DateTime fldDate { get; set; }
+        public string fldNameNoeMostamer { get; set; }
+        public int fldShomareHesabId { get; set; }
+        public string fldShomareHesab { get; set; }
+        public string fldNameFamilyPersonal { get; set; }
+        public string fldMonthName { get; set; }
+        public Nullable<bool> fldFlag { get; set; }
+
+        //Grup
+        public int fldPersonalInfoId { get; set; }
+        public string fldName { get; set; }
+        public string fldCodemeli { get; set; }
+        public string fldSh_Personali { get; set; }
+        public string fldNoeMostamerName { get; set; }
+    }
+}

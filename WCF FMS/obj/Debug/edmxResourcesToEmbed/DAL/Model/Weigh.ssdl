@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RasaNewFMSModel4.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="spr_SelectArze_Kala" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldBaskoolId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectBaskoolParametr_Value" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="baskoolId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectMandeHavali" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="IdHavale" Type="int" Mode="In" />
+    <Parameter Name="IdBaskool" Type="int" Mode="In" />
+    <Parameter Name="IdKala" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectRannadeInPlaque" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldSerialPlaque" Type="tinyint" Mode="In" />
+    <Parameter Name="Haraf" Type="nvarchar" Mode="In" />
+    <Parameter Name="Plaque1" Type="varchar" Mode="In" />
+    <Parameter Name="Plaque2" Type="varchar" Mode="In" />
+    <Parameter Name="BaskoolId" Type="int" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectSumKalaHavale" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="idHavale" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectSumKalaHavale_Detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="value" Type="nvarchar" Mode="In" />
+    <Parameter Name="idHavale" Type="int" Mode="In" />
+    <Parameter Name="idKala" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectVaznKhals_VaznKhali" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="Haraf" Type="nvarchar" Mode="In" />
+    <Parameter Name="Plaque1" Type="varchar" Mode="In" />
+    <Parameter Name="Plaque2" Type="varchar" Mode="In" />
+    <Parameter Name="serial" Type="tinyint" Mode="In" />
+    <Parameter Name="fldBaskoolId" Type="int" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="vaznKol" Type="decimal" Mode="In" />
+    <Parameter Name="Type" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spr_tblArze_DetailDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblArze_DetailInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldHeaderId" Type="int" Mode="In" />
+    <Parameter Name="fldParametrSabetCodeDaramd" Type="int" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldFlag" Type="bit" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblArze_DetailSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblArzeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblArzeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldID" Type="int" Mode="InOut" />
+    <Parameter Name="fldBaskoolId" Type="int" Mode="In" />
+    <Parameter Name="fldKalaId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldTedad" Type="tinyint" Mode="In" />
+    <Parameter Name="fldMablagh" Type="bigint" Mode="In" />
+    <Parameter Name="fldStatusForoosh" Type="tinyint" Mode="In" />
+    <Parameter Name="fldVaznVahed" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblArzeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblArzeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldBaskoolId" Type="int" Mode="In" />
+    <Parameter Name="fldKalaId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldTedad" Type="tinyint" Mode="In" />
+    <Parameter Name="fldMablagh" Type="bigint" Mode="In" />
+    <Parameter Name="fldStatusForoosh" Type="tinyint" Mode="In" />
+    <Parameter Name="fldVaznVahed" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblBaskolDocumentSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblElamAvarez_ModuleOrganInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldCodeDaramdElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblElamAvarez_ModuleOrganSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLoadingPlaceDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLoadingPlaceInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLoadingPlaceSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLoadingPlaceUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblNoeMasrafSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametrBaskoolValueDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametrBaskoolValueInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldParametrBaskoolId" Type="int" Mode="In" />
+    <Parameter Name="fldBaskoolId" Type="int" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametrBaskoolValueSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametrBaskoolValueUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldParametrBaskoolId" Type="int" Mode="In" />
+    <Parameter Name="fldBaskoolId" Type="int" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametrsBaskoolInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldEnName" Type="varchar" Mode="In" />
+    <Parameter Name="fldFaName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametrsBaskoolSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRemittance_DetailsSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRemittance_HeaderDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRemittance_HeaderInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldAshkhasiId" Type="int" Mode="In" />
+    <Parameter Name="fldStatus" Type="bit" Mode="In" />
+    <Parameter Name="fldStartDate" Type="varchar" Mode="In" />
+    <Parameter Name="fldEndDate" Type="varchar" Mode="In" />
+    <Parameter Name="fldFile" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldpasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDescHeader" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldEmployId" Type="int" Mode="In" />
+    <Parameter Name="fldChartOrganEjraeeId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRemittance_HeaderSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRemittance_HeaderUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldHeaderId" Type="int" Mode="In" />
+    <Parameter Name="fldAshkhasiId" Type="int" Mode="In" />
+    <Parameter Name="fldStatus" Type="bit" Mode="In" />
+    <Parameter Name="fldStartDate" Type="varchar" Mode="In" />
+    <Parameter Name="fldEndDate" Type="varchar" Mode="In" />
+    <Parameter Name="fldFileId" Type="int" Mode="In" />
+    <Parameter Name="fldFile" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldpasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDescHeader" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldEmployId" Type="int" Mode="In" />
+    <Parameter Name="fldChartOrganEjraeeId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTozinInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldWeighbridgeId" Type="int" Mode="In" />
+    <Parameter Name="fldMaxW" Type="int" Mode="In" />
+    <Parameter Name="fldPlaqueId" Type="int" Mode="In" />
+    <Parameter Name="fldHour" Type="datetime" Mode="In" />
+    <Parameter Name="fldStartDate" Type="datetime" Mode="In" />
+    <Parameter Name="fldEndDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTozinSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Aztarikh" Type="varchar" Mode="In" />
+    <Parameter Name="Tatarikh" Type="varchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTypeReportInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldBaskoolId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTypeReportSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value2" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblVazn_BaskoolInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldID" Type="int" Mode="InOut" />
+    <Parameter Name="Haraf" Type="nvarchar" Mode="In" />
+    <Parameter Name="Plaque1" Type="varchar" Mode="In" />
+    <Parameter Name="Plaque2" Type="varchar" Mode="In" />
+    <Parameter Name="serial" Type="tinyint" Mode="In" />
+    <Parameter Name="fldRananadeId" Type="int" Mode="In" />
+    <Parameter Name="fldNoeMasrafId" Type="tinyint" Mode="In" />
+    <Parameter Name="fldAshkhasId" Type="int" Mode="In" />
+    <Parameter Name="fldChartOrganEjraeeId" Type="int" Mode="In" />
+    <Parameter Name="fldLoadingPlaceId" Type="int" Mode="In" />
+    <Parameter Name="fldKalaId" Type="int" Mode="In" />
+    <Parameter Name="fldVaznKol" Type="decimal" Mode="In" />
+    <Parameter Name="fldRemittanceId" Type="int" Mode="In" />
+    <Parameter Name="fldBaskoolId" Type="int" Mode="In" />
+    <Parameter Name="fldIsPor" Type="bit" Mode="In" />
+    <Parameter Name="fldTypeKhodroId" Type="int" Mode="In" />
+    <Parameter Name="fldTedad" Type="int" Mode="In" />
+    <Parameter Name="fldTypeMohasebe" Type="bit" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblVazn_BaskoolSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="moduleId" Type="int" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblVazn_BaskoolUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldPluqeId" Type="int" Mode="In" />
+    <Parameter Name="fldRananadeId" Type="int" Mode="In" />
+    <Parameter Name="fldNoeMasrafId" Type="tinyint" Mode="In" />
+    <Parameter Name="fldAshkhasId" Type="int" Mode="In" />
+    <Parameter Name="fldChartOrganEjraeeId" Type="int" Mode="In" />
+    <Parameter Name="fldLoadingPlaceId" Type="int" Mode="In" />
+    <Parameter Name="fldKalaId" Type="int" Mode="In" />
+    <Parameter Name="fldVaznKol" Type="decimal" Mode="In" />
+    <Parameter Name="fldRemittanceId" Type="int" Mode="In" />
+    <Parameter Name="fldBaskoolId" Type="int" Mode="In" />
+    <Parameter Name="fldIsPor" Type="bit" Mode="In" />
+    <Parameter Name="fldTypeKhodroId" Type="int" Mode="In" />
+    <Parameter Name="fldTedad" Type="int" Mode="In" />
+    <Parameter Name="fldTypeMohasebe" Type="bit" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblWeighbridgeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblWeighbridgeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldAshkhasHoghoghiId" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldAddress" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldPassword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblWeighbridgeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblWeighbridgeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldAshkhasHoghoghiId" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldAddress" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_UpdateEbtalBaskool" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_UpdateIsprintBaskool" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_UpdatePassBaskool" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Weigh">
+    <Parameter Name="fldid" Type="int" Mode="In" />
+    <Parameter Name="Pass" Type="nvarchar" Mode="In" />
+    <Parameter Name="userId" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="RasaNewFMSModel4StoreContainer" />
+</Schema>

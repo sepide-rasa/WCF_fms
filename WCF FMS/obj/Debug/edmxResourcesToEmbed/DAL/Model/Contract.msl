@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ContractModelStoreContainer" CdmEntityContainer="ContractEntities">
+    <FunctionImportMapping FunctionImportName="spr_tblRegistrationContractDelete" FunctionName="ContractModel.Store.spr_tblRegistrationContractDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblRegistrationContractInsert" FunctionName="ContractModel.Store.spr_tblRegistrationContractInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblRegistrationContractUpdate" FunctionName="ContractModel.Store.spr_tblRegistrationContractUpdate" />
+  </EntityContainerMapping>
+</Mapping>

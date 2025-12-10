@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ContractModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="spr_tblRegistrationContractDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cntr">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRegistrationContractInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cntr">
+    <Parameter Name="fldWarrantyId" Type="int" Mode="In" />
+    <Parameter Name="fldRoleOrgan" Type="tinyint" Mode="In" />
+    <Parameter Name="fldTitleContract" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldAshkhasId" Type="int" Mode="In" />
+    <Parameter Name="fldSuplyMaterialsType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldAmountContract" Type="bigint" Mode="In" />
+    <Parameter Name="fldNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikh" Type="varchar" Mode="In" />
+    <Parameter Name="fldShobeId" Type="int" Mode="In" />
+    <Parameter Name="fldSepamNum" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikhEtmam" Type="varchar" Mode="In" />
+    <Parameter Name="fldStartContract" Type="varchar" Mode="In" />
+    <Parameter Name="fldEndContract" Type="varchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIp" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRegistrationContractUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cntr">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldWarrantyId" Type="int" Mode="In" />
+    <Parameter Name="fldRoleOrgan" Type="tinyint" Mode="In" />
+    <Parameter Name="fldTitleContract" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldAshkhasId" Type="int" Mode="In" />
+    <Parameter Name="fldSuplyMaterialsType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldAmountContract" Type="bigint" Mode="In" />
+    <Parameter Name="fldNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikh" Type="varchar" Mode="In" />
+    <Parameter Name="fldShobeId" Type="int" Mode="In" />
+    <Parameter Name="fldSepamNum" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikhEtmam" Type="varchar" Mode="In" />
+    <Parameter Name="fldStartContract" Type="varchar" Mode="In" />
+    <Parameter Name="fldEndContract" Type="varchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIp" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="ContractModelStoreContainer" />
+</Schema>

@@ -1,0 +1,928 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AccountingModelStoreContainer" CdmEntityContainer="AccountingEntities">
+    <FunctionImportMapping FunctionImportName="spr_tblAccountingTypeDelete" FunctionName="AccountingModel.Store.spr_tblAccountingTypeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblAccountingTypeInsert" FunctionName="AccountingModel.Store.spr_tblAccountingTypeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblAccountingTypeSelect" FunctionName="AccountingModel.Store.spr_tblAccountingTypeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblAccountingTypeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblAccountingTypeUpdate" FunctionName="AccountingModel.Store.spr_tblAccountingTypeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblCenterCostDelete" FunctionName="AccountingModel.Store.spr_tblCenterCostDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblCenterCostInsert" FunctionName="AccountingModel.Store.spr_tblCenterCostInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblCenterCostSelect" FunctionName="AccountingModel.Store.spr_tblCenterCostSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblCenterCostSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldNameCenter" ColumnName="fldNameCenter" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCenterCostUpdate" FunctionName="AccountingModel.Store.spr_tblCenterCostUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblAccountingLevelDelete" FunctionName="AccountingModel.Store.spr_tblAccountingLevelDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblAccountingLevelInsert" FunctionName="AccountingModel.Store.spr_tblAccountingLevelInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblAccountingLevelSelect" FunctionName="AccountingModel.Store.spr_tblAccountingLevelSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblAccountingLevelSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldYear" ColumnName="fldYear" />
+          <ScalarProperty Name="fldArghamNum" ColumnName="fldArghamNum" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldLevelId" ColumnName="fldLevelId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblAccountingLevelUpdate" FunctionName="AccountingModel.Store.spr_tblAccountingLevelUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblGroupCenterCostDelete" FunctionName="AccountingModel.Store.spr_tblGroupCenterCostDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblGroupCenterCostInsert" FunctionName="AccountingModel.Store.spr_tblGroupCenterCostInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblGroupCenterCostSelect" FunctionName="AccountingModel.Store.spr_tblGroupCenterCostSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblGroupCenterCostSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldNameGroup" ColumnName="fldNameGroup" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblGroupCenterCostUpdate" FunctionName="AccountingModel.Store.spr_tblGroupCenterCostUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblTree_CenterCostDelete" FunctionName="AccountingModel.Store.spr_tblTree_CenterCostDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblTree_CenterCostInsert" FunctionName="AccountingModel.Store.spr_tblTree_CenterCostInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblTree_CenterCostSelect" FunctionName="AccountingModel.Store.spr_tblTree_CenterCostSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblTree_CenterCostSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldCenterCoId" ColumnName="fldCenterCoId" />
+          <ScalarProperty Name="fldCostTreeId" ColumnName="fldCostTreeId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblTree_CenterCostUpdate" FunctionName="AccountingModel.Store.spr_tblTree_CenterCostUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblTreeCenterCostDelete" FunctionName="AccountingModel.Store.spr_tblTreeCenterCostDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblTreeCenterCostInsert" FunctionName="AccountingModel.Store.spr_tblTreeCenterCostInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblTreeCenterCostSelect" FunctionName="AccountingModel.Store.spr_tblTreeCenterCostSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblTreeCenterCostSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldGroupCenterCoId" ColumnName="fldGroupCenterCoId" />
+          <ScalarProperty Name="fldPID" ColumnName="fldPID" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldNodeType" ColumnName="fldNodeType" />
+          <ScalarProperty Name="fldCenter_treeId" ColumnName="fldCenter_treeId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblTreeCenterCostUpdate" FunctionName="AccountingModel.Store.spr_tblTreeCenterCostUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_UpdatePID_Cost_Tree" FunctionName="AccountingModel.Store.spr_UpdatePID_Cost_Tree" />
+    <FunctionImportMapping FunctionImportName="spr_UpdatePID_CostCenter" FunctionName="AccountingModel.Store.spr_UpdatePID_CostCenter" />
+    <FunctionImportMapping FunctionImportName="spr_Centerco_TarifNashodeh" FunctionName="AccountingModel.Store.spr_Centerco_TarifNashodeh">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_Centerco_TarifNashodeh">
+          <ScalarProperty Name="fldNameCenter" ColumnName="fldNameCenter" />
+          <ScalarProperty Name="fldCenterCoId" ColumnName="fldCenterCoId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_selectAccountingLevel" FunctionName="AccountingModel.Store.spr_selectAccountingLevel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_selectAccountingLevel">
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldYear" ColumnName="fldYear" />
+          <ScalarProperty Name="fldArghamNum" ColumnName="fldArghamNum" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_DeleteAccountingLevel" FunctionName="AccountingModel.Store.spr_DeleteAccountingLevel" />
+    <FunctionImportMapping FunctionImportName="spr_tblTemplateCodingDelete" FunctionName="AccountingModel.Store.spr_tblTemplateCodingDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblTemplateCodingInsert" FunctionName="AccountingModel.Store.spr_tblTemplateCodingInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblTemplateCodingUpdate" FunctionName="AccountingModel.Store.spr_tblTemplateCodingUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblItemNecessaryDelete" FunctionName="AccountingModel.Store.spr_tblItemNecessaryDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblItemNecessaryInsert" FunctionName="AccountingModel.Store.spr_tblItemNecessaryInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblItemNecessaryUpdate" FunctionName="AccountingModel.Store.spr_tblItemNecessaryUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblTemplateNameDelete" FunctionName="AccountingModel.Store.spr_tblTemplateNameDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblTemplateNameInsert" FunctionName="AccountingModel.Store.spr_tblTemplateNameInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblTemplateNameSelect" FunctionName="AccountingModel.Store.spr_tblTemplateNameSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblTemplateNameSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldAccountingTypeId" ColumnName="fldAccountingTypeId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIp" ColumnName="fldIp" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldName_AccountingType" ColumnName="fldName_AccountingType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblTemplateNameUpdate" FunctionName="AccountingModel.Store.spr_tblTemplateNameUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblMahiyatSelect" FunctionName="AccountingModel.Store.spr_tblMahiyatSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblMahiyatSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIp" ColumnName="fldIp" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblLevelsAccountingTypeDelete" FunctionName="AccountingModel.Store.spr_tblLevelsAccountingTypeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblLevelsAccountingTypeInsert" FunctionName="AccountingModel.Store.spr_tblLevelsAccountingTypeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblLevelsAccountingTypeSelect" FunctionName="AccountingModel.Store.spr_tblLevelsAccountingTypeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblLevelsAccountingTypeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldAccountTypeId" ColumnName="fldAccountTypeId" />
+          <ScalarProperty Name="fldArghumNum" ColumnName="fldArghumNum" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="flddate" ColumnName="flddate" />
+          <ScalarProperty Name="fldIp" ColumnName="fldIp" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldName_AccountingType" ColumnName="fldName_AccountingType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblLevelsAccountingTypeUpdate" FunctionName="AccountingModel.Store.spr_tblLevelsAccountingTypeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_selectAccountingTypeLevel" FunctionName="AccountingModel.Store.spr_selectAccountingTypeLevel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_selectAccountingTypeLevel">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldAccountTypeId" ColumnName="fldAccountTypeId" />
+          <ScalarProperty Name="fldArghumNum" ColumnName="fldArghumNum" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_UpdatePID_ItemNecessary" FunctionName="AccountingModel.Store.spr_UpdatePID_ItemNecessary" />
+    <FunctionImportMapping FunctionImportName="CheckValidCode" FunctionName="AccountingModel.Store.CheckValidCode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.CheckValidCode">
+          <ScalarProperty Name="fldValid" ColumnName="fldValid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentDescUpdate" FunctionName="AccountingModel.Store.spr_tblDocumentDescUpdate" />
+    <FunctionImportMapping FunctionImportName="CheckAccountingLevel" FunctionName="AccountingModel.Store.CheckAccountingLevel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.CheckAccountingLevel">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CopyFromTemplateCodingToCoding" FunctionName="AccountingModel.Store.CopyFromTemplateCodingToCoding" />
+    <FunctionImportMapping FunctionImportName="spr_tblCaseTypeDelete" FunctionName="AccountingModel.Store.spr_tblCaseTypeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblCaseTypeInsert" FunctionName="AccountingModel.Store.spr_tblCaseTypeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblCaseTypeSelect" FunctionName="AccountingModel.Store.spr_tblCaseTypeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblCaseTypeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCaseTypeUpdate" FunctionName="AccountingModel.Store.spr_tblCaseTypeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentRecord_HeaderDelete" FunctionName="AccountingModel.Store.spr_tblDocumentRecord_HeaderDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentRecord_HeaderUpdate" FunctionName="AccountingModel.Store.spr_tblDocumentRecord_HeaderUpdate" />
+    <FunctionImportMapping FunctionImportName="GetDefaultCode_Coding" FunctionName="AccountingModel.Store.GetDefaultCode_Coding">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.GetDefaultCode_Coding">
+          <ScalarProperty Name="fldCode" ColumnName="fldCode" />
+          <ScalarProperty Name="LevelId" ColumnName="LevelId" />
+          <ScalarProperty Name="fldLevelName" ColumnName="fldLevelName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCoding_HeaderDelete" FunctionName="AccountingModel.Store.spr_tblCoding_HeaderDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblCoding_HeaderInsert" FunctionName="AccountingModel.Store.spr_tblCoding_HeaderInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblCoding_HeaderSelect" FunctionName="AccountingModel.Store.spr_tblCoding_HeaderSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblCoding_HeaderSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldYear" ColumnName="fldYear" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCoding_HeaderUpdate" FunctionName="AccountingModel.Store.spr_tblCoding_HeaderUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblCoding_DetailsDelete" FunctionName="AccountingModel.Store.spr_tblCoding_DetailsDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblCoding_DetailsInsert" FunctionName="AccountingModel.Store.spr_tblCoding_DetailsInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblCoding_DetailsSelect" FunctionName="AccountingModel.Store.spr_tblCoding_DetailsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblCoding_DetailsSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldPCod" ColumnName="fldPCod" />
+          <ScalarProperty Name="fldTempCodingId" ColumnName="fldTempCodingId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldCode" ColumnName="fldCode" />
+          <ScalarProperty Name="fldAccountLevelId" ColumnName="fldAccountLevelId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIp" ColumnName="fldIp" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldMahiyatId" ColumnName="fldMahiyatId" />
+          <ScalarProperty Name="fldHeaderCodId" ColumnName="fldHeaderCodId" />
+          <ScalarProperty Name="fldName_TemplateCoding" ColumnName="fldName_TemplateCoding" />
+          <ScalarProperty Name="fldName_AccountingLevel" ColumnName="fldName_AccountingLevel" />
+          <ScalarProperty Name="fldYear" ColumnName="fldYear" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldTempNameId" ColumnName="fldTempNameId" />
+          <ScalarProperty Name="fldAccountingTypeId" ColumnName="fldAccountingTypeId" />
+          <ScalarProperty Name="fldTypeHesabId" ColumnName="fldTypeHesabId" />
+          <ScalarProperty Name="fldNameTypeHesab" ColumnName="fldNameTypeHesab" />
+          <ScalarProperty Name="fldDaramadCode" ColumnName="fldDaramadCode" />
+          <ScalarProperty Name="fldItemIdParent" ColumnName="fldItemIdParent" />
+          <ScalarProperty Name="LastNod" ColumnName="LastNod" />
+          <ScalarProperty Name="fldMahiyat_GardeshId" ColumnName="fldMahiyat_GardeshId" />
+          <ScalarProperty Name="fldItemId" ColumnName="fldItemId" />
+          <ScalarProperty Name="fldAddChildNode" ColumnName="fldAddChildNode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCoding_DetailsUpdate" FunctionName="AccountingModel.Store.spr_tblCoding_DetailsUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentRecord_DetailsDelete" FunctionName="AccountingModel.Store.spr_tblDocumentRecord_DetailsDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentRecord_DetailsInsert" FunctionName="AccountingModel.Store.spr_tblDocumentRecord_DetailsInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentRecord_DetailsUpdate" FunctionName="AccountingModel.Store.spr_tblDocumentRecord_DetailsUpdate" />
+    <FunctionImportMapping FunctionImportName="CheckValidCode_CodingDetail" FunctionName="AccountingModel.Store.CheckValidCode_CodingDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.CheckValidCode_CodingDetail">
+          <ScalarProperty Name="fldValid" ColumnName="fldValid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCaseDelete" FunctionName="AccountingModel.Store.spr_tblCaseDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblCaseInsert" FunctionName="AccountingModel.Store.spr_tblCaseInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblCaseSelect" FunctionName="AccountingModel.Store.spr_tblCaseSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblCaseSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldCaseTypeId" ColumnName="fldCaseTypeId" />
+          <ScalarProperty Name="fldSourceId" ColumnName="fldSourceId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCaseUpdate" FunctionName="AccountingModel.Store.spr_tblCaseUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_GetParamDocumentDesc" FunctionName="AccountingModel.Store.spr_GetParamDocumentDesc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_GetParamDocumentDesc">
+          <ScalarProperty Name="param" ColumnName="param" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_LastNum_AtfDocumentRecord" FunctionName="AccountingModel.Store.spr_LastNum_AtfDocumentRecord">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_LastNum_AtfDocumentRecord">
+          <ScalarProperty Name="fldDocumentNum" ColumnName="fldDocumentNum" />
+          <ScalarProperty Name="AtfNum" ColumnName="AtfNum" />
+          <ScalarProperty Name="ShomareRoozane" ColumnName="ShomareRoozane" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_IsCostCenter" FunctionName="AccountingModel.Store.spr_IsCostCenter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_IsCostCenter">
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_RptByCoding" FunctionName="AccountingModel.Store.spr_RptByCoding">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_RptByCoding">
+          <ScalarProperty Name="fldBedehkar" ColumnName="fldBedehkar" />
+          <ScalarProperty Name="fldBestankar" ColumnName="fldBestankar" />
+          <ScalarProperty Name="MandehHeasb" ColumnName="MandehHeasb" />
+          <ScalarProperty Name="GardeshHesab" ColumnName="GardeshHesab" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldType" ColumnName="fldType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblFiscalYearDelete" FunctionName="AccountingModel.Store.spr_tblFiscalYearDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblFiscalYearInsert" FunctionName="AccountingModel.Store.spr_tblFiscalYearInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblFiscalYearSelect" FunctionName="AccountingModel.Store.spr_tblFiscalYearSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblFiscalYearSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldYear" ColumnName="fldYear" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="test" ColumnName="test" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblFiscalYearUpdate" FunctionName="AccountingModel.Store.spr_tblFiscalYearUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_DocumentDetailDelete" FunctionName="AccountingModel.Store.spr_DocumentDetailDelete" />
+    <FunctionImportMapping FunctionImportName="spr_RptCodingStatus" FunctionName="AccountingModel.Store.spr_RptCodingStatus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_RptCodingStatus">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldParentTitle" ColumnName="fldParentTitle" />
+          <ScalarProperty Name="fldMande" ColumnName="fldMande" />
+          <ScalarProperty Name="fldTypeName" ColumnName="fldTypeName" />
+          <ScalarProperty Name="fldType" ColumnName="fldType" />
+          <ScalarProperty Name="fldNoe_Mahiyat" ColumnName="fldNoe_Mahiyat" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_RptCodingTurnover" FunctionName="AccountingModel.Store.spr_RptCodingTurnover">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_RptCodingTurnover">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldParentTitle" ColumnName="fldParentTitle" />
+          <ScalarProperty Name="fldBedehkar_t" ColumnName="fldBedehkar_t" />
+          <ScalarProperty Name="fldBestankar_t" ColumnName="fldBestankar_t" />
+          <ScalarProperty Name="fldType" ColumnName="fldType" />
+          <ScalarProperty Name="fldMande_t" ColumnName="fldMande_t" />
+          <ScalarProperty Name="fldTypeName_t" ColumnName="fldTypeName_t" />
+          <ScalarProperty Name="fldDocumentNum" ColumnName="fldDocumentNum" />
+          <ScalarProperty Name="fldDescriptionDocu" ColumnName="fldDescriptionDocu" />
+          <ScalarProperty Name="fldBedehkar" ColumnName="fldBedehkar" />
+          <ScalarProperty Name="fldBestankar" ColumnName="fldBestankar" />
+          <ScalarProperty Name="fldDocument_HedearId" ColumnName="fldDocument_HedearId" />
+          <ScalarProperty Name="fldParvande" ColumnName="fldParvande" />
+          <ScalarProperty Name="fldTarikhDocument" ColumnName="fldTarikhDocument" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetDefaultCode" FunctionName="AccountingModel.Store.GetDefaultCode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.GetDefaultCode">
+          <ScalarProperty Name="fldCode" ColumnName="fldCode" />
+          <ScalarProperty Name="LevelId" ColumnName="LevelId" />
+          <ScalarProperty Name="fldLevelName" ColumnName="fldLevelName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_SelectMoratabSaziTarikhSanad" FunctionName="AccountingModel.Store.spr_SelectMoratabSaziTarikhSanad" />
+    <FunctionImportMapping FunctionImportName="spr_tblTypeHesabSelect" FunctionName="AccountingModel.Store.spr_tblTypeHesabSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblTypeHesabSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentTypeSelect" FunctionName="AccountingModel.Store.spr_tblDocumentTypeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblDocumentTypeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentRecorde_FileDelete" FunctionName="AccountingModel.Store.spr_tblDocumentRecorde_FileDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentRecorde_FileInsert" FunctionName="AccountingModel.Store.spr_tblDocumentRecorde_FileInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentRecorde_FileSelect" FunctionName="AccountingModel.Store.spr_tblDocumentRecorde_FileSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblDocumentRecorde_FileSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldDocumentHeaderId" ColumnName="fldDocumentHeaderId" />
+          <ScalarProperty Name="fldFileId" ColumnName="fldFileId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentDescDelete" FunctionName="AccountingModel.Store.spr_tblDocumentDescDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentDescInsert" FunctionName="AccountingModel.Store.spr_tblDocumentDescInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentDescSelect" FunctionName="AccountingModel.Store.spr_tblDocumentDescSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblDocumentDescSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldDocDesc" ColumnName="fldDocDesc" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldFlag" ColumnName="fldFlag" />
+          <ScalarProperty Name="fldFlagName" ColumnName="fldFlagName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentBookMarkDelete" FunctionName="AccountingModel.Store.spr_tblDocumentBookMarkDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentBookMarkInsert" FunctionName="AccountingModel.Store.spr_tblDocumentBookMarkInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentBookMarkSelect" FunctionName="AccountingModel.Store.spr_tblDocumentBookMarkSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblDocumentBookMarkSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldDocumentRecordeId" ColumnName="fldDocumentRecordeId" />
+          <ScalarProperty Name="fldArchiveTreeId" ColumnName="fldArchiveTreeId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentBookMarkUpdate" FunctionName="AccountingModel.Store.spr_tblDocumentBookMarkUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_CheckRemain" FunctionName="AccountingModel.Store.spr_CheckRemain">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_CheckRemain">
+          <ScalarProperty Name="fldCheck" ColumnName="fldCheck" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentRecorde_File_BookMarkSelect" FunctionName="AccountingModel.Store.spr_tblDocumentRecorde_File_BookMarkSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblDocumentRecorde_File_BookMarkSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldImage" ColumnName="fldImage" />
+          <ScalarProperty Name="fldPasvand" ColumnName="fldPasvand" />
+          <ScalarProperty Name="fldArchiveTreeId" ColumnName="fldArchiveTreeId" />
+          <ScalarProperty Name="fldIsBookMark" ColumnName="fldIsBookMark" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentRecorde_File_BookMarkInsert" FunctionName="AccountingModel.Store.spr_tblDocumentRecorde_File_BookMarkInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentRecord_Ghati" FunctionName="AccountingModel.Store.spr_tblDocumentRecord_Ghati" />
+    <FunctionImportMapping FunctionImportName="spr_SelectBookmarkPath" FunctionName="AccountingModel.Store.spr_SelectBookmarkPath">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_SelectBookmarkPath">
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_selectExistsItemDaramad" FunctionName="AccountingModel.Store.spr_selectExistsItemDaramad">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_selectExistsItemDaramad">
+          <ScalarProperty Name="fldItemId" ColumnName="fldItemId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_RptCodingTurnover_Tarikh" FunctionName="AccountingModel.Store.spr_RptCodingTurnover_Tarikh">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_RptCodingTurnover_Tarikh">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldParentTitle" ColumnName="fldParentTitle" />
+          <ScalarProperty Name="fldBedehkar" ColumnName="fldBedehkar" />
+          <ScalarProperty Name="fldBestankar" ColumnName="fldBestankar" />
+          <ScalarProperty Name="fldBedehkar_t" ColumnName="fldBedehkar_t" />
+          <ScalarProperty Name="fldBestankar_t" ColumnName="fldBestankar_t" />
+          <ScalarProperty Name="fldTypeName_t" ColumnName="fldTypeName_t" />
+          <ScalarProperty Name="fldType" ColumnName="fldType" />
+          <ScalarProperty Name="fldDocumentNum" ColumnName="fldDocumentNum" />
+          <ScalarProperty Name="fldDescriptionDocu" ColumnName="fldDescriptionDocu" />
+          <ScalarProperty Name="fldDocument_HedearId" ColumnName="fldDocument_HedearId" />
+          <ScalarProperty Name="fldParvande" ColumnName="fldParvande" />
+          <ScalarProperty Name="fldMande_t" ColumnName="fldMande_t" />
+          <ScalarProperty Name="fldTarikhDocument" ColumnName="fldTarikhDocument" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_CheckDocStatus" FunctionName="AccountingModel.Store.spr_CheckDocStatus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_CheckDocStatus">
+          <ScalarProperty Name="DocStatus" ColumnName="DocStatus" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_Document_CopyInsert" FunctionName="AccountingModel.Store.spr_Document_CopyInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblItemNecessarySelect" FunctionName="AccountingModel.Store.spr_tblItemNecessarySelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblItemNecessarySelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldNameItem" ColumnName="fldNameItem" />
+          <ScalarProperty Name="fldMahiyatId" ColumnName="fldMahiyatId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIp" ColumnName="fldIp" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldTypeHesabId" ColumnName="fldTypeHesabId" />
+          <ScalarProperty Name="fldNameTypeHesab" ColumnName="fldNameTypeHesab" />
+          <ScalarProperty Name="fldMahiyat_GardeshId" ColumnName="fldMahiyat_GardeshId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblTemplateCodingSelect" FunctionName="AccountingModel.Store.spr_tblTemplateCodingSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblTemplateCodingSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldItemId" ColumnName="fldItemId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldPCod" ColumnName="fldPCod" />
+          <ScalarProperty Name="fldMahiyatId" ColumnName="fldMahiyatId" />
+          <ScalarProperty Name="fldCode" ColumnName="fldCode" />
+          <ScalarProperty Name="fldTempNameId" ColumnName="fldTempNameId" />
+          <ScalarProperty Name="fldLevelsAccountTypId" ColumnName="fldLevelsAccountTypId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIp" ColumnName="fldIp" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldTemplateName" ColumnName="fldTemplateName" />
+          <ScalarProperty Name="fldNameItem" ColumnName="fldNameItem" />
+          <ScalarProperty Name="fldTitle_Mahiyat" ColumnName="fldTitle_Mahiyat" />
+          <ScalarProperty Name="fldName_LevelsAccountingType" ColumnName="fldName_LevelsAccountingType" />
+          <ScalarProperty Name="fldNameTypeHesab" ColumnName="fldNameTypeHesab" />
+          <ScalarProperty Name="fldTypeHesabId" ColumnName="fldTypeHesabId" />
+          <ScalarProperty Name="fldDaramadCode" ColumnName="fldDaramadCode" />
+          <ScalarProperty Name="fldCodeBudget" ColumnName="fldCodeBudget" />
+          <ScalarProperty Name="fldAddChildNode" ColumnName="fldAddChildNode" />
+          <ScalarProperty Name="fldMahiyat_GardeshId" ColumnName="fldMahiyat_GardeshId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_DocumentUpdate" FunctionName="AccountingModel.Store.spr_DocumentUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentRecord_DetailsSelect" FunctionName="AccountingModel.Store.spr_tblDocumentRecord_DetailsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblDocumentRecord_DetailsSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldDocument_HedearId" ColumnName="fldDocument_HedearId" />
+          <ScalarProperty Name="fldCodingId" ColumnName="fldCodingId" />
+          <ScalarProperty Name="fldDescription" ColumnName="fldDescription" />
+          <ScalarProperty Name="fldBedehkar" ColumnName="fldBedehkar" />
+          <ScalarProperty Name="fldBestankar" ColumnName="fldBestankar" />
+          <ScalarProperty Name="fldCenterCoId" ColumnName="fldCenterCoId" />
+          <ScalarProperty Name="fldCaseId" ColumnName="fldCaseId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldSourceId" ColumnName="fldSourceId" />
+          <ScalarProperty Name="fldCaseTypeId" ColumnName="fldCaseTypeId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldNameCenter" ColumnName="fldNameCenter" />
+          <ScalarProperty Name="fldOrder" ColumnName="fldOrder" />
+          <ScalarProperty Name="fldCode" ColumnName="fldCode" />
+          <ScalarProperty Name="fldNameCoding" ColumnName="fldNameCoding" />
+          <ScalarProperty Name="fldName_CodeDetail" ColumnName="fldName_CodeDetail" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentRecord_HeaderSelect" FunctionName="AccountingModel.Store.spr_tblDocumentRecord_HeaderSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblDocumentRecord_HeaderSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldDocumentNum" ColumnName="fldDocumentNum" />
+          <ScalarProperty Name="fldAtfNum" ColumnName="fldAtfNum" />
+          <ScalarProperty Name="fldArchiveNum" ColumnName="fldArchiveNum" />
+          <ScalarProperty Name="fldDescriptionDocu" ColumnName="fldDescriptionDocu" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldTarikhDocument" ColumnName="fldTarikhDocument" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldAccept" ColumnName="fldAccept" />
+          <ScalarProperty Name="fldType" ColumnName="fldType" />
+          <ScalarProperty Name="fldTypeName" ColumnName="fldTypeName" />
+          <ScalarProperty Name="ShomareRoozane" ColumnName="ShomareRoozane" />
+          <ScalarProperty Name="fldShomareFaree" ColumnName="fldShomareFaree" />
+          <ScalarProperty Name="fldYear" ColumnName="fldYear" />
+          <ScalarProperty Name="fldFiscalYearId" ColumnName="fldFiscalYearId" />
+          <ScalarProperty Name="fldTypeSanad" ColumnName="fldTypeSanad" />
+          <ScalarProperty Name="fldTypeSanadName" ColumnName="fldTypeSanadName" />
+          <ScalarProperty Name="fldNameModule" ColumnName="fldNameModule" />
+          <ScalarProperty Name="fldModuleErsalId" ColumnName="fldModuleErsalId" />
+          <ScalarProperty Name="fldIsArchive" ColumnName="fldIsArchive" />
+          <ScalarProperty Name="fldDocumentNum_Pid" ColumnName="fldDocumentNum_Pid" />
+          <ScalarProperty Name="fldPId" ColumnName="fldPId" />
+          <ScalarProperty Name="fldTypeSanadName_Pid" ColumnName="fldTypeSanadName_Pid" />
+          <ScalarProperty Name="fldMainDocNum" ColumnName="fldMainDocNum" />
+          <ScalarProperty Name="fldFlag" ColumnName="fldFlag" />
+          <ScalarProperty Name="fldIsMap" ColumnName="fldIsMap" />
+          <ScalarProperty Name="fldEdit" ColumnName="fldEdit" />
+          <ScalarProperty Name="fldCaseTypeId" ColumnName="fldCaseTypeId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_DocumentInsert" FunctionName="AccountingModel.Store.spr_DocumentInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblDocumentRecord_Header1Update" FunctionName="AccountingModel.Store.spr_tblDocumentRecord_Header1Update" />
+    <FunctionImportMapping FunctionImportName="spr_RptCodingStatus_Parvande" FunctionName="AccountingModel.Store.spr_RptCodingStatus_Parvande">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_RptCodingStatus_Parvande">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldParentTitle" ColumnName="fldParentTitle" />
+          <ScalarProperty Name="fldMande" ColumnName="fldMande" />
+          <ScalarProperty Name="fldTypeName" ColumnName="fldTypeName" />
+          <ScalarProperty Name="fldType" ColumnName="fldType" />
+          <ScalarProperty Name="fldParvande" ColumnName="fldParvande" />
+          <ScalarProperty Name="fldCaseTypeId" ColumnName="fldCaseTypeId" />
+          <ScalarProperty Name="fldSourceId" ColumnName="fldSourceId" />
+          <ScalarProperty Name="fldNoe_Mande" ColumnName="fldNoe_Mande" />
+          <ScalarProperty Name="fldMahiyatId" ColumnName="fldMahiyatId" />
+          <ScalarProperty Name="fldNoe_Mahiyat" ColumnName="fldNoe_Mahiyat" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCoding_ProjeFaaliatSelect" FunctionName="AccountingModel.Store.spr_tblCoding_ProjeFaaliatSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblCoding_ProjeFaaliatSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldCodingDetailId" ColumnName="fldCodingDetailId" />
+          <ScalarProperty Name="fldCodingTitle" ColumnName="fldCodingTitle" />
+          <ScalarProperty Name="fldMahiyatId" ColumnName="fldMahiyatId" />
+          <ScalarProperty Name="fldCodeAcc" ColumnName="fldCodeAcc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_SelectDocumentRecord_ComboBox" FunctionName="AccountingModel.Store.spr_SelectDocumentRecord_ComboBox">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_SelectDocumentRecord_ComboBox">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldCaseTypeId" ColumnName="fldCaseTypeId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_GetParvandeInfo" FunctionName="AccountingModel.Store.spr_GetParvandeInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_GetParvandeInfo">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldCodemeli" ColumnName="fldCodemeli" />
+          <ScalarProperty Name="fldStartContract" ColumnName="fldStartContract" />
+          <ScalarProperty Name="fldEndContract" ColumnName="fldEndContract" />
+          <ScalarProperty Name="fldMablagh" ColumnName="fldMablagh" />
+          <ScalarProperty Name="fldShenasePardakht" ColumnName="fldShenasePardakht" />
+          <ScalarProperty Name="fldShenaseGhabz" ColumnName="fldShenaseGhabz" />
+          <ScalarProperty Name="fldShomareHesab" ColumnName="fldShomareHesab" />
+          <ScalarProperty Name="fldIsEbtal" ColumnName="fldIsEbtal" />
+          <ScalarProperty Name="fldSharh" ColumnName="fldSharh" />
+          <ScalarProperty Name="fldType" ColumnName="fldType" />
+          <ScalarProperty Name="fldTypeId" ColumnName="fldTypeId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_CopyDocumentWithHeaderId" FunctionName="AccountingModel.Store.spr_CopyDocumentWithHeaderId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_CopyDocumentWithHeaderId">
+          <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+          <ScalarProperty Name="Error_Msg" ColumnName="Error_Msg" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCodingDetail_CaseTypeDelete" FunctionName="AccountingModel.Store.spr_tblCodingDetail_CaseTypeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblCodingDetail_CaseTypeInsert" FunctionName="AccountingModel.Store.spr_tblCodingDetail_CaseTypeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblCodingDetail_CaseTypeSelect" FunctionName="AccountingModel.Store.spr_tblCodingDetail_CaseTypeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblCodingDetail_CaseTypeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldCodingDetailId" ColumnName="fldCodingDetailId" />
+          <ScalarProperty Name="fldCaseTypeId" ColumnName="fldCaseTypeId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCodingDetail_CaseTypeUpdate" FunctionName="AccountingModel.Store.spr_tblCodingDetail_CaseTypeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_CheckMahiyatGardesh_Mande" FunctionName="AccountingModel.Store.spr_CheckMahiyatGardesh_Mande">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_CheckMahiyatGardesh_Mande">
+          <ScalarProperty Name="fldBedehkar" ColumnName="fldBedehkar" />
+          <ScalarProperty Name="fldBestankar" ColumnName="fldBestankar" />
+          <ScalarProperty Name="fldMahiyatMonde" ColumnName="fldMahiyatMonde" />
+          <ScalarProperty Name="fldMahiyatGardesh" ColumnName="fldMahiyatGardesh" />
+          <ScalarProperty Name="fldMahiyat_GardeshId" ColumnName="fldMahiyat_GardeshId" />
+          <ScalarProperty Name="fldMahiyatId" ColumnName="fldMahiyatId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblBankTemplate_DetailsSelect" FunctionName="AccountingModel.Store.spr_tblBankTemplate_DetailsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblBankTemplate_DetailsSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldHeaderId" ColumnName="fldHeaderId" />
+          <ScalarProperty Name="fldBankId" ColumnName="fldBankId" />
+          <ScalarProperty Name="fldBankName" ColumnName="fldBankName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_SelectDocumentEkhtetamiye" FunctionName="AccountingModel.Store.spr_SelectDocumentEkhtetamiye">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_SelectDocumentEkhtetamiye">
+          <ScalarProperty Name="fldCodingId" ColumnName="fldCodingId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldDescription" ColumnName="fldDescription" />
+          <ScalarProperty Name="fldBestankar" ColumnName="fldBestankar" />
+          <ScalarProperty Name="fldBedehkar" ColumnName="fldBedehkar" />
+          <ScalarProperty Name="fldCenterCoId" ColumnName="fldCenterCoId" />
+          <ScalarProperty Name="fldCaseId" ColumnName="fldCaseId" />
+          <ScalarProperty Name="fldName_CodeDetail" ColumnName="fldName_CodeDetail" />
+          <ScalarProperty Name="fldCaseTypeId" ColumnName="fldCaseTypeId" />
+          <ScalarProperty Name="fldSourceId" ColumnName="fldSourceId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblBankTemplate_HeaderDelete" FunctionName="AccountingModel.Store.spr_tblBankTemplate_HeaderDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblBankTemplate_HeaderInsert" FunctionName="AccountingModel.Store.spr_tblBankTemplate_HeaderInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblBankTemplate_HeaderSelect" FunctionName="AccountingModel.Store.spr_tblBankTemplate_HeaderSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblBankTemplate_HeaderSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldNamePattern" ColumnName="fldNamePattern" />
+          <ScalarProperty Name="fldStartRow" ColumnName="fldStartRow" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldBankName" ColumnName="fldBankName" />
+          <ScalarProperty Name="fldPasvand" ColumnName="fldPasvand" />
+          <ScalarProperty Name="fldFileId" ColumnName="fldFileId" />
+          <ScalarProperty Name="fldBankId" ColumnName="fldBankId" />
+          <ScalarProperty Name="fldDetailsId" ColumnName="fldDetailsId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblBankTemplate_HeaderUpdate" FunctionName="AccountingModel.Store.spr_tblBankTemplate_HeaderUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblBankBill_DetailsDelete" FunctionName="AccountingModel.Store.spr_tblBankBill_DetailsDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblBankBill_DetailsSelect" FunctionName="AccountingModel.Store.spr_tblBankBill_DetailsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblBankBill_DetailsSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldHedearId" ColumnName="fldHedearId" />
+          <ScalarProperty Name="fldBedehkar" ColumnName="fldBedehkar" />
+          <ScalarProperty Name="fldBestankar" ColumnName="fldBestankar" />
+          <ScalarProperty Name="fldMandeh" ColumnName="fldMandeh" />
+          <ScalarProperty Name="fldTarikh" ColumnName="fldTarikh" />
+          <ScalarProperty Name="fldTime" ColumnName="fldTime" />
+          <ScalarProperty Name="fldCodePeygiri" ColumnName="fldCodePeygiri" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblBankBill_HeaderDelete" FunctionName="AccountingModel.Store.spr_tblBankBill_HeaderDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblBankBill_HeaderInsert" FunctionName="AccountingModel.Store.spr_tblBankBill_HeaderInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblBankBill_HeaderSelect" FunctionName="AccountingModel.Store.spr_tblBankBill_HeaderSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblBankBill_HeaderSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldShomareHesabId" ColumnName="fldShomareHesabId" />
+          <ScalarProperty Name="fldFiscalYearId" ColumnName="fldFiscalYearId" />
+          <ScalarProperty Name="fldJsonFile" ColumnName="fldJsonFile" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldPatternId" ColumnName="fldPatternId" />
+          <ScalarProperty Name="fldNamePattern" ColumnName="fldNamePattern" />
+          <ScalarProperty Name="fldShomareHesab" ColumnName="fldShomareHesab" />
+          <ScalarProperty Name="fldBankName" ColumnName="fldBankName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblBankBill_HeaderUpdate" FunctionName="AccountingModel.Store.spr_tblBankBill_HeaderUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_SelectMoghayeratBanki" FunctionName="AccountingModel.Store.spr_SelectMoghayeratBanki">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_SelectMoghayeratBanki">
+          <ScalarProperty Name="fldBedehkar" ColumnName="fldBedehkar" />
+          <ScalarProperty Name="fldBestankar" ColumnName="fldBestankar" />
+          <ScalarProperty Name="fldTarikh" ColumnName="fldTarikh" />
+          <ScalarProperty Name="fldCodePeygiri" ColumnName="fldCodePeygiri" />
+          <ScalarProperty Name="fldMandeh" ColumnName="fldMandeh" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldDocumentNum" ColumnName="fldDocumentNum" />
+          <ScalarProperty Name="fldCode" ColumnName="fldCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="tblBankBill_DetailsDeleteNotExists" FunctionName="AccountingModel.Store.tblBankBill_DetailsDeleteNotExists">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.tblBankBill_DetailsDeleteNotExists">
+          <ScalarProperty Name="flag" ColumnName="flag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_SelectBankBillBazeTarikh" FunctionName="AccountingModel.Store.spr_SelectBankBillBazeTarikh">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_SelectBankBillBazeTarikh">
+          <ScalarProperty Name="fldMinTarikh" ColumnName="fldMinTarikh" />
+          <ScalarProperty Name="fldMaxTarikh" ColumnName="fldMaxTarikh" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_SelectBastanHesabha" FunctionName="AccountingModel.Store.spr_SelectBastanHesabha">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_SelectBastanHesabha">
+          <ScalarProperty Name="fldCodingId" ColumnName="fldCodingId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldDescription" ColumnName="fldDescription" />
+          <ScalarProperty Name="fldBestankar" ColumnName="fldBestankar" />
+          <ScalarProperty Name="fldBedehkar" ColumnName="fldBedehkar" />
+          <ScalarProperty Name="fldCenterCoId" ColumnName="fldCenterCoId" />
+          <ScalarProperty Name="fldCaseId" ColumnName="fldCaseId" />
+          <ScalarProperty Name="fldName_CodeDetail" ColumnName="fldName_CodeDetail" />
+          <ScalarProperty Name="fldCaseTypeId" ColumnName="fldCaseTypeId" />
+          <ScalarProperty Name="fldSourceId" ColumnName="fldSourceId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_UpdateExitGhateeiDocument" FunctionName="AccountingModel.Store.spr_UpdateExitGhateeiDocument" />
+    <FunctionImportMapping FunctionImportName="spr_RptDafater" FunctionName="AccountingModel.Store.spr_RptDafater">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_RptDafater">
+          <ScalarProperty Name="fldCode" ColumnName="fldCode" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldBedehkar" ColumnName="fldBedehkar" />
+          <ScalarProperty Name="fldBestankar" ColumnName="fldBestankar" />
+          <ScalarProperty Name="fldDocumentNum" ColumnName="fldDocumentNum" />
+          <ScalarProperty Name="fldTarikhDocument" ColumnName="fldTarikhDocument" />
+          <ScalarProperty Name="fldDescriptionDocu" ColumnName="fldDescriptionDocu" />
+          <ScalarProperty Name="fldMande" ColumnName="fldMande" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_DocumentInsert_DaramadFish" FunctionName="AccountingModel.Store.spr_DocumentInsert_DaramadFish" />
+    <FunctionImportMapping FunctionImportName="spr_SelectHesabDaryaftani" FunctionName="AccountingModel.Store.spr_SelectHesabDaryaftani">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_SelectHesabDaryaftani">
+          <ScalarProperty Name="fldSerialFish" ColumnName="fldSerialFish" />
+          <ScalarProperty Name="fldBedehkar" ColumnName="fldBedehkar" />
+          <ScalarProperty Name="fldBestankar" ColumnName="fldBestankar" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldCode" ColumnName="fldCode" />
+          <ScalarProperty Name="fldNameCoding" ColumnName="fldNameCoding" />
+          <ScalarProperty Name="fldMande" ColumnName="fldMande" />
+          <ScalarProperty Name="fldNameShakhs" ColumnName="fldNameShakhs" />
+          <ScalarProperty Name="fldElamAvarezId" ColumnName="fldElamAvarezId" />
+          <ScalarProperty Name="fldModuleErsalId" ColumnName="fldModuleErsalId" />
+          <ScalarProperty Name="fldCaseTypeName" ColumnName="fldCaseTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblArtiklMapInsert" FunctionName="AccountingModel.Store.spr_tblArtiklMapInsert">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_tblArtiklMapInsert_Result">
+          <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_SelectMortabet" FunctionName="AccountingModel.Store.spr_SelectMortabet">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AccountingModel.spr_SelectMortabet">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

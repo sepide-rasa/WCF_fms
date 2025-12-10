@@ -1,0 +1,124 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WCF_FMS.TOL.PayRoll
+{
+    public class OBJ_DisketBazneshastegi
+    {
+        public string fldName { get; set; }
+        public string fldFamily { get; set; }
+        public string fldJensiyat { get; set; }
+        public string fldFatherName { get; set; }
+        public string fldCodemeli { get; set; }
+        public string fldSh_Shenasname { get; set; }
+        public string StateNameSodoor { get; set; }
+        public string CityNameSodoor { get; set; }
+        public string fldTarikhTavalod { get; set; }
+        public string fldSh_Personali { get; set; }
+        public string TitleMadrak { get; set; }
+        public string TitleReshte { get; set; }
+        public string TitleNezamVazife { get; set; }
+        public string fldRasteShoghli { get; set; }
+        public string OrganPost { get; set; }
+        public string fldReshteShoghli { get; set; }
+        public string fldTabaghe { get; set; }
+        public byte fldGroup { get; set; }
+        public string fldStatusTaaholName { get; set; }
+        public byte fldTedadFarzand { get; set; }
+        public string fldTypeEstekhdam { get; set; }
+        public string fldModeEstekhdam { get; set; }
+        public string fldTarikhEstekhdam { get; set; }
+        public string fldEsargariName { get; set; }
+        public string fldNesbat { get; set; }
+        public string FundChangeDate { get; set; }
+        public string fldSanavatRasmi { get; set; }
+        public string fldSanavatGheyrRasmi { get; set; }
+        public byte fldKarkard { get; set; }
+        public string fldTarikhMoafiat { get; set; }
+        public string fldTarikhEjra { get; set; }
+        public string fldTypeHokm { get; set; }
+        public string fldMobile { get; set; }
+        public int h_paye { get; set; }
+        public int sanavat { get; set; }
+        public int foghshoghl { get; set; }
+        public int jazb { get; set; }
+        public int vije { get; set; }
+        public int talash { get; set; }
+        public int xRay { get; set; }
+        public int barjastegi { get; set; }
+        public int modiryati { get; set; }
+        public int takhasosi { get; set; }
+        public int sakhtikar { get; set; }
+        public int nobatkari { get; set; }
+        public int tatbigh { get; set; }
+        public int hadaghaltadil { get; set; }
+        public int Bahrevari { get; set; }
+        public int hamtarazi { get; set; }
+        public int tadil { get; set; }
+        public int band_y { get; set; }
+        public int Tanazol { get; set; }
+        public int tatbigh1 { get; set; }
+        public int Kahesh { get; set; }
+        public int Tarmim { get; set; }
+        public int fldExExpert { get; set; }
+        public int fldMashmolBime { get; set; }
+        public int fldBimePersonal { get; set; }
+        public int fldBimeKarFarma { get; set; }
+        public int fldMashmolBimeMoavaghe { get; set; }
+        public int fldBimePersonalMoavaghe { get; set; }
+        public int fldBimeKarfarmaMoavaghe { get; set; }
+        public int fldMashmoolKosour { get; set; }
+        public int fldPersonalMashmoolKosour { get; set; }
+        public int fldKarfarmaMashmoolKosour { get; set; }
+        public int fldMogharari { get; set; }
+        public int fldMazad30Sal { get; set; }
+        public int Installments { get; set; }
+        public int MoafiatZood { get; set; }
+        public int EnteghalBime { get; set; }
+        public int TotalKosour { get; set; }
+        //public string CityName { get; set; }     
+        //public Nullable<int> fldMahalTavalodId { get; set; }
+        public Nullable<int> fldStatusTaaholId { get; set; }
+        public Nullable<int> fldMadrakId { get; set; }        
+        public Nullable<byte> fldNezamVazifeId { get; set; }       
+        public int fldEsargariId { get; set; }        
+        //public string fldTarikhEstekhdam { get; set; }        
+        //public short fldYear { get; set; }
+        //public byte fldMonth { get; set; }
+        public int fldPersonalId { get; set; } 
+        //public int sanavat { get; set; }
+        //public int paye { get; set; }
+        //public int sanavat_basiji { get; set; }
+        public int sanavat_isar { get; set; }
+        public int made26 { get; set; }
+        public int fogh_isar { get; set; }
+        //public int abohava { get; set; }
+        //public int tashilat { get; set; }
+        public int riali { get; set; }
+        ///public int jazb9 { get; set; }        
+        //public int makhsos { get; set; }        
+        //public int olad { get; set; }
+        //public int ayelemandi { get; set; }
+        //public int kharobar { get; set; }
+        //public int maskan { get; set; }        
+        //public int bon { get; set; }
+        //public int jazb_tabsare { get; set; }        
+        public int jebhe { get; set; }
+        //public int janbazi { get; set; }
+        //public int sayer { get; set; }
+        //public int ezafekar { get; set; }
+        //public int mamoriat { get; set; }
+        //public int tatilkari { get; set; }
+        //public int s_payankhedmat { get; set; }
+        public int ghazai { get; set; }
+        //public int ashoora { get; set; }
+        public int zaribtadil { get; set; }
+        public int jazbTakhasosi { get; set; }
+        public int jazbtadil { get; set; }        
+        public byte fldMoreGroup { get; set; }
+        public string fldTarikhMazad30Sal { get; set; }
+        //public string fldJobDesc { get; set; }
+    }
+}

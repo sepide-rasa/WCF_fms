@@ -1,0 +1,90 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WCF_FMS.TOL.PayRoll
+{
+    public class OBJ_Rpt12Mahe
+    {
+        public int آیدی_پرسنل { get; set; }
+        public byte ماه { get; set; }
+        public int مالیات { get; set; }
+        public int مالیات_معوقه { get; set; }
+        public string نام_خانوادگی_نام { get; set; }
+        public string نام_پدر { get; set; }
+        public string کدملی { get; set; }
+        public int معوقه { get; set; }
+        public int مشمول_مالیات { get; set; }
+        public int مشمول_مالیات_معوقه { get; set; }
+        public int مطالبات { get; set; }
+        public int کل_مطالبات { get; set; }
+        public int حق_اولاد { get; set; }
+        public int عائله_مندی { get; set; }
+        public int حق_مسکن { get; set; }
+        public Nullable<int> تعطیل_کاری_اضافه_کاری { get; set; }
+        public int ماموریت { get; set; }
+        public int سنوات_پایان_خدمت { get; set; }
+        public int تسهیلات_رفاهی { get; set; }
+        public Nullable<int> حقوق { get; set; }
+        public int فوق_العاده_شغل { get; set; }
+        public int تحقیقی_و_تخصصی { get; set; }
+        public int فوق_العاده_ماده26 { get; set; }
+        public int مدیریتی_و_سرپرستی { get; set; }
+        public int برجستگی { get; set; }
+        public int تفاوت_تطبیق { get; set; }
+        public int فوق_العاده_ایثارگری { get; set; }
+        public int بدی_آب_و_هوا { get; set; }
+        public int تسهیلات_زندگی { get; set; }
+        public int سختی_کار { get; set; }
+        public int فوق_العاده_تعدیل { get; set; }
+        public int مزایای_ریالی_گروه_تشویقی { get; set; }
+        public int حق_جذب_بند9 { get; set; }
+        public int خوار_و_بار { get; set; }
+        public int نوبت_کاری { get; set; }
+        public int بن_ماهیانه { get; set; }
+        public int حق_جذب_تبصره_7_ماده_یک { get; set; }
+        public int فوق_العاده_تلاش { get; set; }
+        public int سایر_مزایا { get; set; }
+        public int اضافه_کاری { get; set; }
+        public int تعطیل_کاری { get; set; }
+        public int حق_جذب_قضایی { get; set; }
+        public int ضریب_تعدیل { get; set; }
+        public int جذب_مشاغل_تخصصی { get; set; }
+        public int جذب_تعدیل { get; set; }
+        public int تفاوت_ناشی_از_ضریب_تعدیل { get; set; }
+        public int حق_شیفت { get; set; }
+        public int تفاوت_بند_ی_ { get; set; }
+        public int تفاوت_جزء_1_ { get; set; }
+        public int تفاوت_ناشی_از_بند6 { get; set; }
+        public Nullable<int> فوق_العاده_جذب { get; set; }
+        public Nullable<int> فوق_العاده_ویژه { get; set; }
+        public Nullable<int> فوق_العاده_مخصوص { get; set; }
+        public int تفاوت_تطبیق_موضوع_جزء1 { get; set; }
+        public Nullable<int> فوق_العاده_خاص { get; set; }
+        public int کارانه { get; set; }
+        public int ترمیم_حقوق { get; set; }
+        public Nullable<int> بیمه_معاف { get; set; }
+        public int پس_انداز_پس_انداز_معوق { get; set; }
+        public int بیمه_تکمیلی_کارفرما { get; set; }
+        public Nullable<int> جمع_مطالبات { get; set; }
+        public int حق_درمان_سهم_کارفرما { get; set; }
+        public int حق_درمان_سهم_دولت { get; set; }
+        public int پس_انداز { get; set; }
+        public int بیمه_تکمیلی_سهم_کارفرما { get; set; }
+        public int بیمه_عمر_سهم_کارفرما { get; set; }
+        public int بیمه_سهم_کارفرما { get; set; }
+        public int بیمه_بیکاری { get; set; }
+        public int حق_درمان_سهم_کارفرما_معوق { get; set; }
+        public int حق_درمان_سهم_دولت_معوق { get; set; }
+        public int پس_انداز_معوق { get; set; }
+        public int بیمه_بیکاری_معوق { get; set; }
+        public int بیمه_سهم_کارفرما_معوق { get; set; }
+        public int مزایای_جانبی_رفاهی { get; set; }
+        public int هزینه_مهد_کودک { get; set; }
+        public int اقلام_خوراکی { get; set; }
+        public int کالاهای_بهداشتی { get; set; }
+        public int مناسبت { get; set; }
+        public int مزایای_جوانی_جمعیت { get; set; }
+    }
+}

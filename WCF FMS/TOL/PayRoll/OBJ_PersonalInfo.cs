@@ -1,0 +1,68 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WCF_FMS.TOL.PayRoll
+{
+    public class OBJ_PersonalInfo
+    {
+        public int fldId { get; set; }
+        public int fldEmployeeId { get; set; }
+        public string fldSh_Shenasname { get; set; }
+        public string fldTarikhTavalod { get; set; }
+        public Nullable<int> fldMahalTavalodId { get; set; }
+        public string fldAddress { get; set; }
+        public string fldCodePosti { get; set; }
+        public int fldEsargariId { get; set; }
+        public string fldSharhEsargari { get; set; }
+        public string fldSh_Personali { get; set; }
+        public Nullable<int> fldMadrakId { get; set; }
+        public Nullable<byte> fldNezamVazifeId { get; set; }
+        public int fldOrganPostId { get; set; }
+        public string fldRasteShoghli { get; set; }
+        public string fldReshteShoghli { get; set; }
+        public string fldTarikhEstekhdam { get; set; }
+        public int fldChartOrganId { get; set; }
+        public string fldTabaghe { get; set; }
+        public Nullable<bool> fldMeliyat { get; set; }
+        public string fldSh_MojavezEstekhdam { get; set; }
+        public string fldTarikhMajavezEstekhdam { get; set; }
+        public int fldUserId { get; set; }
+        public string fldDesc { get; set; }
+        public System.DateTime fldDate { get; set; }
+        public string fldMeliyatName { get; set; }
+        public string fldMadrakTahsiliTitle { get; set; }
+        public string fldVaziyatEsargariTitle { get; set; }
+        public string fldNezamVazifeTitle { get; set; }
+        public string fldNameEmployee { get; set; }
+        public string fldName { get; set; }
+        public string fldFamily { get; set; }
+        public string fldFatherName { get; set; }
+        public Nullable<bool> fldJensiyat { get; set; }
+        public string fldTitleChartOrgan { get; set; }
+        public string fldNameOrgan { get; set; }
+        public string fldNameMahalTavalod { get; set; }
+        public string fldNameMahlSodoor { get; set; }
+        public string fldCodemeli { get; set; }
+        public Nullable<int> fldFileId { get; set; }
+        public string fldNameJensiyat { get; set; }
+        public string NamePostOran { get; set; }
+        public string fldReshteTahsiliTitle { get; set; }
+        public string fldName_FamilyEmployee { get; set; }
+        public int fldOrganId { get; set; }
+        public int fldIdStatus { get; set; }
+        public int fldNoeEstekhdam { get; set; }
+        public string fldTitleStatus { get; set; }
+        public Nullable<int> fldMahalSodoorId { get; set; }
+        public Nullable<int> fldReshteId { get; set; }
+        public string fldTarikhSodoor { get; set; }
+        public Nullable<int> fldTaaholId { get; set; }
+        public string TitleNoeEstekhdam { get; set; }
+        public string TitleOrganPostEjraee { get; set; }
+        public string TitleChartOrganEjraee { get; set; }
+        public Nullable<int> fldOrganPostEjraeeId { get; set; }
+        public string fldTel { get; set; }
+        public string fldMobile { get; set; }
+    }
+}

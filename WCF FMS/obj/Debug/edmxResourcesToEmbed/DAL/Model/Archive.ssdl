@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RasaNewFMSModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="spr_SelectArchiveTree_Module" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="ModuleId" Type="int" Mode="In" />
+    <Parameter Name="value" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblArchiveTreeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblArchiveTreeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fldID" Type="int" Mode="InOut" />
+    <Parameter Name="fldPID" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldFileUpload" Type="bit" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldModuleId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblArchiveTreeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="value2" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblArchiveTreeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldPID" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldFileUpload" Type="bit" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldModuleId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblFileMojazDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblFileMojazInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fldArchiveTreeId" Type="int" Mode="In" />
+    <Parameter Name="fldFormatFileId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblFileMojazSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblFileMojazUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldArchiveTreeId" Type="int" Mode="In" />
+    <Parameter Name="fldFormatFileId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParticularPropertiesDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParticularPropertiesInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fldArchiveTreeId" Type="int" Mode="In" />
+    <Parameter Name="fldPropertiesId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParticularPropertiesSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParticularPropertiesUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldArchiveTreeId" Type="int" Mode="In" />
+    <Parameter Name="fldPropertiesId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPropertiesDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPropertiesInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fldNameFn" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldNameEn" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldType" Type="int" Mode="In" />
+    <Parameter Name="fldFormulId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPropertiesSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPropertiesUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldNameFn" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldNameEn" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldType" Type="int" Mode="In" />
+    <Parameter Name="fldFormulId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPropertiesValuesDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPropertiesValuesInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fldParticularId" Type="int" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPropertiesValuesSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPropertiesValuesUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldParticularId" Type="int" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <EntityContainer Name="RasaNewFMSModel1StoreContainer" />
+</Schema>

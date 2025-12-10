@@ -1,0 +1,1137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RasaFMSCommonDBModelStoreContainer" CdmEntityContainer="RasaFMSCommonDBEntities">
+    <FunctionImportMapping FunctionImportName="spr_GetDate" FunctionName="RasaFMSCommonDBModel.Store.spr_GetDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_GetDate">
+          <ScalarProperty Name="fldDateTime" ColumnName="fldDateTime" />
+          <ScalarProperty Name="fldTarikh" ColumnName="fldTarikh" />
+          <ScalarProperty Name="fldTime" ColumnName="fldTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_GetNameOrganForFormul" FunctionName="RasaFMSCommonDBModel.Store.spr_GetNameOrganForFormul">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_GetNameOrganForFormul">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_Masuolin_ZirList" FunctionName="RasaFMSCommonDBModel.Store.spr_Masuolin_ZirList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_Masuolin_ZirList">
+          <ScalarProperty Name="fldid" ColumnName="fldid" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldMasirReport" ColumnName="fldMasirReport" />
+          <ScalarProperty Name="C1" ColumnName="C1" />
+          <ScalarProperty Name="C2" ColumnName="C2" />
+          <ScalarProperty Name="C3" ColumnName="C3" />
+          <ScalarProperty Name="C4" ColumnName="C4" />
+          <ScalarProperty Name="C5" ColumnName="C5" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_MasuolinDetailList" FunctionName="RasaFMSCommonDBModel.Store.spr_MasuolinDetailList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_MasuolinDetailList">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldEmployeeId" ColumnName="fldEmployeeId" />
+          <ScalarProperty Name="fldNameEmployee" ColumnName="fldNameEmployee" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldNameOrgan" ColumnName="fldNameOrgan" />
+          <ScalarProperty Name="fldOrderId" ColumnName="fldOrderId" />
+          <ScalarProperty Name="fldMasuolinId" ColumnName="fldMasuolinId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_SelectUserByUserId" FunctionName="RasaFMSCommonDBModel.Store.spr_SelectUserByUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_SelectUserByUserId">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldEmployId" ColumnName="fldEmployId" />
+          <ScalarProperty Name="fldUserName" ColumnName="fldUserName" />
+          <ScalarProperty Name="fldPassword" ColumnName="fldPassword" />
+          <ScalarProperty Name="fldActive_Deactive" ColumnName="fldActive_Deactive" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldActive_DeactiveName" ColumnName="fldActive_DeactiveName" />
+          <ScalarProperty Name="fldNameEmployee" ColumnName="fldNameEmployee" />
+          <ScalarProperty Name="fldCodemeli" ColumnName="fldCodemeli" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_Signers" FunctionName="RasaFMSCommonDBModel.Store.spr_Signers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_Signers">
+          <ScalarProperty Name="Post" ColumnName="Post" />
+          <ScalarProperty Name="SignerName" ColumnName="SignerName" />
+          <ScalarProperty Name="orderId" ColumnName="orderId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblApplicationPartSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblApplicationPartSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblApplicationPartSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldPID" ColumnName="fldPID" />
+          <ScalarProperty Name="fldUserID" ColumnName="fldUserID" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldModuleId" ColumnName="fldModuleId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblBankDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblBankDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblBankInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblBankInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblBankSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblBankSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblBankSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldBankName" ColumnName="fldBankName" />
+          <ScalarProperty Name="fldFileId" ColumnName="fldFileId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldCentralBankCode" ColumnName="fldCentralBankCode" />
+          <ScalarProperty Name="fldInfinitiveBank" ColumnName="fldInfinitiveBank" />
+          <ScalarProperty Name="fldFix" ColumnName="fldFix" />
+          <ScalarProperty Name="fldFixTitle" ColumnName="fldFixTitle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblBankUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblBankUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblChartOrganDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblChartOrganDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblChartOrganInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblChartOrganInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblChartOrganSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblChartOrganSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblChartOrganSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldPId" ColumnName="fldPId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldNoeVahed" ColumnName="fldNoeVahed" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldNoeVahedName" ColumnName="fldNoeVahedName" />
+          <ScalarProperty Name="fldOrganizationName" ColumnName="fldOrganizationName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblChartOrganUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblChartOrganUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblCityDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblCityDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblCityInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblCityInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblCitySelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblCitySelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblCitySelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldStateId" ColumnName="fldStateId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldStateName" ColumnName="fldStateName" />
+          <ScalarProperty Name="fldLatitude" ColumnName="fldLatitude" />
+          <ScalarProperty Name="fldLongitude" ColumnName="fldLongitude" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCityUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblCityUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblDigitalArchiveTreeStructureDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblDigitalArchiveTreeStructureDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblDigitalArchiveTreeStructureInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblDigitalArchiveTreeStructureInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblDigitalArchiveTreeStructureSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblDigitalArchiveTreeStructureSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblDigitalArchiveTreeStructureSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldPID" ColumnName="fldPID" />
+          <ScalarProperty Name="fldModuleId" ColumnName="fldModuleId" />
+          <ScalarProperty Name="fldAttachFile" ColumnName="fldAttachFile" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldModuleName" ColumnName="fldModuleName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblDigitalArchiveTreeStructureUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblDigitalArchiveTreeStructureUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblEmployeeDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblEmployeeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblEmployeeInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblEmployeeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblEmployeeSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblEmployeeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblEmployeeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldFamily" ColumnName="fldFamily" />
+          <ScalarProperty Name="fldCodemeli" ColumnName="fldCodemeli" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldStatus" ColumnName="fldStatus" />
+          <ScalarProperty Name="fldStatusName" ColumnName="fldStatusName" />
+          <ScalarProperty Name="fldFatherName" ColumnName="fldFatherName" />
+          <ScalarProperty Name="fldTypeShakhs" ColumnName="fldTypeShakhs" />
+          <ScalarProperty Name="fldTypeShakhsName" ColumnName="fldTypeShakhsName" />
+          <ScalarProperty Name="fldSh_Shenasname" ColumnName="fldSh_Shenasname" />
+          <ScalarProperty Name="fldCodeMoshakhase" ColumnName="fldCodeMoshakhase" />
+          <ScalarProperty Name="fldMeli_Moshakhase" ColumnName="fldMeli_Moshakhase" />
+          <ScalarProperty Name="fldPostEjraee" ColumnName="fldPostEjraee" />
+          <ScalarProperty Name="fldOrganPostEjraeeId" ColumnName="fldOrganPostEjraeeId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblEmployeeUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblEmployeeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblErrorDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblErrorDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblErrorInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblErrorInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblErrorSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblErrorSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblErrorSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldUserName" ColumnName="fldUserName" />
+          <ScalarProperty Name="fldMatn" ColumnName="fldMatn" />
+          <ScalarProperty Name="fldTarikh" ColumnName="fldTarikh" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblErrorUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblErrorUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblFileSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblFileSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblFileSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldImage" ColumnName="fldImage" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldPasvand" ColumnName="fldPasvand" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblMasuolin_DetailDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMasuolin_DetailDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblMasuolin_DetailInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMasuolin_DetailInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblMasuolin_DetailSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMasuolin_DetailSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblMasuolin_DetailSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldEmployId" ColumnName="fldEmployId" />
+          <ScalarProperty Name="fldOrganPostId" ColumnName="fldOrganPostId" />
+          <ScalarProperty Name="fldMasuolinId" ColumnName="fldMasuolinId" />
+          <ScalarProperty Name="fldOrderId" ColumnName="fldOrderId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldTarikhEjra" ColumnName="fldTarikhEjra" />
+          <ScalarProperty Name="fldModule_OrganId" ColumnName="fldModule_OrganId" />
+          <ScalarProperty Name="fldNameEmployee" ColumnName="fldNameEmployee" />
+          <ScalarProperty Name="fldNameOrgan" ColumnName="fldNameOrgan" />
+          <ScalarProperty Name="NamePostOrgan" ColumnName="NamePostOrgan" />
+          <ScalarProperty Name="TitlePost" ColumnName="TitlePost" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblMasuolin_DetailUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMasuolin_DetailUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblMasuolinDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMasuolinDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblMasuolinInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMasuolinInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblMasuolinSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMasuolinSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblMasuolinSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTarikhEjra" ColumnName="fldTarikhEjra" />
+          <ScalarProperty Name="fldModule_OrganId" ColumnName="fldModule_OrganId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldTitleModule" ColumnName="fldTitleModule" />
+          <ScalarProperty Name="fldModule_OrganName" ColumnName="fldModule_OrganName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblMasuolinUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMasuolinUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblModule_OrganDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblModule_OrganDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblModule_OrganInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblModule_OrganInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblModule_OrganSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblModule_OrganSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblModule_OrganSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldModuleId" ColumnName="fldModuleId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldNameOrgan" ColumnName="fldNameOrgan" />
+          <ScalarProperty Name="fldNameModule" ColumnName="fldNameModule" />
+          <ScalarProperty Name="fldNameModule_Organ" ColumnName="fldNameModule_Organ" />
+          <ScalarProperty Name="fldPermissionId" ColumnName="fldPermissionId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblModule_OrganUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblModule_OrganUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblModuleDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblModuleDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblModuleInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblModuleInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblModuleSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblModuleSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblModuleSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblModuleUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblModuleUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblOrganizationalPostsDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblOrganizationalPostsDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblOrganizationalPostsInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblOrganizationalPostsInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblOrganizationalPostsSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblOrganizationalPostsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblOrganizationalPostsSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldOrgPostCode" ColumnName="fldOrgPostCode" />
+          <ScalarProperty Name="fldChartOrganId" ColumnName="fldChartOrganId" />
+          <ScalarProperty Name="fldPID" ColumnName="fldPID" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldNameChart" ColumnName="fldNameChart" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldTitlePID" ColumnName="fldTitlePID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblOrganizationalPostsUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblOrganizationalPostsUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblOrganizationDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblOrganizationDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblOrganizationSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblOrganizationSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblOrganizationSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldPId" ColumnName="fldPId" />
+          <ScalarProperty Name="fldFileId" ColumnName="fldFileId" />
+          <ScalarProperty Name="fldCityId" ColumnName="fldCityId" />
+          <ScalarProperty Name="fldCodePosti" ColumnName="fldCodePosti" />
+          <ScalarProperty Name="fldTelphon" ColumnName="fldTelphon" />
+          <ScalarProperty Name="fldAddress" ColumnName="fldAddress" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldCityName" ColumnName="fldCityName" />
+          <ScalarProperty Name="fldCodAnformatic" ColumnName="fldCodAnformatic" />
+          <ScalarProperty Name="fldCodKhedmat" ColumnName="fldCodKhedmat" />
+          <ScalarProperty Name="fldShenaseMelli" ColumnName="fldShenaseMelli" />
+          <ScalarProperty Name="fldCodEghtesadi" ColumnName="fldCodEghtesadi" />
+          <ScalarProperty Name="fldShomareSabt" ColumnName="fldShomareSabt" />
+          <ScalarProperty Name="fldAshkhaseHoghoghiId" ColumnName="fldAshkhaseHoghoghiId" />
+          <ScalarProperty Name="FldNameAshkhaseHoghoghi" ColumnName="FldNameAshkhaseHoghoghi" />
+          <ScalarProperty Name="fldStateId" ColumnName="fldStateId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblOrganizationUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblOrganizationUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblPermissionDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblPermissionDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblPermissionInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblPermissionInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblPermissionSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblPermissionSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblPermissionSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldApplicationPartID" ColumnName="fldApplicationPartID" />
+          <ScalarProperty Name="fldUserID" ColumnName="fldUserID" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldUserGroup_ModuleOrganID" ColumnName="fldUserGroup_ModuleOrganID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblPermissionUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblPermissionUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblSHobeDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblSHobeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblSHobeInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblSHobeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblSHobeSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblSHobeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblSHobeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldBankId" ColumnName="fldBankId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldCodeSHobe" ColumnName="fldCodeSHobe" />
+          <ScalarProperty Name="fldAddress" ColumnName="fldAddress" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldBankName" ColumnName="fldBankName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblSHobeUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblSHobeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblStateDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblStateDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblStateInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblStateInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblStateSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblStateSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblStateSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblStateUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblStateUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblUser_GroupDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblUser_GroupDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblUser_GroupInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblUser_GroupInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblUser_GroupSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblUser_GroupSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblUser_GroupSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldUserGroupId" ColumnName="fldUserGroupId" />
+          <ScalarProperty Name="fldUserSelectId" ColumnName="fldUserSelectId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldGrant" ColumnName="fldGrant" />
+          <ScalarProperty Name="fldWithGrant" ColumnName="fldWithGrant" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldCodemeli" ColumnName="fldCodemeli" />
+          <ScalarProperty Name="fldFatherName" ColumnName="fldFatherName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblUser_GroupUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblUser_GroupUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblUserDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblUserDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblUserGroupDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblUserGroupDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblUserGroupInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblUserGroupInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblUserGroupSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblUserGroupSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblUserGroupSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldUserID" ColumnName="fldUserID" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblUserGroupUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblUserGroupUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblUserInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblUserInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblUserSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblUserSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblUserSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldEmployId" ColumnName="fldEmployId" />
+          <ScalarProperty Name="fldUserName" ColumnName="fldUserName" />
+          <ScalarProperty Name="fldPassword" ColumnName="fldPassword" />
+          <ScalarProperty Name="fldActive_Deactive" ColumnName="fldActive_Deactive" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldActive_DeactiveName" ColumnName="fldActive_DeactiveName" />
+          <ScalarProperty Name="fldNameEmployee" ColumnName="fldNameEmployee" />
+          <ScalarProperty Name="fldCodemeli" ColumnName="fldCodemeli" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblUserUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblUserUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblZirListHaDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblZirListHaDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblZirListHaInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblZirListHaInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblZirListHaSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblZirListHaSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblZirListHaSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldReportId" ColumnName="fldReportId" />
+          <ScalarProperty Name="fldMasuolin_DetailId" ColumnName="fldMasuolin_DetailId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblZirListHaUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblZirListHaUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_TreeOrganPost" FunctionName="RasaFMSCommonDBModel.Store.spr_TreeOrganPost">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_TreeOrganPost">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="pid" ColumnName="pid" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="Namechart" ColumnName="Namechart" />
+          <ScalarProperty Name="fldOrgPostCode" ColumnName="fldOrgPostCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_UserPassUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_UserPassUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblStatusSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblStatusSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblStatusSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblMadrakTahsiliDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMadrakTahsiliDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblMadrakTahsiliInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMadrakTahsiliInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblMadrakTahsiliSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMadrakTahsiliSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblMadrakTahsiliSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblMadrakTahsiliUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMadrakTahsiliUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblNezamVazifeDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblNezamVazifeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblNezamVazifeInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblNezamVazifeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblNezamVazifeSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblNezamVazifeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblNezamVazifeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblNezamVazifeUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblNezamVazifeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblReshteTahsiliDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblReshteTahsiliDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblReshteTahsiliInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblReshteTahsiliInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblReshteTahsiliSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblReshteTahsiliSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblReshteTahsiliSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblReshteTahsiliUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblReshteTahsiliUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblStatusTaaholSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblStatusTaaholSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblStatusTaaholSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblEmployee_DetailDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblEmployee_DetailDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblEmployee_DetailInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblEmployee_DetailInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblEmployee_DetailSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblEmployee_DetailSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblEmployee_DetailSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldEmployeeId" ColumnName="fldEmployeeId" />
+          <ScalarProperty Name="fldFatherName" ColumnName="fldFatherName" />
+          <ScalarProperty Name="fldJensiyat" ColumnName="fldJensiyat" />
+          <ScalarProperty Name="fldMadrakId" ColumnName="fldMadrakId" />
+          <ScalarProperty Name="fldNezamVazifeId" ColumnName="fldNezamVazifeId" />
+          <ScalarProperty Name="fldTaaholId" ColumnName="fldTaaholId" />
+          <ScalarProperty Name="fldReshteId" ColumnName="fldReshteId" />
+          <ScalarProperty Name="fldFileId" ColumnName="fldFileId" />
+          <ScalarProperty Name="fldSh_Shenasname" ColumnName="fldSh_Shenasname" />
+          <ScalarProperty Name="fldMahalTavalodId" ColumnName="fldMahalTavalodId" />
+          <ScalarProperty Name="fldMahalSodoorId" ColumnName="fldMahalSodoorId" />
+          <ScalarProperty Name="fldTarikhSodoor" ColumnName="fldTarikhSodoor" />
+          <ScalarProperty Name="fldAddress" ColumnName="fldAddress" />
+          <ScalarProperty Name="fldCodePosti" ColumnName="fldCodePosti" />
+          <ScalarProperty Name="fldMeliyat" ColumnName="fldMeliyat" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldFamily" ColumnName="fldFamily" />
+          <ScalarProperty Name="fldCodemeli" ColumnName="fldCodemeli" />
+          <ScalarProperty Name="fldTarikhTavalod" ColumnName="fldTarikhTavalod" />
+          <ScalarProperty Name="fldTypeShakhs" ColumnName="fldTypeShakhs" />
+          <ScalarProperty Name="fldTypeShakhsName" ColumnName="fldTypeShakhsName" />
+          <ScalarProperty Name="fldTel" ColumnName="fldTel" />
+          <ScalarProperty Name="fldMobile" ColumnName="fldMobile" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblEmployee_DetailUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblEmployee_DetailUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblAshkhasDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblAshkhasDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblAshkhaseHoghoghiDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblAshkhaseHoghoghiDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblAshkhaseHoghoghiInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblAshkhaseHoghoghiInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblAshkhaseHoghoghiSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblAshkhaseHoghoghiSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblAshkhaseHoghoghiSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldShenaseMelli" ColumnName="fldShenaseMelli" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldShomareSabt" ColumnName="fldShomareSabt" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldTypeShakhs" ColumnName="fldTypeShakhs" />
+          <ScalarProperty Name="fldTypeShakhsName" ColumnName="fldTypeShakhsName" />
+          <ScalarProperty Name="fldSayer" ColumnName="fldSayer" />
+          <ScalarProperty Name="fldSayerName" ColumnName="fldSayerName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblAshkhaseHoghoghiUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblAshkhaseHoghoghiUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblAshkhasInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblAshkhasInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblAshkhasSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblAshkhasSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblAshkhasSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldHaghighiId" ColumnName="fldHaghighiId" />
+          <ScalarProperty Name="fldHoghoghiId" ColumnName="fldHoghoghiId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NoeShakhs" ColumnName="NoeShakhs" />
+          <ScalarProperty Name="fldShenase_CodeMeli" ColumnName="fldShenase_CodeMeli" />
+          <ScalarProperty Name="shomareshabt_father" ColumnName="shomareshabt_father" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldSh_Shenasname" ColumnName="fldSh_Shenasname" />
+          <ScalarProperty Name="fldFamily" ColumnName="fldFamily" />
+          <ScalarProperty Name="fldCodePosti" ColumnName="fldCodePosti" />
+          <ScalarProperty Name="fldShomareTelephone" ColumnName="fldShomareTelephone" />
+          <ScalarProperty Name="fldAddress" ColumnName="fldAddress" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblAshkhasUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblAshkhasUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblMaliyatArzesheAfzoodeDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMaliyatArzesheAfzoodeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblMaliyatArzesheAfzoodeInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMaliyatArzesheAfzoodeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblMaliyatArzesheAfzoodeSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMaliyatArzesheAfzoodeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblMaliyatArzesheAfzoodeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldFromDate" ColumnName="fldFromDate" />
+          <ScalarProperty Name="fldEndDate" ColumnName="fldEndDate" />
+          <ScalarProperty Name="fldDarsadeAvarez" ColumnName="fldDarsadeAvarez" />
+          <ScalarProperty Name="fldDarsadeMaliyat" ColumnName="fldDarsadeMaliyat" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldDarsadAmuzeshParvaresh" ColumnName="fldDarsadAmuzeshParvaresh" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblMaliyatArzesheAfzoodeUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMaliyatArzesheAfzoodeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_chechRangeDateMaliyat" FunctionName="RasaFMSCommonDBModel.Store.spr_chechRangeDateMaliyat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_chechRangeDateMaliyat">
+          <ScalarProperty Name="fldid" ColumnName="fldid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblShomareHesabeOmoomiDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblShomareHesabeOmoomiDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblShomareHesabeOmoomiInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblShomareHesabeOmoomiInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblShomareHesabeOmoomiSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblShomareHesabeOmoomiSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblShomareHesabeOmoomiSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldShobeId" ColumnName="fldShobeId" />
+          <ScalarProperty Name="fldAshkhasId" ColumnName="fldAshkhasId" />
+          <ScalarProperty Name="fldShomareHesab" ColumnName="fldShomareHesab" />
+          <ScalarProperty Name="fldShomareSheba" ColumnName="fldShomareSheba" />
+          <ScalarProperty Name="fldBankId" ColumnName="fldBankId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldBankName" ColumnName="fldBankName" />
+          <ScalarProperty Name="nameShobe" ColumnName="nameShobe" />
+          <ScalarProperty Name="NameAshkhas" ColumnName="NameAshkhas" />
+          <ScalarProperty Name="fldCodeSHobe" ColumnName="fldCodeSHobe" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblShomareHesabeOmoomiUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblShomareHesabeOmoomiUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_GetUserGroupTree" FunctionName="RasaFMSCommonDBModel.Store.spr_GetUserGroupTree">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_GetUserGroupTree">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldGrant" ColumnName="fldGrant" />
+          <ScalarProperty Name="fldWithGrant" ColumnName="fldWithGrant" />
+          <ScalarProperty Name="fldUserID" ColumnName="fldUserID" />
+          <ScalarProperty Name="fldWithGrantLogin" ColumnName="fldWithGrantLogin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_CheckShomareSheba" FunctionName="RasaFMSCommonDBModel.Store.spr_CheckShomareSheba">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_CheckShomareSheba">
+          <ScalarProperty Name="CheckShomareSheba" ColumnName="CheckShomareSheba" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_CheckEmail" FunctionName="RasaFMSCommonDBModel.Store.spr_CheckEmail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_CheckEmail">
+          <ScalarProperty Name="fldType" ColumnName="fldType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblMeasureUnitDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMeasureUnitDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblMeasureUnitInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMeasureUnitInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblMeasureUnitSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMeasureUnitSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblMeasureUnitSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldNameVahed" ColumnName="fldNameVahed" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblMeasureUnitUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblMeasureUnitUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblOrganizationInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblOrganizationInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblAshkhaseHoghoghi_DetailDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblAshkhaseHoghoghi_DetailDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblAshkhaseHoghoghi_DetailInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblAshkhaseHoghoghi_DetailInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblAshkhaseHoghoghi_DetailSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblAshkhaseHoghoghi_DetailSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblAshkhaseHoghoghi_DetailSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldAshkhaseHoghoghiId" ColumnName="fldAshkhaseHoghoghiId" />
+          <ScalarProperty Name="fldCodEghtesadi" ColumnName="fldCodEghtesadi" />
+          <ScalarProperty Name="fldAddress" ColumnName="fldAddress" />
+          <ScalarProperty Name="fldCodePosti" ColumnName="fldCodePosti" />
+          <ScalarProperty Name="fldShomareTelephone" ColumnName="fldShomareTelephone" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldShenaseMelli" ColumnName="fldShenaseMelli" />
+          <ScalarProperty Name="fldShomareSabt" ColumnName="fldShomareSabt" />
+          <ScalarProperty Name="fldTypeShakhs" ColumnName="fldTypeShakhs" />
+          <ScalarProperty Name="fldTypeShakhsName" ColumnName="fldTypeShakhsName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblAshkhaseHoghoghi_DetailUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblAshkhaseHoghoghi_DetailUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblUserGroup_ModuleOrganDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblUserGroup_ModuleOrganDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblUserGroup_ModuleOrganInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblUserGroup_ModuleOrganInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblUserGroup_ModuleOrganSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblUserGroup_ModuleOrganSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblUserGroup_ModuleOrganSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldUserGroupId" ColumnName="fldUserGroupId" />
+          <ScalarProperty Name="fldModuleOrganId" ColumnName="fldModuleOrganId" />
+          <ScalarProperty Name="fldUserID" ColumnName="fldUserID" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldModuleOrganName" ColumnName="fldModuleOrganName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblUserGroup_ModuleOrganUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblUserGroup_ModuleOrganUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_CheckUserGroupForPermission" FunctionName="RasaFMSCommonDBModel.Store.spr_CheckUserGroupForPermission">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_CheckUserGroupForPermission">
+          <ScalarProperty Name="fldType" ColumnName="fldType" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblInputInfoInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblInputInfoInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblInputInfoSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblInputInfoSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblInputInfoSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldDateTime" ColumnName="fldDateTime" />
+          <ScalarProperty Name="fldTime" ColumnName="fldTime" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldMACAddress" ColumnName="fldMACAddress" />
+          <ScalarProperty Name="fldLoginType" ColumnName="fldLoginType" />
+          <ScalarProperty Name="fldUserID" ColumnName="fldUserID" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="Name_Family" ColumnName="Name_Family" />
+          <ScalarProperty Name="fldLoginTypeName" ColumnName="fldLoginTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblChartOrganEjraeeDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblChartOrganEjraeeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblChartOrganEjraeeInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblChartOrganEjraeeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblChartOrganEjraeeSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblChartOrganEjraeeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblChartOrganEjraeeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldPId" ColumnName="fldPId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldNoeVahed" ColumnName="fldNoeVahed" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldNoeVahedName" ColumnName="fldNoeVahedName" />
+          <ScalarProperty Name="fldOrganizationName" ColumnName="fldOrganizationName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblChartOrganEjraeeUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblChartOrganEjraeeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblOrganizationalPostsEjraeeDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblOrganizationalPostsEjraeeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblOrganizationalPostsEjraeeInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblOrganizationalPostsEjraeeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblOrganizationalPostsEjraeeSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblOrganizationalPostsEjraeeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblOrganizationalPostsEjraeeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldOrgPostCode" ColumnName="fldOrgPostCode" />
+          <ScalarProperty Name="fldChartOrganId" ColumnName="fldChartOrganId" />
+          <ScalarProperty Name="fldPID" ColumnName="fldPID" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldNameChart" ColumnName="fldNameChart" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldTitlePID" ColumnName="fldTitlePID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblOrganizationalPostsEjraeeUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblOrganizationalPostsEjraeeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_TreeOrganPostEjra" FunctionName="RasaFMSCommonDBModel.Store.spr_TreeOrganPostEjra">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_TreeOrganPostEjra">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="pid" ColumnName="pid" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="Namechart" ColumnName="Namechart" />
+          <ScalarProperty Name="fldOrgPostCode" ColumnName="fldOrgPostCode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_RptDastresiKarbaran" FunctionName="RasaFMSCommonDBModel.Store.spr_RptDastresiKarbaran">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_RptDastresiKarbaran">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldFamily" ColumnName="fldFamily" />
+          <ScalarProperty Name="NameGroupUser" ColumnName="NameGroupUser" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_CopyPermission" FunctionName="RasaFMSCommonDBModel.Store.spr_CopyPermission" />
+    <FunctionImportMapping FunctionImportName="spr_DeleteChildUserGroupPermission" FunctionName="RasaFMSCommonDBModel.Store.spr_DeleteChildUserGroupPermission" />
+    <FunctionImportMapping FunctionImportName="spr_tblWebServiceLogDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblWebServiceLogDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblWebServiceLogInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblWebServiceLogInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblWebServiceLogSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblWebServiceLogSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblWebServiceLogSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldMatn" ColumnName="fldMatn" />
+          <ScalarProperty Name="fldUser" ColumnName="fldUser" />
+          <ScalarProperty Name="flddate" ColumnName="flddate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblWebServiceLogUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblWebServiceLogUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblWarrantyTypeDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblWarrantyTypeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblWarrantyTypeInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblWarrantyTypeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblWarrantyTypeSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblWarrantyTypeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblWarrantyTypeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIp" ColumnName="fldIp" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblWarrantyTypeUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblWarrantyTypeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblBillsTypeDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblBillsTypeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblBillsTypeInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblBillsTypeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblBillsTypeSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblBillsTypeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblBillsTypeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblBillsTypeUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblBillsTypeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblCaseBillsDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblCaseBillsDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblCaseBillsInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblCaseBillsInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblCaseBillsSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblCaseBillsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblCaseBillsSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldBillsTypeId" ColumnName="fldBillsTypeId" />
+          <ScalarProperty Name="fldFileNum" ColumnName="fldFileNum" />
+          <ScalarProperty Name="fldCentercoId" ColumnName="fldCentercoId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldOrganChartId" ColumnName="fldOrganChartId" />
+          <ScalarProperty Name="fldAshkhasId" ColumnName="fldAshkhasId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldName_BillsType" ColumnName="fldName_BillsType" />
+          <ScalarProperty Name="fldNameCenter" ColumnName="fldNameCenter" />
+          <ScalarProperty Name="fldName_shakhs" ColumnName="fldName_shakhs" />
+          <ScalarProperty Name="fldCodeMelli" ColumnName="fldCodeMelli" />
+          <ScalarProperty Name="fldTitle_chartOrgan" ColumnName="fldTitle_chartOrgan" />
+          <ScalarProperty Name="fldName_Organ" ColumnName="fldName_Organ" />
+          <ScalarProperty Name="fldShakhs_Type" ColumnName="fldShakhs_Type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCaseBillsUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblCaseBillsUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_UpdateActiveUser" FunctionName="RasaFMSCommonDBModel.Store.spr_UpdateActiveUser" />
+    <FunctionImportMapping FunctionImportName="spr_tblFormatFileDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblFormatFileDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblFormatFileInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblFormatFileInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblFormatFileSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblFormatFileSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblFormatFileSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldFormatName" ColumnName="fldFormatName" />
+          <ScalarProperty Name="fldSize" ColumnName="fldSize" />
+          <ScalarProperty Name="fldPassvand" ColumnName="fldPassvand" />
+          <ScalarProperty Name="fldIcon" ColumnName="fldIcon" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblFormatFileUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblFormatFileUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblGeneralSettingDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblGeneralSettingDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblGeneralSettingInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblGeneralSettingInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblGeneralSettingUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblGeneralSettingUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblGeneralSettingSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblGeneralSettingSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblGeneralSettingSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldValue" ColumnName="fldValue" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldModuleId" ColumnName="fldModuleId" />
+          <ScalarProperty Name="fldNameModule" ColumnName="fldNameModule" />
+          <ScalarProperty Name="fldTitleCombo" ColumnName="fldTitleCombo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblKalaDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblKalaDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblKalaInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblKalaInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblKalaSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblKalaSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblKalaSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldKalaType" ColumnName="fldKalaType" />
+          <ScalarProperty Name="fldKalaCode" ColumnName="fldKalaCode" />
+          <ScalarProperty Name="fldStatus" ColumnName="fldStatus" />
+          <ScalarProperty Name="fldStatusName" ColumnName="fldStatusName" />
+          <ScalarProperty Name="fldSell" ColumnName="fldSell" />
+          <ScalarProperty Name="fldArzeshAfzodeh" ColumnName="fldArzeshAfzodeh" />
+          <ScalarProperty Name="fldIranCode" ColumnName="fldIranCode" />
+          <ScalarProperty Name="fldMoshakhaseType" ColumnName="fldMoshakhaseType" />
+          <ScalarProperty Name="fldMoshakhase" ColumnName="fldMoshakhase" />
+          <ScalarProperty Name="fldVahedAsli" ColumnName="fldVahedAsli" />
+          <ScalarProperty Name="fldVahedFaree" ColumnName="fldVahedFaree" />
+          <ScalarProperty Name="fldNesbatType" ColumnName="fldNesbatType" />
+          <ScalarProperty Name="fldVahedMoadel" ColumnName="fldVahedMoadel" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldVahedAsli_Name" ColumnName="fldVahedAsli_Name" />
+          <ScalarProperty Name="fldVahedFaree_Name" ColumnName="fldVahedFaree_Name" />
+          <ScalarProperty Name="fldorganId" ColumnName="fldorganId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblKalaUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblKalaUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblKala_TreeInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblKala_TreeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_UpdatePID_kala" FunctionName="RasaFMSCommonDBModel.Store.spr_UpdatePID_kala" />
+    <FunctionImportMapping FunctionImportName="spr_CheckExistsKala" FunctionName="RasaFMSCommonDBModel.Store.spr_CheckExistsKala">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_CheckExistsKala">
+          <ScalarProperty Name="fldCheck" ColumnName="fldCheck" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCharacterPersianPlaqueDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblCharacterPersianPlaqueDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblCharacterPersianPlaqueInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblCharacterPersianPlaqueInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblCharacterPersianPlaqueSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblCharacterPersianPlaqueSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblCharacterPersianPlaqueSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCharacterPersianPlaqueUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblCharacterPersianPlaqueUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblTypeKhodroDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblTypeKhodroDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblTypeKhodroInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblTypeKhodroInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblTypeKhodroSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblTypeKhodroSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblTypeKhodroSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblTypeKhodroUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblTypeKhodroUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblPlaqueDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblPlaqueDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblPlaqueInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblPlaqueInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblPlaqueSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblPlaqueSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblPlaqueSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldSerialPlaque" ColumnName="fldSerialPlaque" />
+          <ScalarProperty Name="fldPlaque" ColumnName="fldPlaque" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldSerial_Plaque" ColumnName="fldSerial_Plaque" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblPlaqueUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblPlaqueUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblPlaqueInsert_WebService" FunctionName="RasaFMSCommonDBModel.Store.spr_tblPlaqueInsert_WebService" />
+    <FunctionImportMapping FunctionImportName="spr_tblGeneralSetting_ComboBoxDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblGeneralSetting_ComboBoxDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblGeneralSetting_ComboBoxInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblGeneralSetting_ComboBoxInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblGeneralSetting_ComboBoxSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblGeneralSetting_ComboBoxSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblGeneralSetting_ComboBoxSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldGeneralSettingId" ColumnName="fldGeneralSettingId" />
+          <ScalarProperty Name="fldTtile" ColumnName="fldTtile" />
+          <ScalarProperty Name="fldValue" ColumnName="fldValue" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldNameGeneralSetting" ColumnName="fldNameGeneralSetting" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblGeneralSetting_ComboBoxUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblGeneralSetting_ComboBoxUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblGeneralSetting_ValueDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblGeneralSetting_ValueDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblGeneralSetting_ValueInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblGeneralSetting_ValueInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblGeneralSetting_ValueSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblGeneralSetting_ValueSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblGeneralSetting_ValueSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldGeneralSettingId" ColumnName="fldGeneralSettingId" />
+          <ScalarProperty Name="fldValue" ColumnName="fldValue" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldNameGeneralSetting" ColumnName="fldNameGeneralSetting" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblGeneralSetting_ValueUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblGeneralSetting_ValueUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_GeneralSettingInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_GeneralSettingInsert" />
+    <FunctionImportMapping FunctionImportName="spr_GeneralSettingUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_GeneralSettingUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_GeneralSettingDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_GeneralSettingDelete" />
+    <FunctionImportMapping FunctionImportName="spr_SelectChartEjraee_LastNode" FunctionName="RasaFMSCommonDBModel.Store.spr_SelectChartEjraee_LastNode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_SelectChartEjraee_LastNode">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldPId" ColumnName="fldPId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldNoeVahed" ColumnName="fldNoeVahed" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldNoeVahedName" ColumnName="fldNoeVahedName" />
+          <ScalarProperty Name="fldOrganizationName" ColumnName="fldOrganizationName" />
+          <ScalarProperty Name="fldNameFather" ColumnName="fldNameFather" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_UpdateOrder" FunctionName="RasaFMSCommonDBModel.Store.spr_UpdateOrder" />
+    <FunctionImportMapping FunctionImportName="spr_tblPersonalSignInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblPersonalSignInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblPersonalSignSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblPersonalSignSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblPersonalSignSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldFileId" ColumnName="fldFileId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldCommitionId" ColumnName="fldCommitionId" />
+          <ScalarProperty Name="fldIsEdit" ColumnName="fldIsEdit" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblRasteSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblRasteSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblRasteSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldCode" ColumnName="fldCode" />
+          <ScalarProperty Name="fldText" ColumnName="fldText" />
+          <ScalarProperty Name="fldIndex" ColumnName="fldIndex" />
+          <ScalarProperty Name="fldMaliyat" ColumnName="fldMaliyat" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCompanyPostDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblCompanyPostDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblCompanyPostInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblCompanyPostInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblCompanyPostSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblCompanyPostSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblCompanyPostSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblCompanyPostUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblCompanyPostUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_SelectMonth" FunctionName="RasaFMSCommonDBModel.Store.spr_SelectMonth">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_SelectMonth">
+          <ScalarProperty Name="fldCode" ColumnName="fldCode" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblHistoryTahsilatDelete" FunctionName="RasaFMSCommonDBModel.Store.spr_tblHistoryTahsilatDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblHistoryTahsilatInsert" FunctionName="RasaFMSCommonDBModel.Store.spr_tblHistoryTahsilatInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblHistoryTahsilatSelect" FunctionName="RasaFMSCommonDBModel.Store.spr_tblHistoryTahsilatSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSCommonDBModel.spr_tblHistoryTahsilatSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldEmployeeId" ColumnName="fldEmployeeId" />
+          <ScalarProperty Name="fldMadrakId" ColumnName="fldMadrakId" />
+          <ScalarProperty Name="fldReshteId" ColumnName="fldReshteId" />
+          <ScalarProperty Name="fldTarikh" ColumnName="fldTarikh" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldTitleMadrak" ColumnName="fldTitleMadrak" />
+          <ScalarProperty Name="fldTitleReshte" ColumnName="fldTitleReshte" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblHistoryTahsilatUpdate" FunctionName="RasaFMSCommonDBModel.Store.spr_tblHistoryTahsilatUpdate" />
+  </EntityContainerMapping>
+</Mapping>

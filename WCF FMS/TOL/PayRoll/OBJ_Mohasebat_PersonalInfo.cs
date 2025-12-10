@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WCF_FMS.TOL.PayRoll
+{
+    public class OBJ_Mohasebat_PersonalInfo
+    {
+        public int fldId { get; set; }
+        public Nullable<int> fldMohasebatId { get; set; }
+        public Nullable<int> fldVamId { get; set; }
+        public Nullable<int> fldEzafe_TatilKariId { get; set; }
+        public Nullable<int> fldMamuriyatId { get; set; }
+        public Nullable<int> fldSayerPardakhthaId { get; set; }
+        public Nullable<int> fldCostCenterId { get; set; }
+        public Nullable<int> fldInsuranceWorkShopId { get; set; }
+        public string fldCodeShoghliBime { get; set; }
+        public Nullable<int> fldTypeBimeId { get; set; }
+        public Nullable<int> fldAnvaEstekhdamId { get; set; }
+        public Nullable<int> fldFiscalHeaderId { get; set; }
+        public Nullable<int> fldMoteghayerHoghoghiId { get; set; }
+        public Nullable<int> fldShomareHesabId { get; set; }
+        public string fldShomareBime { get; set; }
+        public string fldShPasAndazPersonal { get; set; }
+        public string fldShPasAndazKarFarma { get; set; }
+        public Nullable<int> fldHokmId { get; set; }
+        public Nullable<int> fldTedadBime1 { get; set; }
+        public Nullable<int> fldTedadBime2 { get; set; }
+        public Nullable<int> fldTedadBime3 { get; set; }
+        public Nullable<byte> fldT_Asli { get; set; }
+        public Nullable<byte> fldT_70 { get; set; }
+        public Nullable<byte> fldT_60 { get; set; }
+        public Nullable<byte> fldT_BedonePoshesh { get; set; }
+        public Nullable<bool> fldHamsareKarmand { get; set; }
+        public Nullable<bool> fldMazad30Sal { get; set; }
+        public Nullable<int> fldStatusIsargariId { get; set; }
+        public int fldUserId { get; set; }
+        public string fldDesc { get; set; }
+        public System.DateTime fldDate { get; set; }
+        public Nullable<int> fldMohasebatEydiId { get; set; }
+        public Nullable<int> fldKomakGheyerNaghdiId { get; set; }
+        public Nullable<int> fldOrganId { get; set; }
+        public Nullable<int> fldMorakhasiId { get; set; }
+    }
+}

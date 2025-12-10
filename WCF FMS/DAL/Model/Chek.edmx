@@ -1,0 +1,752 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ChekModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="spr_AghsatCheckAmaniDelete_CheckHayeVaredeId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="CheckHayeVaredeId" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_SelectSumCheckSadere" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAghsatCheckAmaniDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAghsatCheckAmaniInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldMablagh" Type="bigint" Mode="In" />
+          <Parameter Name="fldTarikh" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldNobat" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldIdCheckHayeVarede" Type="int" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAghsatCheckAmaniSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAghsatCheckAmaniUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldMablagh" Type="bigint" Mode="In" />
+          <Parameter Name="fldTarikh" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldNobat" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldIdCheckHayeVarede" Type="int" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblCheck_FactorSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="value" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblCheckHayeVaredeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblCheckHayeVaredeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldIdShobe" Type="int" Mode="In" />
+          <Parameter Name="fldMablagh" Type="int" Mode="In" />
+          <Parameter Name="fldAshkhasId" Type="int" Mode="In" />
+          <Parameter Name="fldTarikhVosolCheck" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldTarikhDaryaftCheck" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldShenaseKamelCheck" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldBabat" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldNoeeCheck" Type="bit" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblCheckHayeVaredeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblCheckHayeVaredeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldIdShobe" Type="int" Mode="In" />
+          <Parameter Name="fldMablagh" Type="int" Mode="In" />
+          <Parameter Name="fldAshkhasId" Type="int" Mode="In" />
+          <Parameter Name="fldTarikhVosolCheck" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldTarikhDaryaftCheck" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldShenaseKamelCheck" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldBabat" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldNoeeCheck" Type="bit" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblCheckStatusInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldSodorCheckId" Type="int" Mode="In" />
+          <Parameter Name="fldCheckVaredeId" Type="int" Mode="In" />
+          <Parameter Name="fldAghsatId" Type="int" Mode="In" />
+          <Parameter Name="fldStatus" Type="tinyint" Mode="In" />
+          <Parameter Name="fldTarikh" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="spr_tblCheckStatusSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblDasteCheckDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblDasteCheckInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldIdOlgoCheck" Type="int" Mode="In" />
+          <Parameter Name="fldShomareHesab" Type="int" Mode="In" />
+          <Parameter Name="fldMoshakhaseDasteCheck" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldTedadBarg" Type="tinyint" Mode="In" />
+          <Parameter Name="fldShoroeSeriyal" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblDasteCheckSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblDasteCheckUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldIdOlgoCheck" Type="int" Mode="In" />
+          <Parameter Name="fldShomareHesab" Type="int" Mode="In" />
+          <Parameter Name="fldMoshakhaseDasteCheck" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldTedadBarg" Type="tinyint" Mode="In" />
+          <Parameter Name="fldShoroeSeriyal" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblOlgoCheckDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblOlgoCheckInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldFile" Type="varbinary(max)" Mode="In" />
+          <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldIdBank" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblOlgoCheckSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblOlgoCheckUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldFile" Type="varbinary(max)" Mode="In" />
+          <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldIdFile" Type="int" Mode="In" />
+          <Parameter Name="fldIdBank" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblSodorCheckDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblSodorCheckInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldID" Type="int" Mode="InOut" />
+          <Parameter Name="fldIdDasteCheck" Type="int" Mode="In" />
+          <Parameter Name="fldTarikhVosol" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldAshkhasId" Type="int" Mode="In" />
+          <Parameter Name="fldCodeSerialCheck" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldBabat" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldBabatFlag" Type="bit" Mode="In" />
+          <Parameter Name="fldMablagh" Type="bigint" Mode="In" />
+          <Parameter Name="fldFactorId" Type="int" Mode="In" />
+          <Parameter Name="fldContractId" Type="int" Mode="In" />
+          <Parameter Name="fldTankhahGroupId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblSodorCheckSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblSodorCheckUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldIdDasteCheck" Type="int" Mode="In" />
+          <Parameter Name="fldTarikhVosol" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldAshkhasId" Type="int" Mode="In" />
+          <Parameter Name="fldCodeSerialCheck" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldBabat" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldBabatFlag" Type="bit" Mode="In" />
+          <Parameter Name="fldMablagh" Type="bigint" Mode="In" />
+          <Parameter Name="fldFactorId" Type="int" Mode="In" />
+          <Parameter Name="fldContractId" Type="int" Mode="In" />
+          <Parameter Name="fldTankhahGroupId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_UpdateStatusAghsatCheckAmani" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldTarikhPardakht" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldVaziat" Type="tinyint" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="ChekModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ChekModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ChekEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="spr_tblOlgoCheckDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblOlgoCheckInsert">
+            <Parameter Name="fldFile" Mode="In" Type="Binary" />
+            <Parameter Name="fldPasvand" Mode="In" Type="String" />
+            <Parameter Name="fldIdBank" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldTitle" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblOlgoCheckUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldFile" Mode="In" Type="Binary" />
+            <Parameter Name="fldPasvand" Mode="In" Type="String" />
+            <Parameter Name="fldIdFile" Mode="In" Type="Int32" />
+            <Parameter Name="fldIdBank" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldTitle" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblDasteCheckDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblDasteCheckInsert">
+            <Parameter Name="fldIdOlgoCheck" Mode="In" Type="Int32" />
+            <Parameter Name="fldShomareHesab" Mode="In" Type="Int32" />
+            <Parameter Name="fldMoshakhaseDasteCheck" Mode="In" Type="String" />
+            <Parameter Name="fldTedadBarg" Mode="In" Type="Byte" />
+            <Parameter Name="fldShoroeSeriyal" Mode="In" Type="String" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblDasteCheckUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldIdOlgoCheck" Mode="In" Type="Int32" />
+            <Parameter Name="fldShomareHesab" Mode="In" Type="Int32" />
+            <Parameter Name="fldMoshakhaseDasteCheck" Mode="In" Type="String" />
+            <Parameter Name="fldTedadBarg" Mode="In" Type="Byte" />
+            <Parameter Name="fldShoroeSeriyal" Mode="In" Type="String" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblSodorCheckDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblSodorCheckInsert">
+            <Parameter Name="fldID" Mode="InOut" Type="Int32" />
+            <Parameter Name="fldIdDasteCheck" Mode="In" Type="Int32" />
+            <Parameter Name="fldTarikhVosol" Mode="In" Type="String" />
+            <Parameter Name="fldAshkhasId" Mode="In" Type="Int32" />
+            <Parameter Name="fldCodeSerialCheck" Mode="In" Type="String" />
+            <Parameter Name="fldBabat" Mode="In" Type="String" />
+            <Parameter Name="fldBabatFlag" Mode="In" Type="Boolean" />
+            <Parameter Name="fldMablagh" Mode="In" Type="Int64" />
+            <Parameter Name="fldFactorId" Mode="In" Type="Int32" />
+            <Parameter Name="fldContractId" Mode="In" Type="Int32" />
+            <Parameter Name="fldTankhahGroupId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblSodorCheckSelect" ReturnType="Collection(ChekModel.spr_tblSodorCheckSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblSodorCheckUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldIdDasteCheck" Mode="In" Type="Int32" />
+            <Parameter Name="fldTarikhVosol" Mode="In" Type="String" />
+            <Parameter Name="fldAshkhasId" Mode="In" Type="Int32" />
+            <Parameter Name="fldCodeSerialCheck" Mode="In" Type="String" />
+            <Parameter Name="fldBabat" Mode="In" Type="String" />
+            <Parameter Name="fldBabatFlag" Mode="In" Type="Boolean" />
+            <Parameter Name="fldMablagh" Mode="In" Type="Int64" />
+            <Parameter Name="fldFactorId" Mode="In" Type="Int32" />
+            <Parameter Name="fldContractId" Mode="In" Type="Int32" />
+            <Parameter Name="fldTankhahGroupId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblOlgoCheckSelect" ReturnType="Collection(ChekModel.spr_tblOlgoCheckSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblDasteCheckSelect" ReturnType="Collection(ChekModel.spr_tblDasteCheckSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAghsatCheckAmaniDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAghsatCheckAmaniInsert">
+            <Parameter Name="fldMablagh" Mode="In" Type="Int64" />
+            <Parameter Name="fldTarikh" Mode="In" Type="String" />
+            <Parameter Name="fldNobat" Mode="In" Type="String" />
+            <Parameter Name="fldIdCheckHayeVarede" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAghsatCheckAmaniSelect" ReturnType="Collection(ChekModel.spr_tblAghsatCheckAmaniSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAghsatCheckAmaniUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldMablagh" Mode="In" Type="Int64" />
+            <Parameter Name="fldTarikh" Mode="In" Type="String" />
+            <Parameter Name="fldNobat" Mode="In" Type="String" />
+            <Parameter Name="fldIdCheckHayeVarede" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblCheckHayeVaredeDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblCheckHayeVaredeInsert">
+            <Parameter Name="fldIdShobe" Mode="In" Type="Int32" />
+            <Parameter Name="fldMablagh" Mode="In" Type="Int32" />
+            <Parameter Name="fldAshkhasId" Mode="In" Type="Int32" />
+            <Parameter Name="fldTarikhVosolCheck" Mode="In" Type="String" />
+            <Parameter Name="fldTarikhDaryaftCheck" Mode="In" Type="String" />
+            <Parameter Name="fldShenaseKamelCheck" Mode="In" Type="String" />
+            <Parameter Name="fldBabat" Mode="In" Type="String" />
+            <Parameter Name="fldNoeeCheck" Mode="In" Type="Boolean" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblCheckHayeVaredeUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldIdShobe" Mode="In" Type="Int32" />
+            <Parameter Name="fldMablagh" Mode="In" Type="Int32" />
+            <Parameter Name="fldAshkhasId" Mode="In" Type="Int32" />
+            <Parameter Name="fldTarikhVosolCheck" Mode="In" Type="String" />
+            <Parameter Name="fldTarikhDaryaftCheck" Mode="In" Type="String" />
+            <Parameter Name="fldShenaseKamelCheck" Mode="In" Type="String" />
+            <Parameter Name="fldBabat" Mode="In" Type="String" />
+            <Parameter Name="fldNoeeCheck" Mode="In" Type="Boolean" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_UpdateStatusAghsatCheckAmani">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldTarikhPardakht" Mode="In" Type="String" />
+            <Parameter Name="fldVaziat" Mode="In" Type="Byte" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_AghsatCheckAmaniDelete_CheckHayeVaredeId">
+            <Parameter Name="CheckHayeVaredeId" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblCheckStatusInsert">
+            <Parameter Name="fldSodorCheckId" Mode="In" Type="Int32" />
+            <Parameter Name="fldCheckVaredeId" Mode="In" Type="Int32" />
+            <Parameter Name="fldAghsatId" Mode="In" Type="Int32" />
+            <Parameter Name="fldStatus" Mode="In" Type="Byte" />
+            <Parameter Name="fldTarikh" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblCheckStatusSelect" ReturnType="Collection(ChekModel.spr_tblCheckStatusSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblCheckHayeVaredeSelect" ReturnType="Collection(ChekModel.spr_tblCheckHayeVaredeSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblCheck_FactorSelect" ReturnType="Collection(ChekModel.spr_tblCheck_FactorSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="value" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_SelectSumCheckSadere" ReturnType="Collection(ChekModel.spr_SelectSumCheckSadere)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="spr_tblSodorCheckSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldIdDasteCheck" Nullable="false" />
+          <Property Type="String" Name="fldTarikhVosol" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="fldDarVajh" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="fldCodeSerialCheck" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="fldBabat" Nullable="false" />
+          <Property Type="Boolean" Name="fldBabatFlag" Nullable="false" />
+          <Property Type="Int64" Name="fldMablagh" Nullable="false" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="fldMoshakhaseDasteCheck" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="fldBankName" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="String" Name="TarikhSabt" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="NameShobe" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Name_Family" Nullable="false" MaxLength="201" />
+          <Property Type="String" Name="ShomareMeli" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="AshkhasId" Nullable="false" />
+          <Property Type="String" Name="BabatText" Nullable="false" />
+          <Property Type="String" Name="TarikhShamsi" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="MablaghBeHorof" Nullable="true" MaxLength="4000" />
+          <Property Type="Byte" Name="fldvaziat" Nullable="false" />
+          <Property Type="String" Name="NameVaziat" Nullable="false" MaxLength="14" />
+          <Property Type="String" Name="fldTarikhVaziat" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+          <Property Type="Int32" Name="fldTankhahGroupId" Nullable="true" />
+          <Property Type="Int32" Name="fldFactorId" Nullable="true" />
+          <Property Type="Int32" Name="fldContractId" Nullable="true" />
+          <Property Type="Int32" Name="Check_FactorId" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_tblOlgoCheckSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldIdFile" Nullable="false" />
+          <Property Type="Int32" Name="fldIdBank" Nullable="false" />
+          <Property Type="Int32" Name="fldUserID" Nullable="false" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="fldBankName" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_tblDasteCheckSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldIdOlgoCheck" Nullable="false" />
+          <Property Type="String" Name="fldMoshakhaseDasteCheck" Nullable="false" MaxLength="50" />
+          <Property Type="Byte" Name="fldTedadBarg" Nullable="false" />
+          <Property Type="String" Name="fldShoroeSeriyal" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="fldUserID" Nullable="false" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="fldOlgu" Nullable="false" MaxLength="152" />
+          <Property Type="Int32" Name="fldIdShomareHesab" Nullable="false" />
+          <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="fldShobeName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="fldBankName" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_tblAghsatCheckAmaniSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int64" Name="fldMablagh" Nullable="false" />
+          <Property Type="String" Name="fldTarikh" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="fldNobat" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="fldIdCheckHayeVarede" Nullable="false" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="NameVaziat" Nullable="false" MaxLength="14" />
+          <Property Type="Byte" Name="fldvaziat" Nullable="false" />
+          <Property Type="String" Name="fldTarikhVaziat" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_tblCheckStatusSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldSodorCheckId" Nullable="true" />
+          <Property Type="Int32" Name="fldCheckVaredeId" Nullable="true" />
+          <Property Type="Int32" Name="fldAghsatId" Nullable="true" />
+          <Property Type="Byte" Name="fldvaziat" Nullable="false" />
+          <Property Type="String" Name="fldTarikh" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="fldUserID" Nullable="false" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="spr_tblCheckHayeVaredeSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldIdShobe" Nullable="true" />
+          <Property Type="Int64" Name="fldMablagh" Nullable="false" />
+          <Property Type="Int32" Name="fldAshkhasId" Nullable="true" />
+          <Property Type="String" Name="fldTarikhVosolCheck" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="fldOrganId" Nullable="true" />
+          <Property Type="String" Name="fldTarikhDaryaftCheck" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="fldShenaseKamelCheck" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="fldBabat" Nullable="false" />
+          <Property Type="Boolean" Name="fldNoeeCheck" Nullable="false" />
+          <Property Type="String" Name="NoeeCheckName" Nullable="true" MaxLength="5" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="TarikhSabt" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="fldShobeName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="fldBankName" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="fldBankId" Nullable="false" />
+          <Property Type="String" Name="NameFamily" Nullable="false" MaxLength="201" />
+          <Property Type="Byte" Name="fldvaziat" Nullable="true" />
+          <Property Type="String" Name="NameVaziat" Nullable="true" MaxLength="14" />
+          <Property Type="String" Name="fldTarikhVaziat" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="fldStatus" Nullable="false" />
+          <Property Type="String" Name="fldCodemeli" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="fldTypeShakhs" Nullable="false" MaxLength="5" />
+          <Property Type="String" Name="fldSaderKonandeh" Nullable="false" MaxLength="250" />
+          <Property Type="Boolean" Name="fldReceive" Nullable="false" />
+          <Property Type="String" Name="fldReceiveName" Nullable="false" MaxLength="12" />
+          <Property Type="Int32" Name="fldElamAvarezId" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_tblCheck_FactorSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldCheckSadereId" Nullable="false" />
+          <Property Type="Int32" Name="fldFactorId" Nullable="true" />
+          <Property Type="Int32" Name="fldContractId" Nullable="true" />
+          <Property Type="Int32" Name="fldTankhahGroupId" Nullable="true" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_SelectSumCheckSadere">
+          <Property Type="Int64" Name="fldMablagh" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ChekModelStoreContainer" CdmEntityContainer="ChekEntities" >
+          <FunctionImportMapping FunctionImportName="spr_tblOlgoCheckDelete" FunctionName="ChekModel.Store.spr_tblOlgoCheckDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblOlgoCheckInsert" FunctionName="ChekModel.Store.spr_tblOlgoCheckInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblOlgoCheckUpdate" FunctionName="ChekModel.Store.spr_tblOlgoCheckUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tblDasteCheckDelete" FunctionName="ChekModel.Store.spr_tblDasteCheckDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblDasteCheckInsert" FunctionName="ChekModel.Store.spr_tblDasteCheckInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblDasteCheckUpdate" FunctionName="ChekModel.Store.spr_tblDasteCheckUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tblSodorCheckDelete" FunctionName="ChekModel.Store.spr_tblSodorCheckDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblSodorCheckInsert" FunctionName="ChekModel.Store.spr_tblSodorCheckInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblSodorCheckSelect" FunctionName="ChekModel.Store.spr_tblSodorCheckSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ChekModel.spr_tblSodorCheckSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldIdDasteCheck" ColumnName="fldIdDasteCheck" />
+                <ScalarProperty Name="fldTarikhVosol" ColumnName="fldTarikhVosol" />
+                <ScalarProperty Name="fldDarVajh" ColumnName="fldDarVajh" />
+                <ScalarProperty Name="fldCodeSerialCheck" ColumnName="fldCodeSerialCheck" />
+                <ScalarProperty Name="fldBabat" ColumnName="fldBabat" />
+                <ScalarProperty Name="fldBabatFlag" ColumnName="fldBabatFlag" />
+                <ScalarProperty Name="fldMablagh" ColumnName="fldMablagh" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldMoshakhaseDasteCheck" ColumnName="fldMoshakhaseDasteCheck" />
+                <ScalarProperty Name="fldBankName" ColumnName="fldBankName" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="TarikhSabt" ColumnName="TarikhSabt" />
+                <ScalarProperty Name="NameShobe" ColumnName="NameShobe" />
+                <ScalarProperty Name="Name_Family" ColumnName="Name_Family" />
+                <ScalarProperty Name="ShomareMeli" ColumnName="ShomareMeli" />
+                <ScalarProperty Name="fldShomareHesab" ColumnName="fldShomareHesab" />
+                <ScalarProperty Name="AshkhasId" ColumnName="AshkhasId" />
+                <ScalarProperty Name="BabatText" ColumnName="BabatText" />
+                <ScalarProperty Name="TarikhShamsi" ColumnName="TarikhShamsi" />
+                <ScalarProperty Name="MablaghBeHorof" ColumnName="MablaghBeHorof" />
+                <ScalarProperty Name="fldvaziat" ColumnName="fldvaziat" />
+                <ScalarProperty Name="NameVaziat" ColumnName="NameVaziat" />
+                <ScalarProperty Name="fldTarikhVaziat" ColumnName="fldTarikhVaziat" />
+                <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+                <ScalarProperty Name="fldTankhahGroupId" ColumnName="fldTankhahGroupId" />
+                <ScalarProperty Name="fldFactorId" ColumnName="fldFactorId" />
+                <ScalarProperty Name="fldContractId" ColumnName="fldContractId" />
+                <ScalarProperty Name="Check_FactorId" ColumnName="Check_FactorId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblSodorCheckUpdate" FunctionName="ChekModel.Store.spr_tblSodorCheckUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tblOlgoCheckSelect" FunctionName="ChekModel.Store.spr_tblOlgoCheckSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ChekModel.spr_tblOlgoCheckSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldIdFile" ColumnName="fldIdFile" />
+                <ScalarProperty Name="fldIdBank" ColumnName="fldIdBank" />
+                <ScalarProperty Name="fldUserID" ColumnName="fldUserID" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+                <ScalarProperty Name="fldBankName" ColumnName="fldBankName" />
+                <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblDasteCheckSelect" FunctionName="ChekModel.Store.spr_tblDasteCheckSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ChekModel.spr_tblDasteCheckSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldIdOlgoCheck" ColumnName="fldIdOlgoCheck" />
+                <ScalarProperty Name="fldMoshakhaseDasteCheck" ColumnName="fldMoshakhaseDasteCheck" />
+                <ScalarProperty Name="fldTedadBarg" ColumnName="fldTedadBarg" />
+                <ScalarProperty Name="fldShoroeSeriyal" ColumnName="fldShoroeSeriyal" />
+                <ScalarProperty Name="fldUserID" ColumnName="fldUserID" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldOlgu" ColumnName="fldOlgu" />
+                <ScalarProperty Name="fldIdShomareHesab" ColumnName="fldIdShomareHesab" />
+                <ScalarProperty Name="fldShomareHesab" ColumnName="fldShomareHesab" />
+                <ScalarProperty Name="fldShobeName" ColumnName="fldShobeName" />
+                <ScalarProperty Name="fldBankName" ColumnName="fldBankName" />
+                <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblAghsatCheckAmaniDelete" FunctionName="ChekModel.Store.spr_tblAghsatCheckAmaniDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblAghsatCheckAmaniInsert" FunctionName="ChekModel.Store.spr_tblAghsatCheckAmaniInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblAghsatCheckAmaniSelect" FunctionName="ChekModel.Store.spr_tblAghsatCheckAmaniSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ChekModel.spr_tblAghsatCheckAmaniSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldMablagh" ColumnName="fldMablagh" />
+                <ScalarProperty Name="fldTarikh" ColumnName="fldTarikh" />
+                <ScalarProperty Name="fldNobat" ColumnName="fldNobat" />
+                <ScalarProperty Name="fldIdCheckHayeVarede" ColumnName="fldIdCheckHayeVarede" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="NameVaziat" ColumnName="NameVaziat" />
+                <ScalarProperty Name="fldvaziat" ColumnName="fldvaziat" />
+                <ScalarProperty Name="fldTarikhVaziat" ColumnName="fldTarikhVaziat" />
+                <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblAghsatCheckAmaniUpdate" FunctionName="ChekModel.Store.spr_tblAghsatCheckAmaniUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tblCheckHayeVaredeDelete" FunctionName="ChekModel.Store.spr_tblCheckHayeVaredeDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblCheckHayeVaredeInsert" FunctionName="ChekModel.Store.spr_tblCheckHayeVaredeInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblCheckHayeVaredeUpdate" FunctionName="ChekModel.Store.spr_tblCheckHayeVaredeUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_UpdateStatusAghsatCheckAmani" FunctionName="ChekModel.Store.spr_UpdateStatusAghsatCheckAmani" />
+          <FunctionImportMapping FunctionImportName="spr_AghsatCheckAmaniDelete_CheckHayeVaredeId" FunctionName="ChekModel.Store.spr_AghsatCheckAmaniDelete_CheckHayeVaredeId" />
+          <FunctionImportMapping FunctionImportName="spr_tblCheckStatusInsert" FunctionName="ChekModel.Store.spr_tblCheckStatusInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblCheckStatusSelect" FunctionName="ChekModel.Store.spr_tblCheckStatusSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ChekModel.spr_tblCheckStatusSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldSodorCheckId" ColumnName="fldSodorCheckId" />
+                <ScalarProperty Name="fldCheckVaredeId" ColumnName="fldCheckVaredeId" />
+                <ScalarProperty Name="fldAghsatId" ColumnName="fldAghsatId" />
+                <ScalarProperty Name="fldvaziat" ColumnName="fldvaziat" />
+                <ScalarProperty Name="fldTarikh" ColumnName="fldTarikh" />
+                <ScalarProperty Name="fldUserID" ColumnName="fldUserID" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblCheckHayeVaredeSelect" FunctionName="ChekModel.Store.spr_tblCheckHayeVaredeSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ChekModel.spr_tblCheckHayeVaredeSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldIdShobe" ColumnName="fldIdShobe" />
+                <ScalarProperty Name="fldMablagh" ColumnName="fldMablagh" />
+                <ScalarProperty Name="fldAshkhasId" ColumnName="fldAshkhasId" />
+                <ScalarProperty Name="fldTarikhVosolCheck" ColumnName="fldTarikhVosolCheck" />
+                <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+                <ScalarProperty Name="fldTarikhDaryaftCheck" ColumnName="fldTarikhDaryaftCheck" />
+                <ScalarProperty Name="fldShenaseKamelCheck" ColumnName="fldShenaseKamelCheck" />
+                <ScalarProperty Name="fldBabat" ColumnName="fldBabat" />
+                <ScalarProperty Name="fldNoeeCheck" ColumnName="fldNoeeCheck" />
+                <ScalarProperty Name="NoeeCheckName" ColumnName="NoeeCheckName" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="TarikhSabt" ColumnName="TarikhSabt" />
+                <ScalarProperty Name="fldShobeName" ColumnName="fldShobeName" />
+                <ScalarProperty Name="fldBankName" ColumnName="fldBankName" />
+                <ScalarProperty Name="fldBankId" ColumnName="fldBankId" />
+                <ScalarProperty Name="NameFamily" ColumnName="NameFamily" />
+                <ScalarProperty Name="fldvaziat" ColumnName="fldvaziat" />
+                <ScalarProperty Name="NameVaziat" ColumnName="NameVaziat" />
+                <ScalarProperty Name="fldTarikhVaziat" ColumnName="fldTarikhVaziat" />
+                <ScalarProperty Name="fldStatus" ColumnName="fldStatus" />
+                <ScalarProperty Name="fldCodemeli" ColumnName="fldCodemeli" />
+                <ScalarProperty Name="fldTypeShakhs" ColumnName="fldTypeShakhs" />
+                <ScalarProperty Name="fldSaderKonandeh" ColumnName="fldSaderKonandeh" />
+                <ScalarProperty Name="fldReceive" ColumnName="fldReceive" />
+                <ScalarProperty Name="fldReceiveName" ColumnName="fldReceiveName" />
+                <ScalarProperty Name="fldElamAvarezId" ColumnName="fldElamAvarezId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblCheck_FactorSelect" FunctionName="ChekModel.Store.spr_tblCheck_FactorSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ChekModel.spr_tblCheck_FactorSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldCheckSadereId" ColumnName="fldCheckSadereId" />
+                <ScalarProperty Name="fldFactorId" ColumnName="fldFactorId" />
+                <ScalarProperty Name="fldContractId" ColumnName="fldContractId" />
+                <ScalarProperty Name="fldTankhahGroupId" ColumnName="fldTankhahGroupId" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_SelectSumCheckSadere" FunctionName="ChekModel.Store.spr_SelectSumCheckSadere" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ChekModel.spr_SelectSumCheckSadere">
+                <ScalarProperty Name="fldMablagh" ColumnName="fldMablagh" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RasaNewFMSModel4StoreContainer" CdmEntityContainer="WeighEntities">
+    <FunctionImportMapping FunctionImportName="spr_tblWeighbridgeDelete" FunctionName="RasaNewFMSModel4.Store.spr_tblWeighbridgeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblWeighbridgeInsert" FunctionName="RasaNewFMSModel4.Store.spr_tblWeighbridgeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblWeighbridgeSelect" FunctionName="RasaNewFMSModel4.Store.spr_tblWeighbridgeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_tblWeighbridgeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldAshkhasHoghoghiId" ColumnName="fldAshkhasHoghoghiId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldAddress" ColumnName="fldAddress" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldNameAshkhasHoghoghi" ColumnName="fldNameAshkhasHoghoghi" />
+          <ScalarProperty Name="fldShenaseMelli" ColumnName="fldShenaseMelli" />
+          <ScalarProperty Name="fldPassword" ColumnName="fldPassword" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblWeighbridgeUpdate" FunctionName="RasaNewFMSModel4.Store.spr_tblWeighbridgeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblRemittance_HeaderDelete" FunctionName="RasaNewFMSModel4.Store.spr_tblRemittance_HeaderDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblRemittance_HeaderSelect" FunctionName="RasaNewFMSModel4.Store.spr_tblRemittance_HeaderSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_tblRemittance_HeaderSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldAshkhasiId" ColumnName="fldAshkhasiId" />
+          <ScalarProperty Name="fldStatus" ColumnName="fldStatus" />
+          <ScalarProperty Name="fldStartDate" ColumnName="fldStartDate" />
+          <ScalarProperty Name="fldEndDate" ColumnName="fldEndDate" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldStatusName" ColumnName="fldStatusName" />
+          <ScalarProperty Name="fldKalaName" ColumnName="fldKalaName" />
+          <ScalarProperty Name="fldTypeShakhs" ColumnName="fldTypeShakhs" />
+          <ScalarProperty Name="fldFamilyName" ColumnName="fldFamilyName" />
+          <ScalarProperty Name="fldCodemeli" ColumnName="fldCodemeli" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldNameChart" ColumnName="fldNameChart" />
+          <ScalarProperty Name="fldNameAshkhas_Chart" ColumnName="fldNameAshkhas_Chart" />
+          <ScalarProperty Name="fldEmployId" ColumnName="fldEmployId" />
+          <ScalarProperty Name="fldChartOrganEjraeeId" ColumnName="fldChartOrganEjraeeId" />
+          <ScalarProperty Name="fldNameNoeHavale" ColumnName="fldNameNoeHavale" />
+          <ScalarProperty Name="fldNameTahvilGirande" ColumnName="fldNameTahvilGirande" />
+          <ScalarProperty Name="fldFileId" ColumnName="fldFileId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_SelectBaskoolParametr_Value" FunctionName="RasaNewFMSModel4.Store.spr_SelectBaskoolParametr_Value">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_SelectBaskoolParametr_Value">
+          <ScalarProperty Name="fldid" ColumnName="fldid" />
+          <ScalarProperty Name="fldFaName" ColumnName="fldFaName" />
+          <ScalarProperty Name="fldEnName" ColumnName="fldEnName" />
+          <ScalarProperty Name="fldParam_ValueId" ColumnName="fldParam_ValueId" />
+          <ScalarProperty Name="fldValue" ColumnName="fldValue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblParametrBaskoolValueInsert" FunctionName="RasaNewFMSModel4.Store.spr_tblParametrBaskoolValueInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblParametrBaskoolValueSelect" FunctionName="RasaNewFMSModel4.Store.spr_tblParametrBaskoolValueSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_tblParametrBaskoolValueSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldParametrBaskoolId" ColumnName="fldParametrBaskoolId" />
+          <ScalarProperty Name="fldBaskoolId" ColumnName="fldBaskoolId" />
+          <ScalarProperty Name="fldValue" ColumnName="fldValue" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblParametrBaskoolValueUpdate" FunctionName="RasaNewFMSModel4.Store.spr_tblParametrBaskoolValueUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblRemittance_DetailsSelect" FunctionName="RasaNewFMSModel4.Store.spr_tblRemittance_DetailsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_tblRemittance_DetailsSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldRemittanceId" ColumnName="fldRemittanceId" />
+          <ScalarProperty Name="fldKalaId" ColumnName="fldKalaId" />
+          <ScalarProperty Name="fldMaxTon" ColumnName="fldMaxTon" />
+          <ScalarProperty Name="fldControlLimit" ColumnName="fldControlLimit" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldKalaName" ColumnName="fldKalaName" />
+          <ScalarProperty Name="fldTitleHeader" ColumnName="fldTitleHeader" />
+          <ScalarProperty Name="fldExistsVazn" ColumnName="fldExistsVazn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblParametrsBaskoolInsert" FunctionName="RasaNewFMSModel4.Store.spr_tblParametrsBaskoolInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblParametrBaskoolValueDelete" FunctionName="RasaNewFMSModel4.Store.spr_tblParametrBaskoolValueDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblParametrsBaskoolSelect" FunctionName="RasaNewFMSModel4.Store.spr_tblParametrsBaskoolSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_tblParametrsBaskoolSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldEnName" ColumnName="fldEnName" />
+          <ScalarProperty Name="fldFaName" ColumnName="fldFaName" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblBaskolDocumentSelect" FunctionName="RasaNewFMSModel4.Store.spr_tblBaskolDocumentSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_tblBaskolDocumentSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTozinId" ColumnName="fldTozinId" />
+          <ScalarProperty Name="fldFileId" ColumnName="fldFileId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldPasvand" ColumnName="fldPasvand" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblArzeDelete" FunctionName="RasaNewFMSModel4.Store.spr_tblArzeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblArzeInsert" FunctionName="RasaNewFMSModel4.Store.spr_tblArzeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblArzeSelect" FunctionName="RasaNewFMSModel4.Store.spr_tblArzeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_tblArzeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldBaskoolId" ColumnName="fldBaskoolId" />
+          <ScalarProperty Name="fldKalaId" ColumnName="fldKalaId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldShomareHesabCodeDaramadId" ColumnName="fldShomareHesabCodeDaramadId" />
+          <ScalarProperty Name="fldNameKala" ColumnName="fldNameKala" />
+          <ScalarProperty Name="fldDaramadCode" ColumnName="fldDaramadCode" />
+          <ScalarProperty Name="fldDaramadTitle" ColumnName="fldDaramadTitle" />
+          <ScalarProperty Name="fldTedad" ColumnName="fldTedad" />
+          <ScalarProperty Name="fldMablagh" ColumnName="fldMablagh" />
+          <ScalarProperty Name="fldOrganName" ColumnName="fldOrganName" />
+          <ScalarProperty Name="fldStatusForoosh" ColumnName="fldStatusForoosh" />
+          <ScalarProperty Name="fldStatusForooshName" ColumnName="fldStatusForooshName" />
+          <ScalarProperty Name="fldVaznVahed" ColumnName="fldVaznVahed" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblArzeUpdate" FunctionName="RasaNewFMSModel4.Store.spr_tblArzeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblRemittance_HeaderInsert" FunctionName="RasaNewFMSModel4.Store.spr_tblRemittance_HeaderInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblRemittance_HeaderUpdate" FunctionName="RasaNewFMSModel4.Store.spr_tblRemittance_HeaderUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_SelectArze_Kala" FunctionName="RasaNewFMSModel4.Store.spr_SelectArze_Kala">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_SelectArze_Kala">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldKalaId" ColumnName="fldKalaId" />
+          <ScalarProperty Name="fldCodeDaramadId" ColumnName="fldCodeDaramadId" />
+          <ScalarProperty Name="fldParametrSabetDaramadId" ColumnName="fldParametrSabetDaramadId" />
+          <ScalarProperty Name="fldSharheCodeDaramad" ColumnName="fldSharheCodeDaramad" />
+          <ScalarProperty Name="fldNameParametreFa" ColumnName="fldNameParametreFa" />
+          <ScalarProperty Name="fldKalaName" ColumnName="fldKalaName" />
+          <ScalarProperty Name="fldNameWeighbridge" ColumnName="fldNameWeighbridge" />
+          <ScalarProperty Name="fldShomareHesabCodeDaramadId" ColumnName="fldShomareHesabCodeDaramadId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_UpdatePassBaskool" FunctionName="RasaNewFMSModel4.Store.spr_UpdatePassBaskool" />
+    <FunctionImportMapping FunctionImportName="spr_tblLoadingPlaceDelete" FunctionName="RasaNewFMSModel4.Store.spr_tblLoadingPlaceDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblLoadingPlaceInsert" FunctionName="RasaNewFMSModel4.Store.spr_tblLoadingPlaceInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblLoadingPlaceSelect" FunctionName="RasaNewFMSModel4.Store.spr_tblLoadingPlaceSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_tblLoadingPlaceSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblLoadingPlaceUpdate" FunctionName="RasaNewFMSModel4.Store.spr_tblLoadingPlaceUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblArze_DetailSelect" FunctionName="RasaNewFMSModel4.Store.spr_tblArze_DetailSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_tblArze_DetailSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldHeaderId" ColumnName="fldHeaderId" />
+          <ScalarProperty Name="fldParametrSabetCodeDaramd" ColumnName="fldParametrSabetCodeDaramd" />
+          <ScalarProperty Name="fldValue" ColumnName="fldValue" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldFlag" ColumnName="fldFlag" />
+          <ScalarProperty Name="fldNameParametreEn" ColumnName="fldNameParametreEn" />
+          <ScalarProperty Name="fldNameParametreFa" ColumnName="fldNameParametreFa" />
+          <ScalarProperty Name="fldValue_Arze" ColumnName="fldValue_Arze" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblNoeMasrafSelect" FunctionName="RasaNewFMSModel4.Store.spr_tblNoeMasrafSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_tblNoeMasrafSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblArze_DetailDelete" FunctionName="RasaNewFMSModel4.Store.spr_tblArze_DetailDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblArze_DetailInsert" FunctionName="RasaNewFMSModel4.Store.spr_tblArze_DetailInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblVazn_BaskoolInsert" FunctionName="RasaNewFMSModel4.Store.spr_tblVazn_BaskoolInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblVazn_BaskoolSelect" FunctionName="RasaNewFMSModel4.Store.spr_tblVazn_BaskoolSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_tblVazn_BaskoolSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldPluqeId" ColumnName="fldPluqeId" />
+          <ScalarProperty Name="fldRananadeId" ColumnName="fldRananadeId" />
+          <ScalarProperty Name="fldNoeMasrafId" ColumnName="fldNoeMasrafId" />
+          <ScalarProperty Name="fldAshkhasId" ColumnName="fldAshkhasId" />
+          <ScalarProperty Name="fldChartOrganEjraeeId" ColumnName="fldChartOrganEjraeeId" />
+          <ScalarProperty Name="fldLoadingPlaceId" ColumnName="fldLoadingPlaceId" />
+          <ScalarProperty Name="fldDateTazin" ColumnName="fldDateTazin" />
+          <ScalarProperty Name="fldKalaId" ColumnName="fldKalaId" />
+          <ScalarProperty Name="fldVaznKol" ColumnName="fldVaznKol" />
+          <ScalarProperty Name="fldVaznKhals" ColumnName="fldVaznKhals" />
+          <ScalarProperty Name="fldRemittanceId" ColumnName="fldRemittanceId" />
+          <ScalarProperty Name="fldTarikhVaznKhali" ColumnName="fldTarikhVaznKhali" />
+          <ScalarProperty Name="fldBaskoolId" ColumnName="fldBaskoolId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldNameRanande" ColumnName="fldNameRanande" />
+          <ScalarProperty Name="fldNameKala" ColumnName="fldNameKala" />
+          <ScalarProperty Name="fldNamePlace" ColumnName="fldNamePlace" />
+          <ScalarProperty Name="fldPlaque" ColumnName="fldPlaque" />
+          <ScalarProperty Name="fldTarikh_TimeTozin" ColumnName="fldTarikh_TimeTozin" />
+          <ScalarProperty Name="fldIsPor" ColumnName="fldIsPor" />
+          <ScalarProperty Name="fldIsporName" ColumnName="fldIsporName" />
+          <ScalarProperty Name="fldVaznKhali" ColumnName="fldVaznKhali" />
+          <ScalarProperty Name="fldCountHavale" ColumnName="fldCountHavale" />
+          <ScalarProperty Name="fldBaghimande" ColumnName="fldBaghimande" />
+          <ScalarProperty Name="fldTypeKhodroId" ColumnName="fldTypeKhodroId" />
+          <ScalarProperty Name="fldNameKhodro" ColumnName="fldNameKhodro" />
+          <ScalarProperty Name="fldNameAshkhas" ColumnName="fldNameAshkhas" />
+          <ScalarProperty Name="fldNameChart" ColumnName="fldNameChart" />
+          <ScalarProperty Name="fldNameHavale" ColumnName="fldNameHavale" />
+          <ScalarProperty Name="fldNameMasraf" ColumnName="fldNameMasraf" />
+          <ScalarProperty Name="fldTarfHesab" ColumnName="fldTarfHesab" />
+          <ScalarProperty Name="fldIsprint" ColumnName="fldIsprint" />
+          <ScalarProperty Name="fldEbtal" ColumnName="fldEbtal" />
+          <ScalarProperty Name="fldElamAvarezId" ColumnName="fldElamAvarezId" />
+          <ScalarProperty Name="fldFishId" ColumnName="fldFishId" />
+          <ScalarProperty Name="fldTedad" ColumnName="fldTedad" />
+          <ScalarProperty Name="fldTypeMohasebe" ColumnName="fldTypeMohasebe" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_SelectRannadeInPlaque" FunctionName="RasaNewFMSModel4.Store.spr_SelectRannadeInPlaque">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_SelectRannadeInPlaque">
+          <ScalarProperty Name="fldRananadeId" ColumnName="fldRananadeId" />
+          <ScalarProperty Name="fldNameRanande" ColumnName="fldNameRanande" />
+          <ScalarProperty Name="IsKhali" ColumnName="IsKhali" />
+          <ScalarProperty Name="fldNameKhodro" ColumnName="fldNameKhodro" />
+          <ScalarProperty Name="fldTypeKhodro" ColumnName="fldTypeKhodro" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_SelectMandeHavali" FunctionName="RasaNewFMSModel4.Store.spr_SelectMandeHavali">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_SelectMandeHavali">
+          <ScalarProperty Name="fldCountHavale" ColumnName="fldCountHavale" />
+          <ScalarProperty Name="fldBaghimande" ColumnName="fldBaghimande" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_SelectVaznKhals_VaznKhali" FunctionName="RasaNewFMSModel4.Store.spr_SelectVaznKhals_VaznKhali">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_SelectVaznKhals_VaznKhali">
+          <ScalarProperty Name="TarikhVaznKhali" ColumnName="TarikhVaznKhali" />
+          <ScalarProperty Name="fldVaznKhals" ColumnName="fldVaznKhals" />
+          <ScalarProperty Name="fldVaznKhali" ColumnName="fldVaznKhali" />
+          <ScalarProperty Name="lastHour" ColumnName="lastHour" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblVazn_BaskoolUpdate" FunctionName="RasaNewFMSModel4.Store.spr_tblVazn_BaskoolUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblTozinInsert" FunctionName="RasaNewFMSModel4.Store.spr_tblTozinInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblTozinSelect" FunctionName="RasaNewFMSModel4.Store.spr_tblTozinSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_tblTozinSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldWeighbridgeId" ColumnName="fldWeighbridgeId" />
+          <ScalarProperty Name="fldMaxW" ColumnName="fldMaxW" />
+          <ScalarProperty Name="fldPlaqueId" ColumnName="fldPlaqueId" />
+          <ScalarProperty Name="fldHour" ColumnName="fldHour" />
+          <ScalarProperty Name="fldStartDate" ColumnName="fldStartDate" />
+          <ScalarProperty Name="fldEndDate" ColumnName="fldEndDate" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldPlaque" ColumnName="fldPlaque" />
+          <ScalarProperty Name="fldNameBaskool" ColumnName="fldNameBaskool" />
+          <ScalarProperty Name="fldTarikhShoroo" ColumnName="fldTarikhShoroo" />
+          <ScalarProperty Name="fldTarikhPayan" ColumnName="fldTarikhPayan" />
+          <ScalarProperty Name="fldSaat" ColumnName="fldSaat" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_UpdateIsprintBaskool" FunctionName="RasaNewFMSModel4.Store.spr_UpdateIsprintBaskool" />
+    <FunctionImportMapping FunctionImportName="spr_UpdateEbtalBaskool" FunctionName="RasaNewFMSModel4.Store.spr_UpdateEbtalBaskool" />
+    <FunctionImportMapping FunctionImportName="spr_tblTypeReportInsert" FunctionName="RasaNewFMSModel4.Store.spr_tblTypeReportInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblTypeReportSelect" FunctionName="RasaNewFMSModel4.Store.spr_tblTypeReportSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_tblTypeReportSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldType" ColumnName="fldType" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldBaskoolId" ColumnName="fldBaskoolId" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldTypeName" ColumnName="fldTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_SelectSumKalaHavale" FunctionName="RasaNewFMSModel4.Store.spr_SelectSumKalaHavale">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_SelectSumKalaHavale">
+          <ScalarProperty Name="fldNameKala" ColumnName="fldNameKala" />
+          <ScalarProperty Name="fldMaxTon" ColumnName="fldMaxTon" />
+          <ScalarProperty Name="fldSumKala" ColumnName="fldSumKala" />
+          <ScalarProperty Name="fldBaghimande" ColumnName="fldBaghimande" />
+          <ScalarProperty Name="fldKalaid" ColumnName="fldKalaid" />
+          <ScalarProperty Name="fldNameHeader" ColumnName="fldNameHeader" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_SelectSumKalaHavale_Detail" FunctionName="RasaNewFMSModel4.Store.spr_SelectSumKalaHavale_Detail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_SelectSumKalaHavale_Detail">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldVaznKol" ColumnName="fldVaznKol" />
+          <ScalarProperty Name="fldVaznKhals" ColumnName="fldVaznKhals" />
+          <ScalarProperty Name="fldRemittanceId" ColumnName="fldRemittanceId" />
+          <ScalarProperty Name="fldTarikhVaznKhali" ColumnName="fldTarikhVaznKhali" />
+          <ScalarProperty Name="fldNameRanande" ColumnName="fldNameRanande" />
+          <ScalarProperty Name="fldNameKala" ColumnName="fldNameKala" />
+          <ScalarProperty Name="fldNamePlace" ColumnName="fldNamePlace" />
+          <ScalarProperty Name="fldPlaque" ColumnName="fldPlaque" />
+          <ScalarProperty Name="fldTarikh_TimeTozin" ColumnName="fldTarikh_TimeTozin" />
+          <ScalarProperty Name="fldIsporName" ColumnName="fldIsporName" />
+          <ScalarProperty Name="fldVaznKhali" ColumnName="fldVaznKhali" />
+          <ScalarProperty Name="fldNameKhodro" ColumnName="fldNameKhodro" />
+          <ScalarProperty Name="fldNameHavale" ColumnName="fldNameHavale" />
+          <ScalarProperty Name="fldNameBaskool" ColumnName="fldNameBaskool" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblElamAvarez_ModuleOrganInsert" FunctionName="RasaNewFMSModel4.Store.spr_tblElamAvarez_ModuleOrganInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblElamAvarez_ModuleOrganSelect" FunctionName="RasaNewFMSModel4.Store.spr_tblElamAvarez_ModuleOrganSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaNewFMSModel4.spr_tblElamAvarez_ModuleOrganSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldElamAvarezId" ColumnName="fldElamAvarezId" />
+          <ScalarProperty Name="fldCodeDaramdElamAvarezId" ColumnName="fldCodeDaramdElamAvarezId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="fldModulOrganId" ColumnName="fldModulOrganId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

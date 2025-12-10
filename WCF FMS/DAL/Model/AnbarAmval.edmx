@@ -1,0 +1,796 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AnbarAmvalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="spr_Anbar_TarifNashode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str" StoreFunctionName="spr.Anbar_TarifNashode">
+          <Parameter Name="fldGroupId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_kala_TarifNashode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str" StoreFunctionName="spr.kala_TarifNashode">
+          <Parameter Name="fldGroupId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_CheckExistsAnbar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldAnbarTreeId" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAnbar_TreeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAnbar_TreeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldAnbarId" Type="int" Mode="In" />
+          <Parameter Name="fldAnbarTreeId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldIP" Type="varchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAnbar_TreeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAnbar_TreeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldAnbarId" Type="int" Mode="In" />
+          <Parameter Name="fldAnbarTreeId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldIP" Type="varchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAnbarDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAnbarGroupDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAnbarGroupInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldIP" Type="varchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAnbarGroupSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAnbarGroupUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldIP" Type="varchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAnbarInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldAddress" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldPhone" Type="varchar" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldAnbarTreeId" Type="varchar" Mode="In" />
+          <Parameter Name="fldIP" Type="varchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAnbarSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAnbarTreeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAnbarTreeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldPID" Type="int" Mode="In" />
+          <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldIP" Type="varchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldGroupId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAnbarTreeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value2" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAnbarTreeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldIP" Type="varchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldGroupId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblAnbarUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldAddress" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldPhone" Type="varchar" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldAnbarTreeId" Type="varchar" Mode="In" />
+          <Parameter Name="fldIP" Type="varchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblInsuranceCompanyDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblInsuranceCompanyInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldFile" Type="varbinary(max)" Mode="In" />
+          <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+          <Parameter Name="fldIp" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spr_tblInsuranceCompanySelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblInsuranceCompanyUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldFileId" Type="int" Mode="In" />
+          <Parameter Name="fldFile" Type="varbinary(max)" Mode="In" />
+          <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+          <Parameter Name="fldIp" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spr_tblInsuranceTypeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblInsuranceTypeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+          <Parameter Name="fldIp" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spr_tblInsuranceTypeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblInsuranceTypeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+          <Parameter Name="fldIp" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spr_tblKalaDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblKalaGroupDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblKalaGroupInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldIP" Type="varchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblKalaGroupSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblKalaGroupUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldIP" Type="varchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblKalaInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldKalaType" Type="tinyint" Mode="In" />
+          <Parameter Name="fldKalaCode" Type="char" Mode="In" />
+          <Parameter Name="fldStatus" Type="tinyint" Mode="In" />
+          <Parameter Name="fldSell" Type="bit" Mode="In" />
+          <Parameter Name="fldArzeshAfzodeh" Type="bit" Mode="In" />
+          <Parameter Name="fldIranCode" Type="varchar" Mode="In" />
+          <Parameter Name="fldMoshakhaseType" Type="tinyint" Mode="In" />
+          <Parameter Name="fldMoshakhase" Type="varchar" Mode="In" />
+          <Parameter Name="fldVahedAsli" Type="int" Mode="In" />
+          <Parameter Name="fldVahedFaree" Type="int" Mode="In" />
+          <Parameter Name="fldNesbatType" Type="tinyint" Mode="In" />
+          <Parameter Name="fldVahedMoadel" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldIP" Type="varchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblKalaSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblKalaTreeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblKalaTreeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldPID" Type="int" Mode="In" />
+          <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldIP" Type="varchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldGroupId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblKalaTreeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value2" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblKalaTreeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldIP" Type="varchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldGroupId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblKalaUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldKalaType" Type="tinyint" Mode="In" />
+          <Parameter Name="fldKalaCode" Type="char" Mode="In" />
+          <Parameter Name="fldStatus" Type="tinyint" Mode="In" />
+          <Parameter Name="fldSell" Type="bit" Mode="In" />
+          <Parameter Name="fldArzeshAfzodeh" Type="bit" Mode="In" />
+          <Parameter Name="fldIranCode" Type="varchar" Mode="In" />
+          <Parameter Name="fldMoshakhaseType" Type="tinyint" Mode="In" />
+          <Parameter Name="fldMoshakhase" Type="varchar" Mode="In" />
+          <Parameter Name="fldVahedAsli" Type="int" Mode="In" />
+          <Parameter Name="fldVahedFaree" Type="int" Mode="In" />
+          <Parameter Name="fldNesbatType" Type="tinyint" Mode="In" />
+          <Parameter Name="fldVahedMoadel" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="fldIP" Type="varchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_UpdatePID_Anbar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="Child" Type="int" Mode="In" />
+          <Parameter Name="Parent" Type="int" Mode="In" />
+          <Parameter Name="UserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_UpdatePID_Anbar_Tree" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="Anbar_TreeId" Type="int" Mode="In" />
+          <Parameter Name="Parent" Type="int" Mode="In" />
+          <Parameter Name="UserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_UpdatePID_kala" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+          <Parameter Name="Child" Type="int" Mode="In" />
+          <Parameter Name="Parent" Type="int" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="AnbarAmvalModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AnbarAmvalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AnbarAmvalEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="spr_tblInsuranceTypeDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblInsuranceTypeInsert">
+            <Parameter Name="fldTitle" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+            <Parameter Name="fldIp" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblInsuranceTypeUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldTitle" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+            <Parameter Name="fldIp" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblInsuranceCompanyDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblInsuranceCompanyInsert">
+            <Parameter Name="fldName" Mode="In" Type="String" />
+            <Parameter Name="fldFile" Mode="In" Type="Binary" />
+            <Parameter Name="fldPasvand" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+            <Parameter Name="fldIp" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblInsuranceCompanySelect" ReturnType="Collection(AnbarAmvalModel.spr_tblInsuranceCompanySelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblInsuranceCompanyUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldName" Mode="In" Type="String" />
+            <Parameter Name="fldFileId" Mode="In" Type="Int32" />
+            <Parameter Name="fldFile" Mode="In" Type="Binary" />
+            <Parameter Name="fldPasvand" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+            <Parameter Name="fldIp" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblInsuranceTypeSelect" ReturnType="Collection(AnbarAmvalModel.spr_tblInsuranceTypeSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAnbarDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAnbarInsert">
+            <Parameter Name="fldName" Mode="In" Type="String" />
+            <Parameter Name="fldAddress" Mode="In" Type="String" />
+            <Parameter Name="fldPhone" Mode="In" Type="String" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldAnbarTreeId" Mode="In" Type="String" />
+            <Parameter Name="fldIP" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAnbarSelect" ReturnType="Collection(AnbarAmvalModel.spr_tblAnbarSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAnbarUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldName" Mode="In" Type="String" />
+            <Parameter Name="fldAddress" Mode="In" Type="String" />
+            <Parameter Name="fldPhone" Mode="In" Type="String" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldAnbarTreeId" Mode="In" Type="String" />
+            <Parameter Name="fldIP" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_UpdatePID_Anbar">
+            <Parameter Name="Child" Mode="In" Type="Int32" />
+            <Parameter Name="Parent" Mode="In" Type="Int32" />
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_UpdatePID_kala">
+            <Parameter Name="Child" Mode="In" Type="Int32" />
+            <Parameter Name="Parent" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAnbarTreeDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAnbarTreeInsert">
+            <Parameter Name="fldPID" Mode="In" Type="Int32" />
+            <Parameter Name="fldName" Mode="In" Type="String" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldIP" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldGroupId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAnbarTreeSelect" ReturnType="Collection(AnbarAmvalModel.spr_tblAnbarTreeSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="Value2" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAnbarTreeUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldName" Mode="In" Type="String" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldIP" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldGroupId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_CheckExistsAnbar" ReturnType="Collection(AnbarAmvalModel.spr_CheckExistsAnbar)">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldAnbarTreeId" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblKalaTreeDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblKalaTreeInsert">
+            <Parameter Name="fldPID" Mode="In" Type="Int32" />
+            <Parameter Name="fldName" Mode="In" Type="String" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldIP" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldGroupId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblKalaTreeSelect" ReturnType="Collection(AnbarAmvalModel.spr_tblKalaTreeSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="Value2" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblKalaTreeUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldName" Mode="In" Type="String" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldIP" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldGroupId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAnbar_TreeDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAnbar_TreeInsert">
+            <Parameter Name="fldAnbarId" Mode="In" Type="Int32" />
+            <Parameter Name="fldAnbarTreeId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldIP" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAnbar_TreeSelect" ReturnType="Collection(AnbarAmvalModel.spr_tblAnbar_TreeSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAnbar_TreeUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldAnbarId" Mode="In" Type="Int32" />
+            <Parameter Name="fldAnbarTreeId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldIP" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAnbarGroupDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAnbarGroupInsert">
+            <Parameter Name="fldName" Mode="In" Type="String" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldIP" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAnbarGroupSelect" ReturnType="Collection(AnbarAmvalModel.spr_tblAnbarGroupSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblAnbarGroupUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldName" Mode="In" Type="String" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldIP" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblKalaGroupDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblKalaGroupInsert">
+            <Parameter Name="fldName" Mode="In" Type="String" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldIP" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblKalaGroupSelect" ReturnType="Collection(AnbarAmvalModel.spr_tblKalaGroupSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblKalaGroupUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldName" Mode="In" Type="String" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldIP" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_UpdatePID_Anbar_Tree">
+            <Parameter Name="Anbar_TreeId" Mode="In" Type="Int32" />
+            <Parameter Name="Parent" Mode="In" Type="Int32" />
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblKala_TreeInsert">
+            <Parameter Name="fldKalaId" Mode="In" Type="Int32" />
+            <Parameter Name="fldKalaTreeId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+            <Parameter Name="fldIP" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_kala_TarifNashode" ReturnType="Collection(AnbarAmvalModel.spr_kala_TarifNashode)">
+          <Parameter Name="fldGroupId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Anbar_TarifNashode" ReturnType="Collection(AnbarAmvalModel.spr_Anbar_TarifNashode)">
+            <Parameter Name="fldGroupId" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="spr_tblInsuranceCompanySelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="String" Name="fldName" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="fldFileId" Nullable="false" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+          <Property Type="String" Name="fldIp" Nullable="false" MaxLength="16" />
+        </ComplexType>
+        <ComplexType Name="spr_tblInsuranceTypeSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+          <Property Type="String" Name="fldIp" Nullable="false" MaxLength="16" />
+        </ComplexType>
+        <ComplexType Name="spr_tblAnbarSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="String" Name="fldName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="fldAddress" Nullable="false" />
+          <Property Type="String" Name="fldPhone" Nullable="false" MaxLength="11" />
+          <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+          </ComplexType>
+        <ComplexType Name="spr_tblAnbarTreeSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldPID" Nullable="true" />
+          <Property Type="String" Name="fldName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="Int32" Name="fldNodeType" Nullable="false" />
+          <Property Type="Int32" Name="fldGroupId" Nullable="false" />
+          <Property Type="Int32" Name="fldAnbar_treeId" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_CheckExistsAnbar">
+          <Property Type="Int32" Name="fldCheck" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_tblKalaTreeSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldPID" Nullable="true" />
+          <Property Type="String" Name="fldName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="Int32" Name="fldNodeType" Nullable="false" />
+          <Property Type="Int32" Name="fldGroupId" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_tblAnbar_TreeSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldAnbarId" Nullable="false" />
+          <Property Type="Int32" Name="fldAnbarTreeId" Nullable="false" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_tblAnbarGroupSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="String" Name="fldName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_tblKalaGroupSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="String" Name="fldName" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spr_kala_TarifNashode">
+          <Property Type="String" Name="fldName" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="kalaId" Nullable="false" />
+          </ComplexType>
+        <ComplexType Name="spr_Anbar_TarifNashode">
+          <Property Type="Int32" Name="AnbarId" Nullable="false" />
+          <Property Type="String" Name="fldName" Nullable="false" MaxLength="100" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AnbarAmvalModelStoreContainer" CdmEntityContainer="AnbarAmvalEntities" >
+          <FunctionImportMapping FunctionImportName="spr_tblInsuranceTypeDelete" FunctionName="AnbarAmvalModel.Store.spr_tblInsuranceTypeDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblInsuranceTypeInsert" FunctionName="AnbarAmvalModel.Store.spr_tblInsuranceTypeInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblInsuranceTypeUpdate" FunctionName="AnbarAmvalModel.Store.spr_tblInsuranceTypeUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tblInsuranceCompanyDelete" FunctionName="AnbarAmvalModel.Store.spr_tblInsuranceCompanyDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblInsuranceCompanyInsert" FunctionName="AnbarAmvalModel.Store.spr_tblInsuranceCompanyInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblInsuranceCompanySelect" FunctionName="AnbarAmvalModel.Store.spr_tblInsuranceCompanySelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_tblInsuranceCompanySelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldName" ColumnName="fldName" />
+                <ScalarProperty Name="fldFileId" ColumnName="fldFileId" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+                <ScalarProperty Name="fldIp" ColumnName="fldIp" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblInsuranceCompanyUpdate" FunctionName="AnbarAmvalModel.Store.spr_tblInsuranceCompanyUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tblInsuranceTypeSelect" FunctionName="AnbarAmvalModel.Store.spr_tblInsuranceTypeSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_tblInsuranceTypeSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+                <ScalarProperty Name="fldIp" ColumnName="fldIp" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblAnbarDelete" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblAnbarInsert" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblAnbarSelect" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_tblAnbarSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="fldName" ColumnName="fldName" />
+                <ScalarProperty Name="fldAddress" ColumnName="fldAddress" />
+                <ScalarProperty Name="fldPhone" ColumnName="fldPhone" />
+                <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+                </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblAnbarUpdate" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_UpdatePID_Anbar" FunctionName="AnbarAmvalModel.Store.spr_UpdatePID_Anbar" />
+          <FunctionImportMapping FunctionImportName="spr_UpdatePID_kala" FunctionName="AnbarAmvalModel.Store.spr_UpdatePID_kala" />
+          <FunctionImportMapping FunctionImportName="spr_tblAnbarTreeDelete" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarTreeDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblAnbarTreeInsert" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarTreeInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblAnbarTreeSelect" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarTreeSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_tblAnbarTreeSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldPID" ColumnName="fldPID" />
+                <ScalarProperty Name="fldName" ColumnName="fldName" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="fldNodeType" ColumnName="fldNodeType" />
+                <ScalarProperty Name="fldGroupId" ColumnName="fldGroupId" />
+                <ScalarProperty Name="fldAnbar_treeId" ColumnName="fldAnbar_treeId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblAnbarTreeUpdate" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarTreeUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_CheckExistsAnbar" FunctionName="AnbarAmvalModel.Store.spr_CheckExistsAnbar" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_CheckExistsAnbar">
+                <ScalarProperty Name="fldCheck" ColumnName="fldCheck" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblKalaTreeDelete" FunctionName="AnbarAmvalModel.Store.spr_tblKalaTreeDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblKalaTreeInsert" FunctionName="AnbarAmvalModel.Store.spr_tblKalaTreeInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblKalaTreeSelect" FunctionName="AnbarAmvalModel.Store.spr_tblKalaTreeSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_tblKalaTreeSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldPID" ColumnName="fldPID" />
+                <ScalarProperty Name="fldName" ColumnName="fldName" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="fldNodeType" ColumnName="fldNodeType" />
+                <ScalarProperty Name="fldGroupId" ColumnName="fldGroupId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblKalaTreeUpdate" FunctionName="AnbarAmvalModel.Store.spr_tblKalaTreeUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tblAnbar_TreeDelete" FunctionName="AnbarAmvalModel.Store.spr_tblAnbar_TreeDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblAnbar_TreeInsert" FunctionName="AnbarAmvalModel.Store.spr_tblAnbar_TreeInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblAnbar_TreeSelect" FunctionName="AnbarAmvalModel.Store.spr_tblAnbar_TreeSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_tblAnbar_TreeSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldAnbarId" ColumnName="fldAnbarId" />
+                <ScalarProperty Name="fldAnbarTreeId" ColumnName="fldAnbarTreeId" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblAnbar_TreeUpdate" FunctionName="AnbarAmvalModel.Store.spr_tblAnbar_TreeUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tblAnbarGroupDelete" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarGroupDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblAnbarGroupInsert" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarGroupInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblAnbarGroupSelect" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarGroupSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_tblAnbarGroupSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldName" ColumnName="fldName" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblAnbarGroupUpdate" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarGroupUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tblKalaGroupDelete" FunctionName="AnbarAmvalModel.Store.spr_tblKalaGroupDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblKalaGroupInsert" FunctionName="AnbarAmvalModel.Store.spr_tblKalaGroupInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblKalaGroupSelect" FunctionName="AnbarAmvalModel.Store.spr_tblKalaGroupSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_tblKalaGroupSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldName" ColumnName="fldName" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblKalaGroupUpdate" FunctionName="AnbarAmvalModel.Store.spr_tblKalaGroupUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_UpdatePID_Anbar_Tree" FunctionName="AnbarAmvalModel.Store.spr_UpdatePID_Anbar_Tree" />
+          <FunctionImportMapping FunctionImportName="spr_kala_TarifNashode" FunctionName="AnbarAmvalModel.Store.spr_kala_TarifNashode">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_kala_TarifNashode">
+                <ScalarProperty Name="fldName" ColumnName="fldName" />
+                <ScalarProperty Name="kalaId" ColumnName="kalaId" />
+                </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_Anbar_TarifNashode" FunctionName="AnbarAmvalModel.Store.spr_Anbar_TarifNashode">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_Anbar_TarifNashode">
+                <ScalarProperty Name="AnbarId" ColumnName="AnbarId" />
+                <ScalarProperty Name="fldName" ColumnName="fldName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,1886 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RasaNewFMSModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AutomationEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="spr_tblCommisionDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCommisionInsert">
+      <Parameter Name="fldAshkhasID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganizPostEjraeeID" Mode="In" Type="Int32" />
+      <Parameter Name="fldStartDate" Mode="In" Type="String" />
+      <Parameter Name="fldEndDate" Mode="In" Type="String" />
+      <Parameter Name="fldOrganicNumber" Mode="In" Type="String" />
+      <Parameter Name="fldSign" Mode="In" Type="Boolean" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCommisionSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblCommisionSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCommisionUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldAshkhasID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganizPostEjraeeID" Mode="In" Type="Int32" />
+      <Parameter Name="fldStartDate" Mode="In" Type="String" />
+      <Parameter Name="fldEndDate" Mode="In" Type="String" />
+      <Parameter Name="fldOrganicNumber" Mode="In" Type="String" />
+      <Parameter Name="fldSign" Mode="In" Type="Boolean" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAssignmentTypeDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAssignmentTypeInsert">
+      <Parameter Name="fldType" Mode="In" Type="String" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAssignmentTypeSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblAssignmentTypeSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAssignmentTypeUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldType" Mode="In" Type="String" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblImmediacyDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblImmediacyInsert">
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldImage" Mode="In" Type="Binary" />
+      <Parameter Name="fldPasvand" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblImmediacySelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblImmediacySelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblImmediacyUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldFileId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="fldImage" Mode="In" Type="Binary" />
+      <Parameter Name="fldPasvand" Mode="In" Type="String" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblNumberingFormatDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblNumberingFormatInsert">
+      <Parameter Name="fldYear" Mode="In" Type="Int32" />
+      <Parameter Name="fldSecretariatID" Mode="In" Type="Int32" />
+      <Parameter Name="fldNumberFormat" Mode="In" Type="String" />
+      <Parameter Name="fldStartNumber" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblNumberingFormatSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblNumberingFormatSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblNumberingFormatUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldYear" Mode="In" Type="Int32" />
+      <Parameter Name="fldSecretariatID" Mode="In" Type="Int32" />
+      <Parameter Name="fldNumberFormat" Mode="In" Type="String" />
+      <Parameter Name="fldStartNumber" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSecurityTypeDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSecurityTypeInsert">
+      <Parameter Name="fldSecurityType" Mode="In" Type="String" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSecurityTypeSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblSecurityTypeSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSecurityTypeUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldSecurityType" Mode="In" Type="String" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblProgramSettingDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblProgramSettingInsert">
+      <Parameter Name="fldEmailAddress" Mode="In" Type="String" />
+      <Parameter Name="fldEmailPassword" Mode="In" Type="String" />
+      <Parameter Name="fldRecieveServer" Mode="In" Type="String" />
+      <Parameter Name="fldSendServer" Mode="In" Type="String" />
+      <Parameter Name="fldSendPort" Mode="In" Type="Int32" />
+      <Parameter Name="fldSSL" Mode="In" Type="Boolean" />
+      <Parameter Name="fldDelFax" Mode="In" Type="Boolean" />
+      <Parameter Name="fldIsSigner" Mode="In" Type="Boolean" />
+      <Parameter Name="fldFaxPath" Mode="In" Type="String" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldRecievePort" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblProgramSettingSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblProgramSettingSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblProgramSettingUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldEmailAddress" Mode="In" Type="String" />
+      <Parameter Name="fldEmailPassword" Mode="In" Type="String" />
+      <Parameter Name="fldRecieveServer" Mode="In" Type="String" />
+      <Parameter Name="fldSendServer" Mode="In" Type="String" />
+      <Parameter Name="fldSendPort" Mode="In" Type="Int32" />
+      <Parameter Name="fldSSL" Mode="In" Type="Boolean" />
+      <Parameter Name="fldDelFax" Mode="In" Type="Boolean" />
+      <Parameter Name="fldIsSigner" Mode="In" Type="Boolean" />
+      <Parameter Name="fldFaxPath" Mode="In" Type="String" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldRecievePort" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSecretariat_OrganizationUnitDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSecretariat_OrganizationUnitInsert">
+      <Parameter Name="fldSecretariatID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganizationUnitID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSecretariat_OrganizationUnitSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblSecretariat_OrganizationUnitSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSecretariat_OrganizationUnitUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldSecretariatID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganizationUnitID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSubstituteDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSubstituteInsert">
+      <Parameter Name="fldSenderComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldReceiverComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldStartDate" Mode="In" Type="String" />
+      <Parameter Name="fldEndDate" Mode="In" Type="String" />
+      <Parameter Name="fldStartTime" Mode="In" Type="Time" />
+      <Parameter Name="fldEndTime" Mode="In" Type="Time" />
+      <Parameter Name="fldIsSigner" Mode="In" Type="Boolean" />
+      <Parameter Name="fldShowReceiverName" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSubstituteSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblSubstituteSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSubstituteUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldSenderComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldReceiverComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldStartDate" Mode="In" Type="String" />
+      <Parameter Name="fldEndDate" Mode="In" Type="String" />
+      <Parameter Name="fldStartTime" Mode="In" Type="Time" />
+      <Parameter Name="fldEndTime" Mode="In" Type="Time" />
+      <Parameter Name="fldIsSigner" Mode="In" Type="Boolean" />
+      <Parameter Name="fldShowReceiverName" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_CheckTarikhForPostCommision" ReturnType="Collection(RasaNewFMSModel2.spr_CheckTarikhForPostCommision)">
+      <Parameter Name="aztarikh" Mode="In" Type="String" />
+      <Parameter Name="tatarikh" Mode="In" Type="String" />
+      <Parameter Name="OrganizationalPost" Mode="In" Type="Int32" />
+      <Parameter Name="AshkhasID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMergeFieldTypesSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblMergeFieldTypesSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblletterTemplateDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblletterTemplateInsert">
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldIsBackGround" Mode="In" Type="Boolean" />
+      <Parameter Name="fldImage" Mode="In" Type="Binary" />
+      <Parameter Name="fldPasvand" Mode="In" Type="String" />
+      <Parameter Name="fldMergeFieldId" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldLetterFile" Mode="In" Type="Binary" />
+      <Parameter Name="fldLetterPasvand" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblletterTemplateSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblletterTemplateSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblletterTemplateUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldIsBackGround" Mode="In" Type="Boolean" />
+      <Parameter Name="fldFileId" Mode="In" Type="Int32" />
+      <Parameter Name="fldImage" Mode="In" Type="Binary" />
+      <Parameter Name="fldPasvand" Mode="In" Type="String" />
+      <Parameter Name="fldMergeFieldId" Mode="In" Type="String" />
+      <Parameter Name="fldLetterFile" Mode="In" Type="Binary" />
+      <Parameter Name="fldLetterPasvand" Mode="In" Type="String" />
+      <Parameter Name="fldLetterFileId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMergeField_LetterTemplateDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMergeField_LetterTemplateInsert">
+      <Parameter Name="fldLetterTamplateId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMergeFieldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMergeField_LetterTemplateSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblMergeField_LetterTemplateSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMergeField_LetterTemplateUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterTamplateId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMergeFieldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblReferralRulesDelete">
+      <Parameter Name="fldPostErjaDahandeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganErjaGirande" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblReferralRulesInsert">
+      <Parameter Name="fldPostErjaDahandeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPostErjaGirandeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldChartEjraeeGirandeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblReferralRulesSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblReferralRulesSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblReferralRulesUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPostErjaDahandeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPostErjaGirandeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldChartEjraeeGirandeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMessageDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMessageInsert">
+      <Parameter Name="fldID" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldCommisionId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldMatn" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMessageSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblMessageSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMessageUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCommisionId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldMatn" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMessageAttachmentDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMessageAttachmentInsert">
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldMessageId" Mode="In" Type="Int32" />
+      <Parameter Name="fldImage" Mode="In" Type="Binary" />
+      <Parameter Name="fldPasvand" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMessageAttachmentSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblMessageAttachmentSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMessageAttachmentUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldMessageId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFileId" Mode="In" Type="Int32" />
+      <Parameter Name="fldImage" Mode="In" Type="Binary" />
+      <Parameter Name="fldPasvand" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterFileMojazDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterFileMojazInsert">
+      <Parameter Name="fldFormatFileId" Mode="In" Type="Int32" />
+      <Parameter Name="fldType" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterFileMojazSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblLetterFileMojazSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterFileMojazUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFormatFileId" Mode="In" Type="Int32" />
+      <Parameter Name="fldType" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBoxDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBoxInsert">
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldBoxTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="fldPID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBoxSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblBoxSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="value2" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBoxUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldBoxTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="fldPID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTabagheBandiDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTabagheBandiInsert">
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldPID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTabagheBandiSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblTabagheBandiSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="value2" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTabagheBandiUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldPID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterStatusSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblLetterStatusSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterInsert">
+      <Parameter Name="fldID" Mode="InOut" Type="Int64" />
+      <Parameter Name="fldYear" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrderId" Mode="InOut" Type="Int64" />
+      <Parameter Name="fldSubject" Mode="In" Type="String" />
+      <Parameter Name="fldLetterNumber" Mode="In" Type="String" />
+      <Parameter Name="fldLetterDate" Mode="In" Type="String" />
+      <Parameter Name="fldKeywords" Mode="In" Type="String" />
+      <Parameter Name="fldLetterStatusID" Mode="In" Type="Int32" />
+      <Parameter Name="fldComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldImmediacyID" Mode="In" Type="Int32" />
+      <Parameter Name="fldSecurityTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="fldSignType" Mode="In" Type="Byte" />
+      <Parameter Name="fldMatnLetter" Mode="In" Type="String" />
+      <Parameter Name="fldLetterTemplateId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFont" Mode="In" Type="String" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblLetterSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int64" />
+      <Parameter Name="fldSubject" Mode="In" Type="String" />
+      <Parameter Name="fldLetterNumber" Mode="In" Type="String" />
+      <Parameter Name="fldLetterDate" Mode="In" Type="String" />
+      <Parameter Name="fldKeywords" Mode="In" Type="String" />
+      <Parameter Name="fldComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldImmediacyID" Mode="In" Type="Int32" />
+      <Parameter Name="fldSecurityTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="fldSignType" Mode="In" Type="Byte" />
+      <Parameter Name="fldMatnLetter" Mode="In" Type="String" />
+      <Parameter Name="fldLetterTemplateId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFont" Mode="In" Type="String" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterUpdateNumDate">
+      <Parameter Name="fldID" Mode="In" Type="Int64" />
+      <Parameter Name="fldLetterNumber" Mode="In" Type="String" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterStatusIdUpdate">
+      <Parameter Name="LetterId" Mode="In" Type="Int64" />
+      <Parameter Name="LetterStatus" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterBoxDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterBoxInsert">
+      <Parameter Name="fldBoxId" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterId" Mode="In" Type="Int64" />
+      <Parameter Name="fldMessageId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterBoxSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblLetterBoxSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterBoxUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldBoxID" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterID" Mode="In" Type="Int64" />
+      <Parameter Name="fldMessageId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterTabagheBandiDelete">
+      <Parameter Name="fieldName" Mode="In" Type="String" />
+      <Parameter Name="fldID" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterTabagheBandiInsert">
+      <Parameter Name="fldTabagheBandiId" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterId" Mode="In" Type="Int64" />
+      <Parameter Name="fldMessageId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterTabagheBandiSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblLetterTabagheBandiSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterTabagheBandiUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTabagheBandiId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMessageId" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterId" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAssignmentStatusSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblAssignmentStatusSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAssignmentDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAssignmentInsert">
+      <Parameter Name="fldID" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldLetterID" Mode="In" Type="Int64" />
+      <Parameter Name="fldMessageId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAnswerDate" Mode="In" Type="String" />
+      <Parameter Name="fldSourceAssId" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAssignmentSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblAssignmentSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAssignmentUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterID" Mode="In" Type="Int64" />
+      <Parameter Name="fldMessageId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAnswerDate" Mode="In" Type="String" />
+      <Parameter Name="fldSourceAssId" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterTemplateUpdateFormat">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldformat" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblInternalAssignmentReceiverDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblInternalAssignmentReceiverInsert">
+      <Parameter Name="fldAssignmentID" Mode="In" Type="Int32" />
+      <Parameter Name="fldReceiverComisionId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAssignmentStatusId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAssignmentTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="fldBoxId" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterReadDate" Mode="In" Type="String" />
+      <Parameter Name="fldShowTypeT_F" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblInternalAssignmentReceiverSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblInternalAssignmentReceiverSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblInternalAssignmentReceiverUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldAssignmentID" Mode="In" Type="Int32" />
+      <Parameter Name="fldReceiverComisionId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAssignmentStatusId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAssignmentTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="fldBoxId" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterReadDate" Mode="In" Type="String" />
+      <Parameter Name="fldShowTypeT_F" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblInternalAssignmentReceiverBoxUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldBoxID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblInternalAssignmentReceiverStatusUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="StatusId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblInternalAssignmentSenderDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblInternalAssignmentSenderInsert">
+      <Parameter Name="fldAssignmentID" Mode="In" Type="Int64" />
+      <Parameter Name="fldSenderComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldBoxID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblInternalAssignmentSenderSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblInternalAssignmentSenderSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblInternalAssignmentSenderUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldAssignmentID" Mode="In" Type="Int64" />
+      <Parameter Name="fldSenderComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldBoxID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCommisionSelect_Post" ReturnType="Collection(RasaNewFMSModel2.spr_tblCommisionSelect_Post)">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblArchiveDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblArchiveInsert">
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldPID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblArchiveSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblArchiveSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblArchiveUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldPID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectSavedMessage" ReturnType="Collection(RasaNewFMSModel2.spr_SelectSavedMessage)">
+      <Parameter Name="fieldName" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+      <Parameter Name="start" Mode="In" Type="String" />
+      <Parameter Name="end" Mode="In" Type="String" />
+      <Parameter Name="BoxId" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="TabagheBandiId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterArchiveDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterArchiveInsert">
+      <Parameter Name="fldLetterId" Mode="In" Type="Int64" />
+      <Parameter Name="fldMessageId" Mode="In" Type="Int32" />
+      <Parameter Name="fldArchiveID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterArchiveSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblLetterArchiveSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterArchiveUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterId" Mode="In" Type="Int64" />
+      <Parameter Name="fldMessageId" Mode="In" Type="Int32" />
+      <Parameter Name="fldArchiveID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectInbox" ReturnType="Collection(RasaNewFMSModel2.spr_SelectInbox)">
+      <Parameter Name="fieldName" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+      <Parameter Name="start" Mode="In" Type="String" />
+      <Parameter Name="End" Mode="In" Type="String" />
+      <Parameter Name="BoxId" Mode="In" Type="Int32" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="TabagheBandiId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectSavedLetter" ReturnType="Collection(RasaNewFMSModel2.spr_SelectSavedLetter)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+      <Parameter Name="start" Mode="In" Type="String" />
+      <Parameter Name="end" Mode="In" Type="String" />
+      <Parameter Name="BoxId" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="TabagheBandiId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectSent" ReturnType="Collection(RasaNewFMSModel2.spr_SelectSent)">
+      <Parameter Name="fieldName" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+      <Parameter Name="start" Mode="In" Type="String" />
+      <Parameter Name="end" Mode="In" Type="String" />
+      <Parameter Name="boxId" Mode="In" Type="Int32" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="TabagheBandiId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectTrash" ReturnType="Collection(RasaNewFMSModel2.spr_SelectTrash)">
+      <Parameter Name="fieldName" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+      <Parameter Name="start" Mode="In" Type="String" />
+      <Parameter Name="end" Mode="In" Type="String" />
+      <Parameter Name="BoxId" Mode="In" Type="Int32" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="TabagheBandiId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_GetBoxTypeId" ReturnType="Collection(RasaNewFMSModel2.spr_GetBoxTypeId)">
+      <Parameter Name="NodeId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblInternalAssignmentSenderBoxUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldBoxID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSignerDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSignerInsert">
+      <Parameter Name="fldLetterID" Mode="In" Type="Int64" />
+      <Parameter Name="fldSignerComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldIndexerID" Mode="In" Type="Int32" />
+      <Parameter Name="fldFirstSigner" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSignerSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblSignerSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSignerUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int64" />
+      <Parameter Name="fldLetterID" Mode="In" Type="Int64" />
+      <Parameter Name="fldSignerComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldIndexerID" Mode="In" Type="Int32" />
+      <Parameter Name="fldFirstSigner" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblExternalLetterReceiverDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblExternalLetterReceiverInsert">
+      <Parameter Name="fldLetterID" Mode="In" Type="Int64" />
+      <Parameter Name="fldMessageId" Mode="In" Type="Int32" />
+      <Parameter Name="fldHoghoghiTitlesId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblExternalLetterReceiverSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblExternalLetterReceiverSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblExternalLetterReceiverUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterID" Mode="In" Type="Int64" />
+      <Parameter Name="fldMessageId" Mode="In" Type="Int32" />
+      <Parameter Name="fldHoghoghiTitlesId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblExternalLetterSenderDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblExternalLetterSenderInsert">
+      <Parameter Name="fldLetterID" Mode="In" Type="Int64" />
+      <Parameter Name="fldMessageId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShakhsHoghoghiTitlesId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblExternalLetterSenderSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblExternalLetterSenderSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblExternalLetterSenderUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterID" Mode="In" Type="Int64" />
+      <Parameter Name="fldMessageId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShakhsHoghoghiTitlesId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblInternalLetterReceiverDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblInternalLetterReceiverSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblInternalLetterReceiverSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblInternalLetterReceiverUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterId" Mode="In" Type="Int64" />
+      <Parameter Name="fldMessageId" Mode="In" Type="Int32" />
+      <Parameter Name="fldReceiverComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldAssignmentStatusID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblContentFileDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblContentFileInsert">
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldLetterText" Mode="In" Type="Binary" />
+      <Parameter Name="fldLetterId" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldType" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblContentFileSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblContentFileSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblContentFileUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldLetterText" Mode="In" Type="Binary" />
+      <Parameter Name="fldLetterId" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldType" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterAttachmentDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterAttachmentInsert">
+      <Parameter Name="fldLetterId" Mode="In" Type="Int64" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldNameFile" Mode="In" Type="String" />
+      <Parameter Name="file" Mode="In" Type="Binary" />
+      <Parameter Name="fldType" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterAttachmentSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblLetterAttachmentSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterAttachmentUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterId" Mode="In" Type="Int64" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldContentFileId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRoneveshtDelete">
+      <Parameter Name="fieldName" Mode="In" Type="String" />
+      <Parameter Name="fldID" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRoneveshtInsert">
+      <Parameter Name="fldLetterID" Mode="In" Type="Int64" />
+      <Parameter Name="fldAshkhasHoghoghiTitlesId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCommisionId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAssignmentTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldText" Mode="In" Type="String" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRoneveshtSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblRoneveshtSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRoneveshtUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterID" Mode="In" Type="Int64" />
+      <Parameter Name="fldAshkhasHoghoghiTitlesId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCommisionId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAssignmentTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldText" Mode="In" Type="String" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterFollowDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterFollowInsert">
+      <Parameter Name="fldLetterID" Mode="In" Type="Int64" />
+      <Parameter Name="fldLetterText" Mode="In" Type="String" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterFollowSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblLetterFollowSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterFollowUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterID" Mode="In" Type="Int64" />
+      <Parameter Name="fldLetterText" Mode="In" Type="String" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterFollowLetterIDDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterAttachmentLetterIDDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterArchiveLetterIDDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAssignmentLetterIDDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblReceiverAssignmentTypeDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblReceiverAssignmentTypeInsert">
+      <Parameter Name="fldAssignmentID" Mode="In" Type="Int32" />
+      <Parameter Name="fldReceiverComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldAssignmentStatusID" Mode="In" Type="Int32" />
+      <Parameter Name="fldAssignmentTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="fldBoxID" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterReadDate" Mode="In" Type="String" />
+      <Parameter Name="fldShowTypeT_F" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblReceiverAssignmentTypeSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblReceiverAssignmentTypeSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblReceiverAssignmentTypeUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldAssignmentID" Mode="In" Type="Int32" />
+      <Parameter Name="fldReceiverComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldAssignmentStatusID" Mode="In" Type="Int32" />
+      <Parameter Name="fldAssignmentTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="fldBoxID" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterReadDate" Mode="In" Type="String" />
+      <Parameter Name="fldShowTypeT_F" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterBoxLetterIDDelete">
+      <Parameter Name="fieldName" Mode="In" Type="String" />
+      <Parameter Name="fldId" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterNumberInsert">
+      <Parameter Name="fldLetterID" Mode="In" Type="Int64" />
+      <Parameter Name="fldNumber" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldStartNumber" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblHistoryLetterDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblHistoryLetterInsert">
+      <Parameter Name="fldCurrentLetter_Id" Mode="In" Type="Int64" />
+      <Parameter Name="fldHistoryType_Id" Mode="In" Type="Int32" />
+      <Parameter Name="fldHistoryLetter_Id" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblHistoryLetterSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblHistoryLetterSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblHistoryLetterUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCurrentLetter_Id" Mode="In" Type="Int64" />
+      <Parameter Name="fldHistoryType_Id" Mode="In" Type="Int32" />
+      <Parameter Name="fldHistoryLetter_Id" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblInternalLetterReceiverInsert">
+      <Parameter Name="fldLetterId" Mode="In" Type="Int64" />
+      <Parameter Name="fldMessageId" Mode="In" Type="Int32" />
+      <Parameter Name="fldReceiverComisionID" Mode="In" Type="Int32" />
+      <Parameter Name="fldAssignmentStatusID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBoxTypeSelect" ReturnType="Collection(RasaNewFMSModel2.spr_tblBoxTypeSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="spr_tblCommisionSelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="Int32" Name="fldAshkhasID" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganizPostEjraeeID" Nullable="false" />
+    <Property Type="String" Name="fldStartDate" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldEndDate" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="fldOrganID" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldUserID" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldOrganicNumber" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldO_postEjraee_Title" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="fldCodeMelli" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="fldTypeShakhs" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="fldActive" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldFatherName" Nullable="true" MaxLength="100" />
+    <Property Type="Boolean" Name="fldSign" Nullable="false" />
+    <Property Type="String" Name="fldSignName" Nullable="false" MaxLength="5" />
+  </ComplexType>
+  <ComplexType Name="spr_tblAssignmentTypeSelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="String" Name="fldType" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldOrganID" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldUserID" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="true" MaxLength="15" />
+  </ComplexType>
+  <ComplexType Name="spr_tblImmediacySelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldOrganID" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldUserID" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="fldFileId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblNumberingFormatSelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="Int32" Name="fldYear" Nullable="false" />
+    <Property Type="String" Name="fldNumberFormat" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldStartNumber" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganID" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldUserID" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="true" MaxLength="15" />
+    <Property Type="Int32" Name="fldSecretariatID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblSecurityTypeSelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="String" Name="fldSecurityType" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldOrganID" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldUserID" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="true" MaxLength="15" />
+  </ComplexType>
+  <ComplexType Name="spr_tblProgramSettingSelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="String" Name="fldEmailAddress" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldEmailPassword" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldRecieveServer" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldSendServer" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldSendPort" Nullable="false" />
+    <Property Type="Boolean" Name="fldSSL" Nullable="false" />
+    <Property Type="Boolean" Name="fldDelFax" Nullable="false" />
+    <Property Type="Boolean" Name="fldIsSigner" Nullable="false" />
+    <Property Type="String" Name="fldFaxPath" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldOrganID" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldUserID" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="true" MaxLength="15" />
+    <Property Type="Int32" Name="fldRecievePort" Nullable="false" />
+    <Property Type="String" Name="NameOrgan" Nullable="false" MaxLength="300" />
+  </ComplexType>
+  <ComplexType Name="spr_tblSecretariat_OrganizationUnitSelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="Int32" Name="fldSecretariatID" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganizationUnitID" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldUserID" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="true" />
+    <Property Type="String" Name="fldIP" Nullable="true" MaxLength="15" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="spr_tblSubstituteSelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="Int32" Name="fldSenderComisionID" Nullable="false" />
+    <Property Type="Int32" Name="fldReceiverComisionID" Nullable="false" />
+    <Property Type="String" Name="fldStartDate" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldEndDate" Nullable="false" MaxLength="10" />
+    <Property Type="Time" Name="fldStartTime" Nullable="false" />
+    <Property Type="Time" Name="fldEndTime" Nullable="false" />
+    <Property Type="Boolean" Name="fldIsSigner" Nullable="false" />
+    <Property Type="Boolean" Name="fldShowReceiverName" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldUserID" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldReciverComisionName" Nullable="false" MaxLength="201" />
+    <Property Type="String" Name="fldSenderComisionName" Nullable="false" MaxLength="201" />
+    <Property Type="String" Name="fldStartTime_S" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="fldEndTime_S" Nullable="true" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="spr_CheckTarikhForPostCommision">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblMergeFieldTypesSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldFaName" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="fldEnName" Nullable="false" MaxLength="400" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spr_tblletterTemplateSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="300" />
+    <Property Type="Boolean" Name="fldIsBackGround" Nullable="false" />
+    <Property Type="Int32" Name="fldFileId" Nullable="true" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldBackGroundName" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="fldNameMergeField" Nullable="true" />
+    <Property Type="String" Name="fldIdMergeField" Nullable="true" />
+    <Property Type="String" Name="fldFormat" Nullable="false" />
+    <Property Type="String" Name="fldEnNameMergeField" Nullable="true" />
+    <Property Type="Int32" Name="fldLetterFileId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblMergeField_LetterTemplateSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldLetterTamplateId" Nullable="false" />
+    <Property Type="Int32" Name="fldMergeFieldId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldEnName" Nullable="false" MaxLength="400" />
+    <Property Type="String" Name="fldFaName" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="fldTitleLetter" Nullable="false" MaxLength="300" />
+  </ComplexType>
+  <ComplexType Name="spr_tblReferralRulesSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldPostErjaDahandeId" Nullable="false" />
+    <Property Type="Int32" Name="fldPostErjaGirandeId" Nullable="true" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldTitleErjaDahande" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="fldTitleErjaGirande" Nullable="false" MaxLength="300" />
+    <Property Type="Int32" Name="fldChartEjraeeGirandeId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblMessageSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldCommisionId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldMatn" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldTarikhShamsi" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="spr_tblMessageAttachmentSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldMessageId" Nullable="false" />
+    <Property Type="Int32" Name="fldFileId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="200" />
+    <Property Type="Decimal" Name="fldSize" Nullable="true" Precision="8" Scale="2" />
+    <Property Type="String" Name="fldPasvand" Nullable="true" MaxLength="5" />
+  </ComplexType>
+  <ComplexType Name="spr_tblLetterFileMojazSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Byte" Name="fldFormatFileId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="Byte" Name="fldType" Nullable="false" />
+    <Property Type="String" Name="fldTypeName" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="fldSize" Nullable="false" />
+    <Property Type="String" Name="fldPassvand" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spr_tblBoxSelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldComisionID" Nullable="false" />
+    <Property Type="Int32" Name="fldBoxTypeID" Nullable="false" />
+    <Property Type="Int32" Name="fldPID" Nullable="true" />
+    <Property Type="Int32" Name="fldOrganID" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldUserID" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="chidId" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="childName" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="tedad" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="spr_tblTabagheBandiSelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="400" />
+    <Property Type="Int32" Name="fldComisionID" Nullable="false" />
+    <Property Type="Int32" Name="fldPID" Nullable="true" />
+    <Property Type="Int32" Name="fldOrganID" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldUserID" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="chidId" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="childName" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="spr_tblLetterStatusSelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="fldDate" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="fldUserID" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="Time" Name="fldDateTime" Nullable="true" />
+    <Property Type="String" Name="fldUserName" Nullable="false" MaxLength="201" />
+  </ComplexType>
+  <ComplexType Name="spr_tblLetterSelect">
+    <Property Type="Int64" Name="fldID" Nullable="false" />
+    <Property Type="Int32" Name="fldYear" Nullable="false" />
+    <Property Type="Int64" Name="fldOrderId" Nullable="false" />
+    <Property Type="String" Name="fldSubject" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="fldLetterNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fldLetterDate" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldCreatedDate" MaxLength="20" Nullable="true" />
+    <Property Type="String" Name="fldKeywords" Nullable="true" MaxLength="300" />
+    <Property Type="Int32" Name="fldLetterStatusID" Nullable="true" />
+    <Property Type="Int32" Name="fldComisionID" Nullable="false" />
+    <Property Type="Int32" Name="fldImmediacyID" Nullable="false" />
+    <Property Type="Int32" Name="fldSecurityTypeID" Nullable="false" />
+    <Property Type="Int32" Name="fldLetterTypeID" Nullable="false" />
+    <Property Type="Byte" Name="fldSignType" Nullable="false" />
+    <Property Type="Int32" Name="fldUserID" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="DateTime" Name="fldCreatedDateEn" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldLetterStatusName" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="fldImmediacyName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldLetterTypeName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldSecurityTypeName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldSenderName" Nullable="true" />
+    <Property Type="String" Name="fldRecieverName" Nullable="true" />
+    <Property Type="String" Name="fldRoonevesht" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldSigner" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldReceiver" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldSignerName" Nullable="false" />
+    <Property Type="String" Name="fldExternalSender" Nullable="false" />
+    <Property Type="String" Name="fldExternalSenderName" Nullable="false" />
+    <Property Type="String" Name="fldMatnLetter" Nullable="false" />
+    <Property Type="Int32" Name="fldLetterTemplateId" Nullable="true" />
+    <Property Type="Int32" Name="fldContentFileID" Nullable="true" />
+    <Property Type="String" Name="fldFont" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="spr_tblLetterBoxSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldBoxId" Nullable="false" />
+    <Property Type="Int64" Name="fldLetterId" Nullable="true" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldBoxName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldMessageId" Nullable="true" />
+    <Property Type="String" Name="fldTitleMessage" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spr_tblLetterTabagheBandiSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldTabagheBandiId" Nullable="false" />
+    <Property Type="Int64" Name="fldLetterId" Nullable="true" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldNameTabagheBandi" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldMessageId" Nullable="true" />
+    <Property Type="String" Name="fldTitleMessage" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spr_tblAssignmentStatusSelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="150" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldUserID" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+  </ComplexType>
+  <ComplexType Name="spr_tblAssignmentSelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="Int64" Name="fldLetterID" Nullable="true" />
+    <Property Type="Int32" Name="fldMessageId" Nullable="true" />
+    <Property Type="String" Name="fldAssignmentDate" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldAnswerDate" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="fldSourceAssId" Nullable="true" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldUserID" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldTitleMessage" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fldSubject" Nullable="true" MaxLength="300" />
+  </ComplexType>
+  <ComplexType Name="spr_tblInternalAssignmentReceiverSelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="Int32" Name="fldAssignmentID" Nullable="false" />
+    <Property Type="Int32" Name="fldReceiverComisionID" Nullable="false" />
+    <Property Type="Int32" Name="fldAssignmentStatusID" Nullable="false" />
+    <Property Type="Int32" Name="fldAssignmentTypeID" Nullable="false" />
+    <Property Type="Int32" Name="fldBoxID" Nullable="false" />
+    <Property Type="String" Name="fldLetterReadDate" Nullable="true" MaxLength="10" />
+    <Property Type="Boolean" Name="fldShowTypeT_F" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldUserID" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldBoxName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldStatusName" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="fldTypeAssignment" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldName_Family" Nullable="false" MaxLength="503" />
+  </ComplexType>
+  <ComplexType Name="spr_tblInternalAssignmentSenderSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldAssignmentID" Nullable="false" />
+    <Property Type="Int32" Name="fldSenderComisionID" Nullable="false" />
+    <Property Type="Int32" Name="fldBoxID" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldName_Family" Nullable="false" MaxLength="201" />
+    <Property Type="String" Name="fldNameBox" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spr_tblCommisionSelect_Post">
+    <Property Type="Int32" Name="fldid" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="201" />
+    <Property Type="String" Name="fldFatherName" Nullable="false" MaxLength="60" />
+    <Property Type="String" Name="fldO_postEjraee_title" Nullable="false" MaxLength="300" />
+  </ComplexType>
+  <ComplexType Name="spr_tblArchiveSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="fldPId" Nullable="true" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectSavedMessage">
+    <Property Type="String" Name="fldTitleMessge" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldMatn" Nullable="false" />
+    <Property Type="String" Name="fldtarikh" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="fldMessageId" Nullable="false" />
+    <Property Type="Int32" Name="fldLetterId" Nullable="true" />
+    <Property Type="Int32" Name="HaveAttach" Nullable="false" />
+    <Property Type="String" Name="fldCommision" Nullable="true" />
+    <Property Type="String" Name="LetterRecievers" Nullable="true" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblLetterArchiveSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int64" Name="fldLetterId" Nullable="true" />
+    <Property Type="Int32" Name="fldMessageId" Nullable="true" />
+    <Property Type="Int32" Name="fldArchiveId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectInbox">
+    <Property Type="Int64" Name="fldLetterId" Nullable="true" />
+    <Property Type="Int32" Name="fldMessageId" Nullable="true" />
+    <Property Type="String" Name="fldOrderId" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldCommision" Nullable="true" MaxLength="1" />
+    <Property Type="Int32" Name="fldComisionID" Nullable="false" />
+    <Property Type="String" Name="fldSubject" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="fldLetterstatus" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="fldLetterType" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldLetterTypeID" Nullable="false" />
+    <Property Type="Int32" Name="HaveAttach" Nullable="false" />
+    <Property Type="String" Name="LetterRecievers" Nullable="true" MaxLength="1" />
+    <Property Type="Int32" Name="assigmentid" Nullable="false" />
+    <Property Type="String" Name="fldAnswerDate" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="fldReceiverComisionID" Nullable="false" />
+    <Property Type="Int32" Name="fldAssignmentStatusID" Nullable="false" />
+    <Property Type="Int32" Name="fldImmediacyID" Nullable="false" />
+    <Property Type="String" Name="fldLetterDate" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldLetterNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="HaveArchiv" Nullable="false" />
+    <Property Type="String" Name="AssimentLetterStatus" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="AssimentLetterStatusId" Nullable="false" />
+    <Property Type="String" Name="fldImmediacyName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="InternalAssignmentReceiverID" Nullable="false" />
+    <Property Type="Int64" Name="code" Nullable="false" />
+    <Property Type="String" Name="fldAssignmentDate" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="fldCreatedDate" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="fldSecurityType" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="String" Name="fldKeywords" Nullable="true" MaxLength="300" />
+    <Property Type="Int32" Name="fldSenderComisionID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectSavedLetter">
+    <Property Type="Int64" Name="fldLetterId" Nullable="false" />
+    <Property Type="Int32" Name="fldMessageId" Nullable="true" />
+    <Property Type="String" Name="fldSubject" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="fldLetterNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fldLetterDate" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldCreatedDate" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="fldLetterStatus" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="fldLetterType" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldLetterTypeID" Nullable="false" />
+    <Property Type="Int32" Name="fldImmediacyID" Nullable="false" />
+    <Property Type="Int32" Name="HaveArchiv" Nullable="false" />
+    <Property Type="String" Name="fldOrderId" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="HaveAttach" Nullable="false" />
+    <Property Type="String" Name="fldSecurityType" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldCommision" Nullable="true" />
+    <Property Type="String" Name="LetterRecievers" Nullable="true" />
+    <Property Type="String" Name="fldKeywords" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldImmediacyName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectSent">
+    <Property Type="Int64" Name="code" Nullable="true" />
+    <Property Type="Int64" Name="fldLetterId" Nullable="true" />
+    <Property Type="Int32" Name="fldMessageId" Nullable="true" />
+    <Property Type="String" Name="fldOrderId" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldCommision" Nullable="true" />
+    <Property Type="Int32" Name="fldComisionID" Nullable="false" />
+    <Property Type="String" Name="fldSubject" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="fldLetterstatus" Nullable="false" MaxLength="300" />
+    <Property Type="Int32" Name="fldLetterTypeID" Nullable="false" />
+    <Property Type="Int32" Name="HaveAttach" Nullable="false" />
+    <Property Type="String" Name="LetterRecievers" Nullable="true" />
+    <Property Type="String" Name="fldAssignmentDate" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="assigmentid" Nullable="false" />
+    <Property Type="String" Name="fldAnswerDate" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="fldSenderComisionID" Nullable="false" />
+    <Property Type="Int32" Name="fldImmediacyID" Nullable="true" />
+    <Property Type="String" Name="fldLetterDate" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldLetterNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="HaveArchiv" Nullable="false" />
+    <Property Type="String" Name="fldImmediacyName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldAssignmentTypeID" Nullable="false" />
+    <Property Type="Int32" Name="InternalAssignmentReceiverID" Nullable="false" />
+    <Property Type="Int32" Name="fldLetterStatusID" Nullable="true" />
+    <Property Type="Int32" Name="fldAssignmentStatusID" Nullable="false" />
+    <Property Type="String" Name="fldLetterType" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldCreatedDate" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldSecurityType" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="String" Name="fldKeywords" Nullable="true" MaxLength="300" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectTrash">
+    <Property Type="Int64" Name="code" Nullable="true" />
+    <Property Type="Int64" Name="fldLetterId" Nullable="true" />
+    <Property Type="String" Name="fldOrderId" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="fldComisionID" Nullable="false" />
+    <Property Type="String" Name="fldSubject" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="fldLetterstatus" Nullable="false" MaxLength="300" />
+    <Property Type="Int32" Name="fldLetterTypeID" Nullable="false" />
+    <Property Type="String" Name="fldAssigmentDate" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="assigmentid" Nullable="false" />
+    <Property Type="String" Name="fldAnswerDate" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="fldSenderComisionID" Nullable="false" />
+    <Property Type="Int32" Name="fldImmediacyID" Nullable="true" />
+    <Property Type="String" Name="fldLetterDate" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldLetterNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fldImmediacyName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldTrashType" Nullable="false" />
+    <Property Type="DateTime" Name="fldDelDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="fldMessageId" Nullable="true" />
+    <Property Type="String" Name="fldCommision" Nullable="true" />
+    <Property Type="Int32" Name="HaveAttach" Nullable="false" />
+    <Property Type="String" Name="LetterRecievers" Nullable="true" />
+    <Property Type="Int32" Name="HaveArchiv" Nullable="false" />
+    <Property Type="String" Name="fldLetterType" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldCreatedDate" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldSecurityType" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="String" Name="fldKeywords" Nullable="true" MaxLength="300" />
+  </ComplexType>
+  <ComplexType Name="spr_GetBoxTypeId">
+    <Property Type="Int32" Name="fldId" Nullable="true" />
+    <Property Type="String" Name="fldName" Nullable="true" />
+    <Property Type="Int32" Name="fldPID" Nullable="true" />
+    <Property Type="Int32" Name="fldBoxType" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblSignerSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int64" Name="fldLetterId" Nullable="false" />
+    <Property Type="Int32" Name="fldSignerComisionId" Nullable="false" />
+    <Property Type="Int32" Name="fldIndexerId" Nullable="false" />
+    <Property Type="Int32" Name="fldFirstSigner" Nullable="true" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="fldTitlePost" Nullable="false" MaxLength="300" />
+    <Property Type="Int32" Name="fldFileSignId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblExternalLetterReceiverSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int64" Name="fldLetterId" Nullable="true" />
+    <Property Type="Int32" Name="fldMessageId" Nullable="true" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="fldNameHoghoghititles" Nullable="false" MaxLength="300" />
+    <Property Type="Int32" Name="fldHoghoghiTitlesId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblExternalLetterSenderSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int64" Name="fldLetterId" Nullable="true" />
+    <Property Type="Int32" Name="fldMessageId" Nullable="true" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldShakhsHoghoghiTitlesId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblInternalLetterReceiverSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int64" Name="fldLetterId" Nullable="true" />
+    <Property Type="Int32" Name="fldMessageId" Nullable="true" />
+    <Property Type="Int32" Name="fldReceiverComisionID" Nullable="false" />
+    <Property Type="Int32" Name="fldAssignmentStatusID" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldNameAssignmentStatus" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="spr_tblContentFileSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="true" MaxLength="300" />
+    <Property Type="Binary" Name="fldLetterText" Nullable="false" />
+    <Property Type="Int64" Name="fldLetterId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="fldType" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spr_tblLetterAttachmentSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int64" Name="fldLetterId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="fldContentFileId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldNameFile" Nullable="false" MaxLength="300" />
+  </ComplexType>
+  <ComplexType Name="spr_tblRoneveshtSelect">
+    <Property Type="Int32" Name="fldid" Nullable="false" />
+    <Property Type="Int64" Name="fldLetterId" Nullable="false" />
+    <Property Type="Int32" Name="fldCommisionId" Nullable="true" />
+    <Property Type="String" Name="fldAssignmentTypeId" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldText" Nullable="false" MaxLength="250" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="fldName" Nullable="true" MaxLength="503" />
+    <Property Type="String" Name="fldId_Type" Nullable="true" MaxLength="12" />
+    <Property Type="Int32" Name="fldAshkhasHoghoghiTitlesId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblLetterFollowSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int64" Name="fldLetterId" Nullable="false" />
+    <Property Type="String" Name="fldLetterText" Nullable="false" MaxLength="300" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+  </ComplexType>
+  <ComplexType Name="spr_tblReceiverAssignmentTypeSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldAssignmentID" Nullable="false" />
+    <Property Type="Int32" Name="fldReceiverComisionID" Nullable="false" />
+    <Property Type="Int32" Name="fldAssignmentStatusID" Nullable="false" />
+    <Property Type="Int32" Name="fldAssignmentTypeID" Nullable="false" />
+    <Property Type="Int32" Name="fldBoxID" Nullable="false" />
+    <Property Type="String" Name="fldLetterReadDate" Nullable="false" MaxLength="20" />
+    <Property Type="Boolean" Name="fldShowTypeT_F" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+  </ComplexType>
+  <ComplexType Name="spr_tblHistoryLetterSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int64" Name="fldCurrentLetter_Id" Nullable="false" />
+    <Property Type="Int32" Name="fldHistoryType_Id" Nullable="false" />
+    <Property Type="Int64" Name="fldHistoryLetter_Id" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldSubject" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="fldLetterNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="fldCreatedLetterId" Nullable="false" />
+    <Property Type="String" Name="fldLetterDate" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="fldComisionID" Nullable="false" />
+    <Property Type="String" Name="fldHistoryTypeName" Nullable="false" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="spr_tblBoxTypeSelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="String" Name="fldType" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldOrganID" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldUserID" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="true" MaxLength="15" />
+  </ComplexType>
+</Schema>

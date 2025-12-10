@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AnbarAmvalModelStoreContainer" CdmEntityContainer="AnbarAmvalEntities">
+    <FunctionImportMapping FunctionImportName="spr_tblInsuranceTypeDelete" FunctionName="AnbarAmvalModel.Store.spr_tblInsuranceTypeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblInsuranceTypeInsert" FunctionName="AnbarAmvalModel.Store.spr_tblInsuranceTypeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblInsuranceTypeUpdate" FunctionName="AnbarAmvalModel.Store.spr_tblInsuranceTypeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblInsuranceCompanyDelete" FunctionName="AnbarAmvalModel.Store.spr_tblInsuranceCompanyDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblInsuranceCompanyInsert" FunctionName="AnbarAmvalModel.Store.spr_tblInsuranceCompanyInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblInsuranceCompanySelect" FunctionName="AnbarAmvalModel.Store.spr_tblInsuranceCompanySelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_tblInsuranceCompanySelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldFileId" ColumnName="fldFileId" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldIp" ColumnName="fldIp" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblInsuranceCompanyUpdate" FunctionName="AnbarAmvalModel.Store.spr_tblInsuranceCompanyUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblInsuranceTypeSelect" FunctionName="AnbarAmvalModel.Store.spr_tblInsuranceTypeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_tblInsuranceTypeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+          <ScalarProperty Name="fldIp" ColumnName="fldIp" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblAnbarDelete" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblAnbarInsert" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblAnbarSelect" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_tblAnbarSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldAddress" ColumnName="fldAddress" />
+          <ScalarProperty Name="fldPhone" ColumnName="fldPhone" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblAnbarUpdate" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_UpdatePID_Anbar" FunctionName="AnbarAmvalModel.Store.spr_UpdatePID_Anbar" />
+    <FunctionImportMapping FunctionImportName="spr_UpdatePID_kala" FunctionName="AnbarAmvalModel.Store.spr_UpdatePID_kala" />
+    <FunctionImportMapping FunctionImportName="spr_tblAnbarTreeDelete" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarTreeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblAnbarTreeInsert" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarTreeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblAnbarTreeSelect" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarTreeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_tblAnbarTreeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldPID" ColumnName="fldPID" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldNodeType" ColumnName="fldNodeType" />
+          <ScalarProperty Name="fldGroupId" ColumnName="fldGroupId" />
+          <ScalarProperty Name="fldAnbar_treeId" ColumnName="fldAnbar_treeId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblAnbarTreeUpdate" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarTreeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_CheckExistsAnbar" FunctionName="AnbarAmvalModel.Store.spr_CheckExistsAnbar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_CheckExistsAnbar">
+          <ScalarProperty Name="fldCheck" ColumnName="fldCheck" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblKalaTreeDelete" FunctionName="AnbarAmvalModel.Store.spr_tblKalaTreeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblKalaTreeInsert" FunctionName="AnbarAmvalModel.Store.spr_tblKalaTreeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblKalaTreeSelect" FunctionName="AnbarAmvalModel.Store.spr_tblKalaTreeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_tblKalaTreeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldPID" ColumnName="fldPID" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldNodeType" ColumnName="fldNodeType" />
+          <ScalarProperty Name="fldGroupId" ColumnName="fldGroupId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblKalaTreeUpdate" FunctionName="AnbarAmvalModel.Store.spr_tblKalaTreeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblAnbar_TreeDelete" FunctionName="AnbarAmvalModel.Store.spr_tblAnbar_TreeDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblAnbar_TreeInsert" FunctionName="AnbarAmvalModel.Store.spr_tblAnbar_TreeInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblAnbar_TreeSelect" FunctionName="AnbarAmvalModel.Store.spr_tblAnbar_TreeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_tblAnbar_TreeSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldAnbarId" ColumnName="fldAnbarId" />
+          <ScalarProperty Name="fldAnbarTreeId" ColumnName="fldAnbarTreeId" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblAnbar_TreeUpdate" FunctionName="AnbarAmvalModel.Store.spr_tblAnbar_TreeUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblAnbarGroupDelete" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarGroupDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblAnbarGroupInsert" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarGroupInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblAnbarGroupSelect" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarGroupSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_tblAnbarGroupSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblAnbarGroupUpdate" FunctionName="AnbarAmvalModel.Store.spr_tblAnbarGroupUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblKalaGroupDelete" FunctionName="AnbarAmvalModel.Store.spr_tblKalaGroupDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblKalaGroupInsert" FunctionName="AnbarAmvalModel.Store.spr_tblKalaGroupInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblKalaGroupSelect" FunctionName="AnbarAmvalModel.Store.spr_tblKalaGroupSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_tblKalaGroupSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldIP" ColumnName="fldIP" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblKalaGroupUpdate" FunctionName="AnbarAmvalModel.Store.spr_tblKalaGroupUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_UpdatePID_Anbar_Tree" FunctionName="AnbarAmvalModel.Store.spr_UpdatePID_Anbar_Tree" />
+    <FunctionImportMapping FunctionImportName="spr_kala_TarifNashode" FunctionName="AnbarAmvalModel.Store.spr_kala_TarifNashode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_kala_TarifNashode">
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+          <ScalarProperty Name="kalaId" ColumnName="kalaId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_Anbar_TarifNashode" FunctionName="AnbarAmvalModel.Store.spr_Anbar_TarifNashode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AnbarAmvalModel.spr_Anbar_TarifNashode">
+          <ScalarProperty Name="AnbarId" ColumnName="AnbarId" />
+          <ScalarProperty Name="fldName" ColumnName="fldName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

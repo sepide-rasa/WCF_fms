@@ -1,0 +1,1914 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RasaNewFMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="prs_InsertCheckIntoSanad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="idcheck" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="tarikh" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="prs_MapCodingDaramad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="OldCode" Type="varchar" Mode="In" />
+    <Parameter Name="NewCode" Type="varchar" Mode="In" />
+    <Parameter Name="Title" Type="nvarchar" Mode="In" />
+    <Parameter Name="userId" Type="int" Mode="In" />
+    <Parameter Name="pcode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="prs_UpdateReceive_Check" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="idcheck" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="DocumentHeader1Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_tblPcPos_Param_Value" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="Value" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_Ashkhas_Taghsit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="ElamAvarId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_AshkhasIdForXmlInput" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="type" Type="tinyint" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="CodeMeli" Type="nvarchar" Mode="In" />
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="family" Type="nvarchar" Mode="In" />
+    <Parameter Name="shomareSabt" Type="nvarchar" Mode="In" />
+    <Parameter Name="TypeShakhs" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="spr_ChangeLetter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd" />
+  <Function Name="spr_CheckCopyCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="maghsadId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_CheckDateParametr" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="AzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaTarikh" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_CheckLastIdForElamAvarez" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ElamAvarezId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_CheckMahdoodiyatMohasebat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="tarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="userid" Type="int" Mode="In" />
+    <Parameter Name="AshkhasId" Type="int" Mode="In" />
+    <Parameter Name="fldShomarehesabDaramd" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_checkTaghsit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_CheckTakhfif" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="IdElamAvarez" Type="int" Mode="In" />
+    <Parameter Name="ShomareHesabId" Type="int" Mode="In" />
+    <Parameter Name="ShooroShenaseGhabz" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="spr_CheckTanzimatDaramad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="avarezId" Type="int" Mode="In" />
+    <Parameter Name="MaliyatId" Type="int" Mode="In" />
+    <Parameter Name="TakhirId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_CodeDaramdAsli" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd" />
+  <Function Name="spr_CopyCodeDaramd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="mabdaId" Type="int" Mode="In" />
+    <Parameter Name="maghsadId" Type="int" Mode="In" />
+    <Parameter Name="userId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_DataForElamAvarez" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="AzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+    <Parameter Name="Organid" Type="int" Mode="In" />
+    <Parameter Name="type" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="spr_DataForElamAvarez_Barat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="AzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+    <Parameter Name="Organid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_DataForElamAvarez_Check" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="AzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+    <Parameter Name="Organid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_DataForElamAvarez_Safte" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="AzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+    <Parameter Name="Organid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_DeleteCodeDaramad_ShomareHesab" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="CodeDaramad" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_DeleteKoliElamAvarez" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="IdElamAvarez" Type="int" Mode="In" />
+    <Parameter Name="userId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_DeleteTaghsit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="elamAvareId" Type="int" Mode="In" />
+    <Parameter Name="userId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_DeleteWithElamAvarezId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_ElamAvarelog" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="ElamAvarezId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_FishSaderShodeForXmlOut" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_InfoPardakhtFTP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="fldShenaseGhabz" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShenasePardakht" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_InsertHesabdariToDaramad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldorganId" Type="int" Mode="In" />
+    <Parameter Name="fldYear" Type="smallint" Mode="In" />
+    <Parameter Name="userid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_InsertSodoorFishForNaghdi_Talab" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="InOut" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldMablagh" Type="bigint" Mode="In" />
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="NaghdiTalabId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareHesabId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_ListCodeDaramad_ShomareHesabWithOrganId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="Type" Type="tinyint" Mode="In" />
+    <Parameter Name="fiscalYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_ListShomareHesabWithElamAvarezId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="Fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_PcPosTransactionUpdate_Status" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldTrackingCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldTerminalCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldSerialNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldCardNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikh" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_RptListCodeDaramad_Asli" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="AzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="ShomareHesabId" Type="int" Mode="In" />
+    <Parameter Name="CodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="DateType" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="spr_RptListCodeDaramad_Day" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="AzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="DateType" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="spr_RptListCodeDaramad_Donati" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="AzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="DateType" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="spr_RptListCodeDaramad_Gaje" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="AzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="value" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_RptListCodeDaramad_Month" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="AzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="DateType" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectAshkhas_ElamAvarez" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+    <Parameter Name="AshkhasId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectAshkhas_Fish" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="ElamAvarezId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectDataForTaghsit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="AzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+    <Parameter Name="Organid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectDetailSodoorFish" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareHesabId" Type="int" Mode="In" />
+    <Parameter Name="fldShorooshenaseGhabz" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="spr_selectEbtal_SodoorFish" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="IdAvarez" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectFishSaderShode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="AzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectForEmalTakhfif" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_ShomareHesabIdForXmlInput" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="ShomareHesab" Type="nvarchar" Mode="In" />
+    <Parameter Name="InfBank" Type="nvarchar" Mode="In" />
+    <Parameter Name="AshkhasId" Type="int" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblBaratDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblBaratInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldTarikhSarResid" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldReplyTaghsitId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareSanad" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMablaghSanad" Type="bigint" Mode="In" />
+    <Parameter Name="fldStatus" Type="tinyint" Mode="In" />
+    <Parameter Name="fldBaratDarId" Type="int" Mode="In" />
+    <Parameter Name="fldMakanPardakht" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblBaratSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblBaratUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldTarikhSarResid" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldReplyTaghsitId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareSanad" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMablaghSanad" Type="bigint" Mode="In" />
+    <Parameter Name="fldStatus" Type="tinyint" Mode="In" />
+    <Parameter Name="fldBaratDarId" Type="int" Mode="In" />
+    <Parameter Name="fldMakanPardakht" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldDateStatus" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCheckDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCheckInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="InOut" />
+    <Parameter Name="fldShomareHesabId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareSanad" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldReplyTaghsitId" Type="int" Mode="In" />
+    <Parameter Name="fldTarikhSarResid" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMablaghSanad" Type="bigint" Mode="In" />
+    <Parameter Name="fldStatus" Type="tinyint" Mode="In" />
+    <Parameter Name="fldTypeSanad" Type="bit" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldShomareHesabIdOrgan" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCheckSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCheckUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareHesabId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareSanad" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldReplyTaghsitId" Type="int" Mode="In" />
+    <Parameter Name="fldTarikhSarResid" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMablaghSanad" Type="bigint" Mode="In" />
+    <Parameter Name="fldStatus" Type="tinyint" Mode="In" />
+    <Parameter Name="fldTypeSanad" Type="bit" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldShomareHesabIdOrgan" Type="int" Mode="In" />
+    <Parameter Name="fldDateStatus" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCodhayeDaramadiElamAvarez_TakhfifUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldTedad" Type="int" Mode="In" />
+    <Parameter Name="fldTakhfifAsliValue" Type="bigint" Mode="In" />
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCodhayeDaramadiElamAvarezDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldCodhayeDaramdId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCodhayeDaramadiElamAvarezInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="InOut" />
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldSharheCodeDaramad" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldTedad" Type="int" Mode="In" />
+    <Parameter Name="fldAsliValue" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCodhayeDaramadiElamAvarezInsert_External" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="InOut" />
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldSharheCodeDaramad" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldTedad" Type="int" Mode="In" />
+    <Parameter Name="fldAsliValue" Type="bigint" Mode="In" />
+    <Parameter Name="fldMaliyatValue" Type="bigint" Mode="In" />
+    <Parameter Name="fldAvarezValue" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCodhayeDaramadiElamAvarezSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCodhayeDaramadiElamAvarezUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldSharheCodeDaramad" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldTedad" Type="int" Mode="In" />
+    <Parameter Name="fldAsliValue" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCodhayeDaramadiElamAvarezUpdate_External" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldSharheCodeDaramad" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldAsliValue" Type="bigint" Mode="In" />
+    <Parameter Name="fldAvarezValue" Type="bigint" Mode="In" />
+    <Parameter Name="fldMaliyatValue" Type="bigint" Mode="In" />
+    <Parameter Name="fldTedad" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCodhayeDaramdDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCodhayeDaramdInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="fldDaramadCode" Type="varchar" Mode="In" />
+    <Parameter Name="fldDaramadTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMashmooleArzesheAfzoode" Type="bit" Mode="In" />
+    <Parameter Name="fldMashmooleKarmozd" Type="bit" Mode="In" />
+    <Parameter Name="fldAmuzeshParvaresh" Type="bit" Mode="In" />
+    <Parameter Name="fldUnitId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCodhayeDaramdSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="fiscALYear" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCodhayeDaramdUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldDaramadCode" Type="varchar" Mode="In" />
+    <Parameter Name="fldDaramadTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMashmooleArzesheAfzoode" Type="bit" Mode="In" />
+    <Parameter Name="fldMashmooleKarmozd" Type="bit" Mode="In" />
+    <Parameter Name="fldAmuzeshParvaresh" Type="bit" Mode="In" />
+    <Parameter Name="fldUnitId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblComboBoxDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblComboBoxInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblComboBoxSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblComboBoxUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblComboBoxValueDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblComboBoxValueInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldComboBoxId" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblComboBoxValueSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="value1" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblComboBoxValueUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldComboBoxId" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCompanyDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCompanyInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShenaseMeli" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldKarbarId" Type="int" Mode="In" />
+    <Parameter Name="fldURL" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserNameService" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldPassService" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCompanySelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCompanyUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShenaseMeli" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldKarbarId" Type="int" Mode="In" />
+    <Parameter Name="fldURL" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserNameService" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldPassService" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblDaramadGroup_ParametrDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblDaramadGroup_ParametrInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldDaramadGroupId" Type="int" Mode="In" />
+    <Parameter Name="fldEnName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldFnName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldStatus" Type="bit" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldNoeField" Type="tinyint" Mode="In" />
+    <Parameter Name="fldComboBoxId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblDaramadGroup_ParametrSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblDaramadGroup_ParametrUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldDaramadGroupId" Type="int" Mode="In" />
+    <Parameter Name="fldEnName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldFnName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldStatus" Type="bit" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldNoeField" Type="tinyint" Mode="In" />
+    <Parameter Name="fldComboBoxId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblDaramadGroup_ParametrValuesDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblDaramadGroup_ParametrValuesInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldParametrGroupDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblDaramadGroup_ParametrValuesSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblDaramadGroup_ParametrValuesUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldParametrGroupDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblDaramadGroupDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblDaramadGroupInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblDaramadGroupSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblDaramadGroupUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblEbtalDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblEbtalInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldFishId" Type="int" Mode="In" />
+    <Parameter Name="fldRequestTaghsit_TakhfifId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblEbtalSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblEbtalUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldFishId" Type="int" Mode="In" />
+    <Parameter Name="fldRequestTaghsit_TakhfifId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblElamAvarezDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblElamAvarezInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="InOut" />
+    <Parameter Name="fldAshakhasID" Type="int" Mode="In" />
+    <Parameter Name="fldType" Type="bit" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIsExternal" Type="bit" Mode="In" />
+    <Parameter Name="fldDaramadGroupId" Type="int" Mode="In" />
+    <Parameter Name="fldCodeSystemMabda" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblElamAvarezSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value1" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblElamAvarezUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldAshakhasID" Type="int" Mode="In" />
+    <Parameter Name="fldType" Type="bit" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDaramadGroupId" Type="int" Mode="In" />
+    <Parameter Name="fldCodeSystemMabda" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblExternalFishDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblExternalFishInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldNameCompany" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblExternalFishSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblExternalFishUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldNameCompany" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblFactorDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblFactorInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldFishId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblFactorSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblFactorUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldFishId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblFormatShomareNameDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblFormatShomareNameInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldYear" Type="smallint" Mode="In" />
+    <Parameter Name="fldFormatShomareName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShomareShoro" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldType" Type="bit" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblFormatShomareNameSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblFormatShomareNameUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldYear" Type="smallint" Mode="In" />
+    <Parameter Name="fldFormatShomareName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShomareShoro" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldType" Type="bit" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblGozareshatFileDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblGozareshatFileInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldGozareshatId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="file" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="Passvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblGozareshatFileSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblGozareshatFileUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldGozareshatId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldReportFileId" Type="int" Mode="In" />
+    <Parameter Name="file" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="Passvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblGozareshatSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterMinutDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterMinutInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="InOut" />
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldDescMinut" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldSodoorBadAzVarizNaghdi" Type="bit" Mode="In" />
+    <Parameter Name="fldSodoorBadAzTaghsit" Type="bit" Mode="In" />
+    <Parameter Name="fldTanzimkonande" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterMinutSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterMinutUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldDescMinut" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldSodoorBadAzVarizNaghdi" Type="bit" Mode="In" />
+    <Parameter Name="fldSodoorBadAzTaghsit" Type="bit" Mode="In" />
+    <Parameter Name="fldTanzimkonande" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterSignersDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldLetterMinutId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterSignersInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldLetterMinutId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganizationalPostsId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterSignersSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterSignersUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldLetterMinutId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganizationalPostsId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMahdoodiyatMohasebat_AshkhasDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMahdoodiyatMohasebat_AshkhasInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldMahdoodiyatMohasebatId" Type="int" Mode="In" />
+    <Parameter Name="fldAshkhasId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMahdoodiyatMohasebat_AshkhasSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMahdoodiyatMohasebat_AshkhasUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldMahdoodiyatMohasebatId" Type="int" Mode="In" />
+    <Parameter Name="fldAshkhasId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMahdoodiyatMohasebat_ShomareHesabDaramadDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMahdoodiyatMohasebat_ShomareHesabDaramadInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldMahdodiyatMohasebatId" Type="int" Mode="In" />
+    <Parameter Name="fldShomarehesabDarmadId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMahdoodiyatMohasebat_ShomareHesabDaramadSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMahdoodiyatMohasebat_ShomareHesabDaramadUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldMahdodiyatMohasebatId" Type="int" Mode="In" />
+    <Parameter Name="fldShomarehesabDarmadId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMahdoodiyatMohasebatDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMahdoodiyatMohasebatInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="InOut" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldAzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTatarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldNoeKarbar" Type="bit" Mode="In" />
+    <Parameter Name="fldNoeCodeDaramad" Type="bit" Mode="In" />
+    <Parameter Name="fldNoeAshkhas" Type="bit" Mode="In" />
+    <Parameter Name="fldStatus" Type="bit" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMahdoodiyatMohasebatSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMahdoodiyatMohasebatUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldAzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTatarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldNoeKarbar" Type="bit" Mode="In" />
+    <Parameter Name="fldNoeCodeDaramad" Type="bit" Mode="In" />
+    <Parameter Name="fldNoeAshkhas" Type="bit" Mode="In" />
+    <Parameter Name="fldStatus" Type="bit" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMohdoodiyatMohasebat_UserDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMohdoodiyatMohasebat_UserInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldIdUser" Type="int" Mode="In" />
+    <Parameter Name="fldMahdoodiyatMohasebatId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMohdoodiyatMohasebat_UserSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMohdoodiyatMohasebat_UserUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldIdUser" Type="int" Mode="In" />
+    <Parameter Name="fldMahdoodiyatMohasebatId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMokatebatDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMokatebatInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="InOut" />
+    <Parameter Name="fldCodhayeDaramadiElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMokatebatSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMokatebatUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldCodhayeDaramadiElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldFileId" Type="int" Mode="InOut" />
+    <Parameter Name="fldFile" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblNaghdi_TalabDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblNaghdi_TalabInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldMablagh" Type="bigint" Mode="In" />
+    <Parameter Name="fldReplyTaghsitId" Type="int" Mode="In" />
+    <Parameter Name="fldType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldShomareHesabId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblNaghdi_TalabSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblNaghdi_TalabUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldMablagh" Type="bigint" Mode="In" />
+    <Parameter Name="fldReplyTaghsitId" Type="int" Mode="In" />
+    <Parameter Name="fldType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldShomareHesabId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblNahvePardakhtDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblNahvePardakhtInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldCodePardakht" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblNahvePardakhtSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblNahvePardakhtUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldCodePardakht" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreOmoomi_ValueDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreOmoomi_ValueInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldParametreOmoomiId" Type="int" Mode="In" />
+    <Parameter Name="fldFromDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldEndDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreOmoomi_ValueSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value1" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreOmoomi_ValueUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldParametreOmoomiId" Type="int" Mode="In" />
+    <Parameter Name="fldFromDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldEndDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreOmoomiDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreOmoomiInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldNameParametreFa" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldNameParametreEn" Type="varchar" Mode="In" />
+    <Parameter Name="fldNoeField" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreOmoomiSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreOmoomiUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldNameParametreFa" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldNameParametreEn" Type="varchar" Mode="In" />
+    <Parameter Name="fldNoeField" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreSabet_NerkhDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreSabet_NerkhInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldParametreSabetId" Type="int" Mode="In" />
+    <Parameter Name="fldTarikhFaalSazi" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreSabet_NerkhSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreSabet_NerkhUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldParametreSabetId" Type="int" Mode="In" />
+    <Parameter Name="fldTarikhFaalSazi" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreSabet_ValueDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreSabet_ValueInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldParametreSabetId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldCodeDaramadElamAvarezId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreSabet_ValueSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value1" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreSabet_ValueUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldParametreSabetId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldCodeDaramadElamAvarezId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreSabetDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreSabetInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldNameParametreFa" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldNameParametreEn" Type="varchar" Mode="In" />
+    <Parameter Name="fldNoe" Type="bit" Mode="In" />
+    <Parameter Name="fldNoeField" Type="tinyint" Mode="In" />
+    <Parameter Name="fldVaziyat" Type="bit" Mode="In" />
+    <Parameter Name="fldComboBaxId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldTypeParametr" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreSabetSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value1" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametreSabetUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldNameParametreFa" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldNameParametreEn" Type="varchar" Mode="In" />
+    <Parameter Name="fldNoe" Type="bit" Mode="In" />
+    <Parameter Name="fldNoeField" Type="tinyint" Mode="In" />
+    <Parameter Name="fldVaziyat" Type="bit" Mode="In" />
+    <Parameter Name="fldComboBaxId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldTypeParametr" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametrHesabdariDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametrHesabdariInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldCodeHesab" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldHesabId" Type="int" Mode="In" />
+    <Parameter Name="fldCompanyId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametrHesabdariSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblParametrHesabdariUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldCodeHesab" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldHesabId" Type="int" Mode="In" />
+    <Parameter Name="fldCompanyId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPardakhtFileDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPardakhtFileInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="InOut" />
+    <Parameter Name="fldBankId" Type="int" Mode="In" />
+    <Parameter Name="fldFileName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldDateSendFile" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPardakhtFiles_DetailDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPardakhtFiles_DetailInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldShenaseGhabz" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShenasePardakht" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikhPardakht" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldCodeRahgiry" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldPardakhtFileId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="CodePardakht" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPardakhtFiles_DetailSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="nvarchar" Mode="In" />
+    <Parameter Name="AzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPardakhtFiles_DetailUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldShenaseGhabz" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShenasePardakht" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikhPardakht" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldCodeRahgiry" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldNahvePardakhtId" Type="int" Mode="In" />
+    <Parameter Name="fldPardakhtFileId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPardakhtFileSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPardakhtFileUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldBankId" Type="int" Mode="In" />
+    <Parameter Name="fldFileName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldDateSendFile" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPardakhtFishDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPardakhtFishInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldFishId" Type="int" Mode="In" />
+    <Parameter Name="fldDatePardakht" Type="datetime" Mode="In" />
+    <Parameter Name="fldNahvePardakhtId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldPardakhtFiles_DetailId" Type="int" Mode="In" />
+    <Parameter Name="fldDateVariz" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPardakhtFishSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPardakhtFishUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldFishId" Type="int" Mode="In" />
+    <Parameter Name="fldDatePardakht" Type="datetime" Mode="In" />
+    <Parameter Name="fldNahvePardakhtId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldPardakhtFiles_DetailId" Type="int" Mode="In" />
+    <Parameter Name="fldDateVariz" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPatternFish_DaramadGroupDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPatternFish_DaramadGroupInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldPatternFishId" Type="int" Mode="In" />
+    <Parameter Name="fldDaramadGroupId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPatternFish_DaramadGroupSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPatternFish_DaramadGroupUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldPatternFishId" Type="int" Mode="In" />
+    <Parameter Name="fldDaramadGroupId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPatternFishDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPatternFishInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldFile" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="pasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPatternFishSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPatternFishUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldFileId" Type="int" Mode="In" />
+    <Parameter Name="fldFile" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="pasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosInfoDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosInfoInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldPspId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosInfoSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value1" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosInfoUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldPspId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosIPDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosIPInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="InOut" />
+    <Parameter Name="fldPcPosInfoId" Type="int" Mode="In" />
+    <Parameter Name="fldSerial" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIp" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosIPSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value1" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosIPUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldPcPosInfoId" Type="int" Mode="In" />
+    <Parameter Name="fldSerial" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIp" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosParam_DetailDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosParam_DetailInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldPcPosParamId" Type="int" Mode="In" />
+    <Parameter Name="fldPcPosInfoId" Type="int" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosParam_DetailSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosParam_DetailUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldPcPosParamId" Type="int" Mode="In" />
+    <Parameter Name="fldPcPosInfoId" Type="int" Mode="In" />
+    <Parameter Name="fldValue" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosParametrDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosParametrInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldFaName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldEnName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldPspId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosParametrSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosParametrUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldFaName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldEnName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldPspId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosTransactionDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosTransactionInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="InOut" />
+    <Parameter Name="fldFishId" Type="int" Mode="In" />
+    <Parameter Name="fldPrice" Type="bigint" Mode="In" />
+    <Parameter Name="fldStatus" Type="bit" Mode="In" />
+    <Parameter Name="fldTrackingCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShGhabz" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShPardakht" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldTerminalCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldSerialNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldCardNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikh" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosTransactionSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosTransactionUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldFishId" Type="int" Mode="In" />
+    <Parameter Name="fldPrice" Type="bigint" Mode="In" />
+    <Parameter Name="fldStatus" Type="bit" Mode="In" />
+    <Parameter Name="fldTrackingCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShGhabz" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShPardakht" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldTerminalCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldSerialNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldCardNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikh" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosUserDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosUserInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldPosIpId" Type="int" Mode="In" />
+    <Parameter Name="fldIdUser" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosUserSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPcPosUserUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldPosIpId" Type="int" Mode="In" />
+    <Parameter Name="fldIdUser" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPspDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPspInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldFile" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPSPModel_ShomareHesabDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPSPModel_ShomareHesabInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldPSPModelId" Type="int" Mode="In" />
+    <Parameter Name="fldShHesabId" Type="int" Mode="In" />
+    <Parameter Name="fldOrder" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPSPModel_ShomareHesabSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPSPModel_ShomareHesabUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldPSPModelId" Type="int" Mode="In" />
+    <Parameter Name="fldShHesabId" Type="int" Mode="In" />
+    <Parameter Name="fldOrder" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPspModelDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPspModelInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldPspId" Type="int" Mode="In" />
+    <Parameter Name="fldModel" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMultiHesab" Type="bit" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPspModelSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPspModelUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldPspId" Type="int" Mode="In" />
+    <Parameter Name="fldModel" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMultiHesab" Type="bit" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPspSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblPspUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldFile" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldFileId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblReplyTaghsitDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblReplyTaghsitInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldMablaghNaghdi" Type="bigint" Mode="In" />
+    <Parameter Name="fldTedadAghsat" Type="tinyint" Mode="In" />
+    <Parameter Name="fldShomareMojavez" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldStatusId" Type="int" Mode="In" />
+    <Parameter Name="fldTedadMahAghsat" Type="tinyint" Mode="In" />
+    <Parameter Name="fldJarimeTakhir" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="spr_tblReplyTaghsitSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblReplyTaghsitUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldMablaghNaghdi" Type="bigint" Mode="In" />
+    <Parameter Name="fldTedadAghsat" Type="tinyint" Mode="In" />
+    <Parameter Name="fldShomareMojavez" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldStatusId" Type="int" Mode="In" />
+    <Parameter Name="fldTedadMahAghsat" Type="tinyint" Mode="In" />
+    <Parameter Name="fldJarimeTakhir" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="spr_tblReplyTakhfifDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblReplyTakhfifInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldDarsad" Type="decimal" Mode="In" />
+    <Parameter Name="fldMablagh" Type="bigint" Mode="In" />
+    <Parameter Name="fldShomareMajavez" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldStatusId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblReplyTakhfifSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblReplyTakhfifUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldDarsad" Type="decimal" Mode="In" />
+    <Parameter Name="fldMablagh" Type="bigint" Mode="In" />
+    <Parameter Name="fldShomareMajavez" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldStatusId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRequestTaghsit_TakhfifDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRequestTaghsit_TakhfifInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="InOut" />
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldRequestType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldEmployeeId" Type="int" Mode="In" />
+    <Parameter Name="fldAddress" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldEmail" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldCodePosti" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMobile" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRequestTaghsit_TakhfifSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRequestTaghsit_TakhfifUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldRequestType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldEmployeeId" Type="int" Mode="In" />
+    <Parameter Name="fldAddress" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldEmail" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldCodePosti" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMobile" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRooneveshtDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRooneveshtInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRooneveshtSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRooneveshtUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSafteDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSafteInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldTarikhSarResid" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldReplyTaghsitId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareSanad" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMablaghSanad" Type="bigint" Mode="In" />
+    <Parameter Name="fldStatus" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSafteSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSafteUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldTarikhSarResid" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShomareSanad" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldReplyTaghsitId" Type="int" Mode="In" />
+    <Parameter Name="fldMablaghSanad" Type="bigint" Mode="In" />
+    <Parameter Name="fldStatus" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldDateStatus" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblShomareHesab_FormulaInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldShomareHesab_CodeId" Type="int" Mode="In" />
+    <Parameter Name="fldFormolsaz" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldFormulKoliId" Type="int" Mode="In" />
+    <Parameter Name="fldFormulMohasebatId" Type="int" Mode="In" />
+    <Parameter Name="fldTarikhEjra" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblShomareHesab_FormulaSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organid" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblShomareHesab_FormulaUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareHesab_CodeId" Type="int" Mode="In" />
+    <Parameter Name="fldFormolsaz" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldTarikhEjra" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblShomareHesabCodeDaramadDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblShomareHesabCodeDaramadInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldShomareHesadId" Type="int" Mode="In" />
+    <Parameter Name="fldCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldShorooshenaseGhabz" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="spr_tblShomareHesabCodeDaramadSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value1" Type="nvarchar" Mode="In" />
+    <Parameter Name="FiscalYear" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblShomareHesabCodeDaramadUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareHesadId" Type="int" Mode="In" />
+    <Parameter Name="fldCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldShorooshenaseGhabz" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="spr_tblShomareNameHaDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblShomareNameHaInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldMokatebatId" Type="int" Mode="In" />
+    <Parameter Name="fldReplyTaghsitId" Type="int" Mode="In" />
+    <Parameter Name="fldShomare" Type="int" Mode="InOut" />
+    <Parameter Name="fldStartNumber" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblShomareNameHaSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblShomareNameHaUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldMokatebatId" Type="int" Mode="In" />
+    <Parameter Name="fldReplyTaghsitId" Type="int" Mode="In" />
+    <Parameter Name="fldYear" Type="smallint" Mode="In" />
+    <Parameter Name="fldShomare" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSodoorFish_DetailDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSodoorFish_DetailInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldFishId" Type="int" Mode="In" />
+    <Parameter Name="fldCodeElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSodoorFish_DetailSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSodoorFish_DetailUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldFishId" Type="int" Mode="In" />
+    <Parameter Name="fldCodeElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSodoorFishDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSodoorFishInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="InOut" />
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareHesabId" Type="int" Mode="In" />
+    <Parameter Name="fldMablaghAvarezGerdShode" Type="bigint" Mode="In" />
+    <Parameter Name="fldShorooShenaseGhabz" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldJamKol" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSodoorFishSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSodoorFishUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldElamAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareHesabId" Type="int" Mode="In" />
+    <Parameter Name="fldMablaghAvarezGerdShode" Type="bigint" Mode="In" />
+    <Parameter Name="fldShorooShenaseGhabz" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldJamKol" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="spr_tblStatusTaghsit_TakhfifDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblStatusTaghsit_TakhfifInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="ReplyId" Type="int" Mode="In" />
+    <Parameter Name="fldRequestId" Type="int" Mode="In" />
+    <Parameter Name="fldTypeMojavez" Type="tinyint" Mode="In" />
+    <Parameter Name="fldTypeRequest" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldDarsad" Type="decimal" Mode="In" />
+    <Parameter Name="fldMablagh" Type="bigint" Mode="In" />
+    <Parameter Name="fldTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMablaghNaghdi" Type="bigint" Mode="In" />
+    <Parameter Name="fldTedadAghsat" Type="tinyint" Mode="In" />
+    <Parameter Name="fldShomareMojavez" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTedadMahAghsat" Type="tinyint" Mode="In" />
+    <Parameter Name="fldJarimeTakhir" Type="bigint" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDarsadTaaghsit" Type="decimal" Mode="In" />
+    <Parameter Name="fldDescKarmozd" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblStatusTaghsit_TakhfifSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblStatusTaghsit_TakhfifUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldRequestId" Type="int" Mode="In" />
+    <Parameter Name="fldTypeMojavez" Type="tinyint" Mode="In" />
+    <Parameter Name="fldTypeRequest" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTakhfifDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTakhfifDetailDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTakhfifDetailInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldTakhfifId" Type="int" Mode="In" />
+    <Parameter Name="fldShCodeDaramad" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTakhfifDetailSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTakhfifDetailUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldTakhfifId" Type="int" Mode="In" />
+    <Parameter Name="fldShCodeDaramad" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTakhfifInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="InOut" />
+    <Parameter Name="fldShomareMojavez" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikhMojavez" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldAzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTaTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTakhfifKoli" Type="decimal" Mode="In" />
+    <Parameter Name="fldTakhfifNaghdi" Type="decimal" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTakhfifSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTakhfifUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldShomareMojavez" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikhMojavez" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldAzTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTaTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTakhfifKoli" Type="decimal" Mode="In" />
+    <Parameter Name="fldTakhfifNaghdi" Type="decimal" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTanzimateDaramadDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTanzimateDaramadInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldMaliyatId" Type="int" Mode="In" />
+    <Parameter Name="fldTakhirId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldMablaghGerdKardan" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldNerkh" Type="decimal" Mode="In" />
+    <Parameter Name="fldChapShenaseGhabz_Pardakht" Type="bit" Mode="In" />
+    <Parameter Name="fldShorooshenaseGhabz" Type="tinyint" Mode="In" />
+    <Parameter Name="fldShomareHesabIdPishfarz" Type="int" Mode="In" />
+    <Parameter Name="fldSumMaliyat_Avarez" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTanzimateDaramadSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fiscalyearId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTanzimateDaramadUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldAvarezId" Type="int" Mode="In" />
+    <Parameter Name="fldMaliyatId" Type="int" Mode="In" />
+    <Parameter Name="fldTakhirId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldMablaghGerdKardan" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldChapShenaseGhabz_Pardakht" Type="bit" Mode="In" />
+    <Parameter Name="fldShorooshenaseGhabz" Type="tinyint" Mode="In" />
+    <Parameter Name="fldShomareHesabIdPishfarz" Type="int" Mode="In" />
+    <Parameter Name="fldSumMaliyat_Avarez" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spr_tblUpdateFileForCodhayeDaramd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldImage" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_UpdateDaramadId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="Childe" Type="int" Mode="In" />
+    <Parameter Name="Parent" Type="int" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_UpdateFormolsazForCodhayeDarmd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fldShomareHesabCodeDaramadId" Type="int" Mode="In" />
+    <Parameter Name="fldFormolsaz" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_UpdateSendToMali_Fish" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="flag" Type="bit" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_UpdateSharhecodeDaramd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="fldSharhCodDaramd" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_UpdateSodoorFishShenaseGhabz_Pardakht" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="fishId" Type="int" Mode="In" />
+    <Parameter Name="fldShenaseGhabz" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShenasePardakht" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="fldBarcode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_UpdateStatus_CodeDaramad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="Status" Type="bit" Mode="In" />
+    <Parameter Name="userId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_UpdateStatusSanad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Drd">
+    <Parameter Name="type" Type="tinyint" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="fldStatus" Type="tinyint" Mode="In" />
+    <Parameter Name="fldDateStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="RasaNewFMSModelStoreContainer" />
+</Schema>

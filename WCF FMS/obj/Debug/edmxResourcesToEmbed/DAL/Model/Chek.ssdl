@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ChekModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="spr_AghsatCheckAmaniDelete_CheckHayeVaredeId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="CheckHayeVaredeId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectSumCheckSadere" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAghsatCheckAmaniDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAghsatCheckAmaniInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldMablagh" Type="bigint" Mode="In" />
+    <Parameter Name="fldTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldNobat" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIdCheckHayeVarede" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAghsatCheckAmaniSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAghsatCheckAmaniUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldMablagh" Type="bigint" Mode="In" />
+    <Parameter Name="fldTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldNobat" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIdCheckHayeVarede" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCheck_FactorSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCheckHayeVaredeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCheckHayeVaredeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldIdShobe" Type="int" Mode="In" />
+    <Parameter Name="fldMablagh" Type="int" Mode="In" />
+    <Parameter Name="fldAshkhasId" Type="int" Mode="In" />
+    <Parameter Name="fldTarikhVosolCheck" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikhDaryaftCheck" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShenaseKamelCheck" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldBabat" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldNoeeCheck" Type="bit" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCheckHayeVaredeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCheckHayeVaredeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldIdShobe" Type="int" Mode="In" />
+    <Parameter Name="fldMablagh" Type="int" Mode="In" />
+    <Parameter Name="fldAshkhasId" Type="int" Mode="In" />
+    <Parameter Name="fldTarikhVosolCheck" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTarikhDaryaftCheck" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShenaseKamelCheck" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldBabat" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldNoeeCheck" Type="bit" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCheckStatusInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldSodorCheckId" Type="int" Mode="In" />
+    <Parameter Name="fldCheckVaredeId" Type="int" Mode="In" />
+    <Parameter Name="fldAghsatId" Type="int" Mode="In" />
+    <Parameter Name="fldStatus" Type="tinyint" Mode="In" />
+    <Parameter Name="fldTarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCheckStatusSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblDasteCheckDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblDasteCheckInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldIdOlgoCheck" Type="int" Mode="In" />
+    <Parameter Name="fldShomareHesab" Type="int" Mode="In" />
+    <Parameter Name="fldMoshakhaseDasteCheck" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTedadBarg" Type="tinyint" Mode="In" />
+    <Parameter Name="fldShoroeSeriyal" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblDasteCheckSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblDasteCheckUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldIdOlgoCheck" Type="int" Mode="In" />
+    <Parameter Name="fldShomareHesab" Type="int" Mode="In" />
+    <Parameter Name="fldMoshakhaseDasteCheck" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldTedadBarg" Type="tinyint" Mode="In" />
+    <Parameter Name="fldShoroeSeriyal" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblOlgoCheckDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblOlgoCheckInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldFile" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIdBank" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblOlgoCheckSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblOlgoCheckUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldFile" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIdFile" Type="int" Mode="In" />
+    <Parameter Name="fldIdBank" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSodorCheckDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSodorCheckInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldID" Type="int" Mode="InOut" />
+    <Parameter Name="fldIdDasteCheck" Type="int" Mode="In" />
+    <Parameter Name="fldTarikhVosol" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldAshkhasId" Type="int" Mode="In" />
+    <Parameter Name="fldCodeSerialCheck" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldBabat" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldBabatFlag" Type="bit" Mode="In" />
+    <Parameter Name="fldMablagh" Type="bigint" Mode="In" />
+    <Parameter Name="fldFactorId" Type="int" Mode="In" />
+    <Parameter Name="fldContractId" Type="int" Mode="In" />
+    <Parameter Name="fldTankhahGroupId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSodorCheckSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSodorCheckUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldIdDasteCheck" Type="int" Mode="In" />
+    <Parameter Name="fldTarikhVosol" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldAshkhasId" Type="int" Mode="In" />
+    <Parameter Name="fldCodeSerialCheck" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldBabat" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldBabatFlag" Type="bit" Mode="In" />
+    <Parameter Name="fldMablagh" Type="bigint" Mode="In" />
+    <Parameter Name="fldFactorId" Type="int" Mode="In" />
+    <Parameter Name="fldContractId" Type="int" Mode="In" />
+    <Parameter Name="fldTankhahGroupId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_UpdateStatusAghsatCheckAmani" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="chk">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldTarikhPardakht" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldVaziat" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="ChekModelStoreContainer" />
+</Schema>

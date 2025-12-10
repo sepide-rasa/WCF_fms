@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WCF_FMS.TOL.PayRoll
+{
+    public class OBJ_KosuratBank
+    {
+        public int fldId { get; set; }
+        public int fldPersonalId { get; set; }
+        public int fldShobeId { get; set; }
+        public int fldMablagh { get; set; }
+        public short fldCount { get; set; }
+        public string fldTarikhPardakht { get; set; }
+        public string fldShomareHesab { get; set; }
+        public bool fldStatus { get; set; }
+        public int fldDeactiveDate { get; set; }
+        public int fldUserID { get; set; }
+        public string fldDesc { get; set; }
+        public System.DateTime fldDate { get; set; }
+        public string fldName_Father { get; set; }
+        public string fldCodemeli { get; set; }
+        public string fldSh_Personali { get; set; }
+        public string ShobeName { get; set; }
+        public string fldStatusName { get; set; }
+        public string fldBankName { get; set; }
+        public int fldMandeAzGhabl { get; set; }
+        public bool fldMandeDarFish { get; set; }
+        public string fldName { get; set; }
+        public string fldFamily { get; set; }
+        public string fldShomareSheba { get; set; }
+    }
+}

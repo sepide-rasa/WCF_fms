@@ -1,0 +1,1667 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AccountingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AccountingEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="spr_tblAccountingTypeDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAccountingTypeInsert">
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAccountingTypeSelect" ReturnType="Collection(AccountingModel.spr_tblAccountingTypeSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAccountingTypeUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCenterCostDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCenterCostInsert">
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldNameCenter" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCenterCostSelect" ReturnType="Collection(AccountingModel.spr_tblCenterCostSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCenterCostUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldNameCenter" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAccountingLevelDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAccountingLevelInsert">
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldYear" Mode="In" Type="Int16" />
+      <Parameter Name="fldArghamNum" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAccountingLevelSelect" ReturnType="Collection(AccountingModel.spr_tblAccountingLevelSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="value1" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblAccountingLevelUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldYear" Mode="In" Type="Int16" />
+      <Parameter Name="fldArghamNum" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblGroupCenterCostDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblGroupCenterCostInsert">
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldNameGroup" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblGroupCenterCostSelect" ReturnType="Collection(AccountingModel.spr_tblGroupCenterCostSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblGroupCenterCostUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldNameGroup" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTree_CenterCostDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTree_CenterCostInsert">
+      <Parameter Name="fldCenterCoId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCostTreeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTree_CenterCostSelect" ReturnType="Collection(AccountingModel.spr_tblTree_CenterCostSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTree_CenterCostUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCenterCoId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCostTreeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTreeCenterCostDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTreeCenterCostInsert">
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldGroupCenterCoId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPID" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTreeCenterCostSelect" ReturnType="Collection(AccountingModel.spr_tblTreeCenterCostSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="Value2" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTreeCenterCostUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldGroupCenterCoId" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_UpdatePID_Cost_Tree">
+      <Parameter Name="Cost_TreeId" Mode="In" Type="Int32" />
+      <Parameter Name="Parent" Mode="In" Type="Int32" />
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_UpdatePID_CostCenter">
+      <Parameter Name="Child" Mode="In" Type="Int32" />
+      <Parameter Name="Parent" Mode="In" Type="Int32" />
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_Centerco_TarifNashodeh" ReturnType="Collection(AccountingModel.spr_Centerco_TarifNashodeh)">
+      <Parameter Name="fldGroupcenterCoId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_selectAccountingLevel" ReturnType="Collection(AccountingModel.spr_selectAccountingLevel)">
+      <Parameter Name="fldYear" Mode="In" Type="Int16" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_DeleteAccountingLevel">
+      <Parameter Name="fldYear" Mode="In" Type="Int16" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRegistrationContractDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRegistrationContractInsert">
+      <Parameter Name="fldWarrantyId" Mode="In" Type="Int32" />
+      <Parameter Name="fldRoleOrgan" Mode="In" Type="Byte" />
+      <Parameter Name="fldTitleContract" Mode="In" Type="String" />
+      <Parameter Name="fldAshkhasId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSuplyMaterialsType" Mode="In" Type="Byte" />
+      <Parameter Name="fldAmountContract" Mode="In" Type="Int64" />
+      <Parameter Name="fldNumber" Mode="In" Type="String" />
+      <Parameter Name="fldTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldShobeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSepamNum" Mode="In" Type="String" />
+      <Parameter Name="fldTarikhEtmam" Mode="In" Type="String" />
+      <Parameter Name="fldStartContract" Mode="In" Type="String" />
+      <Parameter Name="fldEndContract" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRegistrationContractSelect" ReturnType="Collection(AccountingModel.spr_tblRegistrationContractSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRegistrationContractUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldWarrantyId" Mode="In" Type="Int32" />
+      <Parameter Name="fldRoleOrgan" Mode="In" Type="Byte" />
+      <Parameter Name="fldTitleContract" Mode="In" Type="String" />
+      <Parameter Name="fldAshkhasId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSuplyMaterialsType" Mode="In" Type="Byte" />
+      <Parameter Name="fldAmountContract" Mode="In" Type="Int64" />
+      <Parameter Name="fldNumber" Mode="In" Type="String" />
+      <Parameter Name="fldTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldShobeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSepamNum" Mode="In" Type="String" />
+      <Parameter Name="fldTarikhEtmam" Mode="In" Type="String" />
+      <Parameter Name="fldStartContract" Mode="In" Type="String" />
+      <Parameter Name="fldEndContract" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTemplateCodingDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTemplateCodingInsert">
+      <Parameter Name="fldPID" Mode="In" Type="Int32" />
+      <Parameter Name="fldItemId" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldPCod" Mode="In" Type="String" />
+      <Parameter Name="fldMahiyatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCode" Mode="In" Type="String" />
+      <Parameter Name="fldTempNameId" Mode="In" Type="Int32" />
+      <Parameter Name="fldLevelsAccountTypId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTypeHesabId" Mode="In" Type="Byte" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCodeBudget" Mode="In" Type="String" />
+      <Parameter Name="fldAddChildNode" Mode="In" Type="Boolean" />
+      <Parameter Name="fldMahiyat_GardeshId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTemplateCodingUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldItemId" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldMahiyatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCode" Mode="In" Type="String" />
+      <Parameter Name="fldTempNameId" Mode="In" Type="Int32" />
+      <Parameter Name="fldLevelsAccountTypId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTypeHesabId" Mode="In" Type="Byte" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCodeBudget" Mode="In" Type="String" />
+      <Parameter Name="fldAddChildNode" Mode="In" Type="Boolean" />
+      <Parameter Name="fldMahiyat_GardeshId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblItemNecessaryDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblItemNecessaryInsert">
+      <Parameter Name="fldPID" Mode="In" Type="Int32" />
+      <Parameter Name="fldNameItem" Mode="In" Type="String" />
+      <Parameter Name="fldMahiyatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTypeHesabId" Mode="In" Type="Byte" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMahiyat_GardeshId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblItemNecessaryUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldNameItem" Mode="In" Type="String" />
+      <Parameter Name="fldMahiyatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTypeHesabId" Mode="In" Type="Byte" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMahiyat_GardeshId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTemplateNameDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTemplateNameInsert">
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldAccountingTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTemplateNameSelect" ReturnType="Collection(AccountingModel.spr_tblTemplateNameSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTemplateNameUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldAccountingTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMahiyatSelect" ReturnType="Collection(AccountingModel.spr_tblMahiyatSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLevelsAccountingTypeDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLevelsAccountingTypeInsert">
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldAccountTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldArghumNum" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLevelsAccountingTypeSelect" ReturnType="Collection(AccountingModel.spr_tblLevelsAccountingTypeSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLevelsAccountingTypeUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldAccountTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldArghumNum" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_selectAccountingTypeLevel" ReturnType="Collection(AccountingModel.spr_selectAccountingTypeLevel)">
+      <Parameter Name="fldAccountTypeId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_UpdatePID_ItemNecessary">
+      <Parameter Name="Child" Mode="In" Type="Int32" />
+      <Parameter Name="Parent" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CheckValidCode" ReturnType="Collection(AccountingModel.CheckValidCode)">
+      <Parameter Name="AccountTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="PCode" Mode="In" Type="String" />
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="TempNameId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentDescUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldDocDesc" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldFlag" Mode="In" Type="Boolean" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CheckAccountingLevel" ReturnType="Collection(AccountingModel.CheckAccountingLevel)">
+      <Parameter Name="AccountingTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="OrganPostId" Mode="In" Type="Int32" />
+      <Parameter Name="Year" Mode="In" Type="Int16" />
+    </FunctionImport>
+    <FunctionImport Name="CopyFromTemplateCodingToCoding">
+      <Parameter Name="fldHeaderId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTempNameId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCaseTypeDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCaseTypeInsert">
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCaseTypeSelect" ReturnType="Collection(AccountingModel.spr_tblCaseTypeSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCaseTypeUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentRecord_HeaderDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentRecord_HeaderInsert">
+      <Parameter Name="fldDocumentNum" Mode="In" Type="Int32" />
+      <Parameter Name="fldArchiveNum" Mode="In" Type="String" />
+      <Parameter Name="fldDescriptionDocu" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTarikhDocument" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAccept" Mode="In" Type="Byte" />
+      <Parameter Name="fldType" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentRecord_HeaderUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldArchiveNum" Mode="In" Type="String" />
+      <Parameter Name="fldDescriptionDocu" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTarikhDocument" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAccept" Mode="In" Type="Byte" />
+      <Parameter Name="fldType" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="GetDefaultCode_Coding" ReturnType="Collection(AccountingModel.GetDefaultCode_Coding)">
+      <Parameter Name="fldHeaderCodId" Mode="In" Type="Int32" />
+      <Parameter Name="PCode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCoding_HeaderDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCoding_HeaderInsert">
+      <Parameter Name="fldYear" Mode="In" Type="Int16" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCoding_HeaderSelect" ReturnType="Collection(AccountingModel.spr_tblCoding_HeaderSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCoding_HeaderUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldYear" Mode="In" Type="Int16" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCoding_DetailsDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCoding_DetailsInsert">
+      <Parameter Name="fldPID" Mode="In" Type="Int32" />
+      <Parameter Name="fldPCod" Mode="In" Type="String" />
+      <Parameter Name="fldTempCodingId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldCode" Mode="In" Type="String" />
+      <Parameter Name="fldCodeDaramd" Mode="In" Type="String" />
+      <Parameter Name="fldAccountLevelId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTypeHesabId" Mode="In" Type="Byte" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMahiyatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldHeaderCodId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMahiyat_GardeshId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCoding_DetailsSelect" ReturnType="Collection(AccountingModel.spr_tblCoding_DetailsSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="Value2" Mode="In" Type="String" />
+      <Parameter Name="Value3" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCoding_DetailsUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTempCodingId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldCode" Mode="In" Type="String" />
+      <Parameter Name="fldCodeDaramd" Mode="In" Type="String" />
+      <Parameter Name="fldAccountLevelId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTypeHesabId" Mode="In" Type="Byte" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMahiyatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldHeaderCodId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMahiyat_GardeshId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentRecord_DetailsDelete">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentRecord_DetailsInsert">
+      <Parameter Name="fldDocument_HedearId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCodingId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDescription" Mode="In" Type="String" />
+      <Parameter Name="fldBedehkar" Mode="In" Type="Int64" />
+      <Parameter Name="fldBestankar" Mode="In" Type="Int64" />
+      <Parameter Name="fldCenterCoId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCaseTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSourceId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrder" Mode="In" Type="Int16" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentRecord_DetailsUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDocument_HedearId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCodingId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDescription" Mode="In" Type="String" />
+      <Parameter Name="fldBedehkar" Mode="In" Type="Int64" />
+      <Parameter Name="fldBestankar" Mode="In" Type="Int64" />
+      <Parameter Name="fldCenterCoId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCaseId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCaseTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSourceId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrder" Mode="In" Type="Int16" />
+    </FunctionImport>
+    <FunctionImport Name="CheckValidCode_CodingDetail" ReturnType="Collection(AccountingModel.CheckValidCode_CodingDetail)">
+      <Parameter Name="HeaderId" Mode="In" Type="Int32" />
+      <Parameter Name="Code" Mode="In" Type="String" />
+      <Parameter Name="PCode" Mode="In" Type="String" />
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCaseDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCaseInsert">
+      <Parameter Name="fldCaseTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSourceId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCaseSelect" ReturnType="Collection(AccountingModel.spr_tblCaseSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCaseUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCaseTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSourceId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_GetParamDocumentDesc" ReturnType="Collection(AccountingModel.spr_GetParamDocumentDesc)">
+      <Parameter Name="DocDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_LastNum_AtfDocumentRecord" ReturnType="Collection(AccountingModel.spr_LastNum_AtfDocumentRecord)">
+      <Parameter Name="fldYear" Mode="In" Type="Int16" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="ModuleDocId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_IsCostCenter" ReturnType="Collection(AccountingModel.spr_IsCostCenter)">
+      <Parameter Name="CodingId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_RptByCoding" ReturnType="Collection(AccountingModel.spr_RptByCoding)">
+      <Parameter Name="CodingId" Mode="In" Type="Int32" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="Year" Mode="In" Type="Int16" />
+      <Parameter Name="ModuleId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblFiscalYearDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblFiscalYearInsert">
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldYear" Mode="In" Type="Int16" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblFiscalYearSelect" ReturnType="Collection(AccountingModel.spr_tblFiscalYearSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblFiscalYearUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldYear" Mode="In" Type="Int16" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_DocumentDetailDelete">
+      <Parameter Name="HeaderId" Mode="In" Type="Int32" />
+      <Parameter Name="userId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_RptCodingStatus" ReturnType="Collection(AccountingModel.spr_RptCodingStatus)">
+      <Parameter Name="Coding_DetailsId" Mode="In" Type="Int32" />
+      <Parameter Name="Flag" Mode="In" Type="Byte" />
+      <Parameter Name="CaseTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="SourceId" Mode="In" Type="Int32" />
+      <Parameter Name="Year" Mode="In" Type="Int16" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="ModuleSaveId" Mode="In" Type="Int32" />
+      <Parameter Name="Type" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="spr_RptCodingTurnover" ReturnType="Collection(AccountingModel.spr_RptCodingTurnover)">
+      <Parameter Name="Coding_DetailsId" Mode="In" Type="Int32" />
+      <Parameter Name="CaseTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="SourceId" Mode="In" Type="Int32" />
+      <Parameter Name="Year" Mode="In" Type="Int16" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="ModuleSaveId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetDefaultCode" ReturnType="Collection(AccountingModel.GetDefaultCode)">
+      <Parameter Name="AccountTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="PCode" Mode="In" Type="String" />
+      <Parameter Name="TempNameId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectMoratabSaziTarikhSanad">
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="Year" Mode="In" Type="Int16" />
+      <Parameter Name="ModuleId" Mode="In" Type="Int32" />
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTypeHesabSelect" ReturnType="Collection(AccountingModel.spr_tblTypeHesabSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentTypeSelect" ReturnType="Collection(AccountingModel.spr_tblDocumentTypeSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentRecorde_FileDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentRecorde_FileInsert">
+      <Parameter Name="fldDocumentHeaderId" Mode="In" Type="Int32" />
+      <Parameter Name="fldImage" Mode="In" Type="Binary" />
+      <Parameter Name="fldPasvand" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentRecorde_FileSelect" ReturnType="Collection(AccountingModel.spr_tblDocumentRecorde_FileSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentDescDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentDescInsert">
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldDocDesc" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldFlag" Mode="In" Type="Boolean" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentDescSelect" ReturnType="Collection(AccountingModel.spr_tblDocumentDescSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentBookMarkDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentBookMarkInsert">
+      <Parameter Name="fldDocumentRecordeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldArchiveTreeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentBookMarkSelect" ReturnType="Collection(AccountingModel.spr_tblDocumentBookMarkSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentBookMarkUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDocumentRecordeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldArchiveTreeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_CheckRemain" ReturnType="Collection(AccountingModel.spr_CheckRemain)">
+      <Parameter Name="Coding_DetailsId" Mode="In" Type="Int32" />
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="Bedehkar" Mode="In" Type="Int64" />
+      <Parameter Name="Bestankar" Mode="In" Type="Int64" />
+      <Parameter Name="Year" Mode="In" Type="Int16" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="ModuleSaveId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentRecorde_File_BookMarkSelect" ReturnType="Collection(AccountingModel.spr_tblDocumentRecorde_File_BookMarkSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="fldDocumentHeaderId" Mode="In" Type="Int32" />
+      <Parameter Name="fldArchiveTreeId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentRecorde_File_BookMarkInsert">
+      <Parameter Name="fldDocumentHeaderId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldDocumentRecordeId_Del" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentRecord_Ghati">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectBookmarkPath" ReturnType="Collection(AccountingModel.spr_SelectBookmarkPath)">
+      <Parameter Name="fldDocumentRecordeId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_selectExistsItemDaramad" ReturnType="Collection(AccountingModel.spr_selectExistsItemDaramad)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="headerId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_RptCodingTurnover_Tarikh" ReturnType="Collection(AccountingModel.spr_RptCodingTurnover_Tarikh)">
+      <Parameter Name="Coding_DetailsId" Mode="In" Type="Int32" />
+      <Parameter Name="CaseTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="SourceId" Mode="In" Type="Int32" />
+      <Parameter Name="Year" Mode="In" Type="Int16" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="ModuleSaveId" Mode="In" Type="Int32" />
+      <Parameter Name="aztarikh" Mode="In" Type="String" />
+      <Parameter Name="tatarikh" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_CheckDocStatus" ReturnType="Collection(AccountingModel.spr_CheckDocStatus)">
+      <Parameter Name="DocumentRecord_HeaderId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_Document_CopyInsert">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldModuleErsalId" Mode="In" Type="Int32" />
+      <Parameter Name="fldModuleSaveId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTypeInsert" Mode="In" Type="Byte" />
+      <Parameter Name="fldTarikhDocument" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblItemNecessarySelect" ReturnType="Collection(AccountingModel.spr_tblItemNecessarySelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="value2" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTemplateCodingSelect" ReturnType="Collection(AccountingModel.spr_tblTemplateCodingSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="value2" Mode="In" Type="String" />
+      <Parameter Name="HeaderCoding" Mode="In" Type="Int32" />
+      <Parameter Name="Value3" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_DocumentUpdate">
+      <Parameter Name="fldHeaderId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDocumentNum" Mode="In" Type="Int32" />
+      <Parameter Name="fldArchiveNum" Mode="In" Type="String" />
+      <Parameter Name="fldDescriptionDocu" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTarikhDocument" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAccept" Mode="In" Type="Byte" />
+      <Parameter Name="fldType" Mode="In" Type="Byte" />
+      <Parameter Name="fldModuleSaveId" Mode="In" Type="Int32" />
+      <Parameter Name="fldModuleErsalId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareFaree" Mode="In" Type="Int32" />
+      <Parameter Name="fldTypeSanad" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentRecord_DetailsSelect" ReturnType="Collection(AccountingModel.spr_tblDocumentRecord_DetailsSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentRecord_HeaderSelect" ReturnType="Collection(AccountingModel.spr_tblDocumentRecord_HeaderSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="value1" Mode="In" Type="String" />
+      <Parameter Name="value2" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldYear" Mode="In" Type="Int16" />
+      <Parameter Name="fldMadule" Mode="In" Type="Int32" />
+      <Parameter Name="typeorder" Mode="In" Type="Byte" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_DocumentInsert">
+      <Parameter Name="fldDocumentNum" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldArchiveNum" Mode="In" Type="String" />
+      <Parameter Name="fldDescriptionDocu" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTarikhDocument" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAccept" Mode="In" Type="Byte" />
+      <Parameter Name="fldType" Mode="In" Type="Byte" />
+      <Parameter Name="fldModuleSaveId" Mode="In" Type="Int32" />
+      <Parameter Name="fldModuleErsalId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareFaree" Mode="In" Type="Int32" />
+      <Parameter Name="fldFiscalYearId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTypeSanad" Mode="In" Type="Int32" />
+      <Parameter Name="fldPid" Mode="In" Type="Int32" />
+      <Parameter Name="fldEdit" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDocumentRecord_Header1Update">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldArchiveNum" Mode="In" Type="String" />
+      <Parameter Name="fldShomareFaree" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_RptCodingStatus_Parvande" ReturnType="Collection(AccountingModel.spr_RptCodingStatus_Parvande)">
+      <Parameter Name="Coding_DetailsId" Mode="In" Type="Int32" />
+      <Parameter Name="Flag" Mode="In" Type="Byte" />
+      <Parameter Name="CaseTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="SourceId" Mode="In" Type="Int32" />
+      <Parameter Name="Year" Mode="In" Type="Int16" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="ModuleSaveId" Mode="In" Type="Int32" />
+      <Parameter Name="Type" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCoding_ProjeFaaliatSelect" ReturnType="Collection(AccountingModel.spr_tblCoding_ProjeFaaliatSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectDocumentRecord_ComboBox" ReturnType="Collection(AccountingModel.spr_SelectDocumentRecord_ComboBox)">
+      <Parameter Name="fldYear" Mode="In" Type="Int16" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="CodingDetailId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_GetParvandeInfo" ReturnType="Collection(AccountingModel.spr_GetParvandeInfo)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="ParvandeType" Mode="In" Type="Int32" />
+      <Parameter Name="Year" Mode="In" Type="Int16" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_CopyDocumentWithHeaderId" ReturnType="Collection(AccountingModel.spr_CopyDocumentWithHeaderId)">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCodingDetail_CaseTypeDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCodingDetail_CaseTypeInsert">
+      <Parameter Name="fldCodingDetailId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCaseTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCodingDetail_CaseTypeSelect" ReturnType="Collection(AccountingModel.spr_tblCodingDetail_CaseTypeSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCodingDetail_CaseTypeUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCodingDetailId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCaseTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_CheckMahiyatGardesh_Mande" ReturnType="Collection(AccountingModel.spr_CheckMahiyatGardesh_Mande)">
+      <Parameter Name="organid" Mode="In" Type="Int32" />
+      <Parameter Name="year" Mode="In" Type="Int16" />
+      <Parameter Name="Bed" Mode="In" Type="Int64" />
+      <Parameter Name="Best" Mode="In" Type="Int64" />
+      <Parameter Name="IdDetail" Mode="In" Type="Int32" />
+      <Parameter Name="ModuleSaveId" Mode="In" Type="Int32" />
+      <Parameter Name="fldid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBankTemplate_DetailsSelect" ReturnType="Collection(AccountingModel.spr_tblBankTemplate_DetailsSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectDocumentEkhtetamiye" ReturnType="Collection(AccountingModel.spr_SelectDocumentEkhtetamiye)">
+      <Parameter Name="FiscalYearId" Mode="In" Type="Int32" />
+      <Parameter Name="Type" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="prs_tblBankTemplate_HeaderSelect">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBankTemplate_HeaderDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBankTemplate_HeaderInsert">
+      <Parameter Name="fldNamePattern" Mode="In" Type="String" />
+      <Parameter Name="fldStartRow" Mode="In" Type="Int16" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldImage" Mode="In" Type="Binary" />
+      <Parameter Name="fldPasvand" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBankTemplate_HeaderSelect" ReturnType="Collection(AccountingModel.spr_tblBankTemplate_HeaderSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBankTemplate_HeaderUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldNamePattern" Mode="In" Type="String" />
+      <Parameter Name="fldStartRow" Mode="In" Type="Int16" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFileId" Mode="In" Type="Int32" />
+      <Parameter Name="fldImage" Mode="In" Type="Binary" />
+      <Parameter Name="fldPasvand" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBankBill_DetailsDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBankBill_DetailsSelect" ReturnType="Collection(AccountingModel.spr_tblBankBill_DetailsSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="value2" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBankBill_HeaderDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBankBill_HeaderInsert">
+      <Parameter Name="fldid" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldShomareHesabId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFiscalYearId" Mode="In" Type="Int32" />
+      <Parameter Name="fldJsonFile" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPatternId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBankBill_HeaderSelect" ReturnType="Collection(AccountingModel.spr_tblBankBill_HeaderSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBankBill_HeaderUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldShomareHesabId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFiscalYearId" Mode="In" Type="Int32" />
+      <Parameter Name="fldJsonFile" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPatternId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectMoghayeratBanki" ReturnType="Collection(AccountingModel.spr_SelectMoghayeratBanki)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="FiscalYearId" Mode="In" Type="Int32" />
+      <Parameter Name="AzTarikh" Mode="In" Type="String" />
+      <Parameter Name="TaTarikh" Mode="In" Type="String" />
+      <Parameter Name="ShomareHesabId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="tblBankBill_DetailsDeleteNotExists" ReturnType="Collection(AccountingModel.tblBankBill_DetailsDeleteNotExists)">
+      <Parameter Name="HedearId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectBankBillBazeTarikh" ReturnType="Collection(AccountingModel.spr_SelectBankBillBazeTarikh)">
+      <Parameter Name="FiscalYearId" Mode="In" Type="Int32" />
+      <Parameter Name="ShomareHesabId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectBastanHesabha" ReturnType="Collection(AccountingModel.spr_SelectBastanHesabha)">
+      <Parameter Name="FiscalYearId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_UpdateExitGhateeiDocument">
+      <Parameter Name="idheader" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_RptDafater" ReturnType="Collection(AccountingModel.spr_RptDafater)">
+      <Parameter Name="AzCodde" Mode="In" Type="String" />
+      <Parameter Name="TaCode" Mode="In" Type="String" />
+      <Parameter Name="AzSanad" Mode="In" Type="Int32" />
+      <Parameter Name="TaSanad" Mode="In" Type="Int32" />
+      <Parameter Name="Group" Mode="In" Type="Byte" />
+      <Parameter Name="FiscalYearId" Mode="In" Type="Int32" />
+      <Parameter Name="CaseTypeId" Mode="In" Type="Int32" />
+      <Parameter Name="SourceId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_DocumentInsert_DaramadFish">
+      <Parameter Name="fldFiscalYearId" Mode="In" Type="Int32" />
+      <Parameter Name="FishId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldModuleSaveId" Mode="In" Type="Int32" />
+      <Parameter Name="fldModuleErsalId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectHesabDaryaftani" ReturnType="Collection(AccountingModel.spr_SelectHesabDaryaftani)">
+      <Parameter Name="fieldName" Mode="In" Type="String" />
+      <Parameter Name="FiscalYearId" Mode="In" Type="Int32" />
+      <Parameter Name="ShomareHesabId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblArtiklMapInsert" ReturnType="Collection(AccountingModel.spr_tblArtiklMapInsert_Result)">
+      <Parameter Name="fldBankBillId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDocument_HedearId" Mode="In" Type="Int32" />
+      <Parameter Name="fldType" Mode="In" Type="Byte" />
+      <Parameter Name="fldSourceId" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectMortabet" ReturnType="Collection(AccountingModel.spr_SelectMortabet)">
+      <Parameter Name="DocumentRecord_Header1" Mode="In" Type="Int32" />
+      <Parameter Name="ModuleSaveId" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="spr_tblAccountingTypeSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblCenterCostSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldNameCenter" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblAccountingLevelSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="Int16" Name="fldYear" Nullable="false" />
+    <Property Type="Int32" Name="fldArghamNum" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="fldLevelId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblGroupCenterCostSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldNameGroup" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblTree_CenterCostSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldCenterCoId" Nullable="false" />
+    <Property Type="Int32" Name="fldCostTreeId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblTreeCenterCostSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="Int32" Name="fldGroupCenterCoId" Nullable="false" />
+    <Property Type="Int32" Name="fldPID" Nullable="true" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldNodeType" Nullable="false" />
+    <Property Type="Int32" Name="fldCenter_treeId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_Centerco_TarifNashodeh">
+    <Property Type="String" Name="fldNameCenter" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldCenterCoId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_selectAccountingLevel">
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="Int16" Name="fldYear" Nullable="false" />
+    <Property Type="Int32" Name="fldArghamNum" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblRegistrationContractSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldWarrantyId" Nullable="false" />
+    <Property Type="Byte" Name="fldRoleOrgan" Nullable="false" />
+    <Property Type="String" Name="fldRoleOrgan_Name" Nullable="true" MaxLength="7" />
+    <Property Type="String" Name="fldTitleContract" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="fldAshkhasId" Nullable="false" />
+    <Property Type="Byte" Name="fldSuplyMaterialsType" Nullable="false" />
+    <Property Type="String" Name="fldSuplyMaterialsType_Name" Nullable="true" MaxLength="7" />
+    <Property Type="Int64" Name="fldAmountContract" Nullable="false" />
+    <Property Type="String" Name="fldNumber" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldTarikh" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="fldShobeId" Nullable="true" />
+    <Property Type="String" Name="fldSepamNum" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldTarikhEtmam" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldStartContract" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldEndContract" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIp" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldWarentytype_Name" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldCodeMelli" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldName_Shakhs" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="fldName_Shobe" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldCodeSHobe" Nullable="false" />
+    <Property Type="Int32" Name="fldBankId" Nullable="true" />
+    <Property Type="String" Name="fldBankName" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spr_tblTemplateNameSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldAccountingTypeId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIp" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldName_AccountingType" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spr_tblMahiyatSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIp" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblLevelsAccountingTypeSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldAccountTypeId" Nullable="false" />
+    <Property Type="Int32" Name="fldArghumNum" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="flddate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIp" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldName_AccountingType" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spr_selectAccountingTypeLevel">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldAccountTypeId" Nullable="false" />
+    <Property Type="Int32" Name="fldArghumNum" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="CheckValidCode">
+    <Property Type="Int32" Name="fldValid" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CheckAccountingLevel">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="spr_tblCaseTypeSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetDefaultCode_Coding">
+    <Property Type="String" Name="fldCode" Nullable="true" MaxLength="8000" />
+    <Property Type="Int32" Name="LevelId" Nullable="false" />
+    <Property Type="String" Name="fldLevelName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spr_tblCoding_HeaderSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int16" Name="fldYear" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblCoding_DetailsSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldPCod" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="fldTempCodingId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="fldCode" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldAccountLevelId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIp" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldMahiyatId" Nullable="false" />
+    <Property Type="Int32" Name="fldHeaderCodId" Nullable="false" />
+    <Property Type="String" Name="fldName_TemplateCoding" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="fldName_AccountingLevel" Nullable="false" MaxLength="50" />
+    <Property Type="Int16" Name="fldYear" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="Int32" Name="fldTempNameId" Nullable="false" />
+    <Property Type="Int32" Name="fldAccountingTypeId" Nullable="false" />
+    <Property Type="Byte" Name="fldTypeHesabId" Nullable="false" />
+    <Property Type="String" Name="fldNameTypeHesab" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fldDaramadCode" Nullable="true" MaxLength="15" />
+    <Property Type="Int32" Name="fldItemIdParent" Nullable="false" />
+    <Property Type="Int32" Name="LastNod" Nullable="false" />
+    <Property Type="Int32" Name="fldMahiyat_GardeshId" Nullable="true" />
+    <Property Type="Int32" Name="fldItemId" Nullable="true" />
+    <Property Type="Boolean" Name="fldAddChildNode" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CheckValidCode_CodingDetail">
+    <Property Type="Int32" Name="fldValid" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblCaseSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldCaseTypeId" Nullable="false" />
+    <Property Type="Int32" Name="fldSourceId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_GetParamDocumentDesc">
+    <Property Type="String" Name="param" Nullable="true" />
+    <Property Type="String" Name="Value" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="spr_LastNum_AtfDocumentRecord">
+    <Property Type="Int32" Name="fldDocumentNum" Nullable="false" />
+    <Property Type="Int32" Name="AtfNum" Nullable="false" />
+    <Property Type="Int32" Name="ShomareRoozane" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_IsCostCenter">
+    <Property Type="Int32" Name="Cost" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_RptByCoding">
+    <Property Type="Int64" Name="fldBedehkar" Nullable="true" />
+    <Property Type="Int64" Name="fldBestankar" Nullable="true" />
+    <Property Type="Int64" Name="MandehHeasb" Nullable="true" />
+    <Property Type="Int64" Name="GardeshHesab" Nullable="true" />
+    <Property Type="String" Name="fldTitle" Nullable="true" />
+    <Property Type="Int32" Name="fldType" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblFiscalYearSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="Int16" Name="fldYear" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Boolean" Name="test" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_RptCodingStatus">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="fldParentTitle" Nullable="false" />
+    <Property Type="Int64" Name="fldMande" Nullable="false" />
+    <Property Type="String" Name="fldTypeName" Nullable="false" MaxLength="8" />
+    <Property Type="Int32" Name="fldType" Nullable="false" />
+    <Property Type="Int32" Name="fldNoe_Mahiyat" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_RptCodingTurnover">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldParentTitle" Nullable="true" />
+    <Property Type="Int64" Name="fldBedehkar_t" Nullable="true" />
+    <Property Type="Int64" Name="fldBestankar_t" Nullable="true" />
+    <Property Type="Int32" Name="fldType" Nullable="false" />
+    <Property Type="Int64" Name="fldMande_t" Nullable="true" />
+    <Property Type="String" Name="fldTypeName_t" Nullable="false" MaxLength="8" />
+    <Property Type="Int32" Name="fldDocumentNum" Nullable="false" />
+    <Property Type="String" Name="fldDescriptionDocu" Nullable="false" />
+    <Property Type="Int64" Name="fldBedehkar" Nullable="false" />
+    <Property Type="Int64" Name="fldBestankar" Nullable="false" />
+    <Property Type="Int32" Name="fldDocument_HedearId" Nullable="false" />
+    <Property Type="String" Name="fldParvande" Nullable="true" />
+    <Property Type="String" Name="fldTarikhDocument" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="GetDefaultCode">
+    <Property Type="String" Name="fldCode" Nullable="true" MaxLength="8000" />
+    <Property Type="Int32" Name="LevelId" Nullable="false" />
+    <Property Type="String" Name="fldLevelName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spr_tblTypeHesabSelect">
+    <Property Type="Byte" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblDocumentTypeSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="150" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+  </ComplexType>
+  <ComplexType Name="spr_tblDocumentRecorde_FileSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldDocumentHeaderId" Nullable="false" />
+    <Property Type="Int32" Name="fldFileId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+  </ComplexType>
+  <ComplexType Name="spr_tblDocumentDescSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="fldDocDesc" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Boolean" Name="fldFlag" Nullable="true" />
+    <Property Type="String" Name="fldFlagName" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="spr_tblDocumentBookMarkSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldDocumentRecordeId" Nullable="false" />
+    <Property Type="Int32" Name="fldArchiveTreeId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+  </ComplexType>
+  <ComplexType Name="spr_CheckRemain">
+    <Property Type="Boolean" Name="fldCheck" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblDocumentRecorde_File_BookMarkSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Binary" Name="fldImage" Nullable="true" />
+    <Property Type="String" Name="fldPasvand" Nullable="true" MaxLength="5" />
+    <Property Type="Int32" Name="fldArchiveTreeId" Nullable="true" />
+    <Property Type="Boolean" Name="fldIsBookMark" Nullable="true" />
+    <Property Type="String" Name="fldTitle" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectBookmarkPath">
+    <Property Type="String" Name="fldTitle" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_selectExistsItemDaramad">
+    <Property Type="Int32" Name="fldItemId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_RptCodingTurnover_Tarikh">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldParentTitle" Nullable="true" />
+    <Property Type="Int64" Name="fldBedehkar" Nullable="false" />
+    <Property Type="Int64" Name="fldBestankar" Nullable="false" />
+    <Property Type="Int64" Name="fldBedehkar_t" Nullable="false" />
+    <Property Type="Int64" Name="fldBestankar_t" Nullable="false" />
+    <Property Type="String" Name="fldTypeName_t" Nullable="false" MaxLength="8" />
+    <Property Type="Int32" Name="fldType" Nullable="false" />
+    <Property Type="Int32" Name="fldDocumentNum" Nullable="false" />
+    <Property Type="String" Name="fldDescriptionDocu" Nullable="false" />
+    <Property Type="Int32" Name="fldDocument_HedearId" Nullable="false" />
+    <Property Type="String" Name="fldParvande" Nullable="false" />
+    <Property Type="Int64" Name="fldMande_t" Nullable="false" />
+    <Property Type="String" Name="fldTarikhDocument" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="spr_CheckDocStatus">
+    <Property Type="Boolean" Name="DocStatus" Nullable="true" />
+    <Property Type="Int32" Name="Id" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblItemNecessarySelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldNameItem" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldMahiyatId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIp" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Byte" Name="fldTypeHesabId" Nullable="false" />
+    <Property Type="String" Name="fldNameTypeHesab" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="fldMahiyat_GardeshId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblTemplateCodingSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldItemId" Nullable="true" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="fldPCod" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="fldMahiyatId" Nullable="false" />
+    <Property Type="String" Name="fldCode" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldTempNameId" Nullable="false" />
+    <Property Type="Int32" Name="fldLevelsAccountTypId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIp" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldTemplateName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldNameItem" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="fldTitle_Mahiyat" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldName_LevelsAccountingType" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldNameTypeHesab" Nullable="true" MaxLength="50" />
+    <Property Type="Byte" Name="fldTypeHesabId" Nullable="false" />
+    <Property Type="String" Name="fldDaramadCode" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldCodeBudget" Nullable="true" MaxLength="100" />
+    <Property Type="Boolean" Name="fldAddChildNode" Nullable="true" />
+    <Property Type="Int32" Name="fldMahiyat_GardeshId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblDocumentRecord_DetailsSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldDocument_HedearId" Nullable="false" />
+    <Property Type="Int32" Name="fldCodingId" Nullable="false" />
+    <Property Type="String" Name="fldDescription" Nullable="false" />
+    <Property Type="Int64" Name="fldBedehkar" Nullable="false" />
+    <Property Type="Int64" Name="fldBestankar" Nullable="false" />
+    <Property Type="Int32" Name="fldCenterCoId" Nullable="true" />
+    <Property Type="Int32" Name="fldCaseId" Nullable="true" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldSourceId" Nullable="false" />
+    <Property Type="Int32" Name="fldCaseTypeId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="true" />
+    <Property Type="String" Name="fldNameCenter" Nullable="true" MaxLength="100" />
+    <Property Type="Int16" Name="fldOrder" Nullable="true" />
+    <Property Type="String" Name="fldCode" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldNameCoding" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldName_CodeDetail" Nullable="false" MaxLength="202" />
+  </ComplexType>
+  <ComplexType Name="spr_tblDocumentRecord_HeaderSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldDocumentNum" Nullable="false" />
+    <Property Type="Int32" Name="fldAtfNum" Nullable="true" />
+    <Property Type="String" Name="fldArchiveNum" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fldDescriptionDocu" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldTarikhDocument" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Byte" Name="fldAccept" Nullable="false" />
+    <Property Type="Byte" Name="fldType" Nullable="false" />
+    <Property Type="String" Name="fldTypeName" Nullable="true" MaxLength="7" />
+    <Property Type="Int32" Name="ShomareRoozane" Nullable="true" />
+    <Property Type="Int32" Name="fldShomareFaree" Nullable="true" />
+    <Property Type="Int16" Name="fldYear" Nullable="false" />
+    <Property Type="Int32" Name="fldFiscalYearId" Nullable="true" />
+    <Property Type="Int32" Name="fldTypeSanad" Nullable="true" />
+    <Property Type="String" Name="fldTypeSanadName" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="fldNameModule" Nullable="true" MaxLength="300" />
+    <Property Type="Int32" Name="fldModuleErsalId" Nullable="true" />
+    <Property Type="Boolean" Name="fldIsArchive" Nullable="false" />
+    <Property Type="Int32" Name="fldDocumentNum_Pid" Nullable="true" />
+    <Property Type="Int32" Name="fldPId" Nullable="false" />
+    <Property Type="String" Name="fldTypeSanadName_Pid" Nullable="true" MaxLength="28" />
+    <Property Type="Int32" Name="fldMainDocNum" Nullable="true" />
+    <Property Type="Int32" Name="fldFlag" Nullable="false" />
+    <Property Type="Byte" Name="fldIsMap" Nullable="false" />
+    <Property Type="Byte" Name="fldEdit" Nullable="true" />
+    <Property Type="Int32" Name="fldCaseTypeId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_RptCodingStatus_Parvande">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="fldParentTitle" Nullable="false" />
+    <Property Type="Int64" Name="fldMande" Nullable="false" />
+    <Property Type="String" Name="fldTypeName" Nullable="false" MaxLength="8" />
+    <Property Type="Int32" Name="fldType" Nullable="false" />
+    <Property Type="String" Name="fldParvande" Nullable="false" />
+    <Property Type="Int32" Name="fldCaseTypeId" Nullable="false" />
+    <Property Type="Int32" Name="fldSourceId" Nullable="false" />
+    <Property Type="Int32" Name="fldNoe_Mande" Nullable="false" />
+    <Property Type="Int32" Name="fldMahiyatId" Nullable="true" />
+    <Property Type="Int32" Name="fldNoe_Mahiyat" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblCoding_ProjeFaaliatSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldCodingDetailId" Nullable="false" />
+    <Property Type="String" Name="fldCodingTitle" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="fldMahiyatId" Nullable="true" />
+    <Property Type="String" Name="fldCodeAcc" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectDocumentRecord_ComboBox">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldCaseTypeId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_GetParvandeInfo">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="true" MaxLength="314" />
+    <Property Type="String" Name="fldCodemeli" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fldStartContract" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldEndContract" Nullable="false" MaxLength="1" />
+    <Property Type="Int64" Name="fldMablagh" Nullable="true" />
+    <Property Type="String" Name="fldShenasePardakht" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldShenaseGhabz" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldIsEbtal" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldSharh" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldType" Nullable="false" MaxLength="9" />
+    <Property Type="Int32" Name="fldTypeId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_CopyDocumentWithHeaderId">
+    <Property Type="Int32" Name="ErrorCode" Nullable="false" />
+    <Property Type="String" Name="Error_Msg" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="spr_tblCodingDetail_CaseTypeSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldCodingDetailId" Nullable="false" />
+    <Property Type="Int32" Name="fldCaseTypeId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spr_CheckMahiyatGardesh_Mande">
+    <Property Type="Int64" Name="fldBedehkar" Nullable="true" />
+    <Property Type="Int64" Name="fldBestankar" Nullable="true" />
+    <Property Type="Int32" Name="fldMahiyatMonde" Nullable="false" />
+    <Property Type="Int32" Name="fldMahiyatGardesh" Nullable="false" />
+    <Property Type="Int32" Name="fldMahiyat_GardeshId" Nullable="true" />
+    <Property Type="Int32" Name="fldMahiyatId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblBankTemplate_DetailsSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldHeaderId" Nullable="false" />
+    <Property Type="Int32" Name="fldBankId" Nullable="false" />
+    <Property Type="String" Name="fldBankName" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectDocumentEkhtetamiye">
+    <Property Type="Int32" Name="fldCodingId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="fldDescription" Nullable="false" MaxLength="1" />
+    <Property Type="Int64" Name="fldBestankar" Nullable="false" />
+    <Property Type="Int64" Name="fldBedehkar" Nullable="false" />
+    <Property Type="Int32" Name="fldCenterCoId" Nullable="false" />
+    <Property Type="Int32" Name="fldCaseId" Nullable="false" />
+    <Property Type="String" Name="fldName_CodeDetail" Nullable="false" MaxLength="302" />
+    <Property Type="Int32" Name="fldCaseTypeId" Nullable="false" />
+    <Property Type="Int32" Name="fldSourceId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="spr_tblBankTemplate_HeaderSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldNamePattern" Nullable="false" MaxLength="200" />
+    <Property Type="Int16" Name="fldStartRow" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="200" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldBankName" Nullable="true" />
+    <Property Type="String" Name="fldPasvand" Nullable="true" MaxLength="5" a:SetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+    <Property Type="Int32" Name="fldFileId" Nullable="false" />
+    <Property Type="String" Name="fldBankId" Nullable="true" />
+    <Property Type="String" Name="fldDetailsId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblBankBill_DetailsSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldHedearId" Nullable="false" />
+    <Property Type="Int64" Name="fldBedehkar" Nullable="false" />
+    <Property Type="Int64" Name="fldBestankar" Nullable="false" />
+    <Property Type="Int64" Name="fldMandeh" Nullable="false" />
+    <Property Type="String" Name="fldTarikh" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldTime" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="fldCodePeygiri" Nullable="false" MaxLength="300" />
+  </ComplexType>
+  <ComplexType Name="spr_tblBankBill_HeaderSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="false" />
+    <Property Type="Int32" Name="fldFiscalYearId" Nullable="false" />
+    <Property Type="String" Name="fldJsonFile" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="200" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldPatternId" Nullable="false" />
+    <Property Type="String" Name="fldNamePattern" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldBankName" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectMoghayeratBanki">
+    <Property Type="Int64" Name="fldBedehkar" Nullable="false" />
+    <Property Type="Int64" Name="fldBestankar" Nullable="false" />
+    <Property Type="String" Name="fldTarikh" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldCodePeygiri" Nullable="false" MaxLength="300" />
+    <Property Type="Int64" Name="fldMandeh" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="fldDocumentNum" Nullable="false" />
+    <Property Type="String" Name="fldCode" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="tblBankBill_DetailsDeleteNotExists">
+    <Property Type="Int32" Name="flag" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectBankBillBazeTarikh">
+    <Property Type="String" Name="fldMinTarikh" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldMaxTarikh" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectBastanHesabha">
+    <Property Type="Int32" Name="fldCodingId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="fldDescription" Nullable="false" MaxLength="1" />
+    <Property Type="Int64" Name="fldBestankar" Nullable="false" />
+    <Property Type="Int64" Name="fldBedehkar" Nullable="false" />
+    <Property Type="Int32" Name="fldCenterCoId" Nullable="false" />
+    <Property Type="Int32" Name="fldCaseId" Nullable="false" />
+    <Property Type="String" Name="fldName_CodeDetail" Nullable="true" MaxLength="302" />
+    <Property Type="Int32" Name="fldCaseTypeId" Nullable="false" />
+    <Property Type="Int32" Name="fldSourceId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="spr_RptDafater">
+    <Property Type="String" Name="fldCode" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="200" />
+    <Property Type="Int64" Name="fldBedehkar" Nullable="true" />
+    <Property Type="Int64" Name="fldBestankar" Nullable="true" />
+    <Property Type="Int32" Name="fldDocumentNum" Nullable="false" />
+    <Property Type="String" Name="fldTarikhDocument" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldDescriptionDocu" Nullable="false" />
+    <Property Type="Int64" Name="fldMande" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectHesabDaryaftani">
+    <Property Type="Int32" Name="fldSerialFish" Nullable="false" />
+    <Property Type="Int64" Name="fldBedehkar" Nullable="false" />
+    <Property Type="Int64" Name="fldBestankar" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="fldCode" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldNameCoding" Nullable="false" MaxLength="200" />
+    <Property Type="Int64" Name="fldMande" Nullable="false" />
+    <Property Type="String" Name="fldNameShakhs" Nullable="true" MaxLength="300" />
+    <Property Type="Int32" Name="fldElamAvarezId" Nullable="false" />
+    <Property Type="Int32" Name="fldModuleErsalId" Nullable="true" />
+    <Property Type="String" Name="fldCaseTypeName" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="spr_tblArtiklMapInsert_Result">
+    <Property Type="Int32" Name="ErrorCode" Nullable="false" />
+    <Property Type="String" Name="ErrorMessage" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectMortabet">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WCF_FMS.TOL.PayRoll
+{
+    public class OBJ_Mohasebat
+    {
+        public int fldId { get; set; }
+        public int fldPersonalId { get; set; }
+        public short fldYear { get; set; }
+        public byte fldMonth { get; set; }
+        public byte fldKarkard { get; set; }
+        public byte fldGheybat { get; set; }
+        public decimal fldTedadEzafeKar { get; set; }
+        public decimal fldTedadTatilKar { get; set; }
+        public byte fldBaBeytute { get; set; }
+        public byte fldBedunBeytute { get; set; }
+        public int fldBimeOmrKarFarma { get; set; }
+        public int fldBimeOmr { get; set; }
+        public int fldBimeTakmilyKarFarma { get; set; }
+        public int fldBimeTakmily { get; set; }
+        public int fldHaghDarmanKarfFarma { get; set; }
+        public int fldHaghDarmanDolat { get; set; }
+        public int fldHaghDarman { get; set; }
+        public int fldBimePersonal { get; set; }
+        public int fldBimeKarFarma { get; set; }
+        public int fldBimeBikari { get; set; }
+        public int fldBimeMashaghel { get; set; }
+        public decimal fldDarsadBimePersonal { get; set; }
+        public decimal fldDarsadBimeKarFarma { get; set; }
+        public decimal fldDarsadBimeBikari { get; set; }
+        public decimal fldDarsadBimeSakht { get; set; }
+        public byte fldTedadNobatKari { get; set; }
+        public int fldMosaede { get; set; }
+        public int fldNobatPardakht { get; set; }
+        public int fldGhestVam { get; set; }
+        public int fldPasAndaz { get; set; }
+        public int fldMashmolBime { get; set; }
+        public int fldMashmolMaliyat { get; set; }
+        public bool fldFlag { get; set; }
+        public int? fldkhalesPardakhti { get; set; }
+        public int fldkhalesPardakhtiBon { get; set; }
+        public int fldMogharari { get; set; }
+        public int fldMaliyat { get; set; }
+        public int fldUserId { get; set; }
+        public string fldDesc { get; set; }
+        public System.DateTime fldDate { get; set; }
+        public string fldNameMonth { get; set; }
+        public int fldShift { get; set; }
+        public Nullable<byte> fldHesabTypeId { get; set; }
+        public Nullable<int> fldShomareHesabId { get; set; }
+        public int fldBankId { get; set; }
+        public Nullable<short> fldMeetingCount { get; set; }
+        public Nullable<byte> fldCalcType { get; set; }
+        public long fldMaliyatSum { get; set; }
+        public Nullable<byte> fldEstelagi { get; set; }
+    }
+}

@@ -1,0 +1,3556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F99C92F3-9F2C-45B3-934C-FF51EF953403}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WCF_FMS</RootNamespace>
+    <AssemblyName>WCF FMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MyLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\192.168.1.33\Share\FMS\bin\MyLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WCFExtras">
+      <HintPath>C:\Users\ali1390\Downloads\WCFExtras\Bin\WCFExtras.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccountingService.svc" />
+    <Content Include="AnbarAmvalService.svc" />
+    <Content Include="ArchiveService.svc" />
+    <Content Include="AutomationService.svc" />
+    <Content Include="BudgetService.svc" />
+    <Content Include="ChekService.svc" />
+    <Content Include="CommonService.svc" />
+    <Content Include="Comon_PayService.svc" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="ContractService.svc" />
+    <Content Include="DAL\Model\Accounting.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Accounting.edmx</DependentUpon>
+      <LastGenOutput>Accounting.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Model\Accounting.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Accounting.edmx</DependentUpon>
+      <LastGenOutput>Accounting.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Model\Budget.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Budget.edmx</DependentUpon>
+      <LastGenOutput>Budget.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Model\Budget.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Budget.edmx</DependentUpon>
+      <LastGenOutput>Budget.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Model\DeceasedModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DeceasedModel.edmx</DependentUpon>
+      <LastGenOutput>DeceasedModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Model\DeceasedModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DeceasedModel.edmx</DependentUpon>
+      <LastGenOutput>DeceasedModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Model\Weigh.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Weigh.edmx</DependentUpon>
+      <LastGenOutput>Weigh.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Model\Weigh.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Weigh.edmx</DependentUpon>
+      <LastGenOutput>Weigh.cs</LastGenOutput>
+    </Content>
+    <Content Include="DaramadService.svc" />
+    <Content Include="DeceasedService.svc" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="PayRolService.svc" />
+    <Content Include="PersoneliService.svc" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebServiceFormula.asmx" />
+    <Content Include="WeighService.svc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountingService.svc.cs">
+      <DependentUpon>AccountingService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="AnbarAmvalService.svc.cs">
+      <DependentUpon>AnbarAmvalService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ArchiveService.svc.cs">
+      <DependentUpon>ArchiveService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="AutomationService.svc.cs">
+      <DependentUpon>AutomationService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\Accounting\BL_AccountingLevel.cs" />
+    <Compile Include="BLL\Accounting\BL_AccountingType.cs" />
+    <Compile Include="BLL\Accounting\BL_BankBillDetails.cs" />
+    <Compile Include="BLL\Accounting\BL_BankBillHeader.cs" />
+    <Compile Include="BLL\Accounting\BL_BankTemplate_Header.cs" />
+    <Compile Include="BLL\Accounting\BL_Case.cs" />
+    <Compile Include="BLL\Accounting\BL_CaseType.cs" />
+    <Compile Include="BLL\Accounting\BL_CenterCost.cs" />
+    <Compile Include="BLL\Accounting\BL_CodingDetail_CaseType.cs" />
+    <Compile Include="BLL\Accounting\BL_Coding_Details.cs" />
+    <Compile Include="BLL\Accounting\BL_Coding_Header.cs" />
+    <Compile Include="BLL\Accounting\BL_DocumentBookMark.cs" />
+    <Compile Include="BLL\Accounting\BL_DocumentDesc.cs" />
+    <Compile Include="BLL\Accounting\BL_DocumentRecorde_File.cs" />
+    <Compile Include="BLL\Accounting\BL_DocumentRecord_Details.cs" />
+    <Compile Include="BLL\Accounting\BL_DocumentRecord_Header.cs" />
+    <Compile Include="BLL\Accounting\BL_DocumentType.cs" />
+    <Compile Include="BLL\Accounting\BL_FiscalYear.cs" />
+    <Compile Include="BLL\Accounting\BL_GroupCenterCost.cs" />
+    <Compile Include="BLL\Accounting\BL_ItemNecessary.cs" />
+    <Compile Include="BLL\Accounting\BL_LevelsAccountingType.cs" />
+    <Compile Include="BLL\Accounting\BL_Mahiyat.cs" />
+    <Compile Include="BLL\Accounting\BL_ParvandeInfo.cs" />
+    <Compile Include="BLL\Accounting\BL_RptCodingStatus.cs" />
+    <Compile Include="BLL\Accounting\BL_TemplateCoding.cs" />
+    <Compile Include="BLL\Accounting\BL_TemplateName.cs" />
+    <Compile Include="BLL\Accounting\BL_TreeCenterCost.cs" />
+    <Compile Include="BLL\Accounting\BL_Tree_CenterCost.cs" />
+    <Compile Include="BLL\Accounting\BL_TypeHesab.cs" />
+    <Compile Include="BLL\AnbarAmval\BL_Anbar.cs" />
+    <Compile Include="BLL\AnbarAmval\BL_AnbarGroup.cs" />
+    <Compile Include="BLL\AnbarAmval\BL_AnbarTree.cs" />
+    <Compile Include="BLL\AnbarAmval\BL_Anbar_Tree.cs" />
+    <Compile Include="BLL\AnbarAmval\BL_InsuranceCompany.cs" />
+    <Compile Include="BLL\AnbarAmval\BL_InsuranceType.cs" />
+    <Compile Include="BLL\AnbarAmval\BL_KalaGroup.cs" />
+    <Compile Include="BLL\AnbarAmval\BL_KalaTree.cs" />
+    <Compile Include="BLL\AnbarAmval\BL_Kala_Tree.cs" />
+    <Compile Include="BLL\Archive\BL_ArchiveTree.cs" />
+    <Compile Include="BLL\Archive\BL_FileMojaz.cs" />
+    <Compile Include="BLL\Automation\BL_Archive.cs" />
+    <Compile Include="BLL\Automation\BL_Assignment.cs" />
+    <Compile Include="BLL\Automation\BL_AssignmentStatus.cs" />
+    <Compile Include="BLL\Automation\BL_ContentFile.cs" />
+    <Compile Include="BLL\Automation\BL_ExternalLetterReceiver.cs" />
+    <Compile Include="BLL\Automation\BL_ExternalLetterSender.cs" />
+    <Compile Include="BLL\Automation\BL_HistoryLetter.cs" />
+    <Compile Include="BLL\Automation\BL_InternalAssignmentReceiver.cs" />
+    <Compile Include="BLL\Automation\BL_InternalAssignmentSender.cs" />
+    <Compile Include="BLL\Automation\BL_InternalLetterReceiver.cs" />
+    <Compile Include="BLL\Automation\BL_LetterArchive.cs" />
+    <Compile Include="BLL\Automation\BL_LetterAttachment.cs" />
+    <Compile Include="BLL\Automation\BL_LetterFollow.cs" />
+    <Compile Include="BLL\Automation\BL_LetterNumber.cs" />
+    <Compile Include="BLL\Automation\BL_ReceiverAssignmentType.cs" />
+    <Compile Include="BLL\Automation\BL_Ronevesht.cs" />
+    <Compile Include="BLL\Automation\BL_Signer.cs" />
+    <Compile Include="BLL\Budget\BL_Anticipation.cs" />
+    <Compile Include="BLL\Budget\BL_BudgetType.cs" />
+    <Compile Include="BLL\Budget\BL_Budje_khedmatDarsadId.cs" />
+    <Compile Include="BLL\Budget\BL_CodingBudje_Detail.cs" />
+    <Compile Include="BLL\Budget\BL_CodingBudje_Header.cs" />
+    <Compile Include="BLL\Budget\BL_CodingLevel.cs" />
+    <Compile Include="BLL\Budget\BL_CodingTarh_Khedmat.cs" />
+    <Compile Include="BLL\Budget\BL_Motammam.cs" />
+    <Compile Include="BLL\Budget\BL_Pishbini_Daramad.cs" />
+    <Compile Include="BLL\Budget\BL_TaahodatSanavati.cs" />
+    <Compile Include="BLL\Budget\BL_TemplatCoding.cs" />
+    <Compile Include="BLL\Budget\BL_TemplatName.cs" />
+    <Compile Include="BLL\Common\BL_CharacterPersianPlaque.cs" />
+    <Compile Include="BLL\Common\BL_CompanyPost.cs" />
+    <Compile Include="BLL\Common\BL_FormatFile.cs" />
+    <Compile Include="BLL\Archive\BL_ParticularProperties.cs" />
+    <Compile Include="BLL\Archive\BL_Properties.cs" />
+    <Compile Include="BLL\Archive\BL_PropertiesValues.cs" />
+    <Compile Include="BLL\Automation\BL_AssignmentType.cs" />
+    <Compile Include="BLL\Automation\BL_Box.cs" />
+    <Compile Include="BLL\Automation\BL_Commision.cs" />
+    <Compile Include="BLL\Automation\BL_Immediacy.cs" />
+    <Compile Include="BLL\Automation\BL_Letter.cs" />
+    <Compile Include="BLL\Automation\BL_LetterBox.cs" />
+    <Compile Include="BLL\Automation\BL_LetterFileMojaz.cs" />
+    <Compile Include="BLL\Automation\BL_LetterStatus.cs" />
+    <Compile Include="BLL\Automation\BL_LetterTabagheBandi.cs" />
+    <Compile Include="BLL\Automation\BL_LetterTemplate.cs" />
+    <Compile Include="BLL\Automation\BL_MergeFieldTypes.cs" />
+    <Compile Include="BLL\Automation\BL_MergeField_LetterTemplate.cs" />
+    <Compile Include="BLL\Automation\BL_Message.cs" />
+    <Compile Include="BLL\Automation\BL_MessageAttachment.cs" />
+    <Compile Include="BLL\Automation\BL_NumberingFormat.cs" />
+    <Compile Include="BLL\Automation\BL_ReferralRules.cs" />
+    <Compile Include="BLL\Automation\BL_Secretariat_OrganizationUnit.cs" />
+    <Compile Include="BLL\Automation\BL_SecurityType.cs" />
+    <Compile Include="BLL\Automation\BL_Setting.cs" />
+    <Compile Include="BLL\Automation\BL_Substitute.cs" />
+    <Compile Include="BLL\Automation\BL_TabagheBandi.cs" />
+    <Compile Include="BLL\BL.cs" />
+    <Compile Include="BLL\BL_authorize.cs" />
+    <Compile Include="BLL\Budget\BL_EtebarType.cs" />
+    <Compile Include="BLL\Budget\BL_Mamoriyat.cs" />
+    <Compile Include="BLL\Budget\BL_MasrafType.cs" />
+    <Compile Include="BLL\Budget\BL_Program.cs" />
+    <Compile Include="BLL\Budget\BL_Project_Details.cs" />
+    <Compile Include="BLL\Budget\BL_Project_Faaliyat.cs" />
+    <Compile Include="BLL\Budget\BL_Tarh_Khedmat.cs" />
+    <Compile Include="BLL\Chek\BL_AghsatCheckAmani.cs" />
+    <Compile Include="BLL\Chek\BL_CheckHayeVarede.cs" />
+    <Compile Include="BLL\Chek\BL_DasteCheck.cs" />
+    <Compile Include="BLL\Chek\BL_OlgoCheck.cs" />
+    <Compile Include="BLL\Chek\BL_SodorCheck.cs" />
+    <Compile Include="BLL\Chek\BL_StatusChek.cs" />
+    <Compile Include="BLL\Common\BL_ApplictionPart.cs" />
+    <Compile Include="BLL\Common\BL_Ashkhas.cs" />
+    <Compile Include="BLL\Common\BL_AshkhaseHoghoghi.cs" />
+    <Compile Include="BLL\Common\BL_AshkhaseHoghoghi_Detail.cs" />
+    <Compile Include="BLL\Common\BL_Bank.cs" />
+    <Compile Include="BLL\Common\BL_BillsType.cs" />
+    <Compile Include="BLL\Common\BL_CaseBills.cs" />
+    <Compile Include="BLL\Common\BL_ChartOrgan.cs" />
+    <Compile Include="BLL\Common\BL_ChartOrganEjraee.cs" />
+    <Compile Include="BLL\Common\BL_CheckEmail.cs" />
+    <Compile Include="BLL\Common\BL_City.cs" />
+    <Compile Include="BLL\Common\BL_DigitalArchiveTreeStructure.cs" />
+    <Compile Include="BLL\Common\BL_Employee.cs" />
+    <Compile Include="BLL\Common\BL_Employee_Detail.cs" />
+    <Compile Include="BLL\Common\BL_Error.cs" />
+    <Compile Include="BLL\Common\BL_File.cs" />
+    <Compile Include="BLL\Common\BL_GeneralSetting.cs" />
+    <Compile Include="BLL\Common\BL_GeneralSetting_ComboBox.cs" />
+    <Compile Include="BLL\Common\BL_GeneralSetting_Value.cs" />
+    <Compile Include="BLL\Common\BL_GetDate.cs" />
+    <Compile Include="BLL\Common\BL_GetNameOrganForFormul.cs" />
+    <Compile Include="BLL\Common\BL_GetUserGroupTree.cs" />
+    <Compile Include="BLL\Common\BL_HesabType.cs" />
+    <Compile Include="BLL\Common\BL_HistoryTahsilat.cs" />
+    <Compile Include="BLL\Common\BL_Kala.cs" />
+    <Compile Include="BLL\Common\BL_MadrakTahsili.cs" />
+    <Compile Include="BLL\Common\BL_Masoulin.cs" />
+    <Compile Include="BLL\Common\BL_Masoulin_Detail.cs" />
+    <Compile Include="BLL\Common\BL_Module.cs" />
+    <Compile Include="BLL\Common\BL_Module_Organ.cs" />
+    <Compile Include="BLL\Common\BL_Month.cs" />
+    <Compile Include="BLL\Common\BL_NezamVazife.cs" />
+    <Compile Include="BLL\Common\BL_Organization.cs" />
+    <Compile Include="BLL\Common\BL_OrganizationalPosts.cs" />
+    <Compile Include="BLL\Common\BL_OrganizationalPostsEjraee.cs" />
+    <Compile Include="BLL\Common\BL_Permission.cs" />
+    <Compile Include="BLL\Common\BL_PersonalSign.cs" />
+    <Compile Include="BLL\Common\BL_Plaque.cs" />
+    <Compile Include="BLL\Common\BL_Raste.cs" />
+    <Compile Include="BLL\Common\BL_ReshteTahsili.cs" />
+    <Compile Include="BLL\Common\BL_RptDasresiKarbaran.cs" />
+    <Compile Include="BLL\Common\BL_SHobe.cs" />
+    <Compile Include="BLL\Common\BL_ShomareHesabeOmoomi.cs" />
+    <Compile Include="BLL\Common\BL_Signers.cs" />
+    <Compile Include="BLL\Common\BL_State.cs" />
+    <Compile Include="BLL\Common\BL_StatusTaahol.cs" />
+    <Compile Include="BLL\Common\BL_TreeOrganPost.cs" />
+    <Compile Include="BLL\Common\BL_TypeKhodro.cs" />
+    <Compile Include="BLL\Common\BL_User.cs" />
+    <Compile Include="BLL\Common\BL_UserGroup.cs" />
+    <Compile Include="BLL\Common\BL_UserGroup_ModuleOrgan.cs" />
+    <Compile Include="BLL\Common\BL_User_Group.cs" />
+    <Compile Include="BLL\Common\BL_WarrantyType.cs" />
+    <Compile Include="BLL\Common\BL_WebServiceLog.cs" />
+    <Compile Include="BLL\Common\BL_ZirListHa.cs" />
+    <Compile Include="BLL\Contract\BL_RegistrationContract.cs" />
+    <Compile Include="BLL\Daramad\BL_Ashkhas_Taghsit.cs" />
+    <Compile Include="BLL\Daramad\BL_Barat.cs" />
+    <Compile Include="BLL\Daramad\BL_Check.cs" />
+    <Compile Include="BLL\Daramad\BL_checkTaghsit.cs" />
+    <Compile Include="BLL\Daramad\BL_CodeDaramdAsli.cs" />
+    <Compile Include="BLL\Daramad\BL_CodhayeDaramadiElamAvarez.cs" />
+    <Compile Include="BLL\Daramad\BL_CodHayeDarAmad_Asli.cs" />
+    <Compile Include="BLL\Daramad\BL_CodhayeDaramd.cs" />
+    <Compile Include="BLL\Daramad\BL_ComboBox.cs" />
+    <Compile Include="BLL\Daramad\BL_ComboBoxValue.cs" />
+    <Compile Include="BLL\Daramad\BL_Company.cs" />
+    <Compile Include="BLL\Daramad\BL_DaramadGroup.cs" />
+    <Compile Include="BLL\Daramad\BL_DaramadGroup_Parametr.cs" />
+    <Compile Include="BLL\Daramad\BL_DaramadGroup_ParametrValues.cs" />
+    <Compile Include="BLL\Daramad\BL_DataForElamAvarez.cs" />
+    <Compile Include="BLL\Daramad\BL_Ebtal.cs" />
+    <Compile Include="BLL\Daramad\BL_ElamAvarez.cs" />
+    <Compile Include="BLL\Daramad\BL_EmalTakhfif.cs" />
+    <Compile Include="BLL\Daramad\BL_ExpirElamAvarez.cs" />
+    <Compile Include="BLL\Daramad\BL_ExternalFish.cs" />
+    <Compile Include="BLL\Daramad\BL_Factor.cs" />
+    <Compile Include="BLL\Daramad\BL_FormatShomareName.cs" />
+    <Compile Include="BLL\Daramad\BL_GozareshatFile.cs" />
+    <Compile Include="BLL\Daramad\BL_InfoPardakhtFTP.cs" />
+    <Compile Include="BLL\Daramad\BL_InputInfo.cs" />
+    <Compile Include="BLL\Daramad\BL_LetterMinut.cs" />
+    <Compile Include="BLL\Daramad\BL_LetterSigners.cs" />
+    <Compile Include="BLL\Daramad\BL_ListCodeDaramad_ShomareHesabWithOrganId.cs" />
+    <Compile Include="BLL\Daramad\BL_ListShomareHesabWithElamAvarezId.cs" />
+    <Compile Include="BLL\Daramad\BL_MahdoodiyatMohasebat.cs" />
+    <Compile Include="BLL\Daramad\BL_MahdoodiyatMohasebat_Ashkhas.cs" />
+    <Compile Include="BLL\Daramad\BL_MahdoodiyatMohasebat_ShomareHesabDaramad.cs" />
+    <Compile Include="BLL\Daramad\BL_MaliyatArzesheAfzoode.cs" />
+    <Compile Include="BLL\Daramad\BL_MapCodingDaramad.cs" />
+    <Compile Include="BLL\Daramad\BL_MeasureUnit.cs" />
+    <Compile Include="BLL\Daramad\BL_MohdoodiyatMohasebat_User.cs" />
+    <Compile Include="BLL\Daramad\BL_Mokatebat.cs" />
+    <Compile Include="BLL\Daramad\BL_Naghdi_Talab.cs" />
+    <Compile Include="BLL\Daramad\BL_NahvePardakht.cs" />
+    <Compile Include="BLL\Daramad\BL_ParametreOmoomi.cs" />
+    <Compile Include="BLL\Daramad\BL_ParametreOmoomi_Value.cs" />
+    <Compile Include="BLL\Daramad\BL_ParametreSabet.cs" />
+    <Compile Include="BLL\Daramad\BL_ParametreSabet_Nerkh.cs" />
+    <Compile Include="BLL\Daramad\BL_ParametreSabet_Value.cs" />
+    <Compile Include="BLL\Daramad\BL_ParametrHesabdari.cs" />
+    <Compile Include="BLL\Daramad\BL_PardakhtFile.cs" />
+    <Compile Include="BLL\Daramad\BL_PardakhtFiles_Detail.cs" />
+    <Compile Include="BLL\Daramad\BL_PardakhtFish.cs" />
+    <Compile Include="BLL\Daramad\BL_PatternFish.cs" />
+    <Compile Include="BLL\Daramad\BL_PatternFish_DaramadGroup.cs" />
+    <Compile Include="BLL\Daramad\BL_PcPosinfo.cs" />
+    <Compile Include="BLL\Daramad\BL_PcPosIP.cs" />
+    <Compile Include="BLL\Daramad\BL_PcPosParametr.cs" />
+    <Compile Include="BLL\Daramad\BL_PcPosParam_Dtail.cs" />
+    <Compile Include="BLL\Daramad\BL_PcPosTransaction.cs" />
+    <Compile Include="BLL\Daramad\BL_PcPosUser.cs" />
+    <Compile Include="BLL\Daramad\BL_Psp.cs" />
+    <Compile Include="BLL\Daramad\BL_PspModel.cs" />
+    <Compile Include="BLL\Daramad\BL_PSPModel_ShomareHesab.cs" />
+    <Compile Include="BLL\Daramad\BL_ReplyTaghsit.cs" />
+    <Compile Include="BLL\Daramad\BL_ReplyTakhfif.cs" />
+    <Compile Include="BLL\Daramad\BL_RequestTaghsit_Takhfif.cs" />
+    <Compile Include="BLL\Daramad\BL_Roonevesht.cs" />
+    <Compile Include="BLL\Daramad\BL_RptListCodeDaramad.cs" />
+    <Compile Include="BLL\Daramad\BL_Safte.cs" />
+    <Compile Include="BLL\Daramad\BL_SelectDataForTaghsit.cs" />
+    <Compile Include="BLL\Daramad\BL_SelectFishSaderShode.cs" />
+    <Compile Include="BLL\Daramad\BL_ShomareHesabCodeDaramad.cs" />
+    <Compile Include="BLL\Daramad\BL_ShomareHesabCodeDaramad_Fomula.cs" />
+    <Compile Include="BLL\Daramad\BL_ShomareHesab_AshkhasForXml.cs" />
+    <Compile Include="BLL\Daramad\BL_ShomareNameHa.cs" />
+    <Compile Include="BLL\Daramad\BL_SodoorFish.cs" />
+    <Compile Include="BLL\Daramad\BL_SodoorFish_Detail.cs" />
+    <Compile Include="BLL\Daramad\BL_StatusTaghsit_Takhfif.cs" />
+    <Compile Include="BLL\Daramad\BL_Takhfif.cs" />
+    <Compile Include="BLL\Daramad\BL_TakhfifDetail.cs" />
+    <Compile Include="BLL\Daramad\BL_TanzimateDaramad.cs" />
+    <Compile Include="BLL\Daramad\BL_UpdateStatusSanad.cs" />
+    <Compile Include="BLL\Daramad\BL_ElamAvarezLog.cs" />
+    <Compile Include="BLL\Deceased\BL_Actions.cs" />
+    <Compile Include="BLL\Deceased\BL_Action_Kartabl.cs" />
+    <Compile Include="BLL\Deceased\BL_CauseOfDeath.cs" />
+    <Compile Include="BLL\Deceased\BL_CodeDaramadAramestan.cs" />
+    <Compile Include="BLL\Deceased\BL_GhabreAmanat.cs" />
+    <Compile Include="BLL\Deceased\BL_Ghete.cs" />
+    <Compile Include="BLL\Deceased\BL_InsertEmploye.cs" />
+    <Compile Include="BLL\Deceased\BL_Kartabl.cs" />
+    <Compile Include="BLL\Deceased\BL_Kartabl_Request.cs" />
+    <Compile Include="BLL\Deceased\BL_MahalFot.cs" />
+    <Compile Include="BLL\Deceased\BL_Motevaffa.cs" />
+    <Compile Include="BLL\Deceased\BL_NextKartabl.cs" />
+    <Compile Include="BLL\Deceased\BL_Radif.cs" />
+    <Compile Include="BLL\Deceased\BL_RequestAmanat.cs" />
+    <Compile Include="BLL\Deceased\BL_Shomare.cs" />
+    <Compile Include="BLL\Deceased\BL_TimeLine.cs" />
+    <Compile Include="BLL\Deceased\BL_VadiSalam.cs" />
+    <Compile Include="BLL\PayRoll\BL_AfradeTahtePoshesheBimeTakmily.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\PayRoll\BL_AfradeTahtePoshesheBimeTakmily_Details.cs" />
+    <Compile Include="BLL\PayRoll\BL_AfradTahtePooshesh.cs" />
+    <Compile Include="BLL\PayRoll\BL_AfradTahtePoosheshSelect_FromExcel.cs" />
+    <Compile Include="BLL\PayRoll\BL_AkharinHokmSal.cs" />
+    <Compile Include="BLL\PayRoll\BL_AnvaEstekhdam.cs" />
+    <Compile Include="BLL\PayRoll\BL_AnvaGroupTashvighi.cs" />
+    <Compile Include="BLL\PayRoll\BL_BudgetPayDetail.cs" />
+    <Compile Include="BLL\PayRoll\BL_BudgetPayHeader.cs" />
+    <Compile Include="BLL\PayRoll\BL_CalcHeader.cs" />
+    <Compile Include="BLL\PayRoll\BL_CalcMaliyatGheyerNaghdi.cs" />
+    <Compile Include="BLL\PayRoll\BL_CheckAllMohasebat.cs" />
+    <Compile Include="BLL\PayRoll\BL_CheckKosorat_Motalebat.cs" />
+    <Compile Include="BLL\PayRoll\BL_ComputationFormula.cs" />
+    <Compile Include="BLL\PayRoll\BL_CostCenter.cs" />
+    <Compile Include="BLL\PayRoll\BL_DetailHoghoghMabna.cs" />
+    <Compile Include="BLL\PayRoll\BL_DetailPayeSanavati.cs" />
+    <Compile Include="BLL\PayRoll\BL_DiffDayMahSal.cs" />
+    <Compile Include="BLL\PayRoll\BL_DigitalArchive.cs" />
+    <Compile Include="BLL\PayRoll\BL_Disket.cs" />
+    <Compile Include="BLL\PayRoll\BL_DisketBazneshastegi.cs" />
+    <Compile Include="BLL\PayRoll\BL_DisketBime.cs" />
+    <Compile Include="BLL\PayRoll\BL_DisketBimeKhadamatDarmani.cs" />
+    <Compile Include="BLL\PayRoll\BL_DisketBime_Moavaghe.cs" />
+    <Compile Include="BLL\PayRoll\BL_DisketBime_Tatilkar_Ezafekar.cs" />
+    <Compile Include="BLL\PayRoll\BL_DisketPasAndaz.cs" />
+    <Compile Include="BLL\PayRoll\BL_DisketSina.cs" />
+    <Compile Include="BLL\PayRoll\BL_EtelaatEydi.cs" />
+    <Compile Include="BLL\PayRoll\BL_EzafeKari_TatilKari.cs" />
+    <Compile Include="BLL\PayRoll\BL_FileForHokm.cs" />
+    <Compile Include="BLL\PayRoll\BL_FiscalTitle.cs" />
+    <Compile Include="BLL\PayRoll\BL_Fiscal_Detail.cs" />
+    <Compile Include="BLL\PayRoll\BL_Fiscal_Header.cs" />
+    <Compile Include="BLL\PayRoll\BL_FishLog.cs" />
+    <Compile Include="BLL\PayRoll\BL_GHarardadBime.cs" />
+    <Compile Include="BLL\PayRoll\BL_HistoryNoeEstekhdam.cs" />
+    <Compile Include="BLL\PayRoll\BL_HoghoghMabna.cs" />
+    <Compile Include="BLL\PayRoll\BL_HokmReport.cs" />
+    <Compile Include="BLL\PayRoll\BL_Hokm_Item.cs" />
+    <Compile Include="BLL\PayRoll\BL_InsuranceWorkshop.cs" />
+    <Compile Include="BLL\PayRoll\BL_ItemsEstekhdam_FiscalTitle.cs" />
+    <Compile Include="BLL\PayRoll\BL_ItemsEstekhdam_MoteghayerHoghoghi.cs" />
+    <Compile Include="BLL\PayRoll\BL_ItemsHoghughi.cs" />
+    <Compile Include="BLL\PayRoll\BL_Items_Estekhdam.cs" />
+    <Compile Include="BLL\PayRoll\BL_KarKardeMahane.cs" />
+    <Compile Include="BLL\PayRoll\BL_KarKardHokm.cs" />
+    <Compile Include="BLL\PayRoll\BL_KarkardMahane_Detail.cs" />
+    <Compile Include="BLL\PayRoll\BL_KomakGheyerNaghdi.cs" />
+    <Compile Include="BLL\PayRoll\BL_KosorateParametri_Personal.cs" />
+    <Compile Include="BLL\PayRoll\BL_KosuratBank.cs" />
+    <Compile Include="BLL\PayRoll\BL_KosuratParametriGroup.cs" />
+    <Compile Include="BLL\Common\BL_LoginFailed.cs" />
+    <Compile Include="BLL\PayRoll\BL_ListNoMaliyat_BimePersonal.cs" />
+    <Compile Include="BLL\PayRoll\BL_MaliyatDaraei.cs" />
+    <Compile Include="BLL\PayRoll\BL_MaliyatManfi.cs" />
+    <Compile Include="BLL\PayRoll\BL_Mamuriyat.cs" />
+    <Compile Include="BLL\PayRoll\BL_MandehPasAndaz.cs" />
+    <Compile Include="BLL\PayRoll\BL_MaxBime.cs" />
+    <Compile Include="BLL\PayRoll\BL_MaxPersonalEstekhdamType.cs" />
+    <Compile Include="BLL\PayRoll\BL_Moavaghat.cs" />
+    <Compile Include="BLL\PayRoll\BL_Moavaghat_Items.cs" />
+    <Compile Include="BLL\PayRoll\BL_Mohasebat.cs" />
+    <Compile Include="BLL\PayRoll\BL_MohasebatEzafeKari_TatilKari.cs" />
+    <Compile Include="BLL\PayRoll\BL_MohasebatForConvert.cs" />
+    <Compile Include="BLL\PayRoll\BL_Mohasebat_Eydi.cs" />
+    <Compile Include="BLL\PayRoll\BL_Mohasebat_Items.cs" />
+    <Compile Include="BLL\PayRoll\BL_Mohasebat_KosoratBank.cs" />
+    <Compile Include="BLL\PayRoll\BL_Mohasebat_kosorat_MotalebatParam.cs" />
+    <Compile Include="BLL\PayRoll\BL_Mohasebat_Mamuriyat.cs" />
+    <Compile Include="BLL\PayRoll\BL_Mohasebat_Morakhasi.cs" />
+    <Compile Include="BLL\PayRoll\BL_Mohasebat_PersonalInfo.cs" />
+    <Compile Include="BLL\PayRoll\BL_Mohaseleen.cs" />
+    <Compile Include="BLL\PayRoll\BL_Monasebat.cs" />
+    <Compile Include="BLL\PayRoll\BL_MonasebatHeader.cs" />
+    <Compile Include="BLL\PayRoll\BL_MonasebatMablagh.cs" />
+    <Compile Include="BLL\PayRoll\BL_MonasebatTarikh.cs" />
+    <Compile Include="BLL\PayRoll\BL_Morakhasi.cs" />
+    <Compile Include="BLL\PayRoll\BL_MotalebateParametri_Personal.cs" />
+    <Compile Include="BLL\PayRoll\BL_MotalebatParametriGroup.cs" />
+    <Compile Include="BLL\PayRoll\BL_MoteghayerhaAhkam.cs" />
+    <Compile Include="BLL\PayRoll\BL_MoteghayerhayeEydi.cs" />
+    <Compile Include="BLL\PayRoll\BL_MoteghayerhayeHoghoghi.cs" />
+    <Compile Include="BLL\PayRoll\BL_MoteghayerhayeHoghoghi_Detail.cs" />
+    <Compile Include="BLL\PayRoll\BL_NesbatWithPersonalInfoId.cs" />
+    <Compile Include="BLL\PayRoll\BL_OnAccount.cs" />
+    <Compile Include="BLL\PayRoll\BL_Operation.cs" />
+    <Compile Include="BLL\PayRoll\BL_ParameteriItemsFormul.cs" />
+    <Compile Include="BLL\PayRoll\BL_Parametrs.cs" />
+    <Compile Include="BLL\PayRoll\BL_PatternSharhHokm.cs" />
+    <Compile Include="BLL\PayRoll\BL_PayeSanavati.cs" />
+    <Compile Include="BLL\PayRoll\BL_PayPersonalInfo.cs" />
+    <Compile Include="BLL\PayRoll\BL_PersonalHokm.cs" />
+    <Compile Include="BLL\PayRoll\BL_PersonalInfo.cs" />
+    <Compile Include="BLL\PayRoll\BL_PersonalInfo_Mohasebe.cs" />
+    <Compile Include="BLL\PayRoll\BL_PersonalStatus.cs" />
+    <Compile Include="BLL\PayRoll\BL_P_MaliyatManfi.cs" />
+    <Compile Include="BLL\PayRoll\BL_ReportType.cs" />
+    <Compile Include="BLL\PayRoll\BL_Rpt12Mahe.cs" />
+    <Compile Include="BLL\PayRoll\BL_RptFishHoghoughi_Details.cs" />
+    <Compile Include="BLL\PayRoll\BL_RptKosourat_MotalebatParam.cs" />
+    <Compile Include="BLL\PayRoll\BL_RptKosurBazneshastegi.cs" />
+    <Compile Include="BLL\PayRoll\BL_RptListAghsatVam.cs" />
+    <Compile Include="BLL\PayRoll\BL_RptListPardakhtEydi.cs" />
+    <Compile Include="BLL\PayRoll\BL_RptMaliyatSaliyane.cs" />
+    <Compile Include="BLL\PayRoll\BL_RptSanad3.cs" />
+    <Compile Include="BLL\PayRoll\BL_RptSanad2.cs" />
+    <Compile Include="BLL\PayRoll\BL_RptSumMotalebat_Kosurat.cs" />
+    <Compile Include="BLL\PayRoll\BL_SavabegheSanavateKHedmat.cs" />
+    <Compile Include="BLL\PayRoll\BL_SavabeghGroupTashvighi.cs" />
+    <Compile Include="BLL\PayRoll\BL_SavabeghJebhe_Items.cs" />
+    <Compile Include="BLL\PayRoll\BL_SavabeghJebhe_Personal.cs" />
+    <Compile Include="BLL\PayRoll\BL_SayerPardakhtGroup.cs" />
+    <Compile Include="BLL\PayRoll\BL_SayerPardakhts.cs" />
+    <Compile Include="BLL\PayRoll\BL_SelectDisketMaliyatForHoghogh.cs" />
+    <Compile Include="BLL\PayRoll\BL_SelectFlagKarKard_Mohasebe.cs" />
+    <Compile Include="BLL\PayRoll\BL_SelectPasAndazBank.cs" />
+    <Compile Include="BLL\PayRoll\BL_SelectPayPersonalInfo_Ezafekar.cs" />
+    <Compile Include="BLL\PayRoll\BL_SelectVariziForBank.cs" />
+    <Compile Include="BLL\PayRoll\BL_Setting.cs" />
+    <Compile Include="BLL\PayRoll\BL_ShomareHesabPasAndaz.cs" />
+    <Compile Include="BLL\PayRoll\BL_ShomareHesabs.cs" />
+    <Compile Include="BLL\PayRoll\BL_SpecialPermission.cs" />
+    <Compile Include="BLL\PayRoll\BL_Status.cs" />
+    <Compile Include="BLL\PayRoll\BL_StatusMahalKedmat.cs" />
+    <Compile Include="BLL\PayRoll\BL_SumKomakGheyerNaghdi.cs" />
+    <Compile Include="BLL\PayRoll\BL_TabJobOfBime.cs" />
+    <Compile Include="BLL\PayRoll\BL_TasviehHesab.cs" />
+    <Compile Include="BLL\PayRoll\BL_TavighKosurat.cs" />
+    <Compile Include="BLL\PayRoll\BL_TypeBime.cs" />
+    <Compile Include="BLL\PayRoll\BL_TypeEstekhdam.cs" />
+    <Compile Include="BLL\PayRoll\BL_TypeEstekhdam_Formul.cs" />
+    <Compile Include="BLL\PayRoll\BL_TypeEstekhdam_UserGroup.cs" />
+    <Compile Include="BLL\PayRoll\BL_TypeOfCostCenters.cs" />
+    <Compile Include="BLL\PayRoll\BL_TypeOfEmploymentCenter.cs" />
+    <Compile Include="BLL\PayRoll\BL_UpdateEzafekarKarkardMahane.cs" />
+    <Compile Include="BLL\PayRoll\BL_UpdateFlag.cs" />
+    <Compile Include="BLL\PayRoll\BL_Vam.cs" />
+    <Compile Include="BLL\PayRoll\BL_VaziyatEsargari.cs" />
+    <Compile Include="BLL\Weigh\BL_Arze.cs" />
+    <Compile Include="BLL\Weigh\BL_Arze_Detail.cs" />
+    <Compile Include="BLL\Weigh\BL_BaskolDocument.cs" />
+    <Compile Include="BLL\Weigh\BL_ElamAvarez_ModuleOrgan.cs" />
+    <Compile Include="BLL\Weigh\BL_LoadingPlace.cs" />
+    <Compile Include="BLL\Weigh\BL_NoeMasraf.cs" />
+    <Compile Include="BLL\Weigh\BL_ParametrBaskoolValue.cs" />
+    <Compile Include="BLL\Weigh\BL_ParametrsBaskool.cs" />
+    <Compile Include="BLL\Weigh\BL_Remittance_Details.cs" />
+    <Compile Include="BLL\Weigh\BL_Remittance_Header.cs" />
+    <Compile Include="BLL\Weigh\BL_Tozin.cs" />
+    <Compile Include="BLL\Weigh\BL_TypeReport.cs" />
+    <Compile Include="BLL\Weigh\BL_Vazn_Baskool.cs" />
+    <Compile Include="BLL\Weigh\BL_Weighbridge.cs" />
+    <Compile Include="BudgetService.svc.cs">
+      <DependentUpon>BudgetService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ChekService.svc.cs">
+      <DependentUpon>ChekService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ClsError.cs" />
+    <Compile Include="CodeDecode.cs" />
+    <Compile Include="ContractService.svc.cs">
+      <DependentUpon>ContractService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Accounting\DL_AccountingLevel.cs" />
+    <Compile Include="DAL\Accounting\DL_AccountingType.cs" />
+    <Compile Include="DAL\Accounting\DL_BankBillDetails.cs" />
+    <Compile Include="DAL\Accounting\DL_BankBillHeader.cs" />
+    <Compile Include="DAL\Accounting\DL_BankTemplate_Header.cs" />
+    <Compile Include="DAL\Accounting\DL_Case.cs" />
+    <Compile Include="DAL\Accounting\DL_CaseType.cs" />
+    <Compile Include="DAL\Accounting\DL_CenterCost.cs" />
+    <Compile Include="DAL\Accounting\DL_CodingDetail_CaseType.cs" />
+    <Compile Include="DAL\Accounting\DL_Coding_Details.cs" />
+    <Compile Include="DAL\Accounting\DL_Coding_Header.cs" />
+    <Compile Include="DAL\Accounting\DL_DocumentBookMark.cs" />
+    <Compile Include="DAL\Accounting\DL_DocumentDesc.cs" />
+    <Compile Include="DAL\Accounting\DL_DocumentRecorde_File.cs" />
+    <Compile Include="DAL\Accounting\DL_DocumentRecord_Details.cs" />
+    <Compile Include="DAL\Accounting\DL_DocumentRecord_Header.cs" />
+    <Compile Include="DAL\Accounting\DL_DocumentType.cs" />
+    <Compile Include="DAL\Accounting\DL_FiscalYear.cs" />
+    <Compile Include="DAL\Accounting\DL_GroupCenterCost.cs" />
+    <Compile Include="DAL\Accounting\DL_ItemNecessary.cs" />
+    <Compile Include="DAL\Accounting\DL_LevelsAccountingType.cs" />
+    <Compile Include="DAL\Accounting\DL_Mahiyat.cs" />
+    <Compile Include="DAL\Accounting\DL_ParvandeInfo.cs" />
+    <Compile Include="DAL\Accounting\DL_RptCodingStatus.cs" />
+    <Compile Include="DAL\Accounting\DL_TemplateCoding.cs" />
+    <Compile Include="DAL\Accounting\DL_TemplateName.cs" />
+    <Compile Include="DAL\Accounting\DL_TreeCenterCost.cs" />
+    <Compile Include="DAL\Accounting\DL_Tree_CenterCost.cs" />
+    <Compile Include="DAL\Accounting\DL_TypeHesab.cs" />
+    <Compile Include="DAL\AnbarAmval\DL_Anbar.cs" />
+    <Compile Include="DAL\AnbarAmval\DL_AnbarGroup.cs" />
+    <Compile Include="DAL\AnbarAmval\DL_AnbarTree.cs" />
+    <Compile Include="DAL\AnbarAmval\DL_Anbar_Tree.cs" />
+    <Compile Include="DAL\AnbarAmval\DL_InsuranceCompany.cs" />
+    <Compile Include="DAL\AnbarAmval\DL_InsuranceType.cs" />
+    <Compile Include="DAL\AnbarAmval\DL_KalaGroup.cs" />
+    <Compile Include="DAL\AnbarAmval\DL_KalaTree.cs" />
+    <Compile Include="DAL\AnbarAmval\DL_Kala_Tree.cs" />
+    <Compile Include="DAL\Archive\DL_ArchiveTree.cs" />
+    <Compile Include="DAL\Archive\DL_FileMojaz.cs" />
+    <Compile Include="DAL\Automation\DL_Archive.cs" />
+    <Compile Include="DAL\Automation\DL_Assignment.cs" />
+    <Compile Include="DAL\Automation\DL_AssignmentStatus.cs" />
+    <Compile Include="DAL\Automation\DL_ContentFile.cs" />
+    <Compile Include="DAL\Automation\DL_ExternalLetterReceiver.cs" />
+    <Compile Include="DAL\Automation\DL_ExternalLetterSender.cs" />
+    <Compile Include="DAL\Automation\DL_HistoryLetter.cs" />
+    <Compile Include="DAL\Automation\DL_InternalAssignmentReceiver.cs" />
+    <Compile Include="DAL\Automation\DL_InternalAssignmentSender.cs" />
+    <Compile Include="DAL\Automation\DL_InternalLetterReceiver.cs" />
+    <Compile Include="DAL\Automation\DL_LetterArchive.cs" />
+    <Compile Include="DAL\Automation\DL_LetterAttachment.cs" />
+    <Compile Include="DAL\Automation\DL_LetterFollow.cs" />
+    <Compile Include="DAL\Automation\DL_LetterNumber.cs" />
+    <Compile Include="DAL\Automation\DL_ReceiverAssignmentType.cs" />
+    <Compile Include="DAL\Automation\DL_Ronevesht.cs" />
+    <Compile Include="DAL\Automation\DL_Signer.cs" />
+    <Compile Include="DAL\Budget\DL_Anticipation.cs" />
+    <Compile Include="DAL\Budget\DL_BudgetType.cs" />
+    <Compile Include="DAL\Budget\DL_Budje_khedmatDarsadId.cs" />
+    <Compile Include="DAL\Budget\DL_CodingBudje_Detail.cs" />
+    <Compile Include="DAL\Budget\DL_CodingBudje_Header.cs" />
+    <Compile Include="DAL\Budget\DL_CodingLevel.cs" />
+    <Compile Include="DAL\Budget\DL_CodingTarh_Khedmat.cs" />
+    <Compile Include="DAL\Budget\DL_Pishbini_Daramad.cs" />
+    <Compile Include="DAL\Budget\DL_TaahodatSanavati.cs" />
+    <Compile Include="DAL\Budget\DL_TemplatCoding.cs" />
+    <Compile Include="DAL\Budget\DL_TemplatName.cs" />
+    <Compile Include="DAL\Budget\DL_Motammam.cs" />
+    <Compile Include="DAL\Common\DL_CharacterPersianPlaque.cs" />
+    <Compile Include="DAL\Common\DL_CompanyPost.cs" />
+    <Compile Include="DAL\Common\DL_FormatFile.cs" />
+    <Compile Include="DAL\Archive\DL_ParticularProperties.cs" />
+    <Compile Include="DAL\Archive\DL_Properties.cs" />
+    <Compile Include="DAL\Archive\DL_PropertiesValues.cs" />
+    <Compile Include="DAL\authorize.cs" />
+    <Compile Include="DAL\Automation\DL_AssignmentType.cs" />
+    <Compile Include="DAL\Automation\DL_Box.cs" />
+    <Compile Include="DAL\Automation\DL_Commision.cs" />
+    <Compile Include="DAL\Automation\DL_Immediacy.cs" />
+    <Compile Include="DAL\Automation\DL_Letter.cs" />
+    <Compile Include="DAL\Automation\DL_LetterBox.cs" />
+    <Compile Include="DAL\Automation\DL_LetterFileMojaz.cs" />
+    <Compile Include="DAL\Automation\DL_LetterStatus.cs" />
+    <Compile Include="DAL\Automation\DL_LetterTabagheBandi.cs" />
+    <Compile Include="DAL\Automation\DL_LetterTemplate.cs" />
+    <Compile Include="DAL\Automation\DL_MergeFieldTypes.cs" />
+    <Compile Include="DAL\Automation\DL_MergeField_LetterTemplate.cs" />
+    <Compile Include="DAL\Automation\DL_Message.cs" />
+    <Compile Include="DAL\Automation\DL_MessageAttachment.cs" />
+    <Compile Include="DAL\Automation\DL_NumberingFormat.cs" />
+    <Compile Include="DAL\Automation\DL_ReferralRules.cs" />
+    <Compile Include="DAL\Automation\DL_Secretariat_OrganizationUnit.cs" />
+    <Compile Include="DAL\Automation\DL_SecurityType.cs" />
+    <Compile Include="DAL\Automation\DL_Setting.cs" />
+    <Compile Include="DAL\Automation\DL_Substitute.cs" />
+    <Compile Include="DAL\Automation\DL_TabagheBandi.cs" />
+    <Compile Include="DAL\Budget\DL_EtebarType.cs" />
+    <Compile Include="DAL\Budget\DL_Mamoriyat.cs" />
+    <Compile Include="DAL\Budget\DL_MasrafType.cs" />
+    <Compile Include="DAL\Budget\DL_Program.cs" />
+    <Compile Include="DAL\Budget\DL_Project_Details.cs" />
+    <Compile Include="DAL\Budget\DL_Project_Faaliyat.cs" />
+    <Compile Include="DAL\Budget\DL_Tarh_Khedmat.cs" />
+    <Compile Include="DAL\Chek\DL_AghsatCheckAmani.cs" />
+    <Compile Include="DAL\Chek\DL_CheckHayeVarede.cs" />
+    <Compile Include="DAL\Chek\DL_DasteCheck.cs" />
+    <Compile Include="DAL\Chek\DL_OlgoCheck.cs" />
+    <Compile Include="DAL\Chek\DL_SodorCheck.cs" />
+    <Compile Include="DAL\Chek\DL_StatusChek.cs" />
+    <Compile Include="DAL\Common\DL_ApplictionPart.cs" />
+    <Compile Include="DAL\Common\DL_AshkhaseHoghoghi_Detail.cs" />
+    <Compile Include="DAL\Common\DL_Bank.cs" />
+    <Compile Include="DAL\Common\DL_BillsType.cs" />
+    <Compile Include="DAL\Common\DL_CaseBills.cs" />
+    <Compile Include="DAL\Common\DL_ChartOrgan.cs" />
+    <Compile Include="DAL\Common\DL_ChartOrganEjraee.cs" />
+    <Compile Include="DAL\Common\DL_CheckEmail.cs" />
+    <Compile Include="DAL\Common\DL_City.cs" />
+    <Compile Include="DAL\Common\DL_DigitalArchiveTreeStructure.cs" />
+    <Compile Include="DAL\Common\DL_Employee_Detail.cs" />
+    <Compile Include="DAL\Common\DL_Error.cs" />
+    <Compile Include="DAL\Common\DL_File.cs" />
+    <Compile Include="DAL\Common\DL_GeneralSetting.cs" />
+    <Compile Include="DAL\Common\DL_GeneralSetting_ComboBox.cs" />
+    <Compile Include="DAL\Common\DL_GeneralSetting_Value.cs" />
+    <Compile Include="DAL\Common\DL_GetDate.cs" />
+    <Compile Include="DAL\Common\DL_GetNameOrganForFormul.cs" />
+    <Compile Include="DAL\Common\DL_GetUserGroupTree.cs" />
+    <Compile Include="DAL\Common\DL_HesabType.cs" />
+    <Compile Include="DAL\Common\DL_HistoryTashilat.cs" />
+    <Compile Include="DAL\Common\DL_InputInfo.cs" />
+    <Compile Include="DAL\Common\DL_Kala.cs" />
+    <Compile Include="DAL\Common\DL_MadrakTahsili.cs" />
+    <Compile Include="DAL\Common\DL_Masoulin.cs" />
+    <Compile Include="DAL\Common\DL_Masoulin_Detail.cs" />
+    <Compile Include="DAL\Common\DL_Module.cs" />
+    <Compile Include="DAL\Common\DL_Module_Organ.cs" />
+    <Compile Include="DAL\Common\DL_Month.cs" />
+    <Compile Include="DAL\Common\DL_NezamVazife.cs" />
+    <Compile Include="DAL\Common\DL_Organization.cs" />
+    <Compile Include="DAL\Common\DL_OrganizationalPosts.cs" />
+    <Compile Include="DAL\Common\DL_OrganizationalPostsEjraee.cs" />
+    <Compile Include="DAL\Common\DL_Permission.cs" />
+    <Compile Include="DAL\Common\DL_PersonalSign.cs" />
+    <Compile Include="DAL\Common\DL_Plaque.cs" />
+    <Compile Include="DAL\Common\DL_Raste.cs" />
+    <Compile Include="DAL\Common\DL_ReshteTahsili.cs" />
+    <Compile Include="DAL\Common\DL_RptDastresiKarbaran.cs" />
+    <Compile Include="DAL\Common\DL_SHobe.cs" />
+    <Compile Include="DAL\Common\DL_ShomareHesabeOmoomi.cs" />
+    <Compile Include="DAL\Common\DL_Signers.cs" />
+    <Compile Include="DAL\Common\DL_StatusTaahol.cs" />
+    <Compile Include="DAL\Common\DL_TreeOrganPost.cs" />
+    <Compile Include="DAL\Common\DL_TypeKhodro.cs" />
+    <Compile Include="DAL\Common\DL_User.cs" />
+    <Compile Include="DAL\Common\DL_UserGroup.cs" />
+    <Compile Include="DAL\Common\DL_UserGroup_ModuleOrgan.cs" />
+    <Compile Include="DAL\Common\DL_User_Group.cs" />
+    <Compile Include="DAL\Common\DL_WarrantyType.cs" />
+    <Compile Include="DAL\Common\DL_WebServiceLog.cs" />
+    <Compile Include="DAL\Common\DL_ZirListHa.cs" />
+    <Compile Include="DAL\Common\DL_Ashkhas.cs" />
+    <Compile Include="DAL\Common\DL_AshkhaseHoghoghi.cs" />
+    <Compile Include="DAL\Contract\DL_RegistrationContract.cs" />
+    <Compile Include="DAL\Daramad\DAL_ShomareHesabCodeDaramad_Fomula.cs" />
+    <Compile Include="DAL\Daramad\DL_Ashkhas_Taghsit.cs" />
+    <Compile Include="DAL\Daramad\DL_Barat.cs" />
+    <Compile Include="DAL\Daramad\DL_Check.cs" />
+    <Compile Include="DAL\Daramad\DL_CheckTaghsit.cs" />
+    <Compile Include="DAL\Daramad\DL_CodeDaramdAsli.cs" />
+    <Compile Include="DAL\Daramad\DL_CodhayeDaramadiElamAvarez.cs" />
+    <Compile Include="DAL\Daramad\DL_CodHayeDarAmad_Asli.cs" />
+    <Compile Include="DAL\Daramad\DL_CodhayeDaramd.cs" />
+    <Compile Include="DAL\Daramad\DL_ComboBox.cs" />
+    <Compile Include="DAL\Daramad\DL_ComboBoxValue.cs" />
+    <Compile Include="DAL\Daramad\DL_Company.cs" />
+    <Compile Include="DAL\Daramad\DL_DaramadGroup.cs" />
+    <Compile Include="DAL\Daramad\DL_DaramadGroup_Parametr.cs" />
+    <Compile Include="DAL\Daramad\DL_DaramadGroup_ParametrValues.cs" />
+    <Compile Include="DAL\Daramad\DL_DataForElamAvarez.cs" />
+    <Compile Include="DAL\Daramad\DL_Ebtal.cs" />
+    <Compile Include="DAL\Daramad\DL_ElamAvarez.cs" />
+    <Compile Include="DAL\Daramad\DL_ElamAvarezLog.cs" />
+    <Compile Include="DAL\Daramad\DL_EmalTakhfif.cs" />
+    <Compile Include="DAL\Daramad\DL_ExpairElamAvarez.cs" />
+    <Compile Include="DAL\Daramad\DL_ExternalFish.cs" />
+    <Compile Include="DAL\Daramad\DL_Factor.cs" />
+    <Compile Include="DAL\Daramad\DL_FormatShomareName.cs" />
+    <Compile Include="DAL\Daramad\DL_GozareshatFile.cs" />
+    <Compile Include="DAL\Daramad\DL_InfoPardakhtFTP.cs" />
+    <Compile Include="DAL\Daramad\DL_LetterMinut.cs" />
+    <Compile Include="DAL\Daramad\DL_LetterSigners.cs" />
+    <Compile Include="DAL\Daramad\DL_ListCodeDaramad_ShomareHesabWithOrganId.cs" />
+    <Compile Include="DAL\Daramad\DL_ListShomareHesabWithElamAvarezId.cs" />
+    <Compile Include="DAL\Daramad\DL_MahdoodiyatMohasebat.cs" />
+    <Compile Include="DAL\Daramad\DL_MahdoodiyatMohasebat_Ashkhas.cs" />
+    <Compile Include="DAL\Daramad\DL_MahdoodiyatMohasebat_ShomareHesabDaramad.cs" />
+    <Compile Include="DAL\Daramad\DL_MaliyatArzesheAfzoode.cs" />
+    <Compile Include="DAL\Daramad\DL_MapCodingDaramad.cs" />
+    <Compile Include="DAL\Daramad\DL_MeasureUnit.cs" />
+    <Compile Include="DAL\Daramad\DL_MohdoodiyatMohasebat_User.cs" />
+    <Compile Include="DAL\Daramad\DL_Mokatebat.cs" />
+    <Compile Include="DAL\Daramad\DL_Naghdi_Talab.cs" />
+    <Compile Include="DAL\Daramad\DL_NahvePardakht.cs" />
+    <Compile Include="DAL\Daramad\DL_ParametreOmoomi.cs" />
+    <Compile Include="DAL\Daramad\DL_ParametreOmoomi_Value.cs" />
+    <Compile Include="DAL\Daramad\DL_ParametreSabet.cs" />
+    <Compile Include="DAL\Daramad\DL_ParametreSabet_Nerkh.cs" />
+    <Compile Include="DAL\Daramad\DL_ParametreSabet_Value.cs" />
+    <Compile Include="DAL\Daramad\DL_ParametrHesabdari.cs" />
+    <Compile Include="DAL\Daramad\DL_PardakhtFile.cs" />
+    <Compile Include="DAL\Daramad\DL_PardakhtFiles_Detail.cs" />
+    <Compile Include="DAL\Daramad\DL_PardakhtFish.cs" />
+    <Compile Include="DAL\Daramad\DL_PatternFish.cs" />
+    <Compile Include="DAL\Daramad\DL_PatternFish_DaramadGroup.cs" />
+    <Compile Include="DAL\Daramad\DL_PcPosInfo.cs" />
+    <Compile Include="DAL\Daramad\DL_PcPosIP.cs" />
+    <Compile Include="DAL\Daramad\DL_PcPosParametr.cs" />
+    <Compile Include="DAL\Daramad\DL_PcPosParam_Dtail.cs" />
+    <Compile Include="DAL\Daramad\DL_PcPosTransaction.cs" />
+    <Compile Include="DAL\Daramad\DL_PcPosUser.cs" />
+    <Compile Include="DAL\Daramad\DL_Psp.cs" />
+    <Compile Include="DAL\Daramad\DL_PspModel.cs" />
+    <Compile Include="DAL\Daramad\DL_PSPModel_ShomareHesab.cs" />
+    <Compile Include="DAL\Daramad\DL_ReplyTaghsit.cs" />
+    <Compile Include="DAL\Daramad\DL_ReplyTakhfif.cs" />
+    <Compile Include="DAL\Daramad\DL_RequestTaghsit_Takhfif.cs" />
+    <Compile Include="DAL\Daramad\DL_Roonevesht.cs" />
+    <Compile Include="DAL\Daramad\DL_RptListCodeDaramad.cs" />
+    <Compile Include="DAL\Daramad\DL_Safte.cs" />
+    <Compile Include="DAL\Daramad\DL_SelectDataForTaghsit.cs" />
+    <Compile Include="DAL\Daramad\DL_SelectFishSaderShode.cs" />
+    <Compile Include="DAL\Daramad\DL_ShomareHesabCodeDaramad.cs" />
+    <Compile Include="DAL\Daramad\DL_ShomareHesab_AshkhasForXml.cs" />
+    <Compile Include="DAL\Daramad\DL_ShomareNameHa.cs" />
+    <Compile Include="DAL\Daramad\DL_SodoorFish.cs" />
+    <Compile Include="DAL\Daramad\DL_SodoorFish_Detail.cs" />
+    <Compile Include="DAL\Daramad\DL_StatusTaghsit_Takhfif.cs" />
+    <Compile Include="DAL\Daramad\DL_Takhfif.cs" />
+    <Compile Include="DAL\Daramad\DL_TakhfifDetail.cs" />
+    <Compile Include="DAL\Daramad\DL_TanzimateDaramad.cs" />
+    <Compile Include="DAL\Daramad\DL_UpdateStatusSanad.cs" />
+    <Compile Include="DAL\Deceased\DL_Actions.cs" />
+    <Compile Include="DAL\Deceased\DL_Action_Kartabl.cs" />
+    <Compile Include="DAL\Deceased\DL_CauseOfDeath.cs" />
+    <Compile Include="DAL\Deceased\DL_CodeDaramadAramestan.cs" />
+    <Compile Include="DAL\Deceased\DL_GhabreAmanat.cs" />
+    <Compile Include="DAL\Deceased\DL_Ghete.cs" />
+    <Compile Include="DAL\Deceased\DL_InsertEmploye.cs" />
+    <Compile Include="DAL\Deceased\DL_Kartabl.cs" />
+    <Compile Include="DAL\Deceased\DL_Kartabl_Request.cs" />
+    <Compile Include="DAL\Deceased\DL_MahalFot.cs" />
+    <Compile Include="DAL\Deceased\DL_Motevaffa.cs" />
+    <Compile Include="DAL\Deceased\DL_NextKartabl.cs" />
+    <Compile Include="DAL\Deceased\DL_Radif.cs" />
+    <Compile Include="DAL\Deceased\DL_RequestAmanat.cs" />
+    <Compile Include="DAL\Deceased\DL_Shomare.cs" />
+    <Compile Include="DAL\Deceased\DL_TimeLine.cs" />
+    <Compile Include="DAL\Deceased\DL_VadiSalam.cs" />
+    <Compile Include="DAL\DL.cs" />
+    <Compile Include="DAL\Common\DL_Employee.cs" />
+    <Compile Include="DAL\Common\DL_State.cs" />
+    <Compile Include="DAL\Model\Accounting.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Accounting.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Accounting.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Accounting.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Accounting.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\AnbarAmval.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnbarAmval.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\AnbarAmval.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnbarAmval.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\AnbarAmval.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnbarAmval.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Archive.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Archive.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Archive.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Archive.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Archive.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Archive.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Automation.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Automation.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Automation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Automation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Automation.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Budget.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Budget.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Budget.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Budget.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Budget.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\CheckAccountingLevel.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\CheckValidCode.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\CheckValidCodeBudje.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\CheckValidCode_CodingDetail.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\CheckValidCode_CodingDetailBudje.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Chek.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chek.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Chek.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chek.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Chek.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chek.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\CommonModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\CommonModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\CommonModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonService.svc.cs">
+      <DependentUpon>CommonService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Daramad.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Daramad.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Daramad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Daramad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Daramad.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\DeceasedModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeceasedModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\DeceasedModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\DeceasedModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeceasedModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\GetDefaultCode.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\GetDefaultCodeBudje.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\GetDefaultCodeBudje_Coding.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\GetDefaultCode_Coding.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\PartialDocument.cs" />
+    <Compile Include="DAL\Model\PayRollModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PayRollModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\PayRollModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\PayRollModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PayRollModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\prs_InsertCheckIntoSanad.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\prs_tblCalcHeaderSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\SelectPishbiniBudje.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\SelectPishbiniBudje_SalGhabl.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\SelectPishbini_Daramad.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\SelectProjectCoding.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_AfradTahtePoosheshSelect_FromExcel.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Anbar_TarifNashode.cs">
+      <DependentUpon>AnbarAmval.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_AshkhasIdForXmlInput.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Ashkhas_Taghsit.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_BudjeLevel.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Centerco_TarifNashodeh.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_ChangeLetter.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_chechRangeDateMaliyat.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckAllMohasebat.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckCharEjraeeForSecretariat.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckCopyCode.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckDateParametr.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckDocStatus.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckEmail.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckExistsAnbar.cs">
+      <DependentUpon>AnbarAmval.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckExistsKala.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckLastIdForElamAvarez.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckMahdoodiyatMohasebat.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckMahiyatGardesh_Mande.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckMohasebat.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckMohasebeForDisket.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckPishbiniBudje.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckRemain.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckShomareHesabForMohasebat.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckShomareHesabPasAndazForMohasebat.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckShomareSheba.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_checkTaghsit.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckTakhfif.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckTanzimatDaramad.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckTarikhForPostCommision.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CheckUserGroupForPermission.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CodeDaramdAsli.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_CopyDocumentWithHeaderId.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_DataForElamAvarez.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_DataForElamAvarez_Barat.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_DataForElamAvarez_Check.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_DataForElamAvarez_Safte.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_DiffDayMahSal.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_DiffDayMahSalNumber.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_DisketPasAndaz.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_ElamAvarelog.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_FishSaderShodeForXmlOut.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_GetBoxTypeId.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_GetDate.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_GetDate_Result.cs" />
+    <Compile Include="DAL\Model\spr_GetNameOrganForFormul.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_GetNesbatWithPersonalInfoId.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_GetParamDocumentDesc.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_GetParvandeInfo.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_GetUserGroupTree.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_InfoPardakhtFTP.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_IsCostCenter.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_kala_TarifNashode.cs">
+      <DependentUpon>AnbarAmval.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_LastNum_AtfDocumentRecord.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_ListCodeDaramad_ShomareHesabWithOrganId.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_ListShomareHesabWithElamAvarezId.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_MasuolinDetailList.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Masuolin_ZirList.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_MaxChangeDatePersonalSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_MaxPersonalEstekhdamType.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_moteghayerhayeHoghopghi_Zarib.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_payListNoMaliyat_BimePersonal.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_CalcMaliyatGheyerNaghdi.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_CheckKosorat_Motalebat.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_DisketBazneshastegi.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_DisketBime.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_DisketBimeBASTAM.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_DisketBimeKhadamatDarmani.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_DisketBimeSum.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_DisketBime_DBF.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_DisketBime_Header_DBF.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_DisketBime_Moavaghe.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_DisketBime_Tatilkar_Ezafekar.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_DisketSina.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_HistoryAfradTahtePoshesheBimeTakmily.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_Rpt12Mahe.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_RptFishHoghoghi_KosuratParam_Bank_Details.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_RptFishHoghoghi_KosuratParam_Bank_Moavaghe_Details.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_RptFishHoghoghi_Moavaghe_Details.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_RptFishHoghoghi_Motalebat_Details.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_RptFishHoghoghi_Motalebat_Moavaghe_Details.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_RptKosourat_MotalebatParam_Excel.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_RptKosuratBank.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_RptKosurBazneshastegi.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_RptListAghsatVam_Excel.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_RptListPardakhtEydi.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_RptMaliyatSaliyane.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_RptSanad2.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_RptSanad3.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_RptSumMotalebat_Kosurat.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_SelectConflictKarkard_Mohasebat.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_SelectDisketMaliyatForHoghogh.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_SelectFlagKarKard_Mohasebe.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_SelectHoghogh_OnAccount.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_SelectPayPersonalInfo_Ezafekar.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_SelectVariziForBank.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_SumKomakGheyerNaghdi.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Pay_tblPersonalInfoSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_PersonalInfo_Mohasebe.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Prs_tblAnvaGroupTashvighiSelect_Result.cs" />
+    <Compile Include="DAL\Model\spr_Prs_tblPersonalInfoSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Prs_tblPersonalInfoSelect_Hokm.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Prs_tblPersonalInfoSelect_Result.cs" />
+    <Compile Include="DAL\Model\spr_RptByCoding.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_RptCodingStatus.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_RptCodingStatus_Parvande.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_RptCodingTurnover.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_RptCodingTurnover_Tarikh.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_RptDafater.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_RptDastresiKarbaran.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_RptEkhtelafMaliyatBaDaraei.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_RptGhabrPor_Khali.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_RptListCodeDaramad_Asli.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_RptListCodeDaramad_Day.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_RptListCodeDaramad_Donati.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_RptListCodeDaramad_Gaje.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_RptListCodeDaramad_Month.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_selectAccountingLevel.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_selectAccountingTypeLevel.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectArchiveTree_Module.cs">
+      <DependentUpon>Archive.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectArze_Kala.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectAshkhas_ElamAvarez.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectAshkhas_Fish.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectBankBillBazeTarikh.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectBaskoolParametr_Value.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectBastanHesabha.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectBookmarkPath.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectChartEjraee_LastNode.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectCodingAccNotBudje.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectDataForTaghsit.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectDetailSodoorFish.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectDocumentEkhtetamiye.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectDocumentRecord_ComboBox.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_selectEbtal_SodoorFish.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_selectExistsItemDaramad.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectFishSaderShode.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectForEmalTakhfif.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectGheteDetail.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectHesabDaryaftani.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectInbox.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectInfoEmployeeInGhabrAmanat.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectMandeHavali.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectMoghayeratBanki.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectMonth.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectMortabet.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectPasAndazBank.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectRannadeInPlaque.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectSavedLetter.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectSavedMessage.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectSent.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectSumCheckSadere.cs">
+      <DependentUpon>Chek.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectSumKalaHavale.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectSumKalaHavale_Detail.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_selectTabaghe.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectTashimDaramadCode.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectTimeLine.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectTrash.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectUserByUserId.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_SelectVaznKhals_VaznKhali.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_ShomareHesabIdForXmlInput.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_Signers.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAccountingLevelSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAccountingTypeSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblActionsSelect.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAction_KartablSelect.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAfradeTahtePoshesheBimeTakmilySelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAfradeTahtePoshesheBimeTakmily_DetailsSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAfradTahtePoosheshSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAghsatCheckAmaniSelect.cs">
+      <DependentUpon>Chek.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAkharinHokmSal.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAnbarGroupSelect.cs">
+      <DependentUpon>AnbarAmval.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAnbarSelect.cs">
+      <DependentUpon>AnbarAmval.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAnbarTreeSelect.cs">
+      <DependentUpon>AnbarAmval.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAnbar_TreeSelect.cs">
+      <DependentUpon>AnbarAmval.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAnvaEstekhdamSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAnvaGroupTashvighiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblApplicationPartSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblArchiveSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblArchiveTreeSelect.cs">
+      <DependentUpon>Archive.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblArtiklMapInsert_Result.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblArzeSelect.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblArze_DetailSelect.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAshkhaseHoghoghiSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAshkhaseHoghoghi_DetailSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAshkhasSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAssignmentSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAssignmentStatusSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblAssignmentTypeSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblBankBill_DetailsSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblBankBill_HeaderSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblBankSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblBankTemplate_DetailsSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblBankTemplate_HeaderSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblBaratSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblBaskolDocumentSelect.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblBillsTypeSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblBoxSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblBoxTypeSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblBudgetPayDetailSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblBudgetPayHeaderSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblBudgetTypeSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblBudje_khedmatDarsadIdSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCaseBillsSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCaseSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCaseTypeSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCauseOfDeathSelect.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCenterCostSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCharacterPersianPlaqueSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblChartOrganEjraeeSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblChartOrganSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCheckHayeVaredeSelect.cs">
+      <DependentUpon>Chek.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCheckSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCheckStatusSelect.cs">
+      <DependentUpon>Chek.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCheck_FactorSelect.cs">
+      <DependentUpon>Chek.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCitySelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCodeDaramadAramestanSelect.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCodhayeDaramadiElamAvarezSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCodhayeDaramdSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCodingBudje_DetailsSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCodingBudje_HeaderSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCodingDetail_CaseTypeSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCodingLevelSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCodingTarh_KhedmatSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCoding_DetailsSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCoding_HeaderSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCoding_ProjeFaaliatSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblComboBoxSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblComboBoxValueSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCommisionSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCommisionSelect_Post.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCompanyPostSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCompanySelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblComputationFormulaSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblContentFileSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblCostCenterSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblDaramadGroupSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblDaramadGroup_ParametrSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblDaramadGroup_ParametrValuesSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblDasteCheckSelect.cs">
+      <DependentUpon>Chek.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblDetailHoghoghMabnaSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblDetailPayeSanavatiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblDigitalArchiveTreeStructureSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblDigitalArchiveTreeStructureSelect_Result.cs" />
+    <Compile Include="DAL\Model\spr_tblDisketSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblDocumentBookMarkSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblDocumentDescSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblDocumentRecorde_FileSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblDocumentRecorde_File_BookMarkSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblDocumentRecord_DetailsSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblDocumentRecord_HeaderSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblDocumentTypeSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblEbtalSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblElamAvarezSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblElamAvarez_ModuleOrganSelect.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblEmployeeSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblEmployee_DetailSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblErrorSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblEtebarTypeSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblEtelaatEydiGroupSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblEtelaatEydiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblExternalFishSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblExternalLetterReceiverSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblExternalLetterSenderSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblEzafeKari_TatilKariGroupSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblEzafeKari_TatilKariSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblFactorSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblFileMojazSelect.cs">
+      <DependentUpon>Archive.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblFileSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblFiscalTitleSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblFiscalYearSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblFiscal_DetailSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblFiscal_HeaderSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblFishLogSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblFormatFileSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblFormatShomareNameSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblGeneralSettingSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblGeneralSetting_ComboBoxSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblGeneralSetting_ValueSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblGhabreAmanatSelect.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblGHarardadBimeSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblGheteSelect.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblGozareshatFileSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblGozareshatSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblGroupCenterCostSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblHesabTypeSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblHistoryLetterSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblHistoryNoeEstekhdamSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblHistoryTahsilatSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblHoghoghMabnaSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblHokmReportSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblHokm_ItemSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblImmediacySelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblInputInfoSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblInsuranceCompanySelect.cs">
+      <DependentUpon>AnbarAmval.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblInsuranceTypeSelect.cs">
+      <DependentUpon>AnbarAmval.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblInsuranceWorkshopSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblInternalAssignmentReceiverSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblInternalAssignmentSenderSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblInternalLetterReceiverSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblItemNecessarySelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblItemsEstekhdam_FiscalTitleSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblItemsEstekhdam_MoteghayerHoghoghiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblItemsHoghughiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblItems_EstekhdamSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblKalaGroupSelect.cs">
+      <DependentUpon>AnbarAmval.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblKalaSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblKalaTreeSelect.cs">
+      <DependentUpon>AnbarAmval.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblKarKardeMahaneGroupSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblKarKardeMahaneSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblKarKardHokmSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblKarkardMahane_DetailSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblKartablSelect.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblKartabl_RequestSelect.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblKomakGheyerNaghdiGroupSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblKomakGheyerNaghdiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblKosorateParametri_PersonalGroupInsert.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblKosorateParametri_PersonalSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblKosuratBankSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblKosuratParametriGroupSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblLetterArchiveSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblLetterAttachmentSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblLetterBoxSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblLetterFileMojazSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblLetterFollowSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblLetterMinutSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblLetterSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblLetterSignersSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblLetterStatusSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblLetterTabagheBandiSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblletterTemplateSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblLevelsAccountingTypeSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblLoadingPlaceSelect.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMadrakTahsiliSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMahalFotSelect.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMahdoodiyatMohasebatSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMahdoodiyatMohasebat_AshkhasSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMahdoodiyatMohasebat_ShomareHesabDaramadSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMahiyatSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMaliyatArzesheAfzoodeSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMaliyatDaraeiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMaliyatManfiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMamoriyatSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMamuriyatGroupSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMamuriyatSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMandehPasAndazSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMasrafTypeSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMasuolinSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMasuolin_DetailSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMaxBimeSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMeasureUnitSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMergeFieldTypesSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMergeField_LetterTemplateSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMessageAttachmentSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMessageSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMoavaghatSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMoavaghat_ItemsSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblModuleSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblModule_OrganSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMohasebatEzafeKari_TatilKariSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMohasebatSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMohasebat_EydiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMohasebat_ItemsSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMohasebat_KosoratBankSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMohasebat_kosorat_MotalebatParamSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMohasebat_MamuriyatSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMohasebat_MorakhasiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMohasebat_PersonalInfoSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMohaseleenSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMohdoodiyatMohasebat_UserSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMokatebatSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMonasebatHeaderSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMonasebatMablaghSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMonasebatSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMonasebatTarikhSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMonasebatTypeSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMorakhasiGroupSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMorakhasiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMotalebateParametri_PersonalGroupInsert.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMotalebateParametri_PersonalSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMotalebatParametriGroupSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMotammamSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMoteghayerhaAhkamSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMoteghayerhayeEydiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMoteghayerhayeHoghoghiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMoteghayerhayeHoghoghi_DetailSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMotevaffaSelect.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblNaghdi_TalabSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblNahvePardakhtSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblNextKartablSelect.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblNezamVazifeSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblNoeMasrafSelect.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblNumberingFormatSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblOlgoCheckSelect.cs">
+      <DependentUpon>Chek.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblOnAccountSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblOperationSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblOrganizationalPostsEjraeeSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblOrganizationalPostsSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblOrganizationSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblParameteriItemsFormulSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblParametrBaskoolValueSelect.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblParametreOmoomiSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblParametreOmoomi_ValueSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblParametreSabetSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblParametreSabet_NerkhSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblParametreSabet_ValueSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblParametrHesabdariSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblParametrsBaskoolSelect.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblParametrsSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPardakhtFileSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPardakhtFiles_DetailSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPardakhtFishSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblParticularPropertiesSelect.cs">
+      <DependentUpon>Archive.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPatternFishSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPatternFish_DaramadGroupSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPatternSharhHokmSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPayeSanavatiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPcPosInfoSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPcPosIPSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPcPosParametrSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPcPosParam_DetailSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPcPosTransactionSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPcPosUserSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPermissionSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPersonalHokmSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPersonalSignSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPersonalStatusSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPishbiniInsert.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPishbiniSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPlaqueSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblProgramSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblProgramSettingSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblProject_DetailsSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPropertiesSelect.cs">
+      <DependentUpon>Archive.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPropertiesValuesSelect.cs">
+      <DependentUpon>Archive.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPspModelSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPSPModel_ShomareHesabSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblPspSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblP_MaliyatManfiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblRadifSelect.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblRasteSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblReceiverAssignmentTypeSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblReferralRulesSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblRegistrationContractSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblRemittance_DetailsSelect.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblRemittance_HeaderSelect.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblReplyTaghsitSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblReplyTakhfifSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblReportTypeSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblRequestAmanatSelect.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblRequestTaghsit_TakhfifSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblReshteTahsiliSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblRoneveshtSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblRooneveshtSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSafteSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSavabegheSanavateKHedmatSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSavabeghGroupTashvighiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSavabeghJebhe_ItemsSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSavabeghJebhe_PersonalSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSayerPardakhtGroupSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSayerPardakhtsSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSecretariat_OrganizationUnitSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSecurityTypeSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSettingSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSHobeSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblShomareHesabCodeDaramadSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblShomareHesabeOmoomiSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblShomareHesabGroupSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblShomareHesabPasAndazSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblShomareHesabsSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblShomareHesab_FormulaSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblShomareNameHaSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblShomareSelect.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSignerSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSodoorFishSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSodoorFish_DetailSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSodorCheckSelect.cs">
+      <DependentUpon>Chek.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSpecialPermissionSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblStateSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblStatusMahalKhedmatSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblStatusSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblStatusTaaholSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblStatusTaghsit_TakhfifSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblSubstituteSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTabagheBandiSelect.cs">
+      <DependentUpon>Automation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTabJobOfBimeSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTahodatSanavatiSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTakhfifDetailSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTakhfifSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTanzimateDaramadSelect.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTarh_KhedmatSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTasviehHesabSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTavighKosuratSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTemplatCodingSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTemplateCodingSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTemplateNameSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTemplatNameSelect.cs">
+      <DependentUpon>Budget.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTozinSelect.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTreeCenterCostSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTree_CenterCostSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTypeBimeSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTypeEstekhdamSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTypeEstekhdam_FormulSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTypeEstekhdam_UserGroupSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTypeHesabSelect.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTypeKhodroSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTypeOfCostCentersSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTypeOfEmploymentCenterSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblTypeReportSelect.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblUserGroupSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblUserGroup_ModuleOrganSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblUserSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblUser_GroupSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblVadiSalamSelect.cs">
+      <DependentUpon>DeceasedModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblVamSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblVaziyatEsargariSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblVazn_BaskoolSelect.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblWarrantyTypeSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblWebServiceLogSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblWeighbridgeSelect.cs">
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblZirListHaSelect.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_TreeOrganPost.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_TreeOrganPostEjra.cs">
+      <DependentUpon>CommonModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\sp_Com_MaxChangeDatePersonalSelect.cs" />
+    <Compile Include="DAL\Model\sp_Com_MaxPersonalEstekhdamType.cs" />
+    <Compile Include="DAL\Model\sp_tblPcPos_Param_Value.cs">
+      <DependentUpon>Daramad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\tblBankBill_DetailsDeleteNotExists.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Weigh.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Weigh.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Weigh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Weigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\Weigh.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Weigh.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PayRoll\DL_AfradeTahtePoshesheBimeTakmily.cs" />
+    <Compile Include="DAL\PayRoll\DL_AfradeTahtePoshesheBimeTakmily_Details.cs" />
+    <Compile Include="DAL\PayRoll\DL_AfradTahtePooshesh.cs" />
+    <Compile Include="DAL\PayRoll\DL_AfradTahtePoosheshSelect_FromExcel.cs" />
+    <Compile Include="DAL\PayRoll\DL_AkharinHokmSal.cs" />
+    <Compile Include="DAL\PayRoll\DL_AnvaGroupTashvighi.cs" />
+    <Compile Include="DAL\PayRoll\DL_BudgetPayDetail.cs" />
+    <Compile Include="DAL\PayRoll\DL_BudgetPayHeader.cs" />
+    <Compile Include="DAL\PayRoll\DL_CalcHeader.cs" />
+    <Compile Include="DAL\PayRoll\DL_CalcMaliyatGheyerNaghdi.cs" />
+    <Compile Include="DAL\PayRoll\DL_CheckAllMohasebat.cs" />
+    <Compile Include="DAL\PayRoll\DL_CheckKosorat_Motalebat.cs" />
+    <Compile Include="DAL\PayRoll\DL_ComputationFormula.cs" />
+    <Compile Include="DAL\PayRoll\DL_CostCenter.cs" />
+    <Compile Include="DAL\PayRoll\DL_DetailHoghoghMabna.cs" />
+    <Compile Include="DAL\PayRoll\DL_DetailPayeSanavati.cs" />
+    <Compile Include="DAL\PayRoll\DL_DiffDayMahSal.cs" />
+    <Compile Include="DAL\PayRoll\DL_DigitalArchive.cs" />
+    <Compile Include="DAL\PayRoll\DL_Disket.cs" />
+    <Compile Include="DAL\PayRoll\DL_DisketBazneshastegi.cs" />
+    <Compile Include="DAL\PayRoll\DL_DisketBime_Moavaghe.cs" />
+    <Compile Include="DAL\PayRoll\DL_DisketBime.cs" />
+    <Compile Include="DAL\PayRoll\DL_DisketBimeKhadamatDarmani.cs" />
+    <Compile Include="DAL\PayRoll\DL_DisketBime_Tatilkar_Ezafekar.cs" />
+    <Compile Include="DAL\PayRoll\DL_DisketPasAndaz.cs" />
+    <Compile Include="DAL\PayRoll\DL_DisketSina.cs" />
+    <Compile Include="DAL\PayRoll\DL_EtelaatEydi.cs" />
+    <Compile Include="DAL\PayRoll\DL_EzafeKari_TatilKari.cs" />
+    <Compile Include="DAL\PayRoll\DL_FileForHokm.cs" />
+    <Compile Include="DAL\PayRoll\DL_FiscalTitle.cs" />
+    <Compile Include="DAL\PayRoll\DL_Fiscal_Detail.cs" />
+    <Compile Include="DAL\PayRoll\DL_Fiscal_Header.cs" />
+    <Compile Include="DAL\PayRoll\DL_FishLog.cs" />
+    <Compile Include="DAL\PayRoll\DL_GHarardadBime.cs" />
+    <Compile Include="DAL\PayRoll\DL_HistoryNoeEstekhdam.cs" />
+    <Compile Include="DAL\PayRoll\DL_HoghoghMabna.cs" />
+    <Compile Include="DAL\PayRoll\DL_HokmReport.cs" />
+    <Compile Include="DAL\PayRoll\DL_Hokm_Item.cs" />
+    <Compile Include="DAL\PayRoll\DL_InsuranceWorkshop.cs" />
+    <Compile Include="DAL\PayRoll\DL_ItemsEstekhdam_FiscalTitle.cs" />
+    <Compile Include="DAL\PayRoll\DL_ItemsEstekhdam_MoteghayerHoghoghi.cs" />
+    <Compile Include="DAL\PayRoll\DL_ItemsHoghughi.cs" />
+    <Compile Include="DAL\PayRoll\DL_Items_Estekhdam.cs" />
+    <Compile Include="DAL\PayRoll\DL_KarKardeMahane.cs" />
+    <Compile Include="DAL\PayRoll\DL_KarKardHokm.cs" />
+    <Compile Include="DAL\PayRoll\DL_KarkardMahane_Detail.cs" />
+    <Compile Include="DAL\PayRoll\DL_KomakGheyerNaghdi.cs" />
+    <Compile Include="DAL\PayRoll\DL_KosorateParametri_Personal.cs" />
+    <Compile Include="DAL\PayRoll\DL_KosuratBank.cs" />
+    <Compile Include="DAL\PayRoll\DL_KosuratParametriGroup.cs" />
+    <Compile Include="DAL\PayRoll\DL_ListNoMaliyat_BimePersonal.cs" />
+    <Compile Include="DAL\PayRoll\DL_LoginFailed.cs" />
+    <Compile Include="DAL\PayRoll\DL_MaliyatDaraei.cs" />
+    <Compile Include="DAL\PayRoll\DL_MaliyatManfi.cs" />
+    <Compile Include="DAL\PayRoll\DL_Mamuriyat.cs" />
+    <Compile Include="DAL\PayRoll\DL_MandehPasAndaz.cs" />
+    <Compile Include="DAL\PayRoll\DL_MaxBime.cs" />
+    <Compile Include="DAL\PayRoll\DL_MaxPersonalEstekhdamType.cs" />
+    <Compile Include="DAL\PayRoll\DL_Moavaghat.cs" />
+    <Compile Include="DAL\PayRoll\DL_Moavaghat_Items.cs" />
+    <Compile Include="DAL\PayRoll\DL_Mohasebat.cs" />
+    <Compile Include="DAL\PayRoll\DL_MohasebatEzafeKari_TatilKari.cs" />
+    <Compile Include="DAL\PayRoll\DL_MohasebatForConvert.cs" />
+    <Compile Include="DAL\PayRoll\DL_Mohasebat_Eydi.cs" />
+    <Compile Include="DAL\PayRoll\DL_Mohasebat_Items.cs" />
+    <Compile Include="DAL\PayRoll\DL_Mohasebat_KosoratBank.cs" />
+    <Compile Include="DAL\PayRoll\DL_Mohasebat_kosorat_MotalebatParam.cs" />
+    <Compile Include="DAL\PayRoll\DL_Mohasebat_Mamuriyat.cs" />
+    <Compile Include="DAL\PayRoll\DL_Mohasebat_Morakhasi.cs" />
+    <Compile Include="DAL\PayRoll\DL_Mohasebat_PersonalInfo.cs" />
+    <Compile Include="DAL\PayRoll\DL_Mohaseleen.cs" />
+    <Compile Include="DAL\PayRoll\DL_Monasebat.cs" />
+    <Compile Include="DAL\PayRoll\DL_MonasebatHeader.cs" />
+    <Compile Include="DAL\PayRoll\DL_MonasebatMablagh.cs" />
+    <Compile Include="DAL\PayRoll\DL_MonasebatTarikh.cs" />
+    <Compile Include="DAL\PayRoll\DL_Morakhasi.cs" />
+    <Compile Include="DAL\PayRoll\DL_MotalebateParametri_Personal.cs" />
+    <Compile Include="DAL\PayRoll\DL_MotalebatParametriGroup.cs" />
+    <Compile Include="DAL\PayRoll\DL_MoteghayerhaAhkam.cs" />
+    <Compile Include="DAL\PayRoll\DL_MoteghayerhayeEydi.cs" />
+    <Compile Include="DAL\PayRoll\DL_MoteghayerhayeHoghoghi.cs" />
+    <Compile Include="DAL\PayRoll\DL_MoteghayerhayeHoghoghi_Detail.cs" />
+    <Compile Include="DAL\PayRoll\DL_AnvaEstekhdam.cs" />
+    <Compile Include="DAL\PayRoll\DL_NesbatWithPersonalInfoId.cs" />
+    <Compile Include="DAL\PayRoll\DL_OnAccount.cs" />
+    <Compile Include="DAL\PayRoll\DL_Operation.cs" />
+    <Compile Include="DAL\PayRoll\DL_ParameteriItemsFormul.cs" />
+    <Compile Include="DAL\PayRoll\DL_Parametrs.cs" />
+    <Compile Include="DAL\PayRoll\DL_PatternSharhHokm.cs" />
+    <Compile Include="DAL\PayRoll\DL_PayeSanavati.cs" />
+    <Compile Include="DAL\PayRoll\DL_PayPersonalInfo.cs" />
+    <Compile Include="DAL\PayRoll\DL_PersonalHokm.cs" />
+    <Compile Include="DAL\PayRoll\DL_PersonalInfo.cs" />
+    <Compile Include="DAL\PayRoll\DL_PersonalInfo_Mohasebe.cs" />
+    <Compile Include="DAL\PayRoll\DL_PersonalStatus.cs" />
+    <Compile Include="DAL\PayRoll\DL_P_MaliyatManfi.cs" />
+    <Compile Include="DAL\PayRoll\DL_ReportType.cs" />
+    <Compile Include="DAL\PayRoll\DL_Rpt12Mahe.cs" />
+    <Compile Include="DAL\PayRoll\DL_RptFishHoghoughi_Details.cs" />
+    <Compile Include="DAL\PayRoll\DL_RptKosourat_MotalebatParam.cs" />
+    <Compile Include="DAL\PayRoll\DL_RptKosurBazneshastegi.cs" />
+    <Compile Include="DAL\PayRoll\DL_RptListAghsatVam.cs" />
+    <Compile Include="DAL\PayRoll\DL_RptListPardakhtEydi.cs" />
+    <Compile Include="DAL\PayRoll\DL_RptMaliyatSaliyane.cs" />
+    <Compile Include="DAL\PayRoll\DL_RptSanad3.cs" />
+    <Compile Include="DAL\PayRoll\DL_RptSanad2.cs" />
+    <Compile Include="DAL\PayRoll\DL_RptSumMotalebat_Kosurat.cs" />
+    <Compile Include="DAL\PayRoll\DL_SavabegheSanavateKHedmat.cs" />
+    <Compile Include="DAL\PayRoll\DL_SavabeghJebhe_Items.cs" />
+    <Compile Include="DAL\PayRoll\DL_SavabeghJebhe_Personal.cs" />
+    <Compile Include="DAL\PayRoll\DL_SayerPardakhtGroup.cs" />
+    <Compile Include="DAL\PayRoll\DL_SayerPardakhts.cs" />
+    <Compile Include="DAL\PayRoll\DL_SelectDisketMaliyatForHoghogh.cs" />
+    <Compile Include="DAL\PayRoll\DL_SelectFlagKarKard_Mohasebe.cs" />
+    <Compile Include="DAL\PayRoll\DL_SelectPasAndazBank.cs" />
+    <Compile Include="DAL\PayRoll\DL_SelectPayPersonalInfo_Ezafekar.cs" />
+    <Compile Include="DAL\PayRoll\DL_SelectVariziForBank.cs" />
+    <Compile Include="DAL\PayRoll\DL_Setting.cs" />
+    <Compile Include="DAL\PayRoll\DL_ShomareHesabPasAndaz.cs" />
+    <Compile Include="DAL\PayRoll\DL_ShomareHesabs.cs" />
+    <Compile Include="DAL\PayRoll\DL_SpecialPermission.cs" />
+    <Compile Include="DAL\PayRoll\DL_Status.cs" />
+    <Compile Include="DAL\PayRoll\DL_StatusMahalKedmat.cs" />
+    <Compile Include="DAL\PayRoll\DL_SumKomakGheyerNaghdi.cs" />
+    <Compile Include="DAL\PayRoll\DL_TabJobOfBime.cs" />
+    <Compile Include="DAL\PayRoll\DL_TasviehHesab.cs" />
+    <Compile Include="DAL\PayRoll\DL_TavighKosurat.cs" />
+    <Compile Include="DAL\PayRoll\DL_TypeBime.cs" />
+    <Compile Include="DAL\PayRoll\DL_TypeEstekhdam.cs" />
+    <Compile Include="DAL\PayRoll\DL_TypeEstekhdam_Formul.cs" />
+    <Compile Include="DAL\PayRoll\DL_TypeEstekhdam_UserGroup.cs" />
+    <Compile Include="DAL\PayRoll\DL_TypeOfCostCenters.cs" />
+    <Compile Include="DAL\PayRoll\DL_TypeOfEmploymentCenter.cs" />
+    <Compile Include="DAL\PayRoll\DL_UpdateEzafekarKarkardMahane.cs" />
+    <Compile Include="DAL\PayRoll\DL_UpdateFlag.cs" />
+    <Compile Include="DAL\PayRoll\DL_Vam.cs" />
+    <Compile Include="DAL\PayRoll\DL_VaziyatEsargari.cs" />
+    <Compile Include="DAL\PayRoll\DL_SavabeghGroupTashvighi.cs" />
+    <Compile Include="DAL\Weigh\DL_Arze.cs" />
+    <Compile Include="DAL\Weigh\DL_Arze_Detail.cs" />
+    <Compile Include="DAL\Weigh\DL_BaskolDocument.cs" />
+    <Compile Include="DAL\Weigh\DL_ElamAvarez_ModuleOrgan.cs" />
+    <Compile Include="DAL\Weigh\DL_LoadingPlace.cs" />
+    <Compile Include="DAL\Weigh\DL_NoeMasraf.cs" />
+    <Compile Include="DAL\Weigh\DL_ParametrBaskoolValue.cs" />
+    <Compile Include="DAL\Weigh\DL_ParametrsBaskool.cs" />
+    <Compile Include="DAL\Weigh\DL_Remittance_Details.cs" />
+    <Compile Include="DAL\Weigh\DL_Remittance_Header.cs" />
+    <Compile Include="DAL\Weigh\DL_Tozin.cs" />
+    <Compile Include="DAL\Weigh\DL_TypeReport.cs" />
+    <Compile Include="DAL\Weigh\DL_Vazn_Baskool.cs" />
+    <Compile Include="DAL\Weigh\DL_Weighbridge.cs" />
+    <Compile Include="DaramadService.svc.cs">
+      <DependentUpon>DaramadService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="DeceasedService.svc.cs">
+      <DependentUpon>DeceasedService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IAccountingService.cs" />
+    <Compile Include="IAnbarAmvalService.cs" />
+    <Compile Include="IArchiveService.cs" />
+    <Compile Include="IAutomationService.cs" />
+    <Compile Include="IBudgetService.cs" />
+    <Compile Include="IChekService.cs" />
+    <Compile Include="ICommonService.cs" />
+    <Compile Include="IComon_PayService.cs" />
+    <Compile Include="IContractService.cs" />
+    <Compile Include="IDaramadService.cs" />
+    <Compile Include="IDeceasedService.cs" />
+    <Compile Include="IPayRolService.cs" />
+    <Compile Include="IPersoneliService.cs" />
+    <Compile Include="Comon_PayService.svc.cs">
+      <DependentUpon>Comon_PayService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="IWeighService.cs" />
+    <Compile Include="PayRolService.svc.cs">
+      <DependentUpon>PayRolService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="PersoneliService.svc.cs">
+      <DependentUpon>PersoneliService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\TOL\PayRoll\OBJ_AfradTahtePooshesh.cs" />
+    <Compile Include="Service References\TOL\PayRoll\OBJ_Monasebat.cs" />
+    <Compile Include="Service References\TOL\PayRoll\OBJ_MonasebatTarikh.cs" />
+    <Compile Include="Service References\TOL\PayRoll\OBJ_Parametrs.cs" />
+    <Compile Include="Service References\TOL\PayRoll\OBJ_Rpt12Mahe.cs" />
+    <Compile Include="Service References\TOL\PayRoll\OBJ_RptSanad3.cs" />
+    <Compile Include="TOL\Accounting\OBJ_AccountingLevel.cs" />
+    <Compile Include="TOL\Accounting\OBJ_AccountingType.cs" />
+    <Compile Include="TOL\Accounting\OBJ_BankBillDetails.cs" />
+    <Compile Include="TOL\Accounting\OBJ_BankBillHeader.cs" />
+    <Compile Include="TOL\Accounting\OBJ_BankBill_Tarikh.cs" />
+    <Compile Include="TOL\Accounting\OBJ_BankTemplate_Details.cs" />
+    <Compile Include="TOL\Accounting\OBJ_BankTemplate_Header.cs" />
+    <Compile Include="TOL\Accounting\OBJ_Case.cs" />
+    <Compile Include="TOL\Accounting\OBJ_CaseType.cs" />
+    <Compile Include="TOL\Accounting\OBJ_CenterCost.cs" />
+    <Compile Include="TOL\Accounting\OBJ_Centerco_TarifNashodeh.cs" />
+    <Compile Include="TOL\Accounting\OBJ_CheckMahiyatGardesh_Mande.cs" />
+    <Compile Include="TOL\Accounting\OBJ_CheckRemain.cs" />
+    <Compile Include="TOL\Accounting\OBJ_CodingDetail_CaseType.cs" />
+    <Compile Include="TOL\Accounting\OBJ_Coding_Details.cs" />
+    <Compile Include="TOL\Accounting\OBJ_Coding_Header.cs" />
+    <Compile Include="TOL\Accounting\OBJ_Coding_ProjeFaaliat.cs" />
+    <Compile Include="TOL\Accounting\OBJ_Dafater.cs" />
+    <Compile Include="TOL\Accounting\OBJ_DocFiles.cs" />
+    <Compile Include="TOL\Accounting\OBJ_DocumentBookMark.cs" />
+    <Compile Include="TOL\Accounting\OBJ_DocumentDesc.cs" />
+    <Compile Include="TOL\Accounting\OBJ_DocumentRecorde_File.cs" />
+    <Compile Include="TOL\Accounting\OBJ_DocumentRecorde_File_BookMark.cs" />
+    <Compile Include="TOL\Accounting\OBJ_DocumentRecord_Details.cs" />
+    <Compile Include="TOL\Accounting\OBJ_DocumentRecord_Header.cs" />
+    <Compile Include="TOL\Accounting\OBJ_DocumentType.cs" />
+    <Compile Include="TOL\Accounting\OBJ_FiscalYear.cs" />
+    <Compile Include="TOL\Accounting\OBJ_GroupCenterCost.cs" />
+    <Compile Include="TOL\Accounting\OBJ_ItemNecessary.cs" />
+    <Compile Include="TOL\Accounting\OBJ_LevelsAccountingType.cs" />
+    <Compile Include="TOL\Accounting\OBJ_Mahiyat.cs" />
+    <Compile Include="TOL\Accounting\OBJ_MoghayeratBanki.cs" />
+    <Compile Include="TOL\Accounting\OBJ_ParamDocumentDesc.cs" />
+    <Compile Include="TOL\Accounting\OBJ_ParvandeInfo.cs" />
+    <Compile Include="TOL\Accounting\OBJ_RptByCoding.cs" />
+    <Compile Include="TOL\Accounting\OBJ_RptCodingStatus.cs" />
+    <Compile Include="TOL\Accounting\OBJ_RptCodingTurnover.cs" />
+    <Compile Include="TOL\Accounting\OBJ_TemplateCoding.cs" />
+    <Compile Include="TOL\Accounting\OBJ_TemplateName.cs" />
+    <Compile Include="TOL\Accounting\OBJ_TreeCenterCost.cs" />
+    <Compile Include="TOL\Accounting\OBJ_Tree_CenterCost.cs" />
+    <Compile Include="TOL\Accounting\OBJ_TypeHesab.cs" />
+    <Compile Include="TOL\AnbarAmval\OBJ_Anbar.cs" />
+    <Compile Include="TOL\AnbarAmval\OBJ_AnbarGroup.cs" />
+    <Compile Include="TOL\AnbarAmval\OBJ_AnbarTree.cs" />
+    <Compile Include="TOL\AnbarAmval\OBJ_Anbar_TarifNashode.cs" />
+    <Compile Include="TOL\AnbarAmval\OBJ_Anbar_Tree.cs" />
+    <Compile Include="TOL\AnbarAmval\OBJ_InsuranceCompany.cs" />
+    <Compile Include="TOL\AnbarAmval\OBJ_InsuranceType.cs" />
+    <Compile Include="TOL\AnbarAmval\OBJ_KalaGroup.cs" />
+    <Compile Include="TOL\AnbarAmval\OBJ_KalaTree.cs" />
+    <Compile Include="TOL\AnbarAmval\OBJ_kala_TarifNashode.cs" />
+    <Compile Include="TOL\Archive\OBJ_ArchiveTree.cs" />
+    <Compile Include="TOL\Archive\OBJ_FileMojaz.cs" />
+    <Compile Include="TOL\Archive\OBJ_ParticularProperties.cs" />
+    <Compile Include="TOL\Archive\OBJ_Properties.cs" />
+    <Compile Include="TOL\Archive\OBJ_PropertiesValues.cs" />
+    <Compile Include="TOL\Automation\OBJ_Archive.cs" />
+    <Compile Include="TOL\Automation\OBJ_Assignment.cs" />
+    <Compile Include="TOL\Automation\OBJ_AssignmentStatus.cs" />
+    <Compile Include="TOL\Automation\OBJ_AssignmentType.cs" />
+    <Compile Include="TOL\Automation\OBJ_Box.cs" />
+    <Compile Include="TOL\Automation\OBJ_BoxType.cs" />
+    <Compile Include="TOL\Automation\OBJ_Commision.cs" />
+    <Compile Include="TOL\Automation\OBJ_ContentFile.cs" />
+    <Compile Include="TOL\Automation\OBJ_ExternalLetterReceiver.cs" />
+    <Compile Include="TOL\Automation\OBJ_ExternalLetterSender.cs" />
+    <Compile Include="TOL\Automation\OBJ_HistoryLetter.cs" />
+    <Compile Include="TOL\Automation\OBJ_Immediacy.cs" />
+    <Compile Include="TOL\Automation\OBJ_Inbox.cs" />
+    <Compile Include="TOL\Automation\OBJ_InternalAssignmentReceiver.cs" />
+    <Compile Include="TOL\Automation\OBJ_InternalAssignmentSender.cs" />
+    <Compile Include="TOL\Automation\OBJ_InternalLetterReceiver.cs" />
+    <Compile Include="TOL\Automation\OBJ_Letter.cs" />
+    <Compile Include="TOL\Automation\OBJ_LetterArchive.cs" />
+    <Compile Include="TOL\Automation\OBJ_LetterAttachment.cs" />
+    <Compile Include="TOL\Automation\OBJ_LetterBox.cs" />
+    <Compile Include="TOL\Automation\OBJ_LetterFileMojaz.cs" />
+    <Compile Include="TOL\Automation\OBJ_LetterFollow.cs" />
+    <Compile Include="TOL\Automation\OBJ_LetterStatus.cs" />
+    <Compile Include="TOL\Automation\OBJ_LetterTabagheBandi.cs" />
+    <Compile Include="TOL\Automation\OBJ_LetterTemplate.cs" />
+    <Compile Include="TOL\Automation\OBJ_MergeFieldTypes.cs" />
+    <Compile Include="TOL\Automation\OBJ_MergeField_LetterTemplate.cs" />
+    <Compile Include="TOL\Automation\OBJ_Message.cs" />
+    <Compile Include="TOL\Automation\OBJ_MessageAttachment.cs" />
+    <Compile Include="TOL\Automation\OBJ_NumberingFormat.cs" />
+    <Compile Include="TOL\Automation\OBJ_ReceiverAssignmentType.cs" />
+    <Compile Include="TOL\Automation\OBJ_ReferralRules.cs" />
+    <Compile Include="TOL\Automation\OBJ_Ronevesht.cs" />
+    <Compile Include="TOL\Automation\OBJ_SavedLetter.cs" />
+    <Compile Include="TOL\Automation\OBJ_SavedMessage.cs" />
+    <Compile Include="TOL\Automation\OBJ_Secretariat_OrganizationUnit.cs" />
+    <Compile Include="TOL\Automation\OBJ_SecurityType.cs" />
+    <Compile Include="TOL\Automation\OBJ_Sent.cs" />
+    <Compile Include="TOL\Automation\OBJ_Setting.cs" />
+    <Compile Include="TOL\Automation\OBJ_Signer.cs" />
+    <Compile Include="TOL\Automation\OBJ_Substitute.cs" />
+    <Compile Include="TOL\Automation\OBJ_TabagheBandi.cs" />
+    <Compile Include="TOL\Automation\OBJ_Trash.cs" />
+    <Compile Include="TOL\Budget\OBJ_Anticipation.cs" />
+    <Compile Include="TOL\Budget\OBJ_BudgetType.cs" />
+    <Compile Include="TOL\Budget\OBJ_BudjeLevel.cs" />
+    <Compile Include="TOL\Budget\OBJ_Budje_khedmatDarsadId.cs" />
+    <Compile Include="TOL\Budget\OBJ_CheckValidCodeBudje.cs" />
+    <Compile Include="TOL\Budget\OBJ_CodehayeDaramad_Tas_him.cs" />
+    <Compile Include="TOL\Budget\OBJ_CodingBudje.cs" />
+    <Compile Include="TOL\Budget\OBJ_CodingBudje_Detail.cs" />
+    <Compile Include="TOL\Budget\OBJ_CodingBudje_Header.cs" />
+    <Compile Include="TOL\Budget\OBJ_CodingLevel.cs" />
+    <Compile Include="TOL\Budget\OBJ_CodingTarh_Khedmat.cs" />
+    <Compile Include="TOL\Budget\OBJ_DefaultCode.cs" />
+    <Compile Include="TOL\Budget\OBJ_EtebarType.cs" />
+    <Compile Include="TOL\Budget\OBJ_FiscalYearBudje.cs" />
+    <Compile Include="TOL\Budget\OBJ_Mamoriyat.cs" />
+    <Compile Include="TOL\Budget\OBJ_MasrafType.cs" />
+    <Compile Include="TOL\Budget\OBJ_Motammam.cs" />
+    <Compile Include="TOL\Budget\OBJ_Pishbini_Daramad.cs" />
+    <Compile Include="TOL\Budget\OBJ_Program.cs" />
+    <Compile Include="TOL\Budget\OBJ_Project_Details.cs" />
+    <Compile Include="TOL\Budget\OBJ_Project_Faaliyat.cs" />
+    <Compile Include="TOL\Budget\OBJ_SelectCodingAccNotBudje.cs" />
+    <Compile Include="TOL\Budget\OBJ_TaahodatSanavati.cs" />
+    <Compile Include="TOL\Budget\OBJ_Tarh_Khedmat.cs" />
+    <Compile Include="TOL\Budget\OBJ_TemplatCoding.cs" />
+    <Compile Include="TOL\Budget\OBJ_TemplatName.cs" />
+    <Compile Include="TOL\Chek\OBJ_AghsatCheckAmani.cs" />
+    <Compile Include="TOL\Chek\OBJ_CheckHayeVarede.cs" />
+    <Compile Include="TOL\Chek\OBJ_DasteCheck.cs" />
+    <Compile Include="TOL\Chek\OBJ_OlgoCheck.cs" />
+    <Compile Include="TOL\Chek\OBJ_SodorCheck.cs" />
+    <Compile Include="TOL\Common\OBJ_ApplictionPart.cs" />
+    <Compile Include="TOL\Common\OBJ_Ashkhas.cs" />
+    <Compile Include="TOL\Common\OBJ_AshkhaseHoghoghi.cs" />
+    <Compile Include="TOL\Common\OBJ_AshkhaseHoghoghi_Detail.cs" />
+    <Compile Include="TOL\Common\OBJ_Bank.cs" />
+    <Compile Include="TOL\Common\OBJ_BillsType.cs" />
+    <Compile Include="TOL\Common\OBJ_CaseBills.cs" />
+    <Compile Include="TOL\Common\OBJ_CharacterPersianPlaque.cs" />
+    <Compile Include="TOL\Common\OBJ_ChartOrgan.cs" />
+    <Compile Include="TOL\Common\OBJ_ChartOrganEjraee.cs" />
+    <Compile Include="TOL\Common\OBJ_CheckEmail.cs" />
+    <Compile Include="TOL\Common\OBJ_City.cs" />
+    <Compile Include="TOL\Common\OBJ_CompanyPost.cs" />
+    <Compile Include="TOL\Common\OBJ_DigitalArchiveTreeStructure.cs" />
+    <Compile Include="TOL\Common\OBJ_Employee.cs" />
+    <Compile Include="TOL\Common\OBJ_Employee_Detail.cs" />
+    <Compile Include="TOL\Common\OBJ_Error.cs" />
+    <Compile Include="TOL\Common\OBJ_File.cs" />
+    <Compile Include="TOL\Common\OBJ_FormatFile.cs" />
+    <Compile Include="TOL\Common\OBJ_GeneralSetting.cs" />
+    <Compile Include="TOL\Common\OBJ_GeneralSetting_ComboBox.cs" />
+    <Compile Include="TOL\Common\OBJ_GeneralSetting_Value.cs" />
+    <Compile Include="TOL\Common\OBJ_GetDate.cs" />
+    <Compile Include="TOL\Common\OBJ_GetNameOrganForFormul.cs" />
+    <Compile Include="TOL\Common\OBJ_GetUserGroupTree.cs" />
+    <Compile Include="TOL\Common\OBJ_HesabType.cs" />
+    <Compile Include="TOL\Common\OBJ_HistoryTahsilat.cs" />
+    <Compile Include="TOL\Common\OBJ_InputInfo.cs" />
+    <Compile Include="TOL\Common\OBJ_Kala.cs" />
+    <Compile Include="TOL\Common\OBJ_MadrakTahsili.cs" />
+    <Compile Include="TOL\Common\OBJ_Masoulin.cs" />
+    <Compile Include="TOL\Common\OBJ_Masoulin_Detail.cs" />
+    <Compile Include="TOL\Common\OBJ_Masoulin_DetailList.cs" />
+    <Compile Include="TOL\Common\OBJ_Masuolin_ZirList.cs" />
+    <Compile Include="TOL\Common\OBJ_Module.cs" />
+    <Compile Include="TOL\Common\OBJ_Module_Organ.cs" />
+    <Compile Include="TOL\Common\OBJ_Month.cs" />
+    <Compile Include="TOL\Common\OBJ_NezamVazife.cs" />
+    <Compile Include="TOL\Common\OBJ_Organization.cs" />
+    <Compile Include="TOL\Common\OBJ_OrganizationalPosts.cs" />
+    <Compile Include="TOL\Common\OBJ_OrganizationalPostsEjraee.cs" />
+    <Compile Include="TOL\Common\OBJ_Permission.cs" />
+    <Compile Include="TOL\Common\OBJ_PersonalSign.cs" />
+    <Compile Include="TOL\Common\OBJ_Plaque.cs" />
+    <Compile Include="TOL\Common\OBJ_Raste.cs" />
+    <Compile Include="TOL\Common\OBJ_ReshteTahsili.cs" />
+    <Compile Include="TOL\Common\OBJ_RptDastresiKarbaran.cs" />
+    <Compile Include="TOL\Common\OBJ_Setting.cs" />
+    <Compile Include="TOL\Common\OBJ_SHobe.cs" />
+    <Compile Include="TOL\Common\OBJ_ShomareHesabeOmoomi.cs" />
+    <Compile Include="TOL\Common\OBJ_Signers.cs" />
+    <Compile Include="TOL\Common\OBJ_State.cs" />
+    <Compile Include="TOL\Common\OBJ_StatusTaahol.cs" />
+    <Compile Include="TOL\Common\OBJ_TreeOrganPost.cs" />
+    <Compile Include="TOL\Common\OBJ_TypeKhodro.cs" />
+    <Compile Include="TOL\Common\OBJ_User.cs" />
+    <Compile Include="TOL\Common\OBJ_UserGroup.cs" />
+    <Compile Include="TOL\Common\OBJ_UserGroup_ModuleOrgan.cs" />
+    <Compile Include="TOL\Common\OBJ_User_Group.cs" />
+    <Compile Include="TOL\Common\OBJ_WarrantyType.cs" />
+    <Compile Include="TOL\Common\OBJ_WebServiceLog.cs" />
+    <Compile Include="TOL\Common\OBJ_ZirListHa.cs" />
+    <Compile Include="TOL\Contract\OBJ_RegistrationContract.cs" />
+    <Compile Include="TOL\Daramad\OBJ_Ashkhas_ElamAvarez.cs" />
+    <Compile Include="TOL\Daramad\OBJ_Ashkhas_Fish.cs" />
+    <Compile Include="TOL\Daramad\OBJ_Ashkhas_Taghsit.cs" />
+    <Compile Include="TOL\Daramad\OBJ_Barat.cs" />
+    <Compile Include="TOL\Daramad\OBJ_Check.cs" />
+    <Compile Include="TOL\Daramad\OBJ_CheckTaghsit.cs" />
+    <Compile Include="TOL\Daramad\OBJ_CodhayeDaramadiElamAvarez.cs" />
+    <Compile Include="TOL\Daramad\OBJ_CodHayeDarAmad_Asli.cs" />
+    <Compile Include="TOL\Daramad\OBJ_CodhayeDaramd.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ComboBox.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ComboBoxValue.cs" />
+    <Compile Include="TOL\Daramad\OBJ_Company.cs" />
+    <Compile Include="TOL\Daramad\OBJ_DaramadGroup.cs" />
+    <Compile Include="TOL\Daramad\OBJ_DaramadGroup_Parametr.cs" />
+    <Compile Include="TOL\Daramad\OBJ_DaramadGroup_ParametrValues.cs" />
+    <Compile Include="TOL\Daramad\OBJ_DataForElamAvarez.cs" />
+    <Compile Include="TOL\Daramad\OBJ_DetailSodoorFish.cs" />
+    <Compile Include="TOL\Daramad\OBJ_Ebtal.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ElamAvarez.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ElamAvarezLog.cs" />
+    <Compile Include="TOL\Daramad\OBJ_EmalTakhfif.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ExternalFish.cs" />
+    <Compile Include="TOL\Daramad\OBJ_Factor.cs" />
+    <Compile Include="TOL\Daramad\OBJ_FishSaderShode.cs" />
+    <Compile Include="TOL\Daramad\OBJ_FishSaderShodeForXml.cs" />
+    <Compile Include="TOL\Daramad\OBJ_FormatShomareName.cs" />
+    <Compile Include="TOL\Daramad\OBJ_GozareshatFile.cs" />
+    <Compile Include="TOL\Daramad\OBJ_InfoPardakhtFTP.cs" />
+    <Compile Include="TOL\Daramad\OBJ_LetterMinut.cs" />
+    <Compile Include="TOL\Daramad\OBJ_LetterSigners.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ListCodeDaramad_ShomareHesabWithOrganId.cs" />
+    <Compile Include="TOL\Daramad\OBJ_MahdoodiyatMohasebat.cs" />
+    <Compile Include="TOL\Daramad\OBJ_MahdoodiyatMohasebat_Ashkhas.cs" />
+    <Compile Include="TOL\Daramad\OBJ_MahdoodiyatMohasebat_ShomareHesabDaramad.cs" />
+    <Compile Include="TOL\Daramad\OBJ_MaliyatArzesheAfzoode.cs" />
+    <Compile Include="TOL\Daramad\OBJ_MapCodingDaramad.cs" />
+    <Compile Include="TOL\Daramad\OBJ_MeasureUnit.cs" />
+    <Compile Include="TOL\Daramad\OBJ_MohdoodiyatMohasebat_User.cs" />
+    <Compile Include="TOL\Daramad\OBJ_Mokatebat.cs" />
+    <Compile Include="TOL\Daramad\OBJ_Naghdi_Talab.cs" />
+    <Compile Include="TOL\Daramad\OBJ_NahvePardakht.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ParametreOmoomi.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ParametreOmoomi_Value.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ParametreSabet.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ParametreSabet_Nerkh.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ParametreSabet_Value.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ParametrHesabdari.cs" />
+    <Compile Include="TOL\Daramad\OBJ_PardakhtFile.cs" />
+    <Compile Include="TOL\Daramad\OBJ_PardakhtFiles_Detail.cs" />
+    <Compile Include="TOL\Daramad\OBJ_PardakhtFish.cs" />
+    <Compile Include="TOL\Daramad\OBJ_PatternFish.cs" />
+    <Compile Include="TOL\Daramad\OBJ_PatternFish_DaramadGroup.cs" />
+    <Compile Include="TOL\Daramad\OBJ_PcPosInfo.cs" />
+    <Compile Include="TOL\Daramad\OBJ_PcPosIP.cs" />
+    <Compile Include="TOL\Daramad\OBJ_PcPosParametr.cs" />
+    <Compile Include="TOL\Daramad\OBJ_PcPosParam_Dtail.cs" />
+    <Compile Include="TOL\Daramad\OBJ_PcPosTransaction.cs" />
+    <Compile Include="TOL\Daramad\OBJ_PcPosUser.cs" />
+    <Compile Include="TOL\Daramad\OBJ_Psp.cs" />
+    <Compile Include="TOL\Daramad\OBJ_PspModel.cs" />
+    <Compile Include="TOL\Daramad\OBJ_PSPModel_ShomareHesab.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ReplyTaghsit.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ReplyTakhfif.cs" />
+    <Compile Include="TOL\Daramad\OBJ_RequestTaghsit_Takhfif.cs" />
+    <Compile Include="TOL\Daramad\OBJ_Roonevesht.cs" />
+    <Compile Include="TOL\Daramad\OBJ_RptListCodeDaramad_Day.cs" />
+    <Compile Include="TOL\Daramad\OBJ_RptListCodeDaramad_Donati.cs" />
+    <Compile Include="TOL\Daramad\OBJ_RptListCodeDaramad_Gaje.cs" />
+    <Compile Include="TOL\Daramad\OBJ_Safte.cs" />
+    <Compile Include="TOL\Daramad\OBJ_SelectDataForTaghsit.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ShomareHesabCodeDaramad.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ShomareHesabCodeDaramad_Fomula.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ShomareHesabWithElamAvarezId.cs" />
+    <Compile Include="TOL\Daramad\OBJ_ShomareNameHa.cs" />
+    <Compile Include="TOL\Daramad\OBJ_SodoorFish.cs" />
+    <Compile Include="TOL\Daramad\OBJ_SodoorFish_Detail.cs" />
+    <Compile Include="TOL\Daramad\OBJ_StatusTaghsit_Takhfif.cs" />
+    <Compile Include="TOL\Daramad\OBJ_Takhfif.cs" />
+    <Compile Include="TOL\Daramad\OBJ_TakhfifDetail.cs" />
+    <Compile Include="TOL\Daramad\OBJ_TanzimateDaramad.cs" />
+    <Compile Include="TOL\Deceased\OBJ_Actions.cs" />
+    <Compile Include="TOL\Deceased\OBJ_Action_Kartabl.cs" />
+    <Compile Include="TOL\Deceased\OBJ_CauseOfDeath.cs" />
+    <Compile Include="TOL\Deceased\OBJ_CodeDaramadAramestan.cs" />
+    <Compile Include="TOL\Deceased\OBJ_EmployeeInGhabrAmanat.cs" />
+    <Compile Include="TOL\Deceased\OBJ_GhabreAmanat.cs" />
+    <Compile Include="TOL\Deceased\OBJ_GhabrPor_Khali.cs" />
+    <Compile Include="TOL\Deceased\OBJ_Ghete.cs" />
+    <Compile Include="TOL\Deceased\OBJ_Kartabl.cs" />
+    <Compile Include="TOL\Deceased\OBJ_Kartabl_Request.cs" />
+    <Compile Include="TOL\Deceased\OBJ_MahalFot.cs" />
+    <Compile Include="TOL\Deceased\OBJ_Motevaffa.cs" />
+    <Compile Include="TOL\Deceased\OBJ_NextKartabl.cs" />
+    <Compile Include="TOL\Deceased\OBJ_Radif.cs" />
+    <Compile Include="TOL\Deceased\OBJ_RequestAmanat.cs" />
+    <Compile Include="TOL\Deceased\OBJ_Shomare.cs" />
+    <Compile Include="TOL\Deceased\OBJ_Tabaghe.cs" />
+    <Compile Include="TOL\Deceased\OBJ_TimeLine.cs" />
+    <Compile Include="TOL\Deceased\OBJ_VadiSalam.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_AfradeTahtePoshesheBimeTakmily.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_AfradeTahtePoshesheBimeTakmily_Details.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_AfradTahtePoosheshSelect_FromExcel.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_AkharinHokmSal.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_AnvaEstekhdam.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_AnvaGroupTashvighi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_BankFixed.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_BudgetPayDetail.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_BudgetPayHeader.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_CalcHeader.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_CalcMaliyatGheyerNaghdi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_CheckAllMohasebat.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_CheckKosorat_Motalebat.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_CheckShomareHesabPasAndazForMohasebat.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_ComputationFormula.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_CostCenter.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_DetailHoghoghMabna.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_DetailPayeSanavati.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_DiffDayMahSal.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_DigitalArchive.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Disket.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_DisketBazneshastegi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_DisketBime.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_DisketBimeKhadamatDarmani.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_DisketBimeSum.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_DisketBime_DBF.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_DisketBime_DBF_Header.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_DisketBime_Moavaghe.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_DisketBime_Tatilkar_Ezafekar.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_DisketPasAndaz.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_DisketSina.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_DisketSinaKarmandi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_EtelaatEydi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_EzafeKari_TatilKari.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_FiscalTitle.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Fiscal_Detail.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Fiscal_Header.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_FishHoghoghi_Moavaghe.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_FishLog.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_GHarardadBime.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_HistoryAfradTahtePoshesheBimeTakmily.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_HistoryNoeEstekhdam.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_HoghoghMabna.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_HokmReport.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Hokm_Item.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_InsuranceWorkshop.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_ItemsEstekhdam_FiscalTitle.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_ItemsEstekhdam_MoteghayerHoghoghi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_ItemsHoghughi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Items_Estekhdam.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_KarKardeMahane.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_KarKardHokm.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_KarkardMahane_Detail.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_KomakGheyerNaghdi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_KosorateParametri_Personal.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Mohaseleen.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_RptKosouratBank.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_KosouratDetails.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_KosuratBank.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_KosuratParametriGroup.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_ListNoMaliyat_BimePersonal.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MaliyatManfi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Mamuriyat.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MandehPasAndaz.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Masoulin_DetailList.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MaxBime.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MaxChangeDatePersonal.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MaxPersonalEstekhdamType.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Moavaghat.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Moavaghat_Items.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Mohasebat.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MohasebatEzafeKari_TatilKari.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Mohasebat_Eydi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Mohasebat_Items.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Mohasebat_KosoratBank.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Mohasebat_kosorat_MotalebatParam.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Mohasebat_Mamuriyat.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Mohasebat_Morakhasi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Mohasebat_PersonalInfo.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MonasebatHeader.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MonasebatMablagh.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MonasebatType.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Morakhasi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MotalebatDetails.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MotalebateParametri_Personal.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MotalebatParametriGroup.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MoteghayerhaAhkam.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MoteghayerhayeEydi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MoteghayerhayeHoghoghi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MoteghayerhayeHoghoghi_Detail.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_NesbatWithPersonalInfoId.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_OnAccount.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Operation.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_ParameteriItemsFormul.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Parametris_Personal.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_PatternSharhHokm.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_PayeSanavati.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_PayPersonalInfo.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_PersonalHokm.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_PersonalInfo.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_PersonalInfo_Mohasebe.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_PersonalStatus.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_P_MaliyatManfi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_ReportType.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_RptEkhtelafMaliyatBaDaraei.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_RptKosourat_MotalebatParam.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_RptKosurBazneshastegi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_RptListAghsatVam.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_RptListPardakhtEydi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_RptMaliyatSaliyane.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_RptSanad2.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_RptSumMotalebat_Kosurat.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_SavabegheSanavateKHedmat.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_SavabeghGroupTashvighi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_SavabeghJebhe_Items.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_SavabeghJebhe_Personal.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_SayerPardakhtGroup.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_SayerPardakhts.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_SelectDisketMaliyatForHoghogh.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_SelectFlagKarKard_Mohasebe.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_SelectPayPersonalInfo_Ezafekar.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_SelectVarizForOnAccount.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_SelectVariziForBank.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Setting.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_ShomareHesabPasAndaz.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_ShomareHesabs.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_SpecialPermission.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Status.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_StatusMahalKedmat.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_SumKomakGheyerNaghdi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_TabJobOfBime.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_TasviehHesab.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_TavighKosurat.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_TypeBime.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_TypeEstekhdam.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_TypeEstekhdam_Formul.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_TypeEstekhdam_UserGroup.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_TypeOfCostCenters.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_TypeOfEmploymentCenter.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_Vam.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_VaziyatEsargari.cs" />
+    <Compile Include="TOL\Weigh\OBJ_Arze.cs" />
+    <Compile Include="TOL\Weigh\OBJ_Arze_Detail.cs" />
+    <Compile Include="TOL\Weigh\OBJ_Arze_Kala.cs" />
+    <Compile Include="TOL\Weigh\OBJ_BaskolDocument.cs" />
+    <Compile Include="TOL\Weigh\OBJ_BaskoolParametr_Value.cs" />
+    <Compile Include="TOL\Weigh\OBJ_ElameAvarez_ModuleOrgan.cs" />
+    <Compile Include="TOL\Weigh\OBJ_KalaHavale.cs" />
+    <Compile Include="TOL\Weigh\OBJ_LoadingPlace.cs" />
+    <Compile Include="TOL\Weigh\OBJ_NoeMasraf.cs" />
+    <Compile Include="TOL\Weigh\OBJ_ParametrBaskoolValue.cs" />
+    <Compile Include="TOL\Weigh\OBJ_ParametrsBaskool.cs" />
+    <Compile Include="TOL\Weigh\OBJ_Remittance_Details.cs" />
+    <Compile Include="TOL\Weigh\OBJ_Remittance_Header.cs" />
+    <Compile Include="TOL\Weigh\OBJ_SumKalaHavale_Detail.cs" />
+    <Compile Include="TOL\Weigh\OBJ_Tozin.cs" />
+    <Compile Include="TOL\Weigh\OBJ_TypeReport.cs" />
+    <Compile Include="TOL\Weigh\OBJ_Vazn_Baskool.cs" />
+    <Compile Include="TOL\Weigh\OBJ_Weighbridge.cs" />
+    <Compile Include="WebServiceFormula.asmx.cs">
+      <DependentUpon>WebServiceFormula.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeighService.svc.cs">
+      <DependentUpon>WeighService.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+    <Folder Include="TempArchive\" />
+    <Folder Include="Views\MapCodingDaramad\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DAL\Model\CommonModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CommonModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\Model\CommonModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CommonModel.edmx</DependentUpon>
+      <LastGenOutput>CommonModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Model\CommonModel.edmx.diagram">
+      <DependentUpon>CommonModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="DAL\Model\CommonModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CommonModel.edmx</DependentUpon>
+      <LastGenOutput>CommonModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="packages.config" />
+    <EntityDeploy Include="DAL\Model\PayRollModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PayRollModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\Model\PayRollModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PayRollModel.edmx</DependentUpon>
+      <LastGenOutput>PayRollModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Model\PayRollModel.edmx.diagram">
+      <DependentUpon>PayRollModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="DAL\Model\PayRollModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PayRollModel.edmx</DependentUpon>
+      <LastGenOutput>PayRollModel.cs</LastGenOutput>
+    </Content>
+    <EntityDeploy Include="DAL\Model\Daramad.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Daramad.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\Model\Daramad.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Daramad.edmx</DependentUpon>
+      <LastGenOutput>Daramad.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Model\Daramad.edmx.diagram">
+      <DependentUpon>Daramad.edmx</DependentUpon>
+    </Content>
+    <Content Include="DAL\Model\Daramad.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Daramad.edmx</DependentUpon>
+      <LastGenOutput>Daramad.cs</LastGenOutput>
+    </Content>
+    <Content Include="ClassDiagram1.cd" />
+    <EntityDeploy Include="DAL\Model\AnbarAmval.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AnbarAmval.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\Model\AnbarAmval.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AnbarAmval.edmx</DependentUpon>
+      <LastGenOutput>AnbarAmval.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Model\AnbarAmval.edmx.diagram">
+      <DependentUpon>AnbarAmval.edmx</DependentUpon>
+    </Content>
+    <Content Include="DAL\Model\AnbarAmval.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AnbarAmval.edmx</DependentUpon>
+      <LastGenOutput>AnbarAmval.cs</LastGenOutput>
+    </Content>
+    <Content Include="ClassDiagram2.cd" />
+    <EntityDeploy Include="DAL\Model\Chek.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Chek.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\Model\Chek.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Chek.edmx</DependentUpon>
+      <LastGenOutput>Chek.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Model\Chek.edmx.diagram">
+      <DependentUpon>Chek.edmx</DependentUpon>
+    </Content>
+    <Content Include="DAL\Model\Chek.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Chek.edmx</DependentUpon>
+      <LastGenOutput>Chek.cs</LastGenOutput>
+    </Content>
+    <EntityDeploy Include="DAL\Model\Archive.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Archive.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\Model\Archive.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Archive.edmx</DependentUpon>
+      <LastGenOutput>Archive.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Model\Archive.edmx.diagram">
+      <DependentUpon>Archive.edmx</DependentUpon>
+    </Content>
+    <Content Include="DAL\Model\Archive.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Archive.edmx</DependentUpon>
+      <LastGenOutput>Archive.cs</LastGenOutput>
+    </Content>
+    <EntityDeploy Include="DAL\Model\Automation.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Automation.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\Model\Automation.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Automation.edmx</DependentUpon>
+      <LastGenOutput>Automation.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Model\Automation.edmx.diagram">
+      <DependentUpon>Automation.edmx</DependentUpon>
+    </Content>
+    <Content Include="DAL\Model\Automation.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Automation.edmx</DependentUpon>
+      <LastGenOutput>Automation.cs</LastGenOutput>
+    </Content>
+    <EntityDeploy Include="DAL\Model\Accounting.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Accounting.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\Model\Accounting.edmx.diagram">
+      <DependentUpon>Accounting.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="DAL\Model\Budget.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Budget.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\Model\Budget.edmx.diagram">
+      <DependentUpon>Budget.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="DAL\Model\DeceasedModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DeceasedModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\Model\DeceasedModel.edmx.diagram">
+      <DependentUpon>DeceasedModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="DAL\Model\Weigh.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Weigh.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\Model\Weigh.edmx.diagram">
+      <DependentUpon>Weigh.edmx</DependentUpon>
+    </Content>
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>18591</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:18591/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

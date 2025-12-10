@@ -1,0 +1,1219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RasaNewFMSModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="spr_CheckTarikhForPostCommision" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="aztarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="tatarikh" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganizationalPost" Type="int" Mode="In" />
+    <Parameter Name="AshkhasID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectInbox" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+    <Parameter Name="start" Type="nvarchar" Mode="In" />
+    <Parameter Name="End" Type="nvarchar" Mode="In" />
+    <Parameter Name="BoxId" Type="int" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="value" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="TabagheBandiId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectSavedLetter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+    <Parameter Name="start" Type="nvarchar" Mode="In" />
+    <Parameter Name="end" Type="nvarchar" Mode="In" />
+    <Parameter Name="BoxId" Type="nvarchar" Mode="In" />
+    <Parameter Name="value" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="TabagheBandiId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectSavedMessage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+    <Parameter Name="start" Type="nvarchar" Mode="In" />
+    <Parameter Name="end" Type="nvarchar" Mode="In" />
+    <Parameter Name="BoxId" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="TabagheBandiId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectSent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+    <Parameter Name="start" Type="nvarchar" Mode="In" />
+    <Parameter Name="end" Type="varchar" Mode="In" />
+    <Parameter Name="boxId" Type="int" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="TabagheBandiId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_SelectTrash" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+    <Parameter Name="start" Type="nvarchar" Mode="In" />
+    <Parameter Name="end" Type="nvarchar" Mode="In" />
+    <Parameter Name="BoxId" Type="int" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="value" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="TabagheBandiId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblArchiveDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblArchiveInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldPID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblArchiveSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblArchiveUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldPID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAssignmentDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAssignmentInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="InOut" />
+    <Parameter Name="fldLetterID" Type="bigint" Mode="In" />
+    <Parameter Name="fldMessageId" Type="int" Mode="In" />
+    <Parameter Name="fldAnswerDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldSourceAssId" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAssignmentLetterIDDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAssignmentSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAssignmentStatusSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAssignmentTypeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAssignmentTypeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldType" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAssignmentTypeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAssignmentTypeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldType" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAssignmentUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldLetterID" Type="bigint" Mode="In" />
+    <Parameter Name="fldMessageId" Type="int" Mode="In" />
+    <Parameter Name="fldAnswerDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldSourceAssId" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblBoxDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblBoxInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldBoxTypeID" Type="int" Mode="In" />
+    <Parameter Name="fldPID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblBoxSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="value2" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblBoxTypeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblBoxUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldBoxTypeID" Type="int" Mode="In" />
+    <Parameter Name="fldPID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCommisionDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCommisionInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldAshkhasID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganizPostEjraeeID" Type="int" Mode="In" />
+    <Parameter Name="fldStartDate" Type="char" Mode="In" />
+    <Parameter Name="fldEndDate" Type="char" Mode="In" />
+    <Parameter Name="fldOrganicNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldSign" Type="bit" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCommisionSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCommisionSelect_Post" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblCommisionUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldAshkhasID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganizPostEjraeeID" Type="int" Mode="In" />
+    <Parameter Name="fldStartDate" Type="char" Mode="In" />
+    <Parameter Name="fldEndDate" Type="char" Mode="In" />
+    <Parameter Name="fldOrganicNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldSign" Type="bit" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblContentFileDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblContentFileInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldLetterText" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldLetterId" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldType" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblContentFileSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblContentFileUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldLetterText" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldLetterId" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldType" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblExternalLetterReceiverDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblExternalLetterReceiverInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldLetterID" Type="bigint" Mode="In" />
+    <Parameter Name="fldMessageId" Type="int" Mode="In" />
+    <Parameter Name="fldHoghoghiTitlesId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblExternalLetterReceiverSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblExternalLetterReceiverUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldLetterID" Type="bigint" Mode="In" />
+    <Parameter Name="fldMessageId" Type="int" Mode="In" />
+    <Parameter Name="fldHoghoghiTitlesId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblExternalLetterSenderDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblExternalLetterSenderInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldLetterID" Type="bigint" Mode="In" />
+    <Parameter Name="fldMessageId" Type="int" Mode="In" />
+    <Parameter Name="fldShakhsHoghoghiTitlesId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblExternalLetterSenderSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblExternalLetterSenderUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldLetterID" Type="bigint" Mode="In" />
+    <Parameter Name="fldMessageId" Type="int" Mode="In" />
+    <Parameter Name="fldShakhsHoghoghiTitlesId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblHistoryLetterDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblHistoryLetterInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldCurrentLetter_Id" Type="bigint" Mode="In" />
+    <Parameter Name="fldHistoryType_Id" Type="int" Mode="In" />
+    <Parameter Name="fldHistoryLetter_Id" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblHistoryLetterSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblHistoryLetterUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldCurrentLetter_Id" Type="bigint" Mode="In" />
+    <Parameter Name="fldHistoryType_Id" Type="int" Mode="In" />
+    <Parameter Name="fldHistoryLetter_Id" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblImmediacyDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblImmediacyInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldImage" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblImmediacySelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblImmediacyUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldFileId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="fldImage" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInternalAssignmentReceiverBoxUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldBoxID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInternalAssignmentReceiverDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInternalAssignmentReceiverInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldAssignmentID" Type="int" Mode="In" />
+    <Parameter Name="fldReceiverComisionId" Type="int" Mode="In" />
+    <Parameter Name="fldAssignmentStatusId" Type="int" Mode="In" />
+    <Parameter Name="fldAssignmentTypeID" Type="int" Mode="In" />
+    <Parameter Name="fldBoxId" Type="int" Mode="In" />
+    <Parameter Name="fldLetterReadDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShowTypeT_F" Type="bit" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInternalAssignmentReceiverSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInternalAssignmentReceiverStatusUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="StatusId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInternalAssignmentReceiverUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldAssignmentID" Type="int" Mode="In" />
+    <Parameter Name="fldReceiverComisionId" Type="int" Mode="In" />
+    <Parameter Name="fldAssignmentStatusId" Type="int" Mode="In" />
+    <Parameter Name="fldAssignmentTypeID" Type="int" Mode="In" />
+    <Parameter Name="fldBoxId" Type="int" Mode="In" />
+    <Parameter Name="fldLetterReadDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShowTypeT_F" Type="bit" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInternalAssignmentSenderBoxUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldBoxID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInternalAssignmentSenderDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInternalAssignmentSenderInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldAssignmentID" Type="bigint" Mode="In" />
+    <Parameter Name="fldSenderComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldBoxID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInternalAssignmentSenderSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInternalAssignmentSenderUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldAssignmentID" Type="bigint" Mode="In" />
+    <Parameter Name="fldSenderComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldBoxID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInternalLetterReceiverDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInternalLetterReceiverInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldLetterId" Type="bigint" Mode="In" />
+    <Parameter Name="fldMessageId" Type="int" Mode="In" />
+    <Parameter Name="fldReceiverComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldAssignmentStatusID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInternalLetterReceiverSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInternalLetterReceiverUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldLetterId" Type="bigint" Mode="In" />
+    <Parameter Name="fldMessageId" Type="int" Mode="In" />
+    <Parameter Name="fldReceiverComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldAssignmentStatusID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterArchiveDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterArchiveInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldLetterId" Type="bigint" Mode="In" />
+    <Parameter Name="fldMessageId" Type="int" Mode="In" />
+    <Parameter Name="fldArchiveID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterArchiveLetterIDDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterArchiveSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterArchiveUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldLetterId" Type="bigint" Mode="In" />
+    <Parameter Name="fldMessageId" Type="int" Mode="In" />
+    <Parameter Name="fldArchiveID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterAttachmentDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterAttachmentInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldLetterId" Type="bigint" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldNameFile" Type="nvarchar" Mode="In" />
+    <Parameter Name="file" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldType" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterAttachmentLetterIDDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterAttachmentSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterAttachmentUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldLetterId" Type="bigint" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldContentFileId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterBoxDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterBoxInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldBoxId" Type="int" Mode="In" />
+    <Parameter Name="fldLetterId" Type="bigint" Mode="In" />
+    <Parameter Name="fldMessageId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterBoxLetterIDDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldId" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterBoxSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterBoxUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldBoxID" Type="int" Mode="In" />
+    <Parameter Name="fldLetterID" Type="bigint" Mode="In" />
+    <Parameter Name="fldMessageId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterFileMojazDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterFileMojazInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldFormatFileId" Type="int" Mode="In" />
+    <Parameter Name="fldType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterFileMojazSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterFileMojazUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldFormatFileId" Type="int" Mode="In" />
+    <Parameter Name="fldType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterFollowDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterFollowInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldLetterID" Type="bigint" Mode="In" />
+    <Parameter Name="fldLetterText" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterFollowLetterIDDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterFollowSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterFollowUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldLetterID" Type="bigint" Mode="In" />
+    <Parameter Name="fldLetterText" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="bigint" Mode="InOut" />
+    <Parameter Name="fldYear" Type="int" Mode="In" />
+    <Parameter Name="fldOrderId" Type="bigint" Mode="InOut" />
+    <Parameter Name="fldSubject" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldLetterNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldLetterDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldKeywords" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldLetterStatusID" Type="int" Mode="In" />
+    <Parameter Name="fldComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldImmediacyID" Type="int" Mode="In" />
+    <Parameter Name="fldSecurityTypeID" Type="int" Mode="In" />
+    <Parameter Name="fldLetterTypeID" Type="int" Mode="In" />
+    <Parameter Name="fldSignType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldMatnLetter" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldLetterTemplateId" Type="int" Mode="In" />
+    <Parameter Name="fldFont" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterNumberInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldLetterID" Type="bigint" Mode="In" />
+    <Parameter Name="fldNumber" Type="int" Mode="InOut" />
+    <Parameter Name="fldStartNumber" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterStatusIdUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="LetterId" Type="bigint" Mode="In" />
+    <Parameter Name="LetterStatus" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterStatusSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterTabagheBandiDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldID" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterTabagheBandiInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldTabagheBandiId" Type="int" Mode="In" />
+    <Parameter Name="fldLetterId" Type="bigint" Mode="In" />
+    <Parameter Name="fldMessageId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterTabagheBandiSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterTabagheBandiUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldTabagheBandiId" Type="int" Mode="In" />
+    <Parameter Name="fldMessageId" Type="int" Mode="In" />
+    <Parameter Name="fldLetterId" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblletterTemplateDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblletterTemplateInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIsBackGround" Type="bit" Mode="In" />
+    <Parameter Name="fldImage" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMergeFieldId" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldLetterFile" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldLetterPasvand" Type="varchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblletterTemplateSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblletterTemplateUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIsBackGround" Type="bit" Mode="In" />
+    <Parameter Name="fldFileId" Type="int" Mode="In" />
+    <Parameter Name="fldImage" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMergeFieldId" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldLetterFile" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldLetterPasvand" Type="varchar" Mode="In" />
+    <Parameter Name="fldLetterFileId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="bigint" Mode="In" />
+    <Parameter Name="fldSubject" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldLetterNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldLetterDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldKeywords" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldImmediacyID" Type="int" Mode="In" />
+    <Parameter Name="fldSecurityTypeID" Type="int" Mode="In" />
+    <Parameter Name="fldLetterTypeID" Type="int" Mode="In" />
+    <Parameter Name="fldSignType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldMatnLetter" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldLetterTemplateId" Type="int" Mode="In" />
+    <Parameter Name="fldFont" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblLetterUpdateNumDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="bigint" Mode="In" />
+    <Parameter Name="fldLetterNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMergeField_LetterTemplateDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMergeField_LetterTemplateInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldLetterTamplateId" Type="int" Mode="In" />
+    <Parameter Name="fldMergeFieldId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMergeField_LetterTemplateSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMergeField_LetterTemplateUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldLetterTamplateId" Type="int" Mode="In" />
+    <Parameter Name="fldMergeFieldId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMergeFieldTypesSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMessageAttachmentDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMessageAttachmentInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMessageId" Type="int" Mode="In" />
+    <Parameter Name="fldImage" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMessageAttachmentSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMessageAttachmentUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMessageId" Type="int" Mode="In" />
+    <Parameter Name="fldFileId" Type="int" Mode="In" />
+    <Parameter Name="fldImage" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMessageDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMessageInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="InOut" />
+    <Parameter Name="fldCommisionId" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMatn" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMessageSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMessageUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldCommisionId" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldMatn" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblNumberingFormatDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblNumberingFormatInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldYear" Type="int" Mode="In" />
+    <Parameter Name="fldSecretariatID" Type="int" Mode="In" />
+    <Parameter Name="fldNumberFormat" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldStartNumber" Type="int" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblNumberingFormatSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblNumberingFormatUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldYear" Type="int" Mode="In" />
+    <Parameter Name="fldSecretariatID" Type="int" Mode="In" />
+    <Parameter Name="fldNumberFormat" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldStartNumber" Type="int" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblProgramSettingDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblProgramSettingInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldEmailAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldEmailPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldRecieveServer" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldSendServer" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldSendPort" Type="int" Mode="In" />
+    <Parameter Name="fldSSL" Type="bit" Mode="In" />
+    <Parameter Name="fldDelFax" Type="bit" Mode="In" />
+    <Parameter Name="fldIsSigner" Type="bit" Mode="In" />
+    <Parameter Name="fldFaxPath" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldRecievePort" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblProgramSettingSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblProgramSettingUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldEmailAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldEmailPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldRecieveServer" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldSendServer" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldSendPort" Type="int" Mode="In" />
+    <Parameter Name="fldSSL" Type="bit" Mode="In" />
+    <Parameter Name="fldDelFax" Type="bit" Mode="In" />
+    <Parameter Name="fldIsSigner" Type="bit" Mode="In" />
+    <Parameter Name="fldFaxPath" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldRecievePort" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblReceiverAssignmentTypeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblReceiverAssignmentTypeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldAssignmentID" Type="int" Mode="In" />
+    <Parameter Name="fldReceiverComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldAssignmentStatusID" Type="int" Mode="In" />
+    <Parameter Name="fldAssignmentTypeID" Type="int" Mode="In" />
+    <Parameter Name="fldBoxID" Type="int" Mode="In" />
+    <Parameter Name="fldLetterReadDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShowTypeT_F" Type="bit" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblReceiverAssignmentTypeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblReceiverAssignmentTypeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldAssignmentID" Type="int" Mode="In" />
+    <Parameter Name="fldReceiverComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldAssignmentStatusID" Type="int" Mode="In" />
+    <Parameter Name="fldAssignmentTypeID" Type="int" Mode="In" />
+    <Parameter Name="fldBoxID" Type="int" Mode="In" />
+    <Parameter Name="fldLetterReadDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldShowTypeT_F" Type="bit" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblReferralRulesDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldPostErjaDahandeId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganErjaGirande" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblReferralRulesInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldPostErjaDahandeId" Type="int" Mode="In" />
+    <Parameter Name="fldPostErjaGirandeId" Type="int" Mode="In" />
+    <Parameter Name="fldChartEjraeeGirandeId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblReferralRulesSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblReferralRulesUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldPostErjaDahandeId" Type="int" Mode="In" />
+    <Parameter Name="fldPostErjaGirandeId" Type="int" Mode="In" />
+    <Parameter Name="fldChartEjraeeGirandeId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRoneveshtDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldName" Type="varchar" Mode="In" />
+    <Parameter Name="fldID" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRoneveshtInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldLetterID" Type="bigint" Mode="In" />
+    <Parameter Name="fldAshkhasHoghoghiTitlesId" Type="int" Mode="In" />
+    <Parameter Name="fldCommisionId" Type="int" Mode="In" />
+    <Parameter Name="fldAssignmentTypeId" Type="int" Mode="In" />
+    <Parameter Name="fldText" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRoneveshtSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblRoneveshtUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldLetterID" Type="bigint" Mode="In" />
+    <Parameter Name="fldAshkhasHoghoghiTitlesId" Type="int" Mode="In" />
+    <Parameter Name="fldCommisionId" Type="int" Mode="In" />
+    <Parameter Name="fldAssignmentTypeId" Type="int" Mode="In" />
+    <Parameter Name="fldText" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSecretariat_OrganizationUnitDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSecretariat_OrganizationUnitInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldSecretariatID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganizationUnitID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSecretariat_OrganizationUnitSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSecretariat_OrganizationUnitUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldSecretariatID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganizationUnitID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSecurityTypeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSecurityTypeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldSecurityType" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSecurityTypeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSecurityTypeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldSecurityType" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSignerDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="bigint" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSignerInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldLetterID" Type="bigint" Mode="In" />
+    <Parameter Name="fldSignerComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldIndexerID" Type="int" Mode="In" />
+    <Parameter Name="fldFirstSigner" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSignerSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSignerUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="bigint" Mode="In" />
+    <Parameter Name="fldLetterID" Type="bigint" Mode="In" />
+    <Parameter Name="fldSignerComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldIndexerID" Type="int" Mode="In" />
+    <Parameter Name="fldFirstSigner" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSubstituteDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSubstituteInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldSenderComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldReceiverComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldStartDate" Type="char" Mode="In" />
+    <Parameter Name="fldEndDate" Type="char" Mode="In" />
+    <Parameter Name="fldStartTime" Type="time" Mode="In" />
+    <Parameter Name="fldEndTime" Type="time" Mode="In" />
+    <Parameter Name="fldIsSigner" Type="bit" Mode="In" />
+    <Parameter Name="fldShowReceiverName" Type="bit" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSubstituteSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblSubstituteUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldSenderComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldReceiverComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldStartDate" Type="char" Mode="In" />
+    <Parameter Name="fldEndDate" Type="char" Mode="In" />
+    <Parameter Name="fldStartTime" Type="time" Mode="In" />
+    <Parameter Name="fldEndTime" Type="time" Mode="In" />
+    <Parameter Name="fldIsSigner" Type="bit" Mode="In" />
+    <Parameter Name="fldShowReceiverName" Type="bit" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTabagheBandiDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTabagheBandiInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldPID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTabagheBandiSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="FieldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="value2" Type="nvarchar" Mode="In" />
+    <Parameter Name="organId" Type="int" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblTabagheBandiUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Auto">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldComisionID" Type="int" Mode="In" />
+    <Parameter Name="fldPID" Type="int" Mode="In" />
+    <Parameter Name="fldOrganID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldIP" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="RasaNewFMSModel2StoreContainer" />
+</Schema>

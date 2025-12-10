@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RasaNewFMSModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="spr_SelectArchiveTree_Module" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="OrganId" Type="int" Mode="In" />
+          <Parameter Name="ModuleId" Type="int" Mode="In" />
+          <Parameter Name="value" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spr_tblArchiveTreeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblArchiveTreeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fldID" Type="int" Mode="InOut" />
+          <Parameter Name="fldPID" Type="int" Mode="In" />
+          <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldFileUpload" Type="bit" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+          <Parameter Name="fldModuleId" Type="int" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="spr_tblArchiveTreeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="OrganId" Type="int" Mode="In" />
+          <Parameter Name="value2" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblArchiveTreeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldPID" Type="int" Mode="In" />
+          <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldFileUpload" Type="bit" Mode="In" />
+          <Parameter Name="fldOrganId" Type="int" Mode="In" />
+          <Parameter Name="fldModuleId" Type="int" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="spr_tblFileMojazDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblFileMojazInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fldArchiveTreeId" Type="int" Mode="In" />
+          <Parameter Name="fldFormatFileId" Type="int" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="spr_tblFileMojazSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblFileMojazUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldArchiveTreeId" Type="int" Mode="In" />
+          <Parameter Name="fldFormatFileId" Type="int" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="spr_tblParticularPropertiesDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblParticularPropertiesInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fldArchiveTreeId" Type="int" Mode="In" />
+          <Parameter Name="fldPropertiesId" Type="int" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="spr_tblParticularPropertiesSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblParticularPropertiesUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldArchiveTreeId" Type="int" Mode="In" />
+          <Parameter Name="fldPropertiesId" Type="int" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="spr_tblPropertiesDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblPropertiesInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fldNameFn" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldNameEn" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldType" Type="int" Mode="In" />
+          <Parameter Name="fldFormulId" Type="int" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="spr_tblPropertiesSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblPropertiesUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldNameFn" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldNameEn" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldType" Type="int" Mode="In" />
+          <Parameter Name="fldFormulId" Type="int" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="spr_tblPropertiesValuesDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fldID" Type="int" Mode="In" />
+          <Parameter Name="fldUserID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblPropertiesValuesInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fldParticularId" Type="int" Mode="In" />
+          <Parameter Name="fldValue" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="spr_tblPropertiesValuesSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblPropertiesValuesUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Arch">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldParticularId" Type="int" Mode="In" />
+          <Parameter Name="fldValue" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+          <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <EntityContainer Name="RasaNewFMSModel1StoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RasaNewFMSModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ArchiveEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="spr_tblArchiveTreeDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblArchiveTreeInsert">
+            <Parameter Name="fldID" Mode="InOut" Type="Int32" />
+            <Parameter Name="fldPID" Mode="In" Type="Int32" />
+            <Parameter Name="fldTitle" Mode="In" Type="String" />
+            <Parameter Name="fldFileUpload" Mode="In" Type="Boolean" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+            <Parameter Name="fldModuleId" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblArchiveTreeSelect" ReturnType="Collection(RasaNewFMSModel1.spr_tblArchiveTreeSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="OrganId" Mode="In" Type="Int32" />
+            <Parameter Name="value2" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblArchiveTreeUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldPID" Mode="In" Type="Int32" />
+            <Parameter Name="fldTitle" Mode="In" Type="String" />
+            <Parameter Name="fldFileUpload" Mode="In" Type="Boolean" />
+            <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+            <Parameter Name="fldModuleId" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblFileMojazDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblFileMojazInsert">
+            <Parameter Name="fldArchiveTreeId" Mode="In" Type="Int32" />
+            <Parameter Name="fldFormatFileId" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblFileMojazSelect" ReturnType="Collection(RasaNewFMSModel1.spr_tblFileMojazSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblFileMojazUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldArchiveTreeId" Mode="In" Type="Int32" />
+            <Parameter Name="fldFormatFileId" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblParticularPropertiesDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblParticularPropertiesInsert">
+            <Parameter Name="fldArchiveTreeId" Mode="In" Type="Int32" />
+            <Parameter Name="fldPropertiesId" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblParticularPropertiesSelect" ReturnType="Collection(RasaNewFMSModel1.spr_tblParticularPropertiesSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblParticularPropertiesUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldArchiveTreeId" Mode="In" Type="Int32" />
+            <Parameter Name="fldPropertiesId" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblPropertiesDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblPropertiesInsert">
+            <Parameter Name="fldNameFn" Mode="In" Type="String" />
+            <Parameter Name="fldNameEn" Mode="In" Type="String" />
+            <Parameter Name="fldType" Mode="In" Type="Int32" />
+            <Parameter Name="fldFormulId" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblPropertiesSelect" ReturnType="Collection(RasaNewFMSModel1.spr_tblPropertiesSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblPropertiesUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldNameFn" Mode="In" Type="String" />
+            <Parameter Name="fldNameEn" Mode="In" Type="String" />
+            <Parameter Name="fldType" Mode="In" Type="Int32" />
+            <Parameter Name="fldFormulId" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblPropertiesValuesDelete">
+            <Parameter Name="fldID" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblPropertiesValuesInsert">
+            <Parameter Name="fldParticularId" Mode="In" Type="Int32" />
+            <Parameter Name="fldValue" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblPropertiesValuesSelect" ReturnType="Collection(RasaNewFMSModel1.spr_tblPropertiesValuesSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblPropertiesValuesUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldParticularId" Mode="In" Type="Int32" />
+            <Parameter Name="fldValue" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDesc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_SelectArchiveTree_Module" ReturnType="Collection(RasaNewFMSModel1.spr_SelectArchiveTree_Module)">
+            <Parameter Name="OrganId" Mode="In" Type="Int32" />
+            <Parameter Name="ModuleId" Mode="In" Type="Int32" />
+            <Parameter Name="value" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="spr_tblArchiveTreeSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldPID" Nullable="true" />
+          <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="300" />
+          <Property Type="Boolean" Name="fldFileUpload" Nullable="false" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="fldOrganId" Nullable="true" />
+          <Property Type="Int32" Name="fldModuleId" Nullable="true" />
+          <Property Type="String" Name="fldMaduleName" Nullable="false" MaxLength="300" />
+        </ComplexType>
+        <ComplexType Name="spr_tblFileMojazSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldArchiveTreeId" Nullable="false" />
+          <Property Type="Int32" Name="fldFormatFileId" Nullable="false" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="fldFormatName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="fldPassvand" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="300" />
+        </ComplexType>
+        <ComplexType Name="spr_tblParticularPropertiesSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldArchiveTreeId" Nullable="false" />
+          <Property Type="Int32" Name="fldPropertiesId" Nullable="false" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="300" />
+          <Property Type="String" Name="fldNameFn" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="spr_tblPropertiesSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldType" Nullable="false" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="fldNameFn" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="fldNameEn" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="fldTypeName" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="fldFormulId" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spr_tblPropertiesValuesSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldParticularId" Nullable="false" />
+          <Property Type="String" Name="fldValue" Nullable="false" MaxLength="200" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="fldNameFn" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="300" />
+        </ComplexType>
+        <ComplexType Name="spr_SelectArchiveTree_Module">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldPID" Nullable="true" />
+          <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="300" />
+          <Property Type="Boolean" Name="fldFileUpload" Nullable="false" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="String" Name="fldDesc" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="fldOrganId" Nullable="true" />
+          <Property Type="Int32" Name="fldModuleId" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RasaNewFMSModel1StoreContainer" CdmEntityContainer="ArchiveEntities" >
+          <FunctionImportMapping FunctionImportName="spr_tblArchiveTreeDelete" FunctionName="RasaNewFMSModel1.Store.spr_tblArchiveTreeDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblArchiveTreeInsert" FunctionName="RasaNewFMSModel1.Store.spr_tblArchiveTreeInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblArchiveTreeSelect" FunctionName="RasaNewFMSModel1.Store.spr_tblArchiveTreeSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RasaNewFMSModel1.spr_tblArchiveTreeSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldPID" ColumnName="fldPID" />
+                <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+                <ScalarProperty Name="fldFileUpload" ColumnName="fldFileUpload" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+                <ScalarProperty Name="fldModuleId" ColumnName="fldModuleId" />
+                <ScalarProperty Name="fldMaduleName" ColumnName="fldMaduleName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblArchiveTreeUpdate" FunctionName="RasaNewFMSModel1.Store.spr_tblArchiveTreeUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tblFileMojazDelete" FunctionName="RasaNewFMSModel1.Store.spr_tblFileMojazDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblFileMojazInsert" FunctionName="RasaNewFMSModel1.Store.spr_tblFileMojazInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblFileMojazSelect" FunctionName="RasaNewFMSModel1.Store.spr_tblFileMojazSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RasaNewFMSModel1.spr_tblFileMojazSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldArchiveTreeId" ColumnName="fldArchiveTreeId" />
+                <ScalarProperty Name="fldFormatFileId" ColumnName="fldFormatFileId" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldFormatName" ColumnName="fldFormatName" />
+                <ScalarProperty Name="fldPassvand" ColumnName="fldPassvand" />
+                <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblFileMojazUpdate" FunctionName="RasaNewFMSModel1.Store.spr_tblFileMojazUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tblParticularPropertiesDelete" FunctionName="RasaNewFMSModel1.Store.spr_tblParticularPropertiesDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblParticularPropertiesInsert" FunctionName="RasaNewFMSModel1.Store.spr_tblParticularPropertiesInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblParticularPropertiesSelect" FunctionName="RasaNewFMSModel1.Store.spr_tblParticularPropertiesSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RasaNewFMSModel1.spr_tblParticularPropertiesSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldArchiveTreeId" ColumnName="fldArchiveTreeId" />
+                <ScalarProperty Name="fldPropertiesId" ColumnName="fldPropertiesId" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+                <ScalarProperty Name="fldNameFn" ColumnName="fldNameFn" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblParticularPropertiesUpdate" FunctionName="RasaNewFMSModel1.Store.spr_tblParticularPropertiesUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tblPropertiesDelete" FunctionName="RasaNewFMSModel1.Store.spr_tblPropertiesDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblPropertiesInsert" FunctionName="RasaNewFMSModel1.Store.spr_tblPropertiesInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblPropertiesSelect" FunctionName="RasaNewFMSModel1.Store.spr_tblPropertiesSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RasaNewFMSModel1.spr_tblPropertiesSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldType" ColumnName="fldType" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldNameFn" ColumnName="fldNameFn" />
+                <ScalarProperty Name="fldNameEn" ColumnName="fldNameEn" />
+                <ScalarProperty Name="fldTypeName" ColumnName="fldTypeName" />
+                <ScalarProperty Name="fldFormulId" ColumnName="fldFormulId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblPropertiesUpdate" FunctionName="RasaNewFMSModel1.Store.spr_tblPropertiesUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tblPropertiesValuesDelete" FunctionName="RasaNewFMSModel1.Store.spr_tblPropertiesValuesDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblPropertiesValuesInsert" FunctionName="RasaNewFMSModel1.Store.spr_tblPropertiesValuesInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblPropertiesValuesSelect" FunctionName="RasaNewFMSModel1.Store.spr_tblPropertiesValuesSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RasaNewFMSModel1.spr_tblPropertiesValuesSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldParticularId" ColumnName="fldParticularId" />
+                <ScalarProperty Name="fldValue" ColumnName="fldValue" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldNameFn" ColumnName="fldNameFn" />
+                <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblPropertiesValuesUpdate" FunctionName="RasaNewFMSModel1.Store.spr_tblPropertiesValuesUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_SelectArchiveTree_Module" FunctionName="RasaNewFMSModel1.Store.spr_SelectArchiveTree_Module">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RasaNewFMSModel1.spr_SelectArchiveTree_Module">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldPID" ColumnName="fldPID" />
+                <ScalarProperty Name="fldTitle" ColumnName="fldTitle" />
+                <ScalarProperty Name="fldFileUpload" ColumnName="fldFileUpload" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="fldDesc" ColumnName="fldDesc" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldOrganId" ColumnName="fldOrganId" />
+                <ScalarProperty Name="fldModuleId" ColumnName="fldModuleId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

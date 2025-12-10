@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WCF_FMS.TOL.Automation
+{
+    public class OBJ_ReceiverAssignmentType
+    {
+        public int fldId { get; set; }
+        public int fldAssignmentID { get; set; }
+        public int fldReceiverComisionID { get; set; }
+        public int fldAssignmentStatusID { get; set; }
+        public int fldAssignmentTypeID { get; set; }
+        public int fldBoxID { get; set; }
+        public string fldLetterReadDate { get; set; }
+        public bool fldShowTypeT_F { get; set; }
+        public int fldUserId { get; set; }
+        public int fldOrganId { get; set; }
+        public System.DateTime fldDate { get; set; }
+        public string fldDesc { get; set; }
+        public string fldIP { get; set; }
+    }
+}

@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AnbarAmvalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="spr_Anbar_TarifNashode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str" StoreFunctionName="spr.Anbar_TarifNashode">
+    <Parameter Name="fldGroupId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_kala_TarifNashode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str" StoreFunctionName="spr.kala_TarifNashode">
+    <Parameter Name="fldGroupId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_CheckExistsAnbar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldAnbarTreeId" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAnbar_TreeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAnbar_TreeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldAnbarId" Type="int" Mode="In" />
+    <Parameter Name="fldAnbarTreeId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAnbar_TreeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAnbar_TreeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldAnbarId" Type="int" Mode="In" />
+    <Parameter Name="fldAnbarTreeId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAnbarDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAnbarGroupDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAnbarGroupInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAnbarGroupSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAnbarGroupUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAnbarInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldAddress" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldPhone" Type="varchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldAnbarTreeId" Type="varchar" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAnbarSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAnbarTreeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAnbarTreeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldPID" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldGroupId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAnbarTreeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value2" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAnbarTreeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldGroupId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblAnbarUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldAddress" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldPhone" Type="varchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldAnbarTreeId" Type="varchar" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInsuranceCompanyDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInsuranceCompanyInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldFile" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIp" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInsuranceCompanySelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInsuranceCompanyUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldFileId" Type="int" Mode="In" />
+    <Parameter Name="fldFile" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="fldPasvand" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIp" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInsuranceTypeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInsuranceTypeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIp" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInsuranceTypeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblInsuranceTypeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldOrganId" Type="int" Mode="In" />
+    <Parameter Name="fldIp" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spr_tblKalaDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblKalaGroupDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblKalaGroupInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblKalaGroupSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblKalaGroupUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblKalaInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldKalaType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldKalaCode" Type="char" Mode="In" />
+    <Parameter Name="fldStatus" Type="tinyint" Mode="In" />
+    <Parameter Name="fldSell" Type="bit" Mode="In" />
+    <Parameter Name="fldArzeshAfzodeh" Type="bit" Mode="In" />
+    <Parameter Name="fldIranCode" Type="varchar" Mode="In" />
+    <Parameter Name="fldMoshakhaseType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldMoshakhase" Type="varchar" Mode="In" />
+    <Parameter Name="fldVahedAsli" Type="int" Mode="In" />
+    <Parameter Name="fldVahedFaree" Type="int" Mode="In" />
+    <Parameter Name="fldNesbatType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldVahedMoadel" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblKalaSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblKalaTreeDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldID" Type="int" Mode="In" />
+    <Parameter Name="fldUserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblKalaTreeInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldPID" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldGroupId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblKalaTreeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value2" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblKalaTreeUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+    <Parameter Name="fldGroupId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblKalaUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldName" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldKalaType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldKalaCode" Type="char" Mode="In" />
+    <Parameter Name="fldStatus" Type="tinyint" Mode="In" />
+    <Parameter Name="fldSell" Type="bit" Mode="In" />
+    <Parameter Name="fldArzeshAfzodeh" Type="bit" Mode="In" />
+    <Parameter Name="fldIranCode" Type="varchar" Mode="In" />
+    <Parameter Name="fldMoshakhaseType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldMoshakhase" Type="varchar" Mode="In" />
+    <Parameter Name="fldVahedAsli" Type="int" Mode="In" />
+    <Parameter Name="fldVahedFaree" Type="int" Mode="In" />
+    <Parameter Name="fldNesbatType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldVahedMoadel" Type="int" Mode="In" />
+    <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_UpdatePID_Anbar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="Child" Type="int" Mode="In" />
+    <Parameter Name="Parent" Type="int" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_UpdatePID_Anbar_Tree" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="Anbar_TreeId" Type="int" Mode="In" />
+    <Parameter Name="Parent" Type="int" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_UpdatePID_kala" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Str">
+    <Parameter Name="Child" Type="int" Mode="In" />
+    <Parameter Name="Parent" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="AnbarAmvalModelStoreContainer" />
+</Schema>

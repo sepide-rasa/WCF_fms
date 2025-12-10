@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RasaNewFMSModel4" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="WeighEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="spr_tblWeighbridgeDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblWeighbridgeInsert">
+      <Parameter Name="fldAshkhasHoghoghiId" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldAddress" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblWeighbridgeSelect" ReturnType="Collection(RasaNewFMSModel4.spr_tblWeighbridgeSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblWeighbridgeUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAshkhasHoghoghiId" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldAddress" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRemittance_HeaderDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRemittance_HeaderSelect" ReturnType="Collection(RasaNewFMSModel4.spr_tblRemittance_HeaderSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectBaskoolParametr_Value" ReturnType="Collection(RasaNewFMSModel4.spr_SelectBaskoolParametr_Value)">
+      <Parameter Name="baskoolId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametrBaskoolValueInsert">
+      <Parameter Name="fldParametrBaskoolId" Mode="In" Type="Int32" />
+      <Parameter Name="fldBaskoolId" Mode="In" Type="Int32" />
+      <Parameter Name="fldValue" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametrBaskoolValueSelect" ReturnType="Collection(RasaNewFMSModel4.spr_tblParametrBaskoolValueSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametrBaskoolValueUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldParametrBaskoolId" Mode="In" Type="Int32" />
+      <Parameter Name="fldBaskoolId" Mode="In" Type="Int32" />
+      <Parameter Name="fldValue" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRemittance_DetailsSelect" ReturnType="Collection(RasaNewFMSModel4.spr_tblRemittance_DetailsSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametrsBaskoolInsert">
+      <Parameter Name="fldEnName" Mode="In" Type="String" />
+      <Parameter Name="fldFaName" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametrBaskoolValueDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametrsBaskoolSelect" ReturnType="Collection(RasaNewFMSModel4.spr_tblParametrsBaskoolSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBaskolDocumentSelect" ReturnType="Collection(RasaNewFMSModel4.spr_tblBaskolDocumentSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblArzeDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblArzeInsert">
+      <Parameter Name="fldID" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldBaskoolId" Mode="In" Type="Int32" />
+      <Parameter Name="fldKalaId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTedad" Mode="In" Type="Byte" />
+      <Parameter Name="fldMablagh" Mode="In" Type="Int64" />
+      <Parameter Name="fldStatusForoosh" Mode="In" Type="Byte" />
+      <Parameter Name="fldVaznVahed" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblArzeSelect" ReturnType="Collection(RasaNewFMSModel4.spr_tblArzeSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblArzeUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldBaskoolId" Mode="In" Type="Int32" />
+      <Parameter Name="fldKalaId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTedad" Mode="In" Type="Byte" />
+      <Parameter Name="fldMablagh" Mode="In" Type="Int64" />
+      <Parameter Name="fldStatusForoosh" Mode="In" Type="Byte" />
+      <Parameter Name="fldVaznVahed" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRemittance_HeaderInsert">
+      <Parameter Name="fldAshkhasiId" Mode="In" Type="Int32" />
+      <Parameter Name="fldStatus" Mode="In" Type="Boolean" />
+      <Parameter Name="fldStartDate" Mode="In" Type="String" />
+      <Parameter Name="fldEndDate" Mode="In" Type="String" />
+      <Parameter Name="fldFile" Mode="In" Type="Binary" />
+      <Parameter Name="fldpasvand" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDescHeader" Mode="In" Type="String" />
+      <Parameter Name="fldEmployId" Mode="In" Type="Int32" />
+      <Parameter Name="fldChartOrganEjraeeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRemittance_HeaderUpdate">
+      <Parameter Name="fldHeaderId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAshkhasiId" Mode="In" Type="Int32" />
+      <Parameter Name="fldStatus" Mode="In" Type="Boolean" />
+      <Parameter Name="fldStartDate" Mode="In" Type="String" />
+      <Parameter Name="fldEndDate" Mode="In" Type="String" />
+      <Parameter Name="fldFileId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFile" Mode="In" Type="Binary" />
+      <Parameter Name="fldpasvand" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDescHeader" Mode="In" Type="String" />
+      <Parameter Name="fldEmployId" Mode="In" Type="Int32" />
+      <Parameter Name="fldChartOrganEjraeeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectArze_Kala" ReturnType="Collection(RasaNewFMSModel4.spr_SelectArze_Kala)">
+      <Parameter Name="fldBaskoolId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_UpdatePassBaskool">
+      <Parameter Name="fldid" Mode="In" Type="Int32" />
+      <Parameter Name="Pass" Mode="In" Type="String" />
+      <Parameter Name="userId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLoadingPlaceDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLoadingPlaceInsert">
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLoadingPlaceSelect" ReturnType="Collection(RasaNewFMSModel4.spr_tblLoadingPlaceSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLoadingPlaceUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblArze_DetailSelect" ReturnType="Collection(RasaNewFMSModel4.spr_tblArze_DetailSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblNoeMasrafSelect" ReturnType="Collection(RasaNewFMSModel4.spr_tblNoeMasrafSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblArze_DetailDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblArze_DetailInsert">
+      <Parameter Name="fldHeaderId" Mode="In" Type="Int32" />
+      <Parameter Name="fldParametrSabetCodeDaramd" Mode="In" Type="Int32" />
+      <Parameter Name="fldValue" Mode="In" Type="String" />
+      <Parameter Name="fldFlag" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblVazn_BaskoolInsert">
+      <Parameter Name="fldID" Mode="InOut" Type="Int32" />
+      <Parameter Name="Haraf" Mode="In" Type="String" />
+      <Parameter Name="Plaque1" Mode="In" Type="String" />
+      <Parameter Name="Plaque2" Mode="In" Type="String" />
+      <Parameter Name="serial" Mode="In" Type="Byte" />
+      <Parameter Name="fldRananadeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldNoeMasrafId" Mode="In" Type="Byte" />
+      <Parameter Name="fldAshkhasId" Mode="In" Type="Int32" />
+      <Parameter Name="fldChartOrganEjraeeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldLoadingPlaceId" Mode="In" Type="Int32" />
+      <Parameter Name="fldKalaId" Mode="In" Type="Int32" />
+      <Parameter Name="fldVaznKol" Mode="In" Type="Decimal" />
+      <Parameter Name="fldRemittanceId" Mode="In" Type="Int32" />
+      <Parameter Name="fldBaskoolId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIsPor" Mode="In" Type="Boolean" />
+      <Parameter Name="fldTypeKhodroId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTedad" Mode="In" Type="Int32" />
+      <Parameter Name="fldTypeMohasebe" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblVazn_BaskoolSelect" ReturnType="Collection(RasaNewFMSModel4.spr_tblVazn_BaskoolSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="moduleId" Mode="In" Type="Int32" />
+      <Parameter Name="organId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectRannadeInPlaque" ReturnType="Collection(RasaNewFMSModel4.spr_SelectRannadeInPlaque)">
+      <Parameter Name="fieldName" Mode="In" Type="String" />
+      <Parameter Name="fldSerialPlaque" Mode="In" Type="Byte" />
+      <Parameter Name="Haraf" Mode="In" Type="String" />
+      <Parameter Name="Plaque1" Mode="In" Type="String" />
+      <Parameter Name="Plaque2" Mode="In" Type="String" />
+      <Parameter Name="BaskoolId" Mode="In" Type="Int32" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectMandeHavali" ReturnType="Collection(RasaNewFMSModel4.spr_SelectMandeHavali)">
+      <Parameter Name="IdHavale" Mode="In" Type="Int32" />
+      <Parameter Name="IdBaskool" Mode="In" Type="Int32" />
+      <Parameter Name="IdKala" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectVaznKhals_VaznKhali" ReturnType="Collection(RasaNewFMSModel4.spr_SelectVaznKhals_VaznKhali)">
+      <Parameter Name="Haraf" Mode="In" Type="String" />
+      <Parameter Name="Plaque1" Mode="In" Type="String" />
+      <Parameter Name="Plaque2" Mode="In" Type="String" />
+      <Parameter Name="serial" Mode="In" Type="Byte" />
+      <Parameter Name="fldBaskoolId" Mode="In" Type="Int32" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="vaznKol" Mode="In" Type="Decimal" />
+      <Parameter Name="Type" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblVazn_BaskoolUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPluqeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldRananadeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldNoeMasrafId" Mode="In" Type="Byte" />
+      <Parameter Name="fldAshkhasId" Mode="In" Type="Int32" />
+      <Parameter Name="fldChartOrganEjraeeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldLoadingPlaceId" Mode="In" Type="Int32" />
+      <Parameter Name="fldKalaId" Mode="In" Type="Int32" />
+      <Parameter Name="fldVaznKol" Mode="In" Type="Decimal" />
+      <Parameter Name="fldRemittanceId" Mode="In" Type="Int32" />
+      <Parameter Name="fldBaskoolId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIsPor" Mode="In" Type="Boolean" />
+      <Parameter Name="fldTypeKhodroId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTedad" Mode="In" Type="Int32" />
+      <Parameter Name="fldTypeMohasebe" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTozinInsert">
+      <Parameter Name="fldWeighbridgeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMaxW" Mode="In" Type="Int32" />
+      <Parameter Name="fldPlaqueId" Mode="In" Type="Int32" />
+      <Parameter Name="fldHour" Mode="In" Type="DateTime" />
+      <Parameter Name="fldStartDate" Mode="In" Type="DateTime" />
+      <Parameter Name="fldEndDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTozinSelect" ReturnType="Collection(RasaNewFMSModel4.spr_tblTozinSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="Value2" Mode="In" Type="String" />
+      <Parameter Name="Aztarikh" Mode="In" Type="String" />
+      <Parameter Name="Tatarikh" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_UpdateIsprintBaskool">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_UpdateEbtalBaskool">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTypeReportInsert">
+      <Parameter Name="fldType" Mode="In" Type="Byte" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldBaskoolId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTypeReportSelect" ReturnType="Collection(RasaNewFMSModel4.spr_tblTypeReportSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="Value2" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectSumKalaHavale" ReturnType="Collection(RasaNewFMSModel4.spr_SelectSumKalaHavale)">
+      <Parameter Name="fieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="idHavale" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectSumKalaHavale_Detail" ReturnType="Collection(RasaNewFMSModel4.spr_SelectSumKalaHavale_Detail)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="idHavale" Mode="In" Type="Int32" />
+      <Parameter Name="idKala" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblElamAvarez_ModuleOrganInsert">
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCodeDaramdElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblElamAvarez_ModuleOrganSelect" ReturnType="Collection(RasaNewFMSModel4.spr_tblElamAvarez_ModuleOrganSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="spr_tblWeighbridgeSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldAshkhasHoghoghiId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="fldAddress" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldNameAshkhasHoghoghi" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="fldShenaseMelli" Nullable="false" MaxLength="11" />
+    <Property Type="String" Name="fldPassword" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spr_tblRemittance_HeaderSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldAshkhasiId" Nullable="true" />
+    <Property Type="Boolean" Name="fldStatus" Nullable="false" />
+    <Property Type="String" Name="fldStartDate" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldEndDate" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldStatusName" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="fldKalaName" Nullable="true" />
+    <Property Type="String" Name="fldTypeShakhs" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="fldFamilyName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="fldCodemeli" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fldTitle" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="fldNameChart" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="fldNameAshkhas_Chart" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="fldEmployId" Nullable="true" />
+    <Property Type="Int32" Name="fldChartOrganEjraeeId" Nullable="true" />
+    <Property Type="String" Name="fldNameNoeHavale" Nullable="true" MaxLength="9" />
+    <Property Type="String" Name="fldNameTahvilGirande" Nullable="true" MaxLength="201" />
+    <Property Type="Int32" Name="fldFileId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectBaskoolParametr_Value">
+    <Property Type="Int32" Name="fldid" Nullable="false" />
+    <Property Type="String" Name="fldFaName" Nullable="false" MaxLength="400" />
+    <Property Type="String" Name="fldEnName" Nullable="false" MaxLength="300" />
+    <Property Type="Int32" Name="fldParam_ValueId" Nullable="false" />
+    <Property Type="String" Name="fldValue" Nullable="false" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="spr_tblParametrBaskoolValueSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldParametrBaskoolId" Nullable="false" />
+    <Property Type="Int32" Name="fldBaskoolId" Nullable="false" />
+    <Property Type="String" Name="fldValue" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+  </ComplexType>
+  <ComplexType Name="spr_tblRemittance_DetailsSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldRemittanceId" Nullable="false" />
+    <Property Type="Int32" Name="fldKalaId" Nullable="false" />
+    <Property Type="String" Name="fldMaxTon" Nullable="false" MaxLength="20" />
+    <Property Type="Boolean" Name="fldControlLimit" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldKalaName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldTitleHeader" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="fldExistsVazn" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblParametrsBaskoolSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldEnName" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="fldFaName" Nullable="false" MaxLength="400" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+  </ComplexType>
+  <ComplexType Name="spr_tblBaskolDocumentSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldTozinId" Nullable="false" />
+    <Property Type="Int32" Name="fldFileId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldPasvand" Nullable="true" MaxLength="5" />
+  </ComplexType>
+  <ComplexType Name="spr_tblArzeSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldBaskoolId" Nullable="false" />
+    <Property Type="Int32" Name="fldKalaId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldShomareHesabCodeDaramadId" Nullable="false" />
+    <Property Type="String" Name="fldNameKala" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldDaramadCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldDaramadTitle" Nullable="false" MaxLength="250" />
+    <Property Type="Byte" Name="fldTedad" Nullable="false" />
+    <Property Type="Int64" Name="fldMablagh" Nullable="false" />
+    <Property Type="String" Name="fldOrganName" Nullable="true" />
+    <Property Type="Byte" Name="fldStatusForoosh" Nullable="false" />
+    <Property Type="String" Name="fldStatusForooshName" Nullable="true" MaxLength="6" />
+    <Property Type="Int32" Name="fldVaznVahed" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectArze_Kala">
+    <Property Type="Int32" Name="fldId" Nullable="true" />
+    <Property Type="Int32" Name="fldKalaId" Nullable="false" />
+    <Property Type="Int32" Name="fldCodeDaramadId" Nullable="false" />
+    <Property Type="Int32" Name="fldParametrSabetDaramadId" Nullable="false" />
+    <Property Type="String" Name="fldSharheCodeDaramad" Nullable="false" />
+    <Property Type="String" Name="fldNameParametreFa" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldKalaName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldNameWeighbridge" Nullable="false" MaxLength="150" />
+    <Property Type="Int32" Name="fldShomareHesabCodeDaramadId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblLoadingPlaceSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="150" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spr_tblArze_DetailSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldHeaderId" Nullable="false" />
+    <Property Type="Int32" Name="fldParametrSabetCodeDaramd" Nullable="false" />
+    <Property Type="String" Name="fldValue" Nullable="true" MaxLength="1000" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="Boolean" Name="fldFlag" Nullable="false" />
+    <Property Type="String" Name="fldNameParametreEn" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldNameParametreFa" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldValue_Arze" Nullable="false" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="spr_tblNoeMasrafSelect">
+    <Property Type="Byte" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spr_tblVazn_BaskoolSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldPluqeId" Nullable="false" />
+    <Property Type="Int32" Name="fldRananadeId" Nullable="false" />
+    <Property Type="Byte" Name="fldNoeMasrafId" Nullable="true" />
+    <Property Type="Int32" Name="fldAshkhasId" Nullable="true" />
+    <Property Type="Int32" Name="fldChartOrganEjraeeId" Nullable="true" />
+    <Property Type="Int32" Name="fldLoadingPlaceId" Nullable="true" />
+    <Property Type="DateTime" Name="fldDateTazin" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldKalaId" Nullable="true" />
+    <Property Type="Decimal" Name="fldVaznKol" Nullable="true" Precision="15" Scale="3" />
+    <Property Type="Decimal" Name="fldVaznKhals" Nullable="true" Precision="15" Scale="3" />
+    <Property Type="Int32" Name="fldRemittanceId" Nullable="true" />
+    <Property Type="String" Name="fldTarikhVaznKhali" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="fldBaskoolId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="fldNameRanande" Nullable="false" MaxLength="201" />
+    <Property Type="String" Name="fldNameKala" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldNamePlace" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="fldPlaque" Nullable="true" MaxLength="41" />
+    <Property Type="String" Name="fldTarikh_TimeTozin" Nullable="true" MaxLength="19" />
+    <Property Type="Boolean" Name="fldIsPor" Nullable="false" />
+    <Property Type="String" Name="fldIsporName" Nullable="false" MaxLength="4" />
+    <Property Type="Decimal" Name="fldVaznKhali" Nullable="true" Precision="16" Scale="3" />
+    <Property Type="Int32" Name="fldCountHavale" Nullable="true" />
+    <Property Type="Decimal" Name="fldBaghimande" Nullable="true" Precision="38" Scale="3" />
+    <Property Type="Int32" Name="fldTypeKhodroId" Nullable="false" />
+    <Property Type="String" Name="fldNameKhodro" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="fldNameAshkhas" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="fldNameChart" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="fldNameHavale" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="fldNameMasraf" Nullable="true" MaxLength="254" />
+    <Property Type="String" Name="fldTarfHesab" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="fldIsprint" Nullable="false" />
+    <Property Type="Boolean" Name="fldEbtal" Nullable="false" />
+    <Property Type="Int32" Name="fldElamAvarezId" Nullable="false" />
+    <Property Type="Int32" Name="fldFishId" Nullable="false" />
+    <Property Type="Int32" Name="fldTedad" Nullable="true" />
+    <Property Type="Boolean" Name="fldTypeMohasebe" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectRannadeInPlaque">
+    <Property Type="Int32" Name="fldRananadeId" Nullable="false" />
+    <Property Type="String" Name="fldNameRanande" Nullable="false" MaxLength="200" />
+    <Property Type="Boolean" Name="IsKhali" Nullable="true" />
+    <Property Type="String" Name="fldNameKhodro" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldTypeKhodro" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectMandeHavali">
+    <Property Type="Int32" Name="fldCountHavale" Nullable="false" />
+    <Property Type="Decimal" Name="fldBaghimande" Nullable="true" Precision="38" Scale="3" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectVaznKhals_VaznKhali">
+    <Property Type="String" Name="TarikhVaznKhali" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="fldVaznKhals" Nullable="false" Precision="16" Scale="3" />
+    <Property Type="Decimal" Name="fldVaznKhali" Nullable="false" Precision="15" Scale="3" />
+    <Property Type="Boolean" Name="lastHour" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblTozinSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldWeighbridgeId" Nullable="false" />
+    <Property Type="Int32" Name="fldMaxW" Nullable="false" />
+    <Property Type="Int32" Name="fldPlaqueId" Nullable="true" />
+    <Property Type="DateTime" Name="fldHour" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fldStartDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fldEndDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldPlaque" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="fldNameBaskool" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="fldTarikhShoroo" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="fldTarikhPayan" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="fldSaat" Nullable="true" MaxLength="19" />
+  </ComplexType>
+  <ComplexType Name="spr_tblTypeReportSelect">
+    <Property Type="Byte" Name="fldId" Nullable="false" />
+    <Property Type="Byte" Name="fldType" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="Int32" Name="fldBaskoolId" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="fldTypeName" Nullable="true" MaxLength="2" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectSumKalaHavale">
+    <Property Type="String" Name="fldNameKala" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldMaxTon" Nullable="false" />
+    <Property Type="Double" Name="fldSumKala" Nullable="true" />
+    <Property Type="Double" Name="fldBaghimande" Nullable="true" />
+    <Property Type="Int32" Name="fldKalaid" Nullable="false" />
+    <Property Type="String" Name="fldNameHeader" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectSumKalaHavale_Detail">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Decimal" Name="fldVaznKol" Nullable="true" Precision="13" Scale="3" />
+    <Property Type="Decimal" Name="fldVaznKhals" Nullable="true" Precision="13" Scale="3" />
+    <Property Type="Int32" Name="fldRemittanceId" Nullable="true" />
+    <Property Type="String" Name="fldTarikhVaznKhali" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="fldNameRanande" Nullable="false" MaxLength="201" />
+    <Property Type="String" Name="fldNameKala" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldNamePlace" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="fldPlaque" Nullable="true" MaxLength="41" />
+    <Property Type="String" Name="fldTarikh_TimeTozin" Nullable="true" MaxLength="19" />
+    <Property Type="String" Name="fldIsporName" Nullable="false" MaxLength="4" />
+    <Property Type="Decimal" Name="fldVaznKhali" Nullable="true" Precision="14" Scale="3" />
+    <Property Type="String" Name="fldNameKhodro" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="fldNameHavale" Nullable="false" MaxLength="253" />
+    <Property Type="String" Name="fldNameBaskool" Nullable="false" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="spr_tblElamAvarez_ModuleOrganSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldElamAvarezId" Nullable="false" />
+    <Property Type="Int32" Name="fldCodeDaramdElamAvarezId" Nullable="false" />
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="fldModulOrganId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldIP" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="fldDesc" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+</Schema>

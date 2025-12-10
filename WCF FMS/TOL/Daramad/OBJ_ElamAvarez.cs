@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WCF_FMS.TOL.Daramad
+{
+    public class OBJ_ElamAvarez
+    {
+        public int fldId { get; set; }
+        public int fldAshakhasID { get; set; }
+        public bool fldType { get; set; }
+        public int fldUserId { get; set; }
+        public string fldDesc { get; set; }
+        public System.DateTime fldDate { get; set; }
+        public string Noe { get; set; }
+        public string fldNameShakhs { get; set; }
+        public string fldShenaseMeli { get; set; }
+        public string fldNoeShakhs { get; set; }
+        public string fldTarikh { get; set; }
+        public string fldFather_Sabt { get; set; }
+        public int fldOrganId { get; set; }
+        public int fldReplyTaghsitId { get; set; }
+        public long fldMablaghKoli { get; set; }
+        public long fldMablaghTakhfif { get; set; }
+        public long fldMablaghGHabelPardakht { get; set; }
+        public string fldStatusFish { get; set; }
+        public string fldStatusTakhfif { get; set; }
+        public string fldStatusTaghsit { get; set; }
+        public string fldStatusFishName { get; set; }
+        public string fldStatusTakhfifName { get; set; }
+        public string fldStatusTaghsitName { get; set; }
+        public string fldStatusKoli { get; set; }
+        public string fldStatusKoliName { get; set; }
+        public string fldNameOrgan { get; set; }
+        public string SharhDesc { get; set; }
+        public string fldmobile { get; set; }
+
+        public Nullable<bool> fldIsExternal { get; set; }
+        public Nullable<int> fldDaramadGroupId { get; set; }
+        public string fldCodeSystemMabda { get; set; }
+    }
+}

@@ -1,0 +1,3126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RasaNewFMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="RasaNewFMSEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="spr_tblCodhayeDaramdDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCodhayeDaramdInsert">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="fldDaramadCode" Mode="In" Type="String" />
+      <Parameter Name="fldDaramadTitle" Mode="In" Type="String" />
+      <Parameter Name="fldMashmooleArzesheAfzoode" Mode="In" Type="Boolean" />
+      <Parameter Name="fldMashmooleKarmozd" Mode="In" Type="Boolean" />
+      <Parameter Name="fldAmuzeshParvaresh" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUnitId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCodhayeDaramdUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDaramadCode" Mode="In" Type="String" />
+      <Parameter Name="fldDaramadTitle" Mode="In" Type="String" />
+      <Parameter Name="fldMashmooleArzesheAfzoode" Mode="In" Type="Boolean" />
+      <Parameter Name="fldMashmooleKarmozd" Mode="In" Type="Boolean" />
+      <Parameter Name="fldAmuzeshParvaresh" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUnitId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblComboBoxDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblComboBoxInsert">
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblComboBoxSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblComboBoxSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblComboBoxUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblComboBoxValueDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblComboBoxValueInsert">
+      <Parameter Name="fldComboBoxId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldValue" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblComboBoxValueSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblComboBoxValueSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="value1" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblComboBoxValueUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldComboBoxId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldValue" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreOmoomiDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreOmoomiInsert">
+      <Parameter Name="fldNameParametreFa" Mode="In" Type="String" />
+      <Parameter Name="fldNameParametreEn" Mode="In" Type="String" />
+      <Parameter Name="fldNoeField" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreOmoomiSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblParametreOmoomiSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreOmoomiUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldNameParametreFa" Mode="In" Type="String" />
+      <Parameter Name="fldNameParametreEn" Mode="In" Type="String" />
+      <Parameter Name="fldNoeField" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreOmoomi_ValueDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreOmoomi_ValueInsert">
+      <Parameter Name="fldParametreOmoomiId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFromDate" Mode="In" Type="String" />
+      <Parameter Name="fldEndDate" Mode="In" Type="String" />
+      <Parameter Name="fldValue" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreOmoomi_ValueSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblParametreOmoomi_ValueSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="Value1" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreOmoomi_ValueUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldParametreOmoomiId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFromDate" Mode="In" Type="String" />
+      <Parameter Name="fldEndDate" Mode="In" Type="String" />
+      <Parameter Name="fldValue" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreSabetDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreSabetInsert">
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldNameParametreFa" Mode="In" Type="String" />
+      <Parameter Name="fldNameParametreEn" Mode="In" Type="String" />
+      <Parameter Name="fldNoe" Mode="In" Type="Boolean" />
+      <Parameter Name="fldNoeField" Mode="In" Type="Byte" />
+      <Parameter Name="fldVaziyat" Mode="In" Type="Boolean" />
+      <Parameter Name="fldComboBaxId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldTypeParametr" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreSabetSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblParametreSabetSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="Value1" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreSabetUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldNameParametreFa" Mode="In" Type="String" />
+      <Parameter Name="fldNameParametreEn" Mode="In" Type="String" />
+      <Parameter Name="fldNoe" Mode="In" Type="Boolean" />
+      <Parameter Name="fldNoeField" Mode="In" Type="Byte" />
+      <Parameter Name="fldVaziyat" Mode="In" Type="Boolean" />
+      <Parameter Name="fldComboBaxId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldTypeParametr" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spr_CheckDateParametr" ReturnType="Collection(RasaNewFMSModel.spr_CheckDateParametr)">
+      <Parameter Name="AzTarikh" Mode="In" Type="String" />
+      <Parameter Name="TaTarikh" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCodhayeDaramadiElamAvarezDelete">
+      <Parameter Name="fieldName" Mode="In" Type="String" />
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCodhayeDaramdId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCodhayeDaramadiElamAvarezInsert">
+      <Parameter Name="fldID" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSharheCodeDaramad" Mode="In" Type="String" />
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTedad" Mode="In" Type="Int32" />
+      <Parameter Name="fldAsliValue" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCodhayeDaramadiElamAvarezSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblCodhayeDaramadiElamAvarezSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCodhayeDaramadiElamAvarezUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSharheCodeDaramad" Mode="In" Type="String" />
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTedad" Mode="In" Type="Int32" />
+      <Parameter Name="fldAsliValue" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblElamAvarezDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblElamAvarezInsert">
+      <Parameter Name="fldId" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldAshakhasID" Mode="In" Type="Int32" />
+      <Parameter Name="fldType" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIsExternal" Mode="In" Type="Boolean" />
+      <Parameter Name="fldDaramadGroupId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCodeSystemMabda" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblElamAvarezSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblElamAvarezSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="Value1" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblElamAvarezUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAshakhasID" Mode="In" Type="Int32" />
+      <Parameter Name="fldType" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDaramadGroupId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCodeSystemMabda" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_UpdateDaramadId">
+      <Parameter Name="Childe" Mode="In" Type="Int32" />
+      <Parameter Name="Parent" Mode="In" Type="Int32" />
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblUpdateFileForCodhayeDaramd">
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldImage" Mode="In" Type="Binary" />
+      <Parameter Name="fldPasvand" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterMinutDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterMinutInsert">
+      <Parameter Name="fldId" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldDescMinut" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldSodoorBadAzVarizNaghdi" Mode="In" Type="Boolean" />
+      <Parameter Name="fldSodoorBadAzTaghsit" Mode="In" Type="Boolean" />
+      <Parameter Name="fldTanzimkonande" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterMinutSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblLetterMinutSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterMinutUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldDescMinut" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldSodoorBadAzVarizNaghdi" Mode="In" Type="Boolean" />
+      <Parameter Name="fldSodoorBadAzTaghsit" Mode="In" Type="Boolean" />
+      <Parameter Name="fldTanzimkonande" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRooneveshtDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRooneveshtInsert">
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRooneveshtSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblRooneveshtSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRooneveshtUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreSabet_ValueDelete">
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreSabet_ValueInsert">
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldValue" Mode="In" Type="String" />
+      <Parameter Name="fldParametreSabetId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldCodeDaramadElamAvarezId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreSabet_ValueSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblParametreSabet_ValueSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="Value1" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreSabet_ValueUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldValue" Mode="In" Type="String" />
+      <Parameter Name="fldParametreSabetId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldCodeDaramadElamAvarezId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_UpdateFormolsazForCodhayeDarmd">
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFormolsaz" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_DeleteWithElamAvarezId">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblShomareHesabCodeDaramadDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblShomareHesabCodeDaramadInsert">
+      <Parameter Name="fldShomareHesadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldShorooshenaseGhabz" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblShomareHesabCodeDaramadSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblShomareHesabCodeDaramadSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="Value1" Mode="In" Type="String" />
+      <Parameter Name="FiscalYear" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblShomareHesabCodeDaramadUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareHesadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldShorooshenaseGhabz" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="spr_ListCodeDaramad_ShomareHesabWithOrganId" ReturnType="Collection(RasaNewFMSModel.spr_ListCodeDaramad_ShomareHesabWithOrganId)">
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="Type" Mode="In" Type="Byte" />
+      <Parameter Name="fiscalYear" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSodoorFishDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSodoorFishInsert">
+      <Parameter Name="fldId" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareHesabId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMablaghAvarezGerdShode" Mode="In" Type="Int64" />
+      <Parameter Name="fldShorooShenaseGhabz" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldJamKol" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSodoorFishSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblSodoorFishSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSodoorFishUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareHesabId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMablaghAvarezGerdShode" Mode="In" Type="Int64" />
+      <Parameter Name="fldShorooShenaseGhabz" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldJamKol" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="spr_selectEbtal_SodoorFish" ReturnType="Collection(RasaNewFMSModel.spr_selectEbtal_SodoorFish)">
+      <Parameter Name="IdAvarez" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSodoorFish_DetailDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSodoorFish_DetailInsert">
+      <Parameter Name="fldFishId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCodeElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSodoorFish_DetailSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblSodoorFish_DetailSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSodoorFish_DetailUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFishId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCodeElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblReplyTaghsitDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblReplyTaghsitInsert">
+      <Parameter Name="fldMablaghNaghdi" Mode="In" Type="Int64" />
+      <Parameter Name="fldTedadAghsat" Mode="In" Type="Byte" />
+      <Parameter Name="fldShomareMojavez" Mode="In" Type="String" />
+      <Parameter Name="fldTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldStatusId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTedadMahAghsat" Mode="In" Type="Byte" />
+      <Parameter Name="fldJarimeTakhir" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblReplyTaghsitSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblReplyTaghsitSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblReplyTaghsitUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMablaghNaghdi" Mode="In" Type="Int64" />
+      <Parameter Name="fldTedadAghsat" Mode="In" Type="Byte" />
+      <Parameter Name="fldShomareMojavez" Mode="In" Type="String" />
+      <Parameter Name="fldTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldStatusId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTedadMahAghsat" Mode="In" Type="Byte" />
+      <Parameter Name="fldJarimeTakhir" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRequestTaghsit_TakhfifDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRequestTaghsit_TakhfifInsert">
+      <Parameter Name="fldID" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldRequestType" Mode="In" Type="Byte" />
+      <Parameter Name="fldEmployeeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAddress" Mode="In" Type="String" />
+      <Parameter Name="fldEmail" Mode="In" Type="String" />
+      <Parameter Name="fldCodePosti" Mode="In" Type="String" />
+      <Parameter Name="fldMobile" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRequestTaghsit_TakhfifSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblRequestTaghsit_TakhfifSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblRequestTaghsit_TakhfifUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldRequestType" Mode="In" Type="Byte" />
+      <Parameter Name="fldEmployeeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAddress" Mode="In" Type="String" />
+      <Parameter Name="fldEmail" Mode="In" Type="String" />
+      <Parameter Name="fldCodePosti" Mode="In" Type="String" />
+      <Parameter Name="fldMobile" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTanzimateDaramadDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTanzimateDaramadInsert">
+      <Parameter Name="fldAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMaliyatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTakhirId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldMablaghGerdKardan" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldNerkh" Mode="In" Type="Decimal" />
+      <Parameter Name="fldChapShenaseGhabz_Pardakht" Mode="In" Type="Boolean" />
+      <Parameter Name="fldShorooshenaseGhabz" Mode="In" Type="Byte" />
+      <Parameter Name="fldShomareHesabIdPishfarz" Mode="In" Type="Int32" />
+      <Parameter Name="fldSumMaliyat_Avarez" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTanzimateDaramadSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblTanzimateDaramadSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="fiscalyearId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTanzimateDaramadUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMaliyatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTakhirId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldMablaghGerdKardan" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldChapShenaseGhabz_Pardakht" Mode="In" Type="Boolean" />
+      <Parameter Name="fldShorooshenaseGhabz" Mode="In" Type="Byte" />
+      <Parameter Name="fldShomareHesabIdPishfarz" Mode="In" Type="Int32" />
+      <Parameter Name="fldSumMaliyat_Avarez" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spr_CheckLastIdForElamAvarez" ReturnType="Collection(RasaNewFMSModel.spr_CheckLastIdForElamAvarez)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="ElamAvarezId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblEbtalDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblEbtalInsert">
+      <Parameter Name="fldFishId" Mode="In" Type="Int32" />
+      <Parameter Name="fldRequestTaghsit_TakhfifId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblEbtalSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblEbtalSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblEbtalUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFishId" Mode="In" Type="Int32" />
+      <Parameter Name="fldRequestTaghsit_TakhfifId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_UpdateSodoorFishShenaseGhabz_Pardakht">
+      <Parameter Name="fishId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShenaseGhabz" Mode="In" Type="String" />
+      <Parameter Name="fldShenasePardakht" Mode="In" Type="String" />
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldBarcode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblReplyTakhfifDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblReplyTakhfifInsert">
+      <Parameter Name="fldDarsad" Mode="In" Type="Decimal" />
+      <Parameter Name="fldMablagh" Mode="In" Type="Int64" />
+      <Parameter Name="fldShomareMajavez" Mode="In" Type="String" />
+      <Parameter Name="fldTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldStatusId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblReplyTakhfifSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblReplyTakhfifSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblReplyTakhfifUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDarsad" Mode="In" Type="Decimal" />
+      <Parameter Name="fldMablagh" Mode="In" Type="Int64" />
+      <Parameter Name="fldShomareMajavez" Mode="In" Type="String" />
+      <Parameter Name="fldTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldStatusId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblStatusTaghsit_TakhfifDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblStatusTaghsit_TakhfifInsert">
+      <Parameter Name="ReplyId" Mode="In" Type="Int32" />
+      <Parameter Name="fldRequestId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTypeMojavez" Mode="In" Type="Byte" />
+      <Parameter Name="fldTypeRequest" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldDarsad" Mode="In" Type="Decimal" />
+      <Parameter Name="fldMablagh" Mode="In" Type="Int64" />
+      <Parameter Name="fldTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldMablaghNaghdi" Mode="In" Type="Int64" />
+      <Parameter Name="fldTedadAghsat" Mode="In" Type="Byte" />
+      <Parameter Name="fldShomareMojavez" Mode="In" Type="String" />
+      <Parameter Name="fldTedadMahAghsat" Mode="In" Type="Byte" />
+      <Parameter Name="fldJarimeTakhir" Mode="In" Type="Int64" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDarsadTaaghsit" Mode="In" Type="Decimal" />
+      <Parameter Name="fldDescKarmozd" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblStatusTaghsit_TakhfifSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblStatusTaghsit_TakhfifSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblStatusTaghsit_TakhfifUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldRequestId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTypeMojavez" Mode="In" Type="Byte" />
+      <Parameter Name="fldTypeRequest" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_CheckTanzimatDaramad" ReturnType="Collection(RasaNewFMSModel.spr_CheckTanzimatDaramad)">
+      <Parameter Name="avarezId" Mode="In" Type="Int32" />
+      <Parameter Name="MaliyatId" Mode="In" Type="Int32" />
+      <Parameter Name="TakhirId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCheckDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCheckInsert">
+      <Parameter Name="fldID" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldShomareHesabId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareSanad" Mode="In" Type="String" />
+      <Parameter Name="fldReplyTaghsitId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTarikhSarResid" Mode="In" Type="String" />
+      <Parameter Name="fldMablaghSanad" Mode="In" Type="Int64" />
+      <Parameter Name="fldStatus" Mode="In" Type="Byte" />
+      <Parameter Name="fldTypeSanad" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldShomareHesabIdOrgan" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCheckSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblCheckSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCheckUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareHesabId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareSanad" Mode="In" Type="String" />
+      <Parameter Name="fldReplyTaghsitId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTarikhSarResid" Mode="In" Type="String" />
+      <Parameter Name="fldMablaghSanad" Mode="In" Type="Int64" />
+      <Parameter Name="fldStatus" Mode="In" Type="Byte" />
+      <Parameter Name="fldTypeSanad" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldShomareHesabIdOrgan" Mode="In" Type="Int32" />
+      <Parameter Name="fldDateStatus" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSafteDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSafteInsert">
+      <Parameter Name="fldTarikhSarResid" Mode="In" Type="String" />
+      <Parameter Name="fldReplyTaghsitId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareSanad" Mode="In" Type="String" />
+      <Parameter Name="fldMablaghSanad" Mode="In" Type="Int64" />
+      <Parameter Name="fldStatus" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSafteSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblSafteSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblSafteUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTarikhSarResid" Mode="In" Type="String" />
+      <Parameter Name="fldShomareSanad" Mode="In" Type="String" />
+      <Parameter Name="fldReplyTaghsitId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMablaghSanad" Mode="In" Type="Int64" />
+      <Parameter Name="fldStatus" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldDateStatus" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBaratDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBaratInsert">
+      <Parameter Name="fldTarikhSarResid" Mode="In" Type="String" />
+      <Parameter Name="fldReplyTaghsitId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareSanad" Mode="In" Type="String" />
+      <Parameter Name="fldMablaghSanad" Mode="In" Type="Int64" />
+      <Parameter Name="fldStatus" Mode="In" Type="Byte" />
+      <Parameter Name="fldBaratDarId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMakanPardakht" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBaratSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblBaratSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblBaratUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTarikhSarResid" Mode="In" Type="String" />
+      <Parameter Name="fldReplyTaghsitId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareSanad" Mode="In" Type="String" />
+      <Parameter Name="fldMablaghSanad" Mode="In" Type="Int64" />
+      <Parameter Name="fldStatus" Mode="In" Type="Byte" />
+      <Parameter Name="fldBaratDarId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMakanPardakht" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldDateStatus" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectDataForTaghsit" ReturnType="Collection(RasaNewFMSModel.spr_SelectDataForTaghsit)">
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="AzTarikh" Mode="In" Type="String" />
+      <Parameter Name="TaTarikh" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+      <Parameter Name="Organid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCodhayeDaramdSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblCodhayeDaramdSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fiscALYear" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblNaghdi_TalabDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblNaghdi_TalabInsert">
+      <Parameter Name="fldMablagh" Mode="In" Type="Int64" />
+      <Parameter Name="fldReplyTaghsitId" Mode="In" Type="Int32" />
+      <Parameter Name="fldType" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldShomareHesabId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblNaghdi_TalabSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblNaghdi_TalabSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblNaghdi_TalabUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMablagh" Mode="In" Type="Int64" />
+      <Parameter Name="fldReplyTaghsitId" Mode="In" Type="Int32" />
+      <Parameter Name="fldType" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldShomareHesabId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_UpdateSharhecodeDaramd">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="fldSharhCodDaramd" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_InsertSodoorFishForNaghdi_Talab">
+      <Parameter Name="fldId" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMablagh" Mode="In" Type="Int64" />
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="NaghdiTalabId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareHesabId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectFishSaderShode" ReturnType="Collection(RasaNewFMSModel.spr_SelectFishSaderShode)">
+      <Parameter Name="fieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="AzTarikh" Mode="In" Type="String" />
+      <Parameter Name="TaTarikh" Mode="In" Type="String" />
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosInfoDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosInfoInsert">
+      <Parameter Name="fldPspId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosInfoSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblPcPosInfoSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="Value1" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosInfoUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPspId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblNahvePardakhtDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblNahvePardakhtInsert">
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldCodePardakht" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblNahvePardakhtSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblNahvePardakhtSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblNahvePardakhtUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldCodePardakht" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblFactorDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblFactorInsert">
+      <Parameter Name="fldFishId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblFactorSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblFactorSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblFactorUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFishId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosParam_DetailDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosParam_DetailInsert">
+      <Parameter Name="fldPcPosParamId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPcPosInfoId" Mode="In" Type="Int32" />
+      <Parameter Name="fldValue" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosParam_DetailSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblPcPosParam_DetailSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosParam_DetailUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPcPosParamId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPcPosInfoId" Mode="In" Type="Int32" />
+      <Parameter Name="fldValue" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblFormatShomareNameDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblFormatShomareNameInsert">
+      <Parameter Name="fldYear" Mode="In" Type="Int16" />
+      <Parameter Name="fldFormatShomareName" Mode="In" Type="String" />
+      <Parameter Name="fldShomareShoro" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldType" Mode="In" Type="Boolean" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblFormatShomareNameSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblFormatShomareNameSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblFormatShomareNameUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldYear" Mode="In" Type="Int16" />
+      <Parameter Name="fldFormatShomareName" Mode="In" Type="String" />
+      <Parameter Name="fldShomareShoro" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldType" Mode="In" Type="Boolean" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosParametrDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosParametrInsert">
+      <Parameter Name="fldFaName" Mode="In" Type="String" />
+      <Parameter Name="fldEnName" Mode="In" Type="String" />
+      <Parameter Name="fldPspId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosParametrSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblPcPosParametrSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosParametrUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFaName" Mode="In" Type="String" />
+      <Parameter Name="fldEnName" Mode="In" Type="String" />
+      <Parameter Name="fldPspId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectDetailSodoorFish" ReturnType="Collection(RasaNewFMSModel.spr_SelectDetailSodoorFish)">
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareHesabId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShorooshenaseGhabz" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPardakhtFishDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPardakhtFishInsert">
+      <Parameter Name="fldFishId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDatePardakht" Mode="In" Type="DateTime" />
+      <Parameter Name="fldNahvePardakhtId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldPardakhtFiles_DetailId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDateVariz" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPardakhtFishSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblPardakhtFishSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPardakhtFishUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFishId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDatePardakht" Mode="In" Type="DateTime" />
+      <Parameter Name="fldNahvePardakhtId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldPardakhtFiles_DetailId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDateVariz" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosUserDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosUserInsert">
+      <Parameter Name="fldPosIpId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIdUser" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosUserSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblPcPosUserSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosUserUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPosIpId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIdUser" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosIPSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblPcPosIPSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="Value1" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblShomareNameHaDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblShomareNameHaSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblShomareNameHaSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblShomareNameHaUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMokatebatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldReplyTaghsitId" Mode="In" Type="Int32" />
+      <Parameter Name="fldYear" Mode="In" Type="Int16" />
+      <Parameter Name="fldShomare" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblShomareNameHaInsert">
+      <Parameter Name="fldMokatebatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldReplyTaghsitId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomare" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldStartNumber" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMokatebatDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMokatebatInsert">
+      <Parameter Name="fldID" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldCodhayeDaramadiElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMokatebatSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblMokatebatSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMokatebatUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCodhayeDaramadiElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFileId" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldFile" Mode="In" Type="Binary" />
+      <Parameter Name="fldPasvand" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosIPDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosIPInsert">
+      <Parameter Name="fldId" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldPcPosInfoId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSerial" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosIPUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPcPosInfoId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSerial" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterSignersDelete">
+      <Parameter Name="fldLetterMinutId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterSignersInsert">
+      <Parameter Name="fldLetterMinutId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganizationalPostsId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterSignersSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblLetterSignersSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblLetterSignersUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldLetterMinutId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganizationalPostsId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_tblPcPos_Param_Value" ReturnType="Collection(RasaNewFMSModel.sp_tblPcPos_Param_Value)">
+      <Parameter Name="Value" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_ListShomareHesabWithElamAvarezId" ReturnType="Collection(RasaNewFMSModel.spr_ListShomareHesabWithElamAvarezId)">
+      <Parameter Name="Fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPspDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPspInsert">
+      <Parameter Name="fldFile" Mode="In" Type="Binary" />
+      <Parameter Name="fldPasvand" Mode="In" Type="String" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPspSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblPspSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPspUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldFile" Mode="In" Type="Binary" />
+      <Parameter Name="fldPasvand" Mode="In" Type="String" />
+      <Parameter Name="fldFileId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreSabet_NerkhDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreSabet_NerkhInsert">
+      <Parameter Name="fldParametreSabetId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTarikhFaalSazi" Mode="In" Type="String" />
+      <Parameter Name="fldValue" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreSabet_NerkhSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblParametreSabet_NerkhSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametreSabet_NerkhUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldParametreSabetId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTarikhFaalSazi" Mode="In" Type="String" />
+      <Parameter Name="fldValue" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPardakhtFileDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPardakhtFileInsert">
+      <Parameter Name="fldId" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldBankId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFileName" Mode="In" Type="String" />
+      <Parameter Name="fldDateSendFile" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPardakhtFileSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblPardakhtFileSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPardakhtFileUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldBankId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFileName" Mode="In" Type="String" />
+      <Parameter Name="fldDateSendFile" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPardakhtFiles_DetailDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPardakhtFiles_DetailInsert">
+      <Parameter Name="fldShenaseGhabz" Mode="In" Type="String" />
+      <Parameter Name="fldShenasePardakht" Mode="In" Type="String" />
+      <Parameter Name="fldTarikhPardakht" Mode="In" Type="String" />
+      <Parameter Name="fldCodeRahgiry" Mode="In" Type="String" />
+      <Parameter Name="fldPardakhtFileId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="CodePardakht" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPardakhtFiles_DetailSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblPardakhtFiles_DetailSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="String" />
+      <Parameter Name="AzTarikh" Mode="In" Type="String" />
+      <Parameter Name="TaTarikh" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPardakhtFiles_DetailUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShenaseGhabz" Mode="In" Type="String" />
+      <Parameter Name="fldShenasePardakht" Mode="In" Type="String" />
+      <Parameter Name="fldTarikhPardakht" Mode="In" Type="String" />
+      <Parameter Name="fldCodeRahgiry" Mode="In" Type="String" />
+      <Parameter Name="fldNahvePardakhtId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPardakhtFileId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPspModelDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPspModelInsert">
+      <Parameter Name="fldPspId" Mode="In" Type="Int32" />
+      <Parameter Name="fldModel" Mode="In" Type="String" />
+      <Parameter Name="fldMultiHesab" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPspModelSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblPspModelSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPspModelUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPspId" Mode="In" Type="Int32" />
+      <Parameter Name="fldModel" Mode="In" Type="String" />
+      <Parameter Name="fldMultiHesab" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_InfoPardakhtFTP" ReturnType="Collection(RasaNewFMSModel.spr_InfoPardakhtFTP)">
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShenaseGhabz" Mode="In" Type="String" />
+      <Parameter Name="fldShenasePardakht" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosTransactionDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosTransactionInsert">
+      <Parameter Name="fldId" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldFishId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPrice" Mode="In" Type="Int64" />
+      <Parameter Name="fldStatus" Mode="In" Type="Boolean" />
+      <Parameter Name="fldTrackingCode" Mode="In" Type="String" />
+      <Parameter Name="fldShGhabz" Mode="In" Type="String" />
+      <Parameter Name="fldShPardakht" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldTerminalCode" Mode="In" Type="String" />
+      <Parameter Name="fldSerialNumber" Mode="In" Type="String" />
+      <Parameter Name="fldCardNumber" Mode="In" Type="String" />
+      <Parameter Name="fldTarikh" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosTransactionSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblPcPosTransactionSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPcPosTransactionUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFishId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPrice" Mode="In" Type="Int64" />
+      <Parameter Name="fldStatus" Mode="In" Type="Boolean" />
+      <Parameter Name="fldTrackingCode" Mode="In" Type="String" />
+      <Parameter Name="fldShGhabz" Mode="In" Type="String" />
+      <Parameter Name="fldShPardakht" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldTerminalCode" Mode="In" Type="String" />
+      <Parameter Name="fldSerialNumber" Mode="In" Type="String" />
+      <Parameter Name="fldCardNumber" Mode="In" Type="String" />
+      <Parameter Name="fldTarikh" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_PcPosTransactionUpdate_Status">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTrackingCode" Mode="In" Type="String" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldTerminalCode" Mode="In" Type="String" />
+      <Parameter Name="fldSerialNumber" Mode="In" Type="String" />
+      <Parameter Name="fldCardNumber" Mode="In" Type="String" />
+      <Parameter Name="fldTarikh" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_DataForElamAvarez" ReturnType="Collection(RasaNewFMSModel.spr_DataForElamAvarez)">
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="AzTarikh" Mode="In" Type="String" />
+      <Parameter Name="TaTarikh" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+      <Parameter Name="Organid" Mode="In" Type="Int32" />
+      <Parameter Name="type" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="spr_DataForElamAvarez_Barat" ReturnType="Collection(RasaNewFMSModel.spr_DataForElamAvarez_Barat)">
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="AzTarikh" Mode="In" Type="String" />
+      <Parameter Name="TaTarikh" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+      <Parameter Name="Organid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_DataForElamAvarez_Check" ReturnType="Collection(RasaNewFMSModel.spr_DataForElamAvarez_Check)">
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="AzTarikh" Mode="In" Type="String" />
+      <Parameter Name="TaTarikh" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+      <Parameter Name="Organid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_DataForElamAvarez_Safte" ReturnType="Collection(RasaNewFMSModel.spr_DataForElamAvarez_Safte)">
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="AzTarikh" Mode="In" Type="String" />
+      <Parameter Name="TaTarikh" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+      <Parameter Name="Organid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTakhfifDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTakhfifInsert">
+      <Parameter Name="fldId" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldShomareMojavez" Mode="In" Type="String" />
+      <Parameter Name="fldTarikhMojavez" Mode="In" Type="String" />
+      <Parameter Name="fldAzTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldTaTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldTakhfifKoli" Mode="In" Type="Decimal" />
+      <Parameter Name="fldTakhfifNaghdi" Mode="In" Type="Decimal" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTakhfifSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblTakhfifSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTakhfifUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareMojavez" Mode="In" Type="String" />
+      <Parameter Name="fldTarikhMojavez" Mode="In" Type="String" />
+      <Parameter Name="fldAzTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldTaTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldTakhfifKoli" Mode="In" Type="Decimal" />
+      <Parameter Name="fldTakhfifNaghdi" Mode="In" Type="Decimal" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTakhfifDetailDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTakhfifDetailInsert">
+      <Parameter Name="fldTakhfifId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShCodeDaramad" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTakhfifDetailSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblTakhfifDetailSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblTakhfifDetailUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTakhfifId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShCodeDaramad" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_CheckTakhfif" ReturnType="Collection(RasaNewFMSModel.spr_CheckTakhfif)">
+      <Parameter Name="IdElamAvarez" Mode="In" Type="Int32" />
+      <Parameter Name="ShomareHesabId" Mode="In" Type="Int32" />
+      <Parameter Name="ShooroShenaseGhabz" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="spr_DeleteCodeDaramad_ShomareHesab">
+      <Parameter Name="CodeDaramad" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblExternalFishDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblExternalFishInsert">
+      <Parameter Name="fldNameCompany" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblExternalFishSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblExternalFishSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblExternalFishUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldNameCompany" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCodhayeDaramadiElamAvarezInsert_External">
+      <Parameter Name="fldID" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSharheCodeDaramad" Mode="In" Type="String" />
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTedad" Mode="In" Type="Int32" />
+      <Parameter Name="fldAsliValue" Mode="In" Type="Int64" />
+      <Parameter Name="fldMaliyatValue" Mode="In" Type="Int64" />
+      <Parameter Name="fldAvarezValue" Mode="In" Type="Int64" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_RptListCodeDaramad_Donati" ReturnType="Collection(RasaNewFMSModel.spr_RptListCodeDaramad_Donati)">
+      <Parameter Name="AzTarikh" Mode="In" Type="String" />
+      <Parameter Name="TaTarikh" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="DateType" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="spr_RptListCodeDaramad_Gaje" ReturnType="Collection(RasaNewFMSModel.spr_RptListCodeDaramad_Gaje)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="AzTarikh" Mode="In" Type="String" />
+      <Parameter Name="TaTarikh" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_RptListCodeDaramad_Day" ReturnType="Collection(RasaNewFMSModel.spr_RptListCodeDaramad_Day)">
+      <Parameter Name="AzTarikh" Mode="In" Type="String" />
+      <Parameter Name="TaTarikh" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="DateType" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="spr_RptListCodeDaramad_Month" ReturnType="Collection(RasaNewFMSModel.spr_RptListCodeDaramad_Month)">
+      <Parameter Name="AzTarikh" Mode="In" Type="String" />
+      <Parameter Name="TaTarikh" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="DateType" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPSPModel_ShomareHesabDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPSPModel_ShomareHesabInsert">
+      <Parameter Name="fldPSPModelId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShHesabId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrder" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPSPModel_ShomareHesabSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblPSPModel_ShomareHesabSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPSPModel_ShomareHesabUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPSPModelId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShHesabId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrder" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_CopyCodeDaramd">
+      <Parameter Name="fieldName" Mode="In" Type="String" />
+      <Parameter Name="mabdaId" Mode="In" Type="Int32" />
+      <Parameter Name="maghsadId" Mode="In" Type="Int32" />
+      <Parameter Name="userId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_CheckCopyCode" ReturnType="Collection(RasaNewFMSModel.spr_CheckCopyCode)">
+      <Parameter Name="maghsadId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMahdoodiyatMohasebatDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMahdoodiyatMohasebatInsert">
+      <Parameter Name="fldId" Mode="InOut" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldAzTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldTatarikh" Mode="In" Type="String" />
+      <Parameter Name="fldNoeKarbar" Mode="In" Type="Boolean" />
+      <Parameter Name="fldNoeCodeDaramad" Mode="In" Type="Boolean" />
+      <Parameter Name="fldNoeAshkhas" Mode="In" Type="Boolean" />
+      <Parameter Name="fldStatus" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMahdoodiyatMohasebatSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblMahdoodiyatMohasebatSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMahdoodiyatMohasebatUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldAzTarikh" Mode="In" Type="String" />
+      <Parameter Name="fldTatarikh" Mode="In" Type="String" />
+      <Parameter Name="fldNoeKarbar" Mode="In" Type="Boolean" />
+      <Parameter Name="fldNoeCodeDaramad" Mode="In" Type="Boolean" />
+      <Parameter Name="fldNoeAshkhas" Mode="In" Type="Boolean" />
+      <Parameter Name="fldStatus" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMahdoodiyatMohasebat_AshkhasDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMahdoodiyatMohasebat_AshkhasInsert">
+      <Parameter Name="fldMahdoodiyatMohasebatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAshkhasId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMahdoodiyatMohasebat_AshkhasSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblMahdoodiyatMohasebat_AshkhasSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMahdoodiyatMohasebat_AshkhasUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMahdoodiyatMohasebatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAshkhasId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMohdoodiyatMohasebat_UserDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMohdoodiyatMohasebat_UserInsert">
+      <Parameter Name="fldIdUser" Mode="In" Type="Int32" />
+      <Parameter Name="fldMahdoodiyatMohasebatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMohdoodiyatMohasebat_UserSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblMohdoodiyatMohasebat_UserSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMohdoodiyatMohasebat_UserUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldIdUser" Mode="In" Type="Int32" />
+      <Parameter Name="fldMahdoodiyatMohasebatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMahdoodiyatMohasebat_ShomareHesabDaramadDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMahdoodiyatMohasebat_ShomareHesabDaramadInsert">
+      <Parameter Name="fldMahdodiyatMohasebatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomarehesabDarmadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMahdoodiyatMohasebat_ShomareHesabDaramadSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblMahdoodiyatMohasebat_ShomareHesabDaramadSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMahdoodiyatMohasebat_ShomareHesabDaramadUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMahdodiyatMohasebatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomarehesabDarmadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_CheckMahdoodiyatMohasebat" ReturnType="Collection(RasaNewFMSModel.spr_CheckMahdoodiyatMohasebat)">
+      <Parameter Name="tarikh" Mode="In" Type="String" />
+      <Parameter Name="userid" Mode="In" Type="Int32" />
+      <Parameter Name="AshkhasId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomarehesabDaramd" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_checkTaghsit" ReturnType="Collection(RasaNewFMSModel.spr_checkTaghsit)">
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_DeleteTaghsit">
+      <Parameter Name="elamAvareId" Mode="In" Type="Int32" />
+      <Parameter Name="userId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPatternFishDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPatternFishInsert">
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldFile" Mode="In" Type="Binary" />
+      <Parameter Name="pasvand" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPatternFishSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblPatternFishSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPatternFishUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldName" Mode="In" Type="String" />
+      <Parameter Name="fldFileId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFile" Mode="In" Type="Binary" />
+      <Parameter Name="pasvand" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDaramadGroupDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDaramadGroupInsert">
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDaramadGroupSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblDaramadGroupSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDaramadGroupUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDaramadGroup_ParametrDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDaramadGroup_ParametrInsert">
+      <Parameter Name="fldDaramadGroupId" Mode="In" Type="Int32" />
+      <Parameter Name="fldEnName" Mode="In" Type="String" />
+      <Parameter Name="fldFnName" Mode="In" Type="String" />
+      <Parameter Name="fldStatus" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldNoeField" Mode="In" Type="Byte" />
+      <Parameter Name="fldComboBoxId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDaramadGroup_ParametrSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblDaramadGroup_ParametrSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDaramadGroup_ParametrUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDaramadGroupId" Mode="In" Type="Int32" />
+      <Parameter Name="fldEnName" Mode="In" Type="String" />
+      <Parameter Name="fldFnName" Mode="In" Type="String" />
+      <Parameter Name="fldStatus" Mode="In" Type="Boolean" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldNoeField" Mode="In" Type="Byte" />
+      <Parameter Name="fldComboBoxId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDaramadGroup_ParametrValuesDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDaramadGroup_ParametrValuesInsert">
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldParametrGroupDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldValue" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDaramadGroup_ParametrValuesSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblDaramadGroup_ParametrValuesSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblDaramadGroup_ParametrValuesUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldParametrGroupDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldValue" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPatternFish_DaramadGroupDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPatternFish_DaramadGroupInsert">
+      <Parameter Name="fldPatternFishId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDaramadGroupId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPatternFish_DaramadGroupSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblPatternFish_DaramadGroupSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblPatternFish_DaramadGroupUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldPatternFishId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDaramadGroupId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCodhayeDaramadiElamAvarezUpdate_External">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldSharheCodeDaramad" Mode="In" Type="String" />
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldAsliValue" Mode="In" Type="Int64" />
+      <Parameter Name="fldAvarezValue" Mode="In" Type="Int64" />
+      <Parameter Name="fldMaliyatValue" Mode="In" Type="Int64" />
+      <Parameter Name="fldTedad" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_RptListCodeDaramad_Asli" ReturnType="Collection(RasaNewFMSModel.spr_RptListCodeDaramad_Asli)">
+      <Parameter Name="AzTarikh" Mode="In" Type="String" />
+      <Parameter Name="TaTarikh" Mode="In" Type="String" />
+      <Parameter Name="ShomareHesabId" Mode="In" Type="Int32" />
+      <Parameter Name="CodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="OrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="DateType" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="spr_CodeDaramdAsli" ReturnType="Collection(RasaNewFMSModel.spr_CodeDaramdAsli)" />
+    <FunctionImport Name="spr_tblCompanyDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCompanyInsert">
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldShenaseMeli" Mode="In" Type="String" />
+      <Parameter Name="fldKarbarId" Mode="In" Type="Int32" />
+      <Parameter Name="fldURL" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldUserNameService" Mode="In" Type="String" />
+      <Parameter Name="fldPassService" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCompanySelect" ReturnType="Collection(RasaNewFMSModel.spr_tblCompanySelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCompanyUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTitle" Mode="In" Type="String" />
+      <Parameter Name="fldShenaseMeli" Mode="In" Type="String" />
+      <Parameter Name="fldKarbarId" Mode="In" Type="Int32" />
+      <Parameter Name="fldURL" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+      <Parameter Name="fldUserNameService" Mode="In" Type="String" />
+      <Parameter Name="fldPassService" Mode="In" Type="String" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_AshkhasIdForXmlInput" ReturnType="Collection(RasaNewFMSModel.spr_AshkhasIdForXmlInput)">
+      <Parameter Name="type" Mode="In" Type="Byte" />
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+      <Parameter Name="CodeMeli" Mode="In" Type="String" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="family" Mode="In" Type="String" />
+      <Parameter Name="shomareSabt" Mode="In" Type="String" />
+      <Parameter Name="TypeShakhs" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <FunctionImport Name="spr_ShomareHesabIdForXmlInput" ReturnType="Collection(RasaNewFMSModel.spr_ShomareHesabIdForXmlInput)">
+      <Parameter Name="ShomareHesab" Mode="In" Type="String" />
+      <Parameter Name="InfBank" Mode="In" Type="String" />
+      <Parameter Name="AshkhasId" Mode="In" Type="Int32" />
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_DeleteKoliElamAvarez">
+      <Parameter Name="IdElamAvarez" Mode="In" Type="Int32" />
+      <Parameter Name="userId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_FishSaderShodeForXmlOut" ReturnType="Collection(RasaNewFMSModel.spr_FishSaderShodeForXmlOut)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_UpdateSendToMali_Fish">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="flag" Mode="In" Type="Boolean" />
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_UpdateStatus_CodeDaramad">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="Status" Mode="In" Type="Boolean" />
+      <Parameter Name="userId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_Ashkhas_Taghsit" ReturnType="Collection(RasaNewFMSModel.spr_Ashkhas_Taghsit)">
+      <Parameter Name="ElamAvarId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectAshkhas_ElamAvarez" ReturnType="Collection(RasaNewFMSModel.spr_SelectAshkhas_ElamAvarez)">
+      <Parameter Name="fieldName" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+      <Parameter Name="AshkhasId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectAshkhas_Fish" ReturnType="Collection(RasaNewFMSModel.spr_SelectAshkhas_Fish)">
+      <Parameter Name="ElamAvarezId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_SelectForEmalTakhfif" ReturnType="Collection(RasaNewFMSModel.spr_SelectForEmalTakhfif)">
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblCodhayeDaramadiElamAvarez_TakhfifUpdate">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldTedad" Mode="In" Type="Int32" />
+      <Parameter Name="fldTakhfifAsliValue" Mode="In" Type="Int64" />
+      <Parameter Name="fldElamAvarezId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblGozareshatFileDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblGozareshatFileInsert">
+      <Parameter Name="fldGozareshatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="file" Mode="In" Type="Binary" />
+      <Parameter Name="Passvand" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblGozareshatFileSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblGozareshatFileSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="OrganId" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblGozareshatFileUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldGozareshatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldOrganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldReportFileId" Mode="In" Type="Int32" />
+      <Parameter Name="file" Mode="In" Type="Binary" />
+      <Parameter Name="Passvand" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblGozareshatSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblGozareshatSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_ChangeLetter" ReturnType="Collection(RasaNewFMSModel.spr_ChangeLetter)" />
+    <FunctionImport Name="spr_tblParametrHesabdariDelete">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametrHesabdariInsert">
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCodeHesab" Mode="In" Type="String" />
+      <Parameter Name="fldHesabId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCompanyId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametrHesabdariSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblParametrHesabdariSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblParametrHesabdariUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareHesabCodeDaramadId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCodeHesab" Mode="In" Type="String" />
+      <Parameter Name="fldHesabId" Mode="In" Type="Int32" />
+      <Parameter Name="fldCompanyId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDesc" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spr_UpdateSendToMali_Check">
+      <Parameter Name="fldID" Mode="In" Type="Int32" />
+      <Parameter Name="fldStatus" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spr_UpdateStatusSanad">
+      <Parameter Name="type" Mode="In" Type="Byte" />
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="fldStatus" Mode="In" Type="Byte" />
+      <Parameter Name="fldDateStatus" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_HistoryElamAvarez">
+      <Parameter Name="ElamAvarezId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_ElamAvarelog" ReturnType="Collection(RasaNewFMSModel.spr_ElamAvarelog)">
+      <Parameter Name="ElamAvarezId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_InsertHesabdariToDaramad">
+      <Parameter Name="fldorganId" Mode="In" Type="Int32" />
+      <Parameter Name="fldYear" Mode="In" Type="Int16" />
+      <Parameter Name="userid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblShomareHesab_FormulaInsert">
+      <Parameter Name="fldShomareHesab_CodeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFormolsaz" Mode="In" Type="String" />
+      <Parameter Name="fldFormulKoliId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFormulMohasebatId" Mode="In" Type="Int32" />
+      <Parameter Name="fldTarikhEjra" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblShomareHesab_FormulaSelect" ReturnType="Collection(RasaNewFMSModel.spr_tblShomareHesab_FormulaSelect)">
+      <Parameter Name="FieldName" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="organid" Mode="In" Type="Int32" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblShomareHesab_FormulaUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldShomareHesab_CodeId" Mode="In" Type="Int32" />
+      <Parameter Name="fldFormolsaz" Mode="In" Type="String" />
+      <Parameter Name="fldTarikhEjra" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="prs_MapCodingDaramad">
+      <Parameter Name="OldCode" Mode="In" Type="String" />
+      <Parameter Name="NewCode" Mode="In" Type="String" />
+      <Parameter Name="Title" Mode="In" Type="String" />
+      <Parameter Name="userId" Mode="In" Type="Int32" />
+      <Parameter Name="pcode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="prs_UpdateReceive_Check">
+      <Parameter Name="idcheck" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="DocumentHeader1Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="prs_InsertCheckIntoSanad" ReturnType="Collection(RasaNewFMSModel.prs_InsertCheckIntoSanad)">
+      <Parameter Name="idcheck" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+      <Parameter Name="tarikh" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="spr_tblComboBoxSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spr_tblComboBoxValueSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldComboBoxId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldValue" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="comboboxTitle" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spr_tblParametreOmoomiSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldNameParametreFa" Nullable="false" MaxLength="100" />
+    <Property Type="Byte" Name="fldNoeField" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldNameParametreEn" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="NoeFieldName" Nullable="true" MaxLength="8" />
+    <Property Type="Int32" Name="fldFormulId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblParametreOmoomi_ValueSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldParametreOmoomiId" Nullable="false" />
+    <Property Type="String" Name="fldFromDate" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldEndDate" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldValue" Nullable="false" MaxLength="250" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="nameParametrFa_En" Nullable="false" MaxLength="202" />
+  </ComplexType>
+  <ComplexType Name="spr_tblParametreSabetSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldNameParametreFa" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldNameParametreEn" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="fldNoe" Nullable="false" />
+    <Property Type="Byte" Name="fldNoeField" Nullable="false" />
+    <Property Type="Boolean" Name="fldVaziyat" Nullable="false" />
+    <Property Type="Int32" Name="fldComboBaxId" Nullable="true" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="NoeName" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="NoeFieldName" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="fldDaramadTitle" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="VaziyatName" Nullable="true" MaxLength="7" />
+    <Property Type="String" Name="fldTitle" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="fldFormulId" Nullable="true" />
+    <Property Type="Int32" Name="fldShomareHesabCodeDaramadId" Nullable="false" />
+    <Property Type="Boolean" Name="fldTypeParametr" Nullable="false" />
+    <Property Type="String" Name="fldNoeParametr" Nullable="true" MaxLength="5" />
+  </ComplexType>
+  <ComplexType Name="spr_CheckDateParametr">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblCodhayeDaramadiElamAvarezSelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="Int32" Name="fldElamAvarezId" Nullable="false" />
+    <Property Type="String" Name="fldSharheCodeDaramad" Nullable="false" />
+    <Property Type="Int64" Name="fldAsliValue" Nullable="false" />
+    <Property Type="Int64" Name="fldAvarezValue" Nullable="false" />
+    <Property Type="Int64" Name="fldMaliyatValue" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="false" />
+    <Property Type="String" Name="codeDaramadTitle" Nullable="false" MaxLength="302" />
+    <Property Type="Int32" Name="fldTedad" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesabCodeDaramadId" Nullable="false" />
+    <Property Type="String" Name="fldDaramadTitle" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="fldDaramadCode" Nullable="false" MaxLength="50" />
+    <Property Type="Byte" Name="fldShorooshenaseGhabz" Nullable="false" />
+    <Property Type="Int64" Name="fldSumMablgh" Nullable="true" />
+    <Property Type="Int64" Name="fldTakhfifAsliValue" Nullable="true" />
+    <Property Type="Int64" Name="fldTakhfifAvarezValue" Nullable="false" />
+    <Property Type="Int64" Name="fldTakhfifMaliyatValue" Nullable="false" />
+    <Property Type="Int64" Name="fldAmuzeshParvareshValue" Nullable="false" />
+    <Property Type="Int64" Name="fldTakhfifAmuzeshParvareshValue" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblElamAvarezSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldAshakhasID" Nullable="false" />
+    <Property Type="Boolean" Name="fldType" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Noe" Nullable="true" MaxLength="209" />
+    <Property Type="String" Name="fldNameShakhs" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="fldShenaseMeli" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fldNoeShakhs" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="fldTarikh" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldFather_Sabt" Nullable="false" MaxLength="60" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="Int32" Name="fldReplyTaghsitId" Nullable="false" />
+    <Property Type="Int64" Name="fldMablaghKoli" Nullable="false" />
+    <Property Type="Int64" Name="fldMablaghTakhfif" Nullable="false" />
+    <Property Type="Int64" Name="fldMablaghGHabelPardakht" Nullable="false" />
+    <Property Type="String" Name="fldStatusFish" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldStatusTakhfif" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldStatusTaghsit" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldStatusFishName" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="fldStatusTakhfifName" Nullable="true" MaxLength="23" />
+    <Property Type="String" Name="fldStatusTaghsitName" Nullable="true" MaxLength="22" />
+    <Property Type="String" Name="fldStatusKoli" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldStatusKoliName" Nullable="false" MaxLength="11" />
+    <Property Type="String" Name="fldNameOrgan" Nullable="true" />
+    <Property Type="String" Name="SharhDesc" Nullable="true" />
+    <Property Type="Boolean" Name="fldIsExternal" Nullable="true" />
+    <Property Type="Int32" Name="fldDaramadGroupId" Nullable="true" />
+    <Property Type="String" Name="fldCodeSystemMabda" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fldmobile" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="spr_tblLetterMinutSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="400" />
+    <Property Type="String" Name="fldDescMinut" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldDesc" Nullable="true" />
+    <Property Type="Int32" Name="fldShomareHesabCodeDaramadId" Nullable="false" />
+    <Property Type="Boolean" Name="fldSodoorBadAzVarizNaghdi" Nullable="false" />
+    <Property Type="Boolean" Name="fldSodoorBadAzTaghsit" Nullable="false" />
+    <Property Type="Boolean" Name="fldTanzimkonande" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblRooneveshtSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="400" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldDesc" Nullable="true" />
+    <Property Type="Int32" Name="fldShomareHesabCodeDaramadId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblParametreSabet_ValueSelect">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="Int32" Name="fldElamAvarezId" Nullable="false" />
+    <Property Type="String" Name="fldValue" Nullable="false" MaxLength="300" />
+    <Property Type="Int32" Name="fldParametreSabetId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIsCombo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldIsComboName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="fldCodeDaramadElamAvarezId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblShomareHesabCodeDaramadSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesadId" Nullable="false" />
+    <Property Type="Int32" Name="fldCodeDaramadId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="50" />
+    <Property Type="Byte" Name="fldShorooshenaseGhabz" Nullable="false" />
+    <Property Type="String" Name="fldFormolsaz" Nullable="true" />
+    <Property Type="Int32" Name="fldFormulKoliId" Nullable="true" />
+    <Property Type="Int32" Name="fldFormulMohasebatId" Nullable="true" />
+    <Property Type="Int32" Name="fldReportFileId" Nullable="true" />
+    <Property Type="String" Name="fldDaramadCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldDaramadTitle" Nullable="false" MaxLength="250" />
+    <Property Type="Boolean" Name="fldMashmooleArzesheAfzoode" Nullable="false" />
+    <Property Type="Int32" Name="fldUnitId" Nullable="false" />
+    <Property Type="Boolean" Name="fldMashmooleKarmozd" Nullable="false" />
+    <Property Type="String" Name="fldNameVahed" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldSharhCodDaramd" Nullable="true" />
+    <Property Type="Boolean" Name="fldStatus" Nullable="false" />
+    <Property Type="Boolean" Name="fldAmuzeshParvaresh" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_ListCodeDaramad_ShomareHesabWithOrganId">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldDaramadCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldDaramadTitle" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="fldNameVahed" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="fldMashmooleArzesheAfzoode" Nullable="false" />
+    <Property Type="Boolean" Name="fldMashmooleKarmozd" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHsabCodeDaramadId" Nullable="false" />
+    <Property Type="Byte" Name="fldShorooshenaseGhabz" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="false" />
+    <Property Type="Boolean" Name="fldStatus" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblSodoorFishSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldElamAvarezId" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="false" />
+    <Property Type="String" Name="fldShenaseGhabz" Nullable="false" MaxLength="13" />
+    <Property Type="Int64" Name="fldMablaghAvarezGerdShode" Nullable="false" />
+    <Property Type="Byte" Name="fldShorooShenaseGhabz" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldShenasePardakht" Nullable="false" MaxLength="13" />
+    <Property Type="String" Name="fldStatusName" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="fldStatusId" Nullable="false" MaxLength="1" />
+    <Property Type="Int64" Name="fldJamKol" Nullable="false" />
+    <Property Type="String" Name="fldBarcode" Nullable="false" MaxLength="26" />
+    <Property Type="Boolean" Name="fldSendToMaliFlag" Nullable="false" />
+    <Property Type="Boolean" Name="fldFishSentFlag" Nullable="false" />
+    <Property Type="DateTime" Name="fldDateSendToMali" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fldDateFishSent" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spr_selectEbtal_SodoorFish">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldElamAvarezId" Nullable="false" />
+    <Property Type="Int32" Name="fldItem" Nullable="false" />
+    <Property Type="Int64" Name="fldMaliyat" Nullable="false" />
+    <Property Type="Int64" Name="fldAvarez" Nullable="false" />
+    <Property Type="Int64" Name="fldJamFish" Nullable="false" />
+    <Property Type="String" Name="fldShenaseGhabz" Nullable="false" MaxLength="13" />
+    <Property Type="String" Name="fldShenasePardakht" Nullable="false" MaxLength="13" />
+    <Property Type="String" Name="fldStatus" Nullable="true" MaxLength="1" />
+    <Property Type="Byte" Name="fldShorooshenaseGhabz" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="false" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="fldAsliValue" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="Int64" Name="fldjamkol" Nullable="false" />
+    <Property Type="Int64" Name="fldMablaghTakhfif" Nullable="false" />
+    <Property Type="String" Name="PardakhtStatus" Nullable="false" MaxLength="1" />
+    <Property Type="Int64" Name="fldAmuzeshParvareshValue" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblSodoorFish_DetailSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldFishId" Nullable="false" />
+    <Property Type="Int32" Name="fldCodeElamAvarezId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spr_tblReplyTaghsitSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int64" Name="fldMablaghNaghdi" Nullable="false" />
+    <Property Type="Byte" Name="fldTedadAghsat" Nullable="false" />
+    <Property Type="String" Name="fldShomareMojavez" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldTarikh" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldStatusId" Nullable="false" />
+    <Property Type="Byte" Name="fldTedadMahAghsat" Nullable="false" />
+    <Property Type="Int64" Name="fldJarimeTakhir" Nullable="false" />
+    <Property Type="Decimal" Name="fldDarsad" Nullable="true" Precision="5" Scale="2" />
+    <Property Type="String" Name="fldDescKarmozd" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblRequestTaghsit_TakhfifSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldElamAvarezId" Nullable="false" />
+    <Property Type="Byte" Name="fldRequestType" Nullable="false" />
+    <Property Type="Int32" Name="fldEmployeeId" Nullable="false" />
+    <Property Type="String" Name="fldAddress" Nullable="false" />
+    <Property Type="String" Name="fldEmail" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="fldCodePosti" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldMobile" Nullable="false" MaxLength="11" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldRequestTypeName" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="fldStatusName" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="fldStatusId" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldName_Family" Nullable="false" MaxLength="210" />
+    <Property Type="String" Name="fldCodemeli" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fldFatherName" Nullable="false" MaxLength="60" />
+    <Property Type="String" Name="fldReplyRequest" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="fldReplyRequestName" Nullable="true" MaxLength="9" />
+    <Property Type="Int64" Name="fldMablaghMashmoolKarmozd" Nullable="false" />
+    <Property Type="Int64" Name="fldMablaghKoli" Nullable="false" />
+    <Property Type="String" Name="fldCheckTakhfif_Taghsit" Nullable="false" MaxLength="1" />
+    <Property Type="Int64" Name="fldMablagh" Nullable="false" />
+    <Property Type="Int64" Name="fldMablaghWithTakhfifKoli" Nullable="false" />
+    <Property Type="Int64" Name="MablaghAsli" Nullable="false" />
+    <Property Type="Int32" Name="SumTedad" Nullable="false" />
+    <Property Type="Int64" Name="fldMablaghAmuzesh" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblTanzimateDaramadSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldAvarezId" Nullable="false" />
+    <Property Type="Int32" Name="fldMaliyatId" Nullable="false" />
+    <Property Type="Int32" Name="fldTakhirId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldMablaghGerdKardan" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="String" Name="fldTitle_CodeAvarez" Nullable="false" MaxLength="302" />
+    <Property Type="String" Name="fldTitle_CodeMaliyat" Nullable="false" MaxLength="302" />
+    <Property Type="String" Name="fldTitle_CodeTakhir" Nullable="false" MaxLength="302" />
+    <Property Type="Decimal" Name="fldNerkh" Nullable="false" Precision="5" Scale="2" />
+    <Property Type="Boolean" Name="fldChapShenaseGhabz_Pardakht" Nullable="false" />
+    <Property Type="Byte" Name="fldShorooshenaseGhabz" Nullable="false" />
+    <Property Type="String" Name="fldBankName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldNameShobe" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldCodeSHobe" Nullable="false" />
+    <Property Type="String" Name="fldAddressOrgan" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesabIdPishfarz" Nullable="false" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldOrganName" Nullable="true" />
+    <Property Type="String" Name="fldFormul" Nullable="true" />
+    <Property Type="String" Name="fldSumMaliyat_AvarezName" Nullable="false" MaxLength="18" />
+    <Property Type="Boolean" Name="fldSumMaliyat_Avarez" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_CheckLastIdForElamAvarez">
+    <Property Type="Boolean" Name="fldType" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblEbtalSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldFishId" Nullable="true" />
+    <Property Type="Int32" Name="fldRequestTaghsit_TakhfifId" Nullable="true" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spr_tblReplyTakhfifSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Decimal" Name="fldDarsad" Nullable="false" Precision="5" Scale="2" />
+    <Property Type="Int64" Name="fldMablagh" Nullable="false" />
+    <Property Type="String" Name="fldShomareMajavez" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldTarikh" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldStatusId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblStatusTaghsit_TakhfifSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldRequestId" Nullable="false" />
+    <Property Type="Byte" Name="fldTypeMojavez" Nullable="false" />
+    <Property Type="Byte" Name="fldTypeRequest" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Vaziyat" Nullable="true" MaxLength="9" />
+    <Property Type="String" Name="NoeDarkhast" Nullable="true" MaxLength="5" />
+  </ComplexType>
+  <ComplexType Name="spr_CheckTanzimatDaramad">
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblCheckSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="false" />
+    <Property Type="String" Name="fldShomareSanad" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldTarikhSarResid" Nullable="true" MaxLength="10" />
+    <Property Type="Int64" Name="fldMablaghSanad" Nullable="true" />
+    <Property Type="Byte" Name="fldStatus" Nullable="false" />
+    <Property Type="Boolean" Name="fldTypeSanad" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldReplyTaghsitId" Nullable="false" />
+    <Property Type="String" Name="fldTypeSanadName" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldStatusName" Nullable="true" MaxLength="14" />
+    <Property Type="Int32" Name="fldShomareHesabIdOrgan" Nullable="false" />
+    <Property Type="Boolean" Name="fldSendToMali" Nullable="true" />
+    <Property Type="String" Name="fldSendToMaliDate" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldShomareHesabOrgan" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spr_tblSafteSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTarikhSarResid" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldShomareSanad" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldReplyTaghsitId" Nullable="false" />
+    <Property Type="Int64" Name="fldMablaghSanad" Nullable="false" />
+    <Property Type="Byte" Name="fldStatus" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldStatusName" Nullable="true" MaxLength="14" />
+  </ComplexType>
+  <ComplexType Name="spr_tblBaratSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTarikhSarResid" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldShomareSanad" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldReplyTaghsitId" Nullable="false" />
+    <Property Type="Int64" Name="fldMablaghSanad" Nullable="false" />
+    <Property Type="Byte" Name="fldStatus" Nullable="false" />
+    <Property Type="Int32" Name="fldBaratDarId" Nullable="false" />
+    <Property Type="String" Name="fldMakanPardakht" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldStatusName" Nullable="true" MaxLength="14" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectDataForTaghsit">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTarikhSarResid" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="fldReplyTaghsitId" Nullable="false" />
+    <Property Type="String" Name="fldShomareSanad" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="fldMablaghSanad" Nullable="false" />
+    <Property Type="Byte" Name="fldStatus" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="false" />
+    <Property Type="Int32" Name="fldBaratDarId" Nullable="false" />
+    <Property Type="Byte" Name="fldTypeSanad" Nullable="false" />
+    <Property Type="String" Name="fldMakanPardakht" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldTypeSanadName" Nullable="true" MaxLength="9" />
+    <Property Type="String" Name="fldStatusName" Nullable="false" MaxLength="14" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldBankName" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldBankId" Nullable="false" />
+    <Property Type="String" Name="fldNameShobe" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldShobeId" Nullable="false" />
+    <Property Type="String" Name="fldNameBaratDar" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="fldStatusFish" Nullable="false" MaxLength="13" />
+    <Property Type="String" Name="fldStatusFishId" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="fldFishId" Nullable="true" />
+    <Property Type="Int32" Name="fldShomareHesabIdOrgan" Nullable="false" />
+    <Property Type="String" Name="fldShomareHesabOrgan" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="fldShenaseMeli" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldFather_Sabt" Nullable="false" MaxLength="60" />
+    <Property Type="String" Name="fldDateStatus" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldTarikhSabt" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldNameSaderKonandeCheck" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="TarikhPardakht" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="fldIsSanad" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblCodhayeDaramdSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldDaramadCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldDaramadTitle" Nullable="false" MaxLength="250" />
+    <Property Type="Boolean" Name="fldMashmooleArzesheAfzoode" Nullable="false" />
+    <Property Type="Boolean" Name="fldMashmooleKarmozd" Nullable="false" />
+    <Property Type="Int32" Name="fldUnitId" Nullable="false" />
+    <Property Type="Int16" Name="fldLevel" Nullable="true" />
+    <Property Type="String" Name="fldStrhid" Nullable="true" MaxLength="4000" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldNameVahed" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="fldFlag" Nullable="false" />
+    <Property Type="Int32" Name="lastNod" Nullable="false" />
+    <Property Type="Boolean" Name="fldAmuzeshParvaresh" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblNaghdi_TalabSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int64" Name="fldMablagh" Nullable="false" />
+    <Property Type="Int32" Name="fldReplyTaghsitId" Nullable="false" />
+    <Property Type="Byte" Name="fldType" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldTypeName" Nullable="true" MaxLength="9" />
+    <Property Type="Int32" Name="fldFishId" Nullable="true" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectFishSaderShode">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldElamAvarezId" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="false" />
+    <Property Type="String" Name="fldShenaseGhabz" Nullable="false" MaxLength="13" />
+    <Property Type="String" Name="fldShenasePardakht" Nullable="false" MaxLength="13" />
+    <Property Type="Int64" Name="fldMablaghAvarezGerdShode" Nullable="false" />
+    <Property Type="Byte" Name="fldShorooShenaseGhabz" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="Int64" Name="fldJamKol" Nullable="false" />
+    <Property Type="String" Name="fldBarcode" Nullable="false" MaxLength="26" />
+    <Property Type="Int32" Name="fldAshakhasID" Nullable="false" />
+    <Property Type="String" Name="fldNameShakhs" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="fldNoeShakhs" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="fldFather_ShomareSabt" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="fldTypeAvarez" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="fldTarikh" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldNationalCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fldMashmool" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldPardakhFish" Nullable="false" MaxLength="313" />
+    <Property Type="Int32" Name="fldPcposUser" Nullable="false" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fldShomareSheba" Nullable="true" MaxLength="27" />
+    <Property Type="String" Name="fldTarikhPardakhFish" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="spr_tblPcPosInfoSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldOrganName" Nullable="false" />
+    <Property Type="Int32" Name="fldPspId" Nullable="false" />
+    <Property Type="String" Name="fldPspName" Nullable="false" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="spr_tblNahvePardakhtSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="300" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldCodePardakht" Nullable="false" MaxLength="3" />
+  </ComplexType>
+  <ComplexType Name="spr_tblFactorSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldFishId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldTarikh" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="spr_tblPcPosParam_DetailSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldPcPosParamId" Nullable="false" />
+    <Property Type="Int32" Name="fldPcPosInfoId" Nullable="false" />
+    <Property Type="String" Name="fldValue" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spr_tblFormatShomareNameSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int16" Name="fldYear" Nullable="false" />
+    <Property Type="String" Name="fldFormatShomareName" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="fldShomareShoro" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="fldType" Nullable="false" />
+    <Property Type="String" Name="typeName" Nullable="true" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="spr_tblPcPosParametrSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldFaName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldEnName" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldPspId" Nullable="false" />
+    <Property Type="String" Name="fldPspName" Nullable="false" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectDetailSodoorFish">
+    <Property Type="String" Name="fldSharheCodeDaramad" Nullable="false" />
+    <Property Type="Int64" Name="fldAsliValue" Nullable="false" />
+    <Property Type="Int64" Name="fldAvarezValue" Nullable="false" />
+    <Property Type="Int64" Name="fldMaliyatValue" Nullable="false" />
+    <Property Type="Int32" Name="fldCodeDaramadId" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="false" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="50" />
+    <Property Type="Byte" Name="fldShorooshenaseGhabz" Nullable="false" />
+    <Property Type="Int64" Name="fldAmuzeshParvareshValue" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblPardakhtFishSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldFishId" Nullable="false" />
+    <Property Type="DateTime" Name="fldDatePardakht" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldNahvePardakhtId" Nullable="false" />
+    <Property Type="String" Name="fldTarikh" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldPardakhtFiles_DetailId" Nullable="true" />
+    <Property Type="DateTime" Name="fldDateVariz" Nullable="true" Precision="23" />
+    <Property Type="String" Name="fldTarikhVariz" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="spr_tblPcPosUserSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldPosIpId" Nullable="false" />
+    <Property Type="Int32" Name="fldIdUser" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldUserName" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spr_tblPcPosIPSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldPcPosInfoId" Nullable="false" />
+    <Property Type="String" Name="fldSerial" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldIp" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldOrganName" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="fldPspName" Nullable="false" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="spr_tblShomareNameHaSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldMokatebatId" Nullable="true" />
+    <Property Type="Int32" Name="fldReplyTaghsitId" Nullable="true" />
+    <Property Type="Int16" Name="fldYear" Nullable="false" />
+    <Property Type="Int32" Name="fldShomare" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spr_tblMokatebatSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldCodhayeDaramadiElamAvarezId" Nullable="false" />
+    <Property Type="Int32" Name="fldFileId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldSharheCodeDaramad" Nullable="false" />
+    <Property Type="Int32" Name="fldElamAvarezId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblLetterSignersSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldLetterMinutId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganizationalPostsId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_tblPcPos_Param_Value">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldFaName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldEnName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldValue" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_ListShomareHesabWithElamAvarezId">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spr_tblPspSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="300" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldFileId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblParametreSabet_NerkhSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldParametreSabetId" Nullable="false" />
+    <Property Type="String" Name="fldTarikhFaalSazi" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldValue" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spr_tblPardakhtFileSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldBankId" Nullable="false" />
+    <Property Type="String" Name="fldFileName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldDateSendFile" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spr_tblPardakhtFiles_DetailSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldShenaseGhabz" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldShenasePardakht" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldTarikhPardakht" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldCodeRahgiry" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldNahvePardakhtId" Nullable="false" />
+    <Property Type="Int32" Name="fldPardakhtFileId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldBankId" Nullable="false" />
+    <Property Type="String" Name="fldFileName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldDateSendFile" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldBankName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldTitleNahvePardakht" Nullable="false" MaxLength="300" />
+    <Property Type="Int32" Name="fldFishId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblPspModelSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldPspId" Nullable="false" />
+    <Property Type="String" Name="fldModel" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="fldTitleModel" Nullable="false" MaxLength="402" />
+    <Property Type="Boolean" Name="fldMultiHesab" Nullable="false" />
+    <Property Type="String" Name="fldMultiHesabName" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="spr_InfoPardakhtFTP">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="fldCodAnformatic" Nullable="true" MaxLength="3" />
+    <Property Type="Byte" Name="fldCodKhedmat" Nullable="false" />
+    <Property Type="Byte" Name="fldShorooShenaseGhabz" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblPcPosTransactionSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldFishId" Nullable="false" />
+    <Property Type="Int64" Name="fldPrice" Nullable="false" />
+    <Property Type="Boolean" Name="fldStatus" Nullable="false" />
+    <Property Type="String" Name="fldTrackingCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldShGhabz" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="fldShPardakht" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldSerialNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldTerminalCode" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldTarikh" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldCardNumber" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldNahvePardakht" Nullable="false" MaxLength="5" />
+  </ComplexType>
+  <ComplexType Name="spr_DataForElamAvarez">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTarikhSarResid" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="fldReplyTaghsitId" Nullable="false" />
+    <Property Type="String" Name="fldShomareSanad" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="fldMablaghSanad" Nullable="false" />
+    <Property Type="Byte" Name="fldStatus" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="false" />
+    <Property Type="Int32" Name="fldBaratDarId" Nullable="false" />
+    <Property Type="Byte" Name="fldTypeSanad" Nullable="false" />
+    <Property Type="String" Name="fldMakanPardakht" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldTypeSanadName" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="fldStatusName" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="fldBankName" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldBankId" Nullable="false" />
+    <Property Type="String" Name="fldNameShobe" Nullable="false" MaxLength="150" />
+    <Property Type="Int32" Name="fldShobeId" Nullable="false" />
+    <Property Type="String" Name="fldNameBaratDar" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="fldStatusFish" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldStatusFishId" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldFishId" Nullable="true" />
+    <Property Type="Int32" Name="fldShomareHesabIdOrgan" Nullable="false" />
+    <Property Type="String" Name="fldShomareHesabOrgan" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="fldShenaseMeli" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="fldFather_Sabt" Nullable="false" MaxLength="150" />
+    <Property Type="Int32" Name="fldElamAvarezId" Nullable="false" />
+    <Property Type="String" Name="fldTarikhAkhz" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldDateStatus" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="spr_DataForElamAvarez_Barat">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTarikhSarResid" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="fldReplyTaghsitId" Nullable="false" />
+    <Property Type="String" Name="fldShomareSanad" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="fldMablaghSanad" Nullable="false" />
+    <Property Type="Byte" Name="fldStatus" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="false" />
+    <Property Type="Int32" Name="fldBaratDarId" Nullable="false" />
+    <Property Type="Byte" Name="fldTypeSanad" Nullable="true" />
+    <Property Type="String" Name="fldMakanPardakht" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldTypeSanadName" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="fldStatusName" Nullable="false" MaxLength="14" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldBankName" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="fldBankId" Nullable="false" />
+    <Property Type="String" Name="fldNameShobe" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="fldShobeId" Nullable="false" />
+    <Property Type="String" Name="fldNameBaratDar" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="fldStatusFish" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldStatusFishId" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="fldFishId" Nullable="true" />
+    <Property Type="Int32" Name="fldShomareHesabIdOrgan" Nullable="false" />
+    <Property Type="String" Name="fldShomareHesabOrgan" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="fldShenaseMeli" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldFather_Sabt" Nullable="false" MaxLength="60" />
+    <Property Type="Int32" Name="fldElamAvarezId" Nullable="false" />
+    <Property Type="String" Name="fldTarikhAkhz" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldDateStatus" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="spr_DataForElamAvarez_Check">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTarikhSarResid" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="fldReplyTaghsitId" Nullable="false" />
+    <Property Type="String" Name="fldShomareSanad" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="fldMablaghSanad" Nullable="false" />
+    <Property Type="Byte" Name="fldStatus" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="false" />
+    <Property Type="Int32" Name="fldBaratDarId" Nullable="false" />
+    <Property Type="Byte" Name="fldTypeSanad" Nullable="true" />
+    <Property Type="String" Name="fldMakanPardakht" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldTypeSanadName" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="fldStatusName" Nullable="false" MaxLength="14" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldBankName" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldBankId" Nullable="false" />
+    <Property Type="String" Name="fldNameShobe" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldShobeId" Nullable="false" />
+    <Property Type="String" Name="fldNameBaratDar" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldStatusFish" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldStatusFishId" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="fldFishId" Nullable="true" />
+    <Property Type="Int32" Name="fldShomareHesabIdOrgan" Nullable="false" />
+    <Property Type="String" Name="fldShomareHesabOrgan" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="fldShenaseMeli" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldFather_Sabt" Nullable="false" MaxLength="60" />
+    <Property Type="Int32" Name="fldElamAvarezId" Nullable="false" />
+    <Property Type="String" Name="fldTarikhAkhz" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldDateStatus" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldNameSaderkonandeCheck" Nullable="true" MaxLength="300" />
+  </ComplexType>
+  <ComplexType Name="spr_DataForElamAvarez_Safte">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTarikhSarResid" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="fldReplyTaghsitId" Nullable="false" />
+    <Property Type="String" Name="fldShomareSanad" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="fldMablaghSanad" Nullable="false" />
+    <Property Type="Byte" Name="fldStatus" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="false" />
+    <Property Type="Int32" Name="fldBaratDarId" Nullable="false" />
+    <Property Type="Byte" Name="fldTypeSanad" Nullable="true" />
+    <Property Type="String" Name="fldMakanPardakht" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldTypeSanadName" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="fldStatusName" Nullable="false" MaxLength="14" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldBankName" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="fldBankId" Nullable="false" />
+    <Property Type="String" Name="fldNameShobe" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="fldShobeId" Nullable="false" />
+    <Property Type="String" Name="fldNameBaratDar" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldStatusFish" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldStatusFishId" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="fldFishId" Nullable="true" />
+    <Property Type="Int32" Name="fldShomareHesabIdOrgan" Nullable="false" />
+    <Property Type="String" Name="fldShomareHesabOrgan" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="fldShenaseMeli" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldFather_Sabt" Nullable="false" MaxLength="60" />
+    <Property Type="Int32" Name="fldElamAvarezId" Nullable="false" />
+    <Property Type="String" Name="fldTarikhAkhz" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldDateStatus" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="spr_tblTakhfifSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldShomareMojavez" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldTarikhMojavez" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldAzTarikh" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldTaTarikh" Nullable="false" MaxLength="10" />
+    <Property Type="Decimal" Name="fldTakhfifKoli" Nullable="true" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="fldTakhfifNaghdi" Nullable="true" Precision="5" Scale="2" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spr_tblTakhfifDetailSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldTakhfifId" Nullable="false" />
+    <Property Type="Int32" Name="fldShCodeDaramad" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spr_CheckTakhfif">
+    <Property Type="Boolean" Name="Takhfif" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblExternalFishSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldNameCompany" Nullable="false" MaxLength="350" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spr_RptListCodeDaramad_Donati">
+    <Property Type="String" Name="hidChilde" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DaramadCodeTitle" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DaramdTitleChilde" Nullable="true" />
+    <Property Type="String" Name="lvlChilde" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="P_hid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="P_DaramadCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="P_DaramadTitle" Nullable="true" />
+    <Property Type="String" Name="P_Level" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="Mablagh" Nullable="true" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="true" />
+    <Property Type="String" Name="LastNode" Nullable="true" MaxLength="2" />
+  </ComplexType>
+  <ComplexType Name="spr_RptListCodeDaramad_Gaje">
+    <Property Type="Int32" Name="MaxMablagh" Nullable="true" />
+    <Property Type="String" Name="MaxDaramadCodeChilde" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MaxDaramdTitleChilde" Nullable="true" />
+    <Property Type="Int32" Name="MinMablagh" Nullable="true" />
+    <Property Type="String" Name="MinDaramadCodeChilde" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MinDaramdTitleChilde" Nullable="true" />
+    <Property Type="Int32" Name="Mablagh" Nullable="true" />
+    <Property Type="String" Name="DaramadCodeChilde" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DaramdTitleChilde" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_RptListCodeDaramad_Day">
+    <Property Type="Int64" Name="Mablagh" Nullable="true" />
+    <Property Type="String" Name="TarikhPardakht" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldday" Nullable="false" MaxLength="2" />
+  </ComplexType>
+  <ComplexType Name="spr_RptListCodeDaramad_Month">
+    <Property Type="Int64" Name="Mablagh" Nullable="true" />
+    <Property Type="Byte" Name="fldmonth" Nullable="false" />
+    <Property Type="String" Name="fldNameMah" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="spr_tblPSPModel_ShomareHesabSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldPSPModelId" Nullable="false" />
+    <Property Type="Int32" Name="fldShHesabId" Nullable="false" />
+    <Property Type="Byte" Name="fldOrder" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spr_CheckCopyCode">
+    <Property Type="Int32" Name="fldCheck" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblMahdoodiyatMohasebatSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldAzTarikh" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="fldTatarikh" Nullable="false" MaxLength="10" />
+    <Property Type="Boolean" Name="fldNoeKarbar" Nullable="false" />
+    <Property Type="Boolean" Name="fldNoeCodeDaramad" Nullable="false" />
+    <Property Type="Boolean" Name="fldNoeAshkhas" Nullable="false" />
+    <Property Type="Boolean" Name="fldStatus" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldNoeKarbarName" Nullable="false" MaxLength="11" />
+    <Property Type="String" Name="fldNoeCodeDaramadName" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="fldNoeAshkhasName" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="fldStatusName" Nullable="false" MaxLength="7" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="spr_tblMahdoodiyatMohasebat_AshkhasSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldMahdoodiyatMohasebatId" Nullable="false" />
+    <Property Type="Int32" Name="fldAshkhasId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldName" Nullable="true" MaxLength="300" />
+  </ComplexType>
+  <ComplexType Name="spr_tblMohdoodiyatMohasebat_UserSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldIdUser" Nullable="false" />
+    <Property Type="Int32" Name="fldMahdoodiyatMohasebatId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldNameEmployee" Nullable="false" MaxLength="201" />
+  </ComplexType>
+  <ComplexType Name="spr_tblMahdoodiyatMohasebat_ShomareHesabDaramadSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldMahdodiyatMohasebatId" Nullable="false" />
+    <Property Type="Int32" Name="fldShomarehesabDarmadId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldDaramadCode" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spr_CheckMahdoodiyatMohasebat">
+    <Property Type="Boolean" Name="fldCheck" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_checkTaghsit">
+    <Property Type="Int32" Name="fish" Nullable="true" />
+    <Property Type="Int32" Name="check" Nullable="true" />
+    <Property Type="Int32" Name="Barat" Nullable="true" />
+    <Property Type="Int32" Name="Safte" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblPatternFishSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldFileId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldName" Nullable="false" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="spr_tblDaramadGroupSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="150" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblDaramadGroup_ParametrSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldDaramadGroupId" Nullable="false" />
+    <Property Type="String" Name="fldEnName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldFnName" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="fldStatus" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldStatusName" Nullable="false" MaxLength="7" />
+    <Property Type="Byte" Name="fldNoeField" Nullable="false" />
+    <Property Type="Int32" Name="fldComboBoxId" Nullable="true" />
+    <Property Type="Int32" Name="fldFormuleId" Nullable="true" />
+    <Property Type="String" Name="NoeFieldName" Nullable="true" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="spr_tblDaramadGroup_ParametrValuesSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldElamAvarezId" Nullable="false" />
+    <Property Type="Int32" Name="fldParametrGroupDaramadId" Nullable="false" />
+    <Property Type="String" Name="fldValue" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldFnName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spr_tblPatternFish_DaramadGroupSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldPatternFishId" Nullable="false" />
+    <Property Type="Int32" Name="fldDaramadGroupId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spr_RptListCodeDaramad_Asli">
+    <Property Type="String" Name="P_DaramdCode" Nullable="true" />
+    <Property Type="String" Name="P_DaramadTitle" Nullable="true" />
+    <Property Type="Int64" Name="Mablagh" Nullable="true" />
+    <Property Type="Int32" Name="Count" Nullable="true" />
+    <Property Type="String" Name="fldTarikh" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="true" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_CodeDaramdAsli">
+    <Property Type="Int32" Name="fldCodeDaramadId" Nullable="false" />
+    <Property Type="String" Name="fldDaramadCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="fldDaramadTitle" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="fldMashmooleArzesheAfzoode" Nullable="false" />
+    <Property Type="Boolean" Name="fldMashmooleKarmozd" Nullable="false" />
+    <Property Type="String" Name="fldNameVahed" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="spr_tblCompanySelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="fldShenaseMeli" Nullable="false" MaxLength="11" />
+    <Property Type="Int32" Name="fldKarbarId" Nullable="false" />
+    <Property Type="String" Name="fldURL" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldUserName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="fldUserNameService" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldPassService" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="true" />
+    <Property Type="String" Name="fldNameOrgan" Nullable="false" MaxLength="300" />
+  </ComplexType>
+  <ComplexType Name="spr_AshkhasIdForXmlInput">
+    <Property Type="Int32" Name="IdOutput" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_ShomareHesabIdForXmlInput">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_FishSaderShodeForXmlOut">
+    <Property Type="Int64" Name="MablaghPardakhtShode" Nullable="false" />
+    <Property Type="Int64" Name="Avarez" Nullable="true" />
+    <Property Type="Int64" Name="Maliyat" Nullable="true" />
+    <Property Type="String" Name="TarikhSodoor" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="TarikhPardakht" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="NoePardakht" Nullable="false" />
+    <Property Type="String" Name="CodeRahgiri" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CodeErja" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="TarikhVarizBeHesab" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ShomareHesabVariz" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Infi_Bank" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="OrganName" Nullable="true" />
+    <Property Type="String" Name="ShenaseMeliOrgan" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="NameBank" Nullable="true" MaxLength="151" />
+    <Property Type="String" Name="NoeMoadi" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="NameMoadi" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="FamilyMoadi" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CodeMeli" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NoeSherkat" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="ShenaseMeliSherkat" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="ShomareSabt" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CodeDaramadElamAvarez" Nullable="true" />
+    <Property Type="Int32" Name="SerialFish" Nullable="false" />
+    <Property Type="Int32" Name="ElamAvarezId" Nullable="false" />
+    <Property Type="Boolean" Name="fldSendToMaliFlag" Nullable="false" />
+    <Property Type="Boolean" Name="fldFishSentFlag" Nullable="false" />
+    <Property Type="DateTime" Name="fldDateSendToMali" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fldDateFishSent" Nullable="true" Precision="23" />
+    <Property Type="Int64" Name="AmuzeshParvaresh" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_Ashkhas_Taghsit">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTarikhSarResid" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="fldReplyTaghsitId" Nullable="false" />
+    <Property Type="String" Name="fldShomareSanad" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="fldMablaghSanad" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="false" />
+    <Property Type="Int32" Name="fldBaratDarId" Nullable="false" />
+    <Property Type="Byte" Name="fldTypeSanad" Nullable="true" />
+    <Property Type="String" Name="fldMakanPardakht" Nullable="false" />
+    <Property Type="String" Name="fldTypeSanadName" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="fldDateStatus" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldStatusName" Nullable="false" MaxLength="14" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldBankName" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="fldBankId" Nullable="false" />
+    <Property Type="String" Name="fldNameShobe" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="fldShobeId" Nullable="false" />
+    <Property Type="String" Name="fldNameBaratDar" Nullable="true" MaxLength="300" />
+    <Property Type="Int32" Name="fldShomareHesabIdOrgan" Nullable="false" />
+    <Property Type="String" Name="fldShomareHesabOrgan" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldTarikhSabt" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldNameSaderKonandeCheck" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectAshkhas_ElamAvarez">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Boolean" Name="fldType" Nullable="false" />
+    <Property Type="String" Name="fldTarikh" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="Int64" Name="fldMablaghKoli" Nullable="false" />
+    <Property Type="Int64" Name="fldMablaghTakhfif" Nullable="false" />
+    <Property Type="Int64" Name="fldMablaghGHabelPardakht" Nullable="false" />
+    <Property Type="String" Name="fldNameOrgan" Nullable="true" />
+    <Property Type="String" Name="SharhDesc" Nullable="true" />
+    <Property Type="String" Name="Noe" Nullable="true" MaxLength="209" />
+    <Property Type="Int32" Name="FishId" Nullable="false" />
+    <Property Type="Int32" Name="ReplyId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectAshkhas_Fish">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesabId" Nullable="false" />
+    <Property Type="String" Name="fldShenaseGhabz" Nullable="false" MaxLength="13" />
+    <Property Type="String" Name="fldShenasePardakht" Nullable="false" MaxLength="13" />
+    <Property Type="Int64" Name="fldMablaghAvarezGerdShode" Nullable="false" />
+    <Property Type="Byte" Name="fldShorooShenaseGhabz" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="Int64" Name="fldJamKol" Nullable="false" />
+    <Property Type="String" Name="fldBarcode" Nullable="false" MaxLength="26" />
+    <Property Type="String" Name="fldTarikh" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldShomareHesab" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="fldTarikhPardakht" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="NoePardakht" Nullable="false" MaxLength="300" />
+    <Property Type="String" Name="fldStatus" Nullable="false" MaxLength="11" />
+    <Property Type="Int64" Name="fldAsliValue" Nullable="true" />
+    <Property Type="Int64" Name="fldMaliyatValue" Nullable="true" />
+    <Property Type="Int64" Name="fldAvarezValue" Nullable="true" />
+    <Property Type="String" Name="fldTarikhVariz" Nullable="false" MaxLength="10" />
+    <Property Type="Int64" Name="fldAmuzeshParvareshValue" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_SelectForEmalTakhfif">
+    <Property Type="Int32" Name="fldID" Nullable="false" />
+    <Property Type="Int32" Name="fldTedad" Nullable="false" />
+    <Property Type="Int64" Name="AsliValue" Nullable="true" />
+    <Property Type="Int64" Name="fldTakhfifAsliValue" Nullable="true" />
+    <Property Type="String" Name="fldSharheCodeDaramad" Nullable="false" />
+    <Property Type="String" Name="fldDaramadCode" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spr_tblGozareshatFileSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldGozareshatId" Nullable="false" />
+    <Property Type="Int32" Name="fldOrganId" Nullable="false" />
+    <Property Type="Int32" Name="fldReportFileId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldOrganName" Nullable="true" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="spr_tblGozareshatSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="String" Name="fldTitle" Nullable="false" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="spr_ChangeLetter">
+    <Property Type="Int32" Name="flag" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spr_tblParametrHesabdariSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesabCodeDaramadId" Nullable="false" />
+    <Property Type="String" Name="fldCodeHesab" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="fldHesabId" Nullable="true" />
+    <Property Type="Int32" Name="fldCompanyId" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="String" Name="fldDesc" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spr_ElamAvarelog">
+    <Property Type="String" Name="fldTarikh" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="fldtime" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="fldTypeEghdam" Nullable="true" />
+    <Property Type="String" Name="fldUser" Nullable="false" MaxLength="253" />
+  </ComplexType>
+  <ComplexType Name="spr_tblShomareHesab_FormulaSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldShomareHesab_CodeId" Nullable="false" />
+    <Property Type="String" Name="fldFormolsaz" Nullable="true" />
+    <Property Type="Int32" Name="fldFormulKoliId" Nullable="true" />
+    <Property Type="Int32" Name="fldFormulMohasebatId" Nullable="true" />
+    <Property Type="String" Name="fldTarikhEjra" Nullable="false" MaxLength="10" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="prs_InsertCheckIntoSanad">
+    <Property Type="Int32" Name="ErrorCode" Nullable="false" />
+    <Property Type="String" Name="ErrorMessage" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="fldId" Nullable="true" />
+  </ComplexType>
+</Schema>
