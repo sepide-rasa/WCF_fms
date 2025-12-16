@@ -1207,6 +1207,63 @@
           <Parameter Name="fldUserId" Type="int" Mode="In" />
           <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
         </Function>
+        <Function Name="spr_tblItemMablgh_HeaderCopy" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+          <Parameter Name="fldHeaderID" Type="int" Mode="In" />
+          <Parameter Name="fldActiveDate" Type="int" Mode="In" />
+          <Parameter Name="fldIP" Type="varchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblItemMablgh_HeaderDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblItemMablgh_HeaderInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+          <Parameter Name="fldActiveDate" Type="int" Mode="In" />
+          <Parameter Name="fldIp" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblItemMablgh_HeaderSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="value" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblItemMablgh_HeaderUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldActiveDate" Type="int" Mode="In" />
+          <Parameter Name="fldDeactiveDate" Type="int" Mode="In" />
+          <Parameter Name="fldActive" Type="bit" Mode="In" />
+          <Parameter Name="fldIp" Type="nvarchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblItemsMablghDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblItemsMablghInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+          <Parameter Name="fldHeaderId" Type="int" Mode="In" />
+          <Parameter Name="fldItemsHoghughiId" Type="int" Mode="In" />
+          <Parameter Name="fldMablagh" Type="int" Mode="In" />
+          <Parameter Name="fldPercentW_H" Type="decimal" Mode="In" />
+          <Parameter Name="fldPercentChild" Type="decimal" Mode="In" />
+          <Parameter Name="fldCount" Type="tinyint" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblItemsMablghSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="value" Type="nvarchar" Mode="In" />
+          <Parameter Name="value2" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblItemsMablghUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldHeaderId" Type="int" Mode="In" />
+          <Parameter Name="fldItemsHoghughiId" Type="int" Mode="In" />
+          <Parameter Name="fldMablagh" Type="int" Mode="In" />
+          <Parameter Name="fldPercentW_H" Type="decimal" Mode="In" />
+          <Parameter Name="fldPercentChild" Type="decimal" Mode="In" />
+          <Parameter Name="fldCount" Type="tinyint" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
         <Function Name="spr_tblKarKardeMahaneDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
           <Parameter Name="fldID" Type="int" Mode="In" />
           <Parameter Name="fldUserID" Type="int" Mode="In" />
@@ -2521,6 +2578,27 @@
           <Parameter Name="fldUserId" Type="int" Mode="In" />
           <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
         </Function>
+        <Function Name="spr_tblMoteghayerhayeHoghoghiItemsDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblMoteghayerhayeHoghoghiItemsInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+          <Parameter Name="fldMoteghayerhayeHoghoghiId" Type="int" Mode="In" />
+          <Parameter Name="fldItemEstekhdamId" Type="varchar(max)" Mode="In" />
+          <Parameter Name="fldType" Type="tinyint" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblMoteghayerhayeHoghoghiItemsSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+          <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value" Type="nvarchar" Mode="In" />
+          <Parameter Name="h" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_tblMoteghayerhayeHoghoghiItemsUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+          <Parameter Name="fldMoteghayerhayeHoghoghiId" Type="int" Mode="In" />
+          <Parameter Name="fldItemEstekhdamId" Type="varchar(max)" Mode="In" />
+          <Parameter Name="fldType" Type="tinyint" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
+        </Function>
         <Function Name="spr_tblMoteghayerhayeHoghoghiSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
           <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
           <Parameter Name="Value" Type="nvarchar" Mode="In" />
@@ -2924,6 +3002,13 @@
           <Parameter Name="fldMonth" Type="tinyint" Mode="In" />
           <Parameter Name="fldUserId" Type="int" Mode="In" />
           <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="spr_tbltblItemMablgh_HeaderActiveDate_fldDeactiveDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+          <Parameter Name="fldId" Type="int" Mode="In" />
+          <Parameter Name="fldDeactiveDate" Type="int" Mode="In" />
+          <Parameter Name="fldActive" Type="bit" Mode="In" />
+          <Parameter Name="fldIP" Type="varchar" Mode="In" />
+          <Parameter Name="fldUserId" Type="int" Mode="In" />
         </Function>
         <Function Name="spr_tblTypeEstekhdam_UserGroupDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
           <Parameter Name="fldUseGroupId" Type="int" Mode="In" />
@@ -7488,6 +7573,91 @@
             <Parameter Name="fldTarikh" Mode="In" Type="Int32" />
             <Parameter Name="fldUserId" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="spr_tblMoteghayerhayeHoghoghiItemsDelete">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblMoteghayerhayeHoghoghiItemsInsert">
+            <Parameter Name="fldMoteghayerhayeHoghoghiId" Mode="In" Type="Int32" />
+            <Parameter Name="fldItemEstekhdamId" Mode="In" Type="String" />
+            <Parameter Name="fldType" Mode="In" Type="Byte" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblMoteghayerhayeHoghoghiItemsSelect" ReturnType="Collection(RasaFMSPayRollDBModel.spr_tblMoteghayerhayeHoghoghiItemsSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="Value" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblMoteghayerhayeHoghoghiItemsUpdate">
+            <Parameter Name="fldMoteghayerhayeHoghoghiId" Mode="In" Type="Int32" />
+            <Parameter Name="fldItemEstekhdamId" Mode="In" Type="String" />
+            <Parameter Name="fldType" Mode="In" Type="Byte" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblItemMablgh_HeaderDelete">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblItemMablgh_HeaderInsert">
+            <Parameter Name="fldActiveDate" Mode="In" Type="Int32" />
+            <Parameter Name="fldIp" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblItemMablgh_HeaderSelect" ReturnType="Collection(RasaFMSPayRollDBModel.spr_tblItemMablgh_HeaderSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="value" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblItemMablgh_HeaderUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldActiveDate" Mode="In" Type="Int32" />
+            <Parameter Name="fldDeactiveDate" Mode="In" Type="Int32" />
+            <Parameter Name="fldActive" Mode="In" Type="Boolean" />
+            <Parameter Name="fldIp" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblItemsMablghDelete">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblItemsMablghInsert">
+            <Parameter Name="fldHeaderId" Mode="In" Type="Int32" />
+            <Parameter Name="fldItemsHoghughiId" Mode="In" Type="Int32" />
+            <Parameter Name="fldMablagh" Mode="In" Type="Int32" />
+            <Parameter Name="fldPercentW_H" Mode="In" Type="Decimal" />
+            <Parameter Name="fldPercentChild" Mode="In" Type="Decimal" />
+            <Parameter Name="fldCount" Mode="In" Type="Byte" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblItemsMablghSelect" ReturnType="Collection(RasaFMSPayRollDBModel.spr_tblItemsMablghSelect)">
+            <Parameter Name="fieldname" Mode="In" Type="String" />
+            <Parameter Name="value" Mode="In" Type="String" />
+            <Parameter Name="value2" Mode="In" Type="String" />
+            <Parameter Name="h" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblItemsMablghUpdate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldHeaderId" Mode="In" Type="Int32" />
+            <Parameter Name="fldItemsHoghughiId" Mode="In" Type="Int32" />
+            <Parameter Name="fldMablagh" Mode="In" Type="Int32" />
+            <Parameter Name="fldPercentW_H" Mode="In" Type="Decimal" />
+            <Parameter Name="fldPercentChild" Mode="In" Type="Decimal" />
+            <Parameter Name="fldCount" Mode="In" Type="Byte" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tbltblItemMablgh_HeaderActiveDate_fldDeactiveDate">
+            <Parameter Name="fldId" Mode="In" Type="Int32" />
+            <Parameter Name="fldDeactiveDate" Mode="In" Type="Int32" />
+            <Parameter Name="fldActive" Mode="In" Type="Boolean" />
+            <Parameter Name="fldIP" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_tblItemMablgh_HeaderCopy">
+            <Parameter Name="fldHeaderID" Mode="In" Type="Int32" />
+            <Parameter Name="fldActiveDate" Mode="In" Type="Int32" />
+            <Parameter Name="fldIP" Mode="In" Type="String" />
+            <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="spr_tblItemsEstekhdam_FiscalTitleSelect">
           <Property Type="Int32" Name="fldId" Nullable="false" />
@@ -10295,6 +10465,36 @@
           <Property Type="Int32" Name="tarmim" Nullable="false" />
           <Property Type="String" Name="fldHalateEstekhdam" Nullable="false" MaxLength="4" />
           <Property Type="Int32" Name="jame" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spr_tblMoteghayerhayeHoghoghiItemsSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldMoteghayerhayeHoghoghiId" Nullable="false" />
+          <Property Type="Int32" Name="fldItemEstekhdamId" Nullable="false" />
+          <Property Type="Byte" Name="fldType" Nullable="false" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="spr_tblItemMablgh_HeaderSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldActiveDate" Nullable="false" />
+          <Property Type="Int32" Name="fldDeactiveDate" Nullable="true" />
+          <Property Type="Boolean" Name="fldActive" Nullable="false" />
+          <Property Type="String" Name="fldIp" Nullable="false" MaxLength="16" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="fldActiveName" Nullable="false" MaxLength="7" />
+        </ComplexType>
+        <ComplexType Name="spr_tblItemsMablghSelect">
+          <Property Type="Int32" Name="fldId" Nullable="false" />
+          <Property Type="Int32" Name="fldHeaderId" Nullable="true" />
+          <Property Type="Int32" Name="fldItemsHoghughiId" Nullable="false" />
+          <Property Type="Int32" Name="fldMablagh" Nullable="false" />
+          <Property Type="Decimal" Name="fldPercentW_H" Nullable="false" Precision="4" Scale="2" />
+          <Property Type="Decimal" Name="fldPercentChild" Nullable="false" Precision="4" Scale="2" />
+          <Property Type="Byte" Name="fldCount" Nullable="false" />
+          <Property Type="Int32" Name="fldUserId" Nullable="false" />
+          <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="fldItemHoghughiTitle" Nullable="false" MaxLength="400" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -14037,6 +14237,59 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="spr_tblMohaseleenUpdate" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblMohaseleenUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tblMoteghayerhayeHoghoghiItemsDelete" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblMoteghayerhayeHoghoghiItemsDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblMoteghayerhayeHoghoghiItemsInsert" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblMoteghayerhayeHoghoghiItemsInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblMoteghayerhayeHoghoghiItemsSelect" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblMoteghayerhayeHoghoghiItemsSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RasaFMSPayRollDBModel.spr_tblMoteghayerhayeHoghoghiItemsSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldMoteghayerhayeHoghoghiId" ColumnName="fldMoteghayerhayeHoghoghiId" />
+                <ScalarProperty Name="fldItemEstekhdamId" ColumnName="fldItemEstekhdamId" />
+                <ScalarProperty Name="fldType" ColumnName="fldType" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblMoteghayerhayeHoghoghiItemsUpdate" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblMoteghayerhayeHoghoghiItemsUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tblItemMablgh_HeaderDelete" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemMablgh_HeaderDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblItemMablgh_HeaderInsert" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemMablgh_HeaderInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblItemMablgh_HeaderSelect" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemMablgh_HeaderSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RasaFMSPayRollDBModel.spr_tblItemMablgh_HeaderSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldActiveDate" ColumnName="fldActiveDate" />
+                <ScalarProperty Name="fldDeactiveDate" ColumnName="fldDeactiveDate" />
+                <ScalarProperty Name="fldActive" ColumnName="fldActive" />
+                <ScalarProperty Name="fldIp" ColumnName="fldIp" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldActiveName" ColumnName="fldActiveName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblItemMablgh_HeaderUpdate" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemMablgh_HeaderUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tblItemsMablghDelete" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemsMablghDelete" />
+          <FunctionImportMapping FunctionImportName="spr_tblItemsMablghInsert" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemsMablghInsert" />
+          <FunctionImportMapping FunctionImportName="spr_tblItemsMablghSelect" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemsMablghSelect">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RasaFMSPayRollDBModel.spr_tblItemsMablghSelect">
+                <ScalarProperty Name="fldId" ColumnName="fldId" />
+                <ScalarProperty Name="fldHeaderId" ColumnName="fldHeaderId" />
+                <ScalarProperty Name="fldItemsHoghughiId" ColumnName="fldItemsHoghughiId" />
+                <ScalarProperty Name="fldMablagh" ColumnName="fldMablagh" />
+                <ScalarProperty Name="fldPercentW_H" ColumnName="fldPercentW_H" />
+                <ScalarProperty Name="fldPercentChild" ColumnName="fldPercentChild" />
+                <ScalarProperty Name="fldCount" ColumnName="fldCount" />
+                <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+                <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+                <ScalarProperty Name="fldItemHoghughiTitle" ColumnName="fldItemHoghughiTitle" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_tblItemsMablghUpdate" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemsMablghUpdate" />
+          <FunctionImportMapping FunctionImportName="spr_tbltblItemMablgh_HeaderActiveDate_fldDeactiveDate" FunctionName="RasaFMSPayRollDBModel.Store.spr_tbltblItemMablgh_HeaderActiveDate_fldDeactiveDate" />
+          <FunctionImportMapping FunctionImportName="spr_tblItemMablgh_HeaderCopy" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemMablgh_HeaderCopy" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

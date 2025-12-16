@@ -11416,6 +11416,508 @@ namespace WCF_FMS
         }
         #endregion
 
-      
+        //MoteghayerhayeHoghoghiItems
+        #region GetMoteghayerhayeHoghoghiItemsDetail
+        public OBJ_MoteghayerhayeHoghoghiItems GetMoteghayerhayeHoghoghiItemsDetail(int Id, string IP, out ClsError Error)
+        {
+            Error = new ClsError();
+            try
+            {
+                return new BL_MoteghayerhayeHoghoghiItems().Detail(Id, out Error);
+            }
+            catch (Exception x)
+            {
+                Error.ErrorType = true;
+                //Error.ErrorMsg = "خطای پیش بینی نشده";
+                string Er = x.Message;
+                if (x.InnerException != null)
+                    Er += " " + x.InnerException.Message;
+                Error.ErrorMsg = new BL().BLErrorMsg("", Er, IP, null);
+                return null;
+            }
+        }
+        #endregion
+        #region GetMoteghayerhayeHoghoghiItemsWithFilter
+        public List<OBJ_MoteghayerhayeHoghoghiItems> GetMoteghayerhayeHoghoghiItemsWithFilter(string FieldName, string FilterValue, int Top, string IP, out ClsError Error)
+        {
+            Error = new ClsError();
+            Error.ErrorType = false;
+            Error.ErrorMsg = "";
+            try
+            {
+                return new BL_MoteghayerhayeHoghoghiItems().Select(FieldName, FilterValue, Top);
+            }
+            catch (Exception x)
+            {
+                Error.ErrorType = true;
+                //Error.ErrorMsg = "خطای پیش بینی نشده";
+                string Er = x.Message;
+                if (x.InnerException != null)
+                    Er += " " + x.InnerException.Message;
+                Error.ErrorMsg = new BL().BLErrorMsg("", Er, IP, null);
+                return null;
+            }
+
+        }
+        #endregion
+        #region InsertMoteghayerhayeHoghoghiItems
+        public string InsertMoteghayerhayeHoghoghiItems(int MoteghayerhayeHoghoghiId, string ItemEstekhdamId, byte fldType,  string UserName, string Password, int OrganId, string IP, out ClsError Error)
+        {
+            Error = new ClsError();
+            var UserId = authorize.ExistUser(UserName, Password);
+            if (UserId != 0)
+            {
+                try
+                {
+                    //if (new BL().BLPermission(298, UserId, OrganId))
+                    return new BL_MoteghayerhayeHoghoghiItems().Insert(MoteghayerhayeHoghoghiId, ItemEstekhdamId, fldType, UserId, out Error);
+                    //else
+                    //{
+                    //    Error.ErrorType = true;
+                    //    Error.ErrorMsg = "شما مجاز به دسترسی نمی باشید.";
+                    //    return "خطا";
+                    //}
+                }
+                catch (Exception x)
+                {
+                    Error.ErrorType = true;
+                    //Error.ErrorMsg = "خطای پیش بینی نشده";
+                    string Er = x.Message;
+                    if (x.InnerException != null)
+                        Er += " " + x.InnerException.Message;
+                    Error.ErrorMsg = new BL().BLErrorMsg(UserName, Er, IP, UserId);
+                    return "خطا";
+                }
+            }
+            else
+            {
+                Error.ErrorType = true;
+                Error.ErrorMsg = "نام کاربری یا رمز عبور صحیح نمی باشد.";
+                return "خطا";
+            }
+        }
+        #endregion
+        #region UpdateMoteghayerhayeHoghoghiItems
+        public string UpdateMoteghayerhayeHoghoghiItems(int MoteghayerhayeHoghoghiId, string ItemEstekhdamId, byte fldType, string UserName, string Password, int OrganId, string IP, out ClsError Error)
+        {
+            Error = new ClsError();
+            var UserId = authorize.ExistUser(UserName, Password);
+            if (UserId != 0)
+            {
+                try
+                {
+                    //if (new BL().BLPermission(299, UserId, OrganId))
+                    return new BL_MoteghayerhayeHoghoghiItems().Update(MoteghayerhayeHoghoghiId, ItemEstekhdamId,fldType, UserId, out Error);
+                    //else
+                    //{
+                    //    Error.ErrorType = true;
+                    //    Error.ErrorMsg = "شما مجاز به دسترسی نمی باشید.";
+                    //    return "خطا";
+                    //}
+                }
+                catch (Exception x)
+                {
+                    Error.ErrorType = true;
+                    //Error.ErrorMsg = "خطای پیش بینی نشده";
+                    string Er = x.Message;
+                    if (x.InnerException != null)
+                        Er += " " + x.InnerException.Message;
+                    Error.ErrorMsg = new BL().BLErrorMsg(UserName, Er, IP, UserId);
+                    return "خطا";
+                }
+            }
+            else
+            {
+                Error.ErrorType = true;
+                Error.ErrorMsg = "نام کاربری یا رمز عبور صحیح نمی باشد.";
+                return "خطا";
+            }
+        }
+        #endregion
+        #region DeleteMoteghayerhayeHoghoghiItems
+        public string DeleteMoteghayerhayeHoghoghiItems( int Id, string UserName, string Password, int OrganId, string IP, out ClsError Error)
+        {
+            Error = new ClsError();
+            var UserId = authorize.ExistUser(UserName, Password);
+            if (UserId != 0)
+            {
+                try
+                {
+                    //if (new BL().BLPermission(300, UserId, OrganId))
+                    return new BL_MoteghayerhayeHoghoghiItems().Delete(Id, UserId, out Error);
+                    //else
+                    //{
+                    //    Error.ErrorType = true;
+                    //    Error.ErrorMsg = "شما مجاز به دسترسی نمی باشید.";
+                    //    return "خطا";
+                    //}
+                }
+                catch (Exception x)
+                {
+                    Error.ErrorType = true;
+                    //Error.ErrorMsg = "خطای پیش بینی نشده";
+                    string Er = x.Message;
+                    if (x.InnerException != null)
+                        Er += " " + x.InnerException.Message;
+                    Error.ErrorMsg = new BL().BLErrorMsg(UserName, Er, IP, UserId);
+                    return "خطا";
+                }
+            }
+            else
+            {
+                Error.ErrorType = true;
+                Error.ErrorMsg = "نام کاربری یا رمز عبور صحیح نمی باشد.";
+                return "خطا";
+            }
+        }
+        #endregion
+        //ItemMablgh_Header
+        #region GetItemMablgh_HeaderDetail
+        public OBJ_ItemMablgh_Header GetItemMablgh_HeaderDetail(int Id, string IP, out ClsError Error)
+        {
+            Error = new ClsError();
+            try
+            {
+                return new BL_ItemMablgh_Header().Detail(Id, out Error);
+            }
+            catch (Exception x)
+            {
+                Error.ErrorType = true;
+                //Error.ErrorMsg = "خطای پیش بینی نشده";
+                string Er = x.Message;
+                if (x.InnerException != null)
+                    Er += " " + x.InnerException.Message;
+                Error.ErrorMsg = new BL().BLErrorMsg("", Er, IP, null);
+                return null;
+            }
+        }
+        #endregion
+        #region GetItemMablgh_HeaderWithFilter
+        public List<OBJ_ItemMablgh_Header> GetItemMablgh_HeaderWithFilter(string FieldName, string FilterValue, int Top, string IP, out ClsError Error)
+        {
+            Error = new ClsError();
+
+            Error.ErrorType = false;
+            Error.ErrorMsg = "";
+            try
+            {
+                return new BL_ItemMablgh_Header().Select(FieldName, FilterValue, Top);
+            }
+            catch (Exception x)
+            {
+                Error.ErrorType = true;
+                // Error.ErrorMsg = "خطای پیش بینی نشده";
+                string Er = x.Message;
+                if (x.InnerException != null)
+                    Er += " " + x.InnerException.Message;
+                Error.ErrorMsg = new BL().BLErrorMsg("", Er, IP, null);
+                return null;
+            }
+        }
+        #endregion
+        #region InsertItemMablgh_Header
+        public string InsertItemMablgh_Header(int ActiveDate, string UserName, string Password, int OrganId, string IP, out ClsError Error)
+        {
+            Error = new ClsError();
+            var UserId = authorize.ExistUser(UserName, Password);
+            if (UserId != 0)
+            {
+                try
+                {
+                    if (new BL().BLPermission(1337, UserId, OrganId))
+                        return new BL_ItemMablgh_Header().Insert(ActiveDate, UserId, IP, out Error);
+                    else
+                    {
+                        Error.ErrorType = true;
+                        Error.ErrorMsg = "شما مجاز به دسترسی نمی باشید.";
+                        return "خطا";
+                    }
+                }
+                catch (Exception x)
+                {
+                    Error.ErrorType = true;
+                    //Error.ErrorMsg = "خطای پیش بینی نشده";
+                    string Er = x.Message;
+                    if (x.InnerException != null)
+                        Er += " " + x.InnerException.Message;
+                    Error.ErrorMsg = new BL().BLErrorMsg(UserName, Er, IP, UserId);
+                    return "خطا";
+                }
+            }
+            else
+            {
+                Error.ErrorType = true;
+                Error.ErrorMsg = "نام کاربری یا رمز عبور صحیح نمی باشد.";
+                return "خطا";
+            }
+        }
+        #endregion
+        #region UpdateItemMablgh_Header
+        public string UpdateItemMablgh_Header(int Id, int? DeactiveDate, bool Active, string UserName, string Password, int OrganId, string IP, out ClsError Error)
+        {
+            Error = new ClsError();
+            var UserId = authorize.ExistUser(UserName, Password);
+            if (UserId != 0)
+            {
+                try
+                {
+                    if (new BL().BLPermission(1338, UserId, OrganId))
+                        return new BL_ItemMablgh_Header().Update(Id, DeactiveDate, Active, UserId, IP, out Error);
+                    else
+                    {
+                        Error.ErrorType = true;
+                        Error.ErrorMsg = "شما مجاز به دسترسی نمی باشید.";
+                        return "خطا";
+                    }
+                }
+                catch (Exception x)
+                {
+                    Error.ErrorType = true;
+                    //Error.ErrorMsg = "خطای پیش بینی نشده";
+                    string Er = x.Message;
+                    if (x.InnerException != null)
+                        Er += " " + x.InnerException.Message;
+                    Error.ErrorMsg = new BL().BLErrorMsg(UserName, Er, IP, UserId);
+                    return "خطا";
+                }
+            }
+            else
+            {
+                Error.ErrorType = true;
+                Error.ErrorMsg = "نام کاربری یا رمز عبور صحیح نمی باشد.";
+                return "خطا";
+            }
+        }
+        #endregion
+        #region DeleteItemMablgh_Header
+        public string DeleteItemMablgh_Header(int Id, string UserName, string Password, int OrganId, string IP, out ClsError Error)
+        {
+            Error = new ClsError();
+            var UserId = authorize.ExistUser(UserName, Password);
+            if (UserId != 0)
+            {
+                try
+                {
+                    if (new BL().BLPermission(1339, UserId, OrganId))
+                        return new BL_ItemMablgh_Header().Delete(Id, UserId, out Error);
+                    else
+                    {
+                        Error.ErrorType = true;
+                        Error.ErrorMsg = "شما مجاز به دسترسی نمی باشید.";
+                        return "خطا";
+                    }
+                }
+                catch (Exception x)
+                {
+                    Error.ErrorType = true;
+                    //Error.ErrorMsg = "خطای پیش بینی نشده";
+                    string Er = x.Message;
+                    if (x.InnerException != null)
+                        Er += " " + x.InnerException.Message;
+                    Error.ErrorMsg = new BL().BLErrorMsg(UserName, Er, IP, UserId);
+                    return "خطا";
+                }
+            }
+            else
+            {
+                Error.ErrorType = true;
+                Error.ErrorMsg = "نام کاربری یا رمز عبور صحیح نمی باشد.";
+                return "خطا";
+            }
+        }
+        #endregion
+        #region CopyItemMablgh_Header
+        public string CopyItemMablgh_Header(int HeaderId, int ActiveDate, string UserName, string Password, int OrganId, string IP, out ClsError Error)
+        {
+            Error = new ClsError();
+            var UserId = authorize.ExistUser(UserName, Password);
+            if (UserId != 0)
+            {
+                try
+                {
+                    if (new BL().BLPermission(1337, UserId, OrganId))
+                        return new BL_ItemMablgh_Header().Copy(HeaderId, ActiveDate, UserId, IP, out Error);
+                    else
+                    {
+                        Error.ErrorType = true;
+                        Error.ErrorMsg = "شما مجاز به دسترسی نمی باشید.";
+                        return "خطا";
+                    }
+                }
+                catch (Exception x)
+                {
+                    Error.ErrorType = true;
+                    //Error.ErrorMsg = "خطای پیش بینی نشده";
+                    string Er = x.Message;
+                    if (x.InnerException != null)
+                        Er += " " + x.InnerException.Message;
+                    Error.ErrorMsg = new BL().BLErrorMsg(UserName, Er, IP, UserId);
+                    return "خطا";
+                }
+            }
+            else
+            {
+                Error.ErrorType = true;
+                Error.ErrorMsg = "نام کاربری یا رمز عبور صحیح نمی باشد.";
+                return "خطا";
+            }
+        }
+        #endregion
+
+        //ItemsMablgh
+        #region GetItemsMablghDetail
+        public OBJ_ItemsMablgh GetItemsMablghDetail(int Id, string IP, out ClsError Error)
+        {
+            Error = new ClsError();
+            try
+            {
+                return new BL_ItemsMablgh().Detail(Id, out Error);
+            }
+            catch (Exception x)
+            {
+                Error.ErrorType = true;
+                //Error.ErrorMsg = "خطای پیش بینی نشده";
+                string Er = x.Message;
+                if (x.InnerException != null)
+                    Er += " " + x.InnerException.Message;
+                Error.ErrorMsg = new BL().BLErrorMsg("", Er, IP, null);
+                return null;
+            }
+        }
+        #endregion
+        #region GetItemsMablghWithFilter
+        public List<OBJ_ItemsMablgh> GetItemsMablghWithFilter(string FieldName, string FilterValue, string FilterValue2,  int Top, string IP, out ClsError Error)
+        {
+            Error = new ClsError();
+
+            Error.ErrorType = false;
+            Error.ErrorMsg = "";
+            try
+            {
+                return new BL_ItemsMablgh().Select(FieldName, FilterValue, FilterValue2, Top);
+            }
+            catch (Exception x)
+            {
+                Error.ErrorType = true;
+                // Error.ErrorMsg = "خطای پیش بینی نشده";
+                string Er = x.Message;
+                if (x.InnerException != null)
+                    Er += " " + x.InnerException.Message;
+                Error.ErrorMsg = new BL().BLErrorMsg("", Er, IP, null);
+                return null;
+            }
+        }
+        #endregion
+        #region InsertItemsMablgh
+        public string InsertItemsMablgh(int HeaderId, int ItemsHoghughiId, int Mablagh, decimal PercentW_H, decimal PercentChild, byte Count, string UserName, string Password, int OrganId, string IP, out ClsError Error)
+        {
+            Error = new ClsError();
+            var UserId = authorize.ExistUser(UserName, Password);
+            if (UserId != 0)
+            {
+                try
+                {
+                    if (new BL().BLPermission(1337, UserId, OrganId))
+                        return new BL_ItemsMablgh().Insert(HeaderId, ItemsHoghughiId, Mablagh, PercentW_H, PercentChild, Count, UserId,  out Error);
+                    else
+                    {
+                        Error.ErrorType = true;
+                        Error.ErrorMsg = "شما مجاز به دسترسی نمی باشید.";
+                        return "خطا";
+                    }
+                }
+                catch (Exception x)
+                {
+                    Error.ErrorType = true;
+                    //Error.ErrorMsg = "خطای پیش بینی نشده";
+                    string Er = x.Message;
+                    if (x.InnerException != null)
+                        Er += " " + x.InnerException.Message;
+                    Error.ErrorMsg = new BL().BLErrorMsg(UserName, Er, IP, UserId);
+                    return "خطا";
+                }
+            }
+            else
+            {
+                Error.ErrorType = true;
+                Error.ErrorMsg = "نام کاربری یا رمز عبور صحیح نمی باشد.";
+                return "خطا";
+            }
+        }
+        #endregion
+        #region UpdateItemsMablgh
+        public string UpdateItemsMablgh(int Id, int HeaderId, int ItemsHoghughiId, int Mablagh, decimal PercentW_H, decimal PercentChild, byte Count, string UserName, string Password, int OrganId, string IP, out ClsError Error)
+        {
+            Error = new ClsError();
+            var UserId = authorize.ExistUser(UserName, Password);
+            if (UserId != 0)
+            {
+                try
+                {
+                    if (new BL().BLPermission(1338, UserId, OrganId))
+                        return new BL_ItemsMablgh().Update(Id, HeaderId, ItemsHoghughiId, Mablagh, PercentW_H, PercentChild, Count, UserId,  out Error);
+                    else
+                    {
+                        Error.ErrorType = true;
+                        Error.ErrorMsg = "شما مجاز به دسترسی نمی باشید.";
+                        return "خطا";
+                    }
+                }
+                catch (Exception x)
+                {
+                    Error.ErrorType = true;
+                    //Error.ErrorMsg = "خطای پیش بینی نشده";
+                    string Er = x.Message;
+                    if (x.InnerException != null)
+                        Er += " " + x.InnerException.Message;
+                    Error.ErrorMsg = new BL().BLErrorMsg(UserName, Er, IP, UserId);
+                    return "خطا";
+                }
+            }
+            else
+            {
+                Error.ErrorType = true;
+                Error.ErrorMsg = "نام کاربری یا رمز عبور صحیح نمی باشد.";
+                return "خطا";
+            }
+        }
+        #endregion
+        #region DeleteItemsMablgh
+        public string DeleteItemsMablgh(int Id, string UserName, string Password, int OrganId, string IP, out ClsError Error)
+        {
+            Error = new ClsError();
+            var UserId = authorize.ExistUser(UserName, Password);
+            if (UserId != 0)
+            {
+                try
+                {
+                    if (new BL().BLPermission(1339, UserId, OrganId))
+                        return new BL_ItemsMablgh().Delete(Id, UserId, out Error);
+                    else
+                    {
+                        Error.ErrorType = true;
+                        Error.ErrorMsg = "شما مجاز به دسترسی نمی باشید.";
+                        return "خطا";
+                    }
+                }
+                catch (Exception x)
+                {
+                    Error.ErrorType = true;
+                    //Error.ErrorMsg = "خطای پیش بینی نشده";
+                    string Er = x.Message;
+                    if (x.InnerException != null)
+                        Er += " " + x.InnerException.Message;
+                    Error.ErrorMsg = new BL().BLErrorMsg(UserName, Er, IP, UserId);
+                    return "خطا";
+                }
+            }
+            else
+            {
+                Error.ErrorType = true;
+                Error.ErrorMsg = "نام کاربری یا رمز عبور صحیح نمی باشد.";
+                return "خطا";
+            }
+        }
+        #endregion
     }
 }

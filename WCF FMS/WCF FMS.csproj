@@ -517,9 +517,11 @@
     <Compile Include="BLL\PayRoll\BL_HokmReport.cs" />
     <Compile Include="BLL\PayRoll\BL_Hokm_Item.cs" />
     <Compile Include="BLL\PayRoll\BL_InsuranceWorkshop.cs" />
+    <Compile Include="BLL\PayRoll\BL_ItemMablgh_Header.cs" />
     <Compile Include="BLL\PayRoll\BL_ItemsEstekhdam_FiscalTitle.cs" />
     <Compile Include="BLL\PayRoll\BL_ItemsEstekhdam_MoteghayerHoghoghi.cs" />
     <Compile Include="BLL\PayRoll\BL_ItemsHoghughi.cs" />
+    <Compile Include="BLL\PayRoll\BL_ItemsMablgh.cs" />
     <Compile Include="BLL\PayRoll\BL_Items_Estekhdam.cs" />
     <Compile Include="BLL\PayRoll\BL_KarKardeMahane.cs" />
     <Compile Include="BLL\PayRoll\BL_KarKardHokm.cs" />
@@ -559,6 +561,7 @@
     <Compile Include="BLL\PayRoll\BL_MoteghayerhaAhkam.cs" />
     <Compile Include="BLL\PayRoll\BL_MoteghayerhayeEydi.cs" />
     <Compile Include="BLL\PayRoll\BL_MoteghayerhayeHoghoghi.cs" />
+    <Compile Include="BLL\PayRoll\BL_MoteghayerhayeHoghoghiItems.cs" />
     <Compile Include="BLL\PayRoll\BL_MoteghayerhayeHoghoghi_Detail.cs" />
     <Compile Include="BLL\PayRoll\BL_NesbatWithPersonalInfoId.cs" />
     <Compile Include="BLL\PayRoll\BL_OnAccount.cs" />
@@ -1991,6 +1994,9 @@
     <Compile Include="DAL\Model\spr_tblInternalLetterReceiverSelect.cs">
       <DependentUpon>Automation.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Model\spr_tblItemMablgh_HeaderSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="DAL\Model\spr_tblItemNecessarySelect.cs">
       <DependentUpon>Accounting.tt</DependentUpon>
     </Compile>
@@ -2001,6 +2007,9 @@
       <DependentUpon>PayRollModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\Model\spr_tblItemsHoghughiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblItemsMablghSelect.cs">
       <DependentUpon>PayRollModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\Model\spr_tblItems_EstekhdamSelect.cs">
@@ -2241,6 +2250,9 @@
       <DependentUpon>PayRollModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\Model\spr_tblMoteghayerhayeEydiSelect.cs">
+      <DependentUpon>PayRollModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model\spr_tblMoteghayerhayeHoghoghiItemsSelect.cs">
       <DependentUpon>PayRollModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\Model\spr_tblMoteghayerhayeHoghoghiSelect.cs">
@@ -2722,9 +2734,11 @@
     <Compile Include="DAL\PayRoll\DL_HokmReport.cs" />
     <Compile Include="DAL\PayRoll\DL_Hokm_Item.cs" />
     <Compile Include="DAL\PayRoll\DL_InsuranceWorkshop.cs" />
+    <Compile Include="DAL\PayRoll\DL_ItemMablgh_Header.cs" />
     <Compile Include="DAL\PayRoll\DL_ItemsEstekhdam_FiscalTitle.cs" />
     <Compile Include="DAL\PayRoll\DL_ItemsEstekhdam_MoteghayerHoghoghi.cs" />
     <Compile Include="DAL\PayRoll\DL_ItemsHoghughi.cs" />
+    <Compile Include="DAL\PayRoll\DL_ItemsMablgh.cs" />
     <Compile Include="DAL\PayRoll\DL_Items_Estekhdam.cs" />
     <Compile Include="DAL\PayRoll\DL_KarKardeMahane.cs" />
     <Compile Include="DAL\PayRoll\DL_KarKardHokm.cs" />
@@ -2764,6 +2778,7 @@
     <Compile Include="DAL\PayRoll\DL_MoteghayerhaAhkam.cs" />
     <Compile Include="DAL\PayRoll\DL_MoteghayerhayeEydi.cs" />
     <Compile Include="DAL\PayRoll\DL_MoteghayerhayeHoghoghi.cs" />
+    <Compile Include="DAL\PayRoll\DL_MoteghayerhayeHoghoghiItems.cs" />
     <Compile Include="DAL\PayRoll\DL_MoteghayerhayeHoghoghi_Detail.cs" />
     <Compile Include="DAL\PayRoll\DL_AnvaEstekhdam.cs" />
     <Compile Include="DAL\PayRoll\DL_NesbatWithPersonalInfoId.cs" />
@@ -3213,9 +3228,11 @@
     <Compile Include="TOL\PayRoll\OBJ_HokmReport.cs" />
     <Compile Include="TOL\PayRoll\OBJ_Hokm_Item.cs" />
     <Compile Include="TOL\PayRoll\OBJ_InsuranceWorkshop.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_ItemMablgh_Header.cs" />
     <Compile Include="TOL\PayRoll\OBJ_ItemsEstekhdam_FiscalTitle.cs" />
     <Compile Include="TOL\PayRoll\OBJ_ItemsEstekhdam_MoteghayerHoghoghi.cs" />
     <Compile Include="TOL\PayRoll\OBJ_ItemsHoghughi.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_ItemsMablgh.cs" />
     <Compile Include="TOL\PayRoll\OBJ_Items_Estekhdam.cs" />
     <Compile Include="TOL\PayRoll\OBJ_KarKardeMahane.cs" />
     <Compile Include="TOL\PayRoll\OBJ_KarKardHokm.cs" />
@@ -3223,6 +3240,7 @@
     <Compile Include="TOL\PayRoll\OBJ_KomakGheyerNaghdi.cs" />
     <Compile Include="TOL\PayRoll\OBJ_KosorateParametri_Personal.cs" />
     <Compile Include="TOL\PayRoll\OBJ_Mohaseleen.cs" />
+    <Compile Include="TOL\PayRoll\OBJ_MoteghayerhayeHoghoghiItems.cs" />
     <Compile Include="TOL\PayRoll\OBJ_RptKosouratBank.cs" />
     <Compile Include="TOL\PayRoll\OBJ_KosouratDetails.cs" />
     <Compile Include="TOL\PayRoll\OBJ_KosuratBank.cs" />

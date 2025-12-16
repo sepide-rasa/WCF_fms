@@ -3736,5 +3736,58 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="spr_tblMohaseleenUpdate" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblMohaseleenUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblMoteghayerhayeHoghoghiItemsDelete" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblMoteghayerhayeHoghoghiItemsDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblMoteghayerhayeHoghoghiItemsInsert" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblMoteghayerhayeHoghoghiItemsInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblMoteghayerhayeHoghoghiItemsSelect" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblMoteghayerhayeHoghoghiItemsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSPayRollDBModel.spr_tblMoteghayerhayeHoghoghiItemsSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldMoteghayerhayeHoghoghiId" ColumnName="fldMoteghayerhayeHoghoghiId" />
+          <ScalarProperty Name="fldItemEstekhdamId" ColumnName="fldItemEstekhdamId" />
+          <ScalarProperty Name="fldType" ColumnName="fldType" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblMoteghayerhayeHoghoghiItemsUpdate" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblMoteghayerhayeHoghoghiItemsUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblItemMablgh_HeaderDelete" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemMablgh_HeaderDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblItemMablgh_HeaderInsert" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemMablgh_HeaderInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblItemMablgh_HeaderSelect" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemMablgh_HeaderSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSPayRollDBModel.spr_tblItemMablgh_HeaderSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldActiveDate" ColumnName="fldActiveDate" />
+          <ScalarProperty Name="fldDeactiveDate" ColumnName="fldDeactiveDate" />
+          <ScalarProperty Name="fldActive" ColumnName="fldActive" />
+          <ScalarProperty Name="fldIp" ColumnName="fldIp" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldActiveName" ColumnName="fldActiveName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblItemMablgh_HeaderUpdate" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemMablgh_HeaderUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tblItemsMablghDelete" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemsMablghDelete" />
+    <FunctionImportMapping FunctionImportName="spr_tblItemsMablghInsert" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemsMablghInsert" />
+    <FunctionImportMapping FunctionImportName="spr_tblItemsMablghSelect" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemsMablghSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RasaFMSPayRollDBModel.spr_tblItemsMablghSelect">
+          <ScalarProperty Name="fldId" ColumnName="fldId" />
+          <ScalarProperty Name="fldHeaderId" ColumnName="fldHeaderId" />
+          <ScalarProperty Name="fldItemsHoghughiId" ColumnName="fldItemsHoghughiId" />
+          <ScalarProperty Name="fldMablagh" ColumnName="fldMablagh" />
+          <ScalarProperty Name="fldPercentW_H" ColumnName="fldPercentW_H" />
+          <ScalarProperty Name="fldPercentChild" ColumnName="fldPercentChild" />
+          <ScalarProperty Name="fldCount" ColumnName="fldCount" />
+          <ScalarProperty Name="fldUserId" ColumnName="fldUserId" />
+          <ScalarProperty Name="fldDate" ColumnName="fldDate" />
+          <ScalarProperty Name="fldItemHoghughiTitle" ColumnName="fldItemHoghughiTitle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spr_tblItemsMablghUpdate" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemsMablghUpdate" />
+    <FunctionImportMapping FunctionImportName="spr_tbltblItemMablgh_HeaderActiveDate_fldDeactiveDate" FunctionName="RasaFMSPayRollDBModel.Store.spr_tbltblItemMablgh_HeaderActiveDate_fldDeactiveDate" />
+    <FunctionImportMapping FunctionImportName="spr_tblItemMablgh_HeaderCopy" FunctionName="RasaFMSPayRollDBModel.Store.spr_tblItemMablgh_HeaderCopy" />
   </EntityContainerMapping>
 </Mapping>

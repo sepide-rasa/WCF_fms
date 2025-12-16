@@ -52,3 +52,37 @@ E:\FMS\WCF FMS\WCF FMS\WCF FMS\obj\Debug\WCF FMS.csproj.ResolveComReference.cach
 E:\FMS\WCF FMS\WCF FMS\WCF FMS\obj\Debug\WCF FMS.dll
 E:\FMS\WCF FMS\WCF FMS\WCF FMS\obj\Debug\WCF FMS.pdb
 E:\FMS\WCF FMS\WCF FMS\WCF FMS\obj\Debug\WCF FMS.csprojResolveAssemblyReference.cache
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\obj\Debug\WCF FMS.csprojResolveAssemblyReference.cache
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\obj\Debug\Interop.WIA.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\obj\Debug\WCF FMS.csproj.ResolveComReference.cache
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\obj\Debug\WCF FMS.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\obj\Debug\WCF FMS.pdb
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\WCF FMS.dll.config
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\WCF FMS.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\WCF FMS.pdb
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\Antlr3.Runtime.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\EntityFramework.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\EntityFramework.SqlServer.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\Microsoft.Web.Infrastructure.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\MyLib.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\Newtonsoft.Json.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\System.Web.Helpers.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\System.Web.Mvc.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\System.Web.Optimization.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\System.Web.Razor.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\System.Web.WebPages.Deployment.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\System.Web.WebPages.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\System.Web.WebPages.Razor.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\WebGrease.dll
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\Antlr3.Runtime.pdb
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\EntityFramework.xml
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\EntityFramework.SqlServer.xml
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\Newtonsoft.Json.xml
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\System.Web.Helpers.xml
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\System.Web.Mvc.xml
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\System.Web.Optimization.xml
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\System.Web.Razor.xml
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\System.Web.WebPages.xml
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\System.Web.WebPages.Deployment.xml
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\System.Web.WebPages.Razor.xml
+E:\Projects\FMS\NEW\NewFMS\WCF\WCF FMS\bin\Interop.WIA.dll

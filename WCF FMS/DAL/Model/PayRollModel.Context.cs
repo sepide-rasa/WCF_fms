@@ -13627,5 +13627,303 @@ namespace WCF_FMS.DAL.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spr_tblMohaseleenUpdate", fldIdParameter, fldAfradTahtePoosheshIdParameter, fldTarikhParameter, fldUserIdParameter);
         }
+    
+        public virtual int spr_tblMoteghayerhayeHoghoghiItemsDelete(Nullable<int> fldId, Nullable<int> fldUserId)
+        {
+            var fldIdParameter = fldId.HasValue ?
+                new ObjectParameter("fldId", fldId) :
+                new ObjectParameter("fldId", typeof(int));
+    
+            var fldUserIdParameter = fldUserId.HasValue ?
+                new ObjectParameter("fldUserId", fldUserId) :
+                new ObjectParameter("fldUserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spr_tblMoteghayerhayeHoghoghiItemsDelete", fldIdParameter, fldUserIdParameter);
+        }
+    
+        public virtual int spr_tblMoteghayerhayeHoghoghiItemsInsert(Nullable<int> fldMoteghayerhayeHoghoghiId, string fldItemEstekhdamId, Nullable<byte> fldType, Nullable<int> fldUserId)
+        {
+            var fldMoteghayerhayeHoghoghiIdParameter = fldMoteghayerhayeHoghoghiId.HasValue ?
+                new ObjectParameter("fldMoteghayerhayeHoghoghiId", fldMoteghayerhayeHoghoghiId) :
+                new ObjectParameter("fldMoteghayerhayeHoghoghiId", typeof(int));
+    
+            var fldItemEstekhdamIdParameter = fldItemEstekhdamId != null ?
+                new ObjectParameter("fldItemEstekhdamId", fldItemEstekhdamId) :
+                new ObjectParameter("fldItemEstekhdamId", typeof(string));
+    
+            var fldTypeParameter = fldType.HasValue ?
+                new ObjectParameter("fldType", fldType) :
+                new ObjectParameter("fldType", typeof(byte));
+    
+            var fldUserIdParameter = fldUserId.HasValue ?
+                new ObjectParameter("fldUserId", fldUserId) :
+                new ObjectParameter("fldUserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spr_tblMoteghayerhayeHoghoghiItemsInsert", fldMoteghayerhayeHoghoghiIdParameter, fldItemEstekhdamIdParameter, fldTypeParameter, fldUserIdParameter);
+        }
+    
+        public virtual ObjectResult<spr_tblMoteghayerhayeHoghoghiItemsSelect> spr_tblMoteghayerhayeHoghoghiItemsSelect(string fieldname, string value, Nullable<int> h)
+        {
+            var fieldnameParameter = fieldname != null ?
+                new ObjectParameter("fieldname", fieldname) :
+                new ObjectParameter("fieldname", typeof(string));
+    
+            var valueParameter = value != null ?
+                new ObjectParameter("Value", value) :
+                new ObjectParameter("Value", typeof(string));
+    
+            var hParameter = h.HasValue ?
+                new ObjectParameter("h", h) :
+                new ObjectParameter("h", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_tblMoteghayerhayeHoghoghiItemsSelect>("spr_tblMoteghayerhayeHoghoghiItemsSelect", fieldnameParameter, valueParameter, hParameter);
+        }
+    
+        public virtual int spr_tblMoteghayerhayeHoghoghiItemsUpdate(Nullable<int> fldMoteghayerhayeHoghoghiId, string fldItemEstekhdamId, Nullable<byte> fldType, Nullable<int> fldUserId)
+        {
+            var fldMoteghayerhayeHoghoghiIdParameter = fldMoteghayerhayeHoghoghiId.HasValue ?
+                new ObjectParameter("fldMoteghayerhayeHoghoghiId", fldMoteghayerhayeHoghoghiId) :
+                new ObjectParameter("fldMoteghayerhayeHoghoghiId", typeof(int));
+    
+            var fldItemEstekhdamIdParameter = fldItemEstekhdamId != null ?
+                new ObjectParameter("fldItemEstekhdamId", fldItemEstekhdamId) :
+                new ObjectParameter("fldItemEstekhdamId", typeof(string));
+    
+            var fldTypeParameter = fldType.HasValue ?
+                new ObjectParameter("fldType", fldType) :
+                new ObjectParameter("fldType", typeof(byte));
+    
+            var fldUserIdParameter = fldUserId.HasValue ?
+                new ObjectParameter("fldUserId", fldUserId) :
+                new ObjectParameter("fldUserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spr_tblMoteghayerhayeHoghoghiItemsUpdate", fldMoteghayerhayeHoghoghiIdParameter, fldItemEstekhdamIdParameter, fldTypeParameter, fldUserIdParameter);
+        }
+    
+        public virtual int spr_tblItemMablgh_HeaderDelete(Nullable<int> fldId, Nullable<int> fldUserId)
+        {
+            var fldIdParameter = fldId.HasValue ?
+                new ObjectParameter("fldId", fldId) :
+                new ObjectParameter("fldId", typeof(int));
+    
+            var fldUserIdParameter = fldUserId.HasValue ?
+                new ObjectParameter("fldUserId", fldUserId) :
+                new ObjectParameter("fldUserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spr_tblItemMablgh_HeaderDelete", fldIdParameter, fldUserIdParameter);
+        }
+    
+        public virtual int spr_tblItemMablgh_HeaderInsert(Nullable<int> fldActiveDate, string fldIp, Nullable<int> fldUserId)
+        {
+            var fldActiveDateParameter = fldActiveDate.HasValue ?
+                new ObjectParameter("fldActiveDate", fldActiveDate) :
+                new ObjectParameter("fldActiveDate", typeof(int));
+    
+            var fldIpParameter = fldIp != null ?
+                new ObjectParameter("fldIp", fldIp) :
+                new ObjectParameter("fldIp", typeof(string));
+    
+            var fldUserIdParameter = fldUserId.HasValue ?
+                new ObjectParameter("fldUserId", fldUserId) :
+                new ObjectParameter("fldUserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spr_tblItemMablgh_HeaderInsert", fldActiveDateParameter, fldIpParameter, fldUserIdParameter);
+        }
+    
+        public virtual ObjectResult<spr_tblItemMablgh_HeaderSelect> spr_tblItemMablgh_HeaderSelect(string fieldname, string value, Nullable<int> h)
+        {
+            var fieldnameParameter = fieldname != null ?
+                new ObjectParameter("fieldname", fieldname) :
+                new ObjectParameter("fieldname", typeof(string));
+    
+            var valueParameter = value != null ?
+                new ObjectParameter("value", value) :
+                new ObjectParameter("value", typeof(string));
+    
+            var hParameter = h.HasValue ?
+                new ObjectParameter("h", h) :
+                new ObjectParameter("h", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_tblItemMablgh_HeaderSelect>("spr_tblItemMablgh_HeaderSelect", fieldnameParameter, valueParameter, hParameter);
+        }
+    
+        public virtual int spr_tblItemMablgh_HeaderUpdate(Nullable<int> fldId, Nullable<int> fldActiveDate, Nullable<int> fldDeactiveDate, Nullable<bool> fldActive, string fldIp, Nullable<int> fldUserId)
+        {
+            var fldIdParameter = fldId.HasValue ?
+                new ObjectParameter("fldId", fldId) :
+                new ObjectParameter("fldId", typeof(int));
+    
+            var fldActiveDateParameter = fldActiveDate.HasValue ?
+                new ObjectParameter("fldActiveDate", fldActiveDate) :
+                new ObjectParameter("fldActiveDate", typeof(int));
+    
+            var fldDeactiveDateParameter = fldDeactiveDate.HasValue ?
+                new ObjectParameter("fldDeactiveDate", fldDeactiveDate) :
+                new ObjectParameter("fldDeactiveDate", typeof(int));
+    
+            var fldActiveParameter = fldActive.HasValue ?
+                new ObjectParameter("fldActive", fldActive) :
+                new ObjectParameter("fldActive", typeof(bool));
+    
+            var fldIpParameter = fldIp != null ?
+                new ObjectParameter("fldIp", fldIp) :
+                new ObjectParameter("fldIp", typeof(string));
+    
+            var fldUserIdParameter = fldUserId.HasValue ?
+                new ObjectParameter("fldUserId", fldUserId) :
+                new ObjectParameter("fldUserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spr_tblItemMablgh_HeaderUpdate", fldIdParameter, fldActiveDateParameter, fldDeactiveDateParameter, fldActiveParameter, fldIpParameter, fldUserIdParameter);
+        }
+    
+        public virtual int spr_tblItemsMablghDelete(Nullable<int> fldId, Nullable<int> fldUserId)
+        {
+            var fldIdParameter = fldId.HasValue ?
+                new ObjectParameter("fldId", fldId) :
+                new ObjectParameter("fldId", typeof(int));
+    
+            var fldUserIdParameter = fldUserId.HasValue ?
+                new ObjectParameter("fldUserId", fldUserId) :
+                new ObjectParameter("fldUserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spr_tblItemsMablghDelete", fldIdParameter, fldUserIdParameter);
+        }
+    
+        public virtual int spr_tblItemsMablghInsert(Nullable<int> fldHeaderId, Nullable<int> fldItemsHoghughiId, Nullable<int> fldMablagh, Nullable<decimal> fldPercentW_H, Nullable<decimal> fldPercentChild, Nullable<byte> fldCount, Nullable<int> fldUserId)
+        {
+            var fldHeaderIdParameter = fldHeaderId.HasValue ?
+                new ObjectParameter("fldHeaderId", fldHeaderId) :
+                new ObjectParameter("fldHeaderId", typeof(int));
+    
+            var fldItemsHoghughiIdParameter = fldItemsHoghughiId.HasValue ?
+                new ObjectParameter("fldItemsHoghughiId", fldItemsHoghughiId) :
+                new ObjectParameter("fldItemsHoghughiId", typeof(int));
+    
+            var fldMablaghParameter = fldMablagh.HasValue ?
+                new ObjectParameter("fldMablagh", fldMablagh) :
+                new ObjectParameter("fldMablagh", typeof(int));
+    
+            var fldPercentW_HParameter = fldPercentW_H.HasValue ?
+                new ObjectParameter("fldPercentW_H", fldPercentW_H) :
+                new ObjectParameter("fldPercentW_H", typeof(decimal));
+    
+            var fldPercentChildParameter = fldPercentChild.HasValue ?
+                new ObjectParameter("fldPercentChild", fldPercentChild) :
+                new ObjectParameter("fldPercentChild", typeof(decimal));
+    
+            var fldCountParameter = fldCount.HasValue ?
+                new ObjectParameter("fldCount", fldCount) :
+                new ObjectParameter("fldCount", typeof(byte));
+    
+            var fldUserIdParameter = fldUserId.HasValue ?
+                new ObjectParameter("fldUserId", fldUserId) :
+                new ObjectParameter("fldUserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spr_tblItemsMablghInsert", fldHeaderIdParameter, fldItemsHoghughiIdParameter, fldMablaghParameter, fldPercentW_HParameter, fldPercentChildParameter, fldCountParameter, fldUserIdParameter);
+        }
+    
+        public virtual ObjectResult<spr_tblItemsMablghSelect> spr_tblItemsMablghSelect(string fieldname, string value, string value2, Nullable<int> h)
+        {
+            var fieldnameParameter = fieldname != null ?
+                new ObjectParameter("fieldname", fieldname) :
+                new ObjectParameter("fieldname", typeof(string));
+    
+            var valueParameter = value != null ?
+                new ObjectParameter("value", value) :
+                new ObjectParameter("value", typeof(string));
+    
+            var value2Parameter = value2 != null ?
+                new ObjectParameter("value2", value2) :
+                new ObjectParameter("value2", typeof(string));
+    
+            var hParameter = h.HasValue ?
+                new ObjectParameter("h", h) :
+                new ObjectParameter("h", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_tblItemsMablghSelect>("spr_tblItemsMablghSelect", fieldnameParameter, valueParameter, value2Parameter, hParameter);
+        }
+    
+        public virtual int spr_tblItemsMablghUpdate(Nullable<int> fldId, Nullable<int> fldHeaderId, Nullable<int> fldItemsHoghughiId, Nullable<int> fldMablagh, Nullable<decimal> fldPercentW_H, Nullable<decimal> fldPercentChild, Nullable<byte> fldCount, Nullable<int> fldUserId)
+        {
+            var fldIdParameter = fldId.HasValue ?
+                new ObjectParameter("fldId", fldId) :
+                new ObjectParameter("fldId", typeof(int));
+    
+            var fldHeaderIdParameter = fldHeaderId.HasValue ?
+                new ObjectParameter("fldHeaderId", fldHeaderId) :
+                new ObjectParameter("fldHeaderId", typeof(int));
+    
+            var fldItemsHoghughiIdParameter = fldItemsHoghughiId.HasValue ?
+                new ObjectParameter("fldItemsHoghughiId", fldItemsHoghughiId) :
+                new ObjectParameter("fldItemsHoghughiId", typeof(int));
+    
+            var fldMablaghParameter = fldMablagh.HasValue ?
+                new ObjectParameter("fldMablagh", fldMablagh) :
+                new ObjectParameter("fldMablagh", typeof(int));
+    
+            var fldPercentW_HParameter = fldPercentW_H.HasValue ?
+                new ObjectParameter("fldPercentW_H", fldPercentW_H) :
+                new ObjectParameter("fldPercentW_H", typeof(decimal));
+    
+            var fldPercentChildParameter = fldPercentChild.HasValue ?
+                new ObjectParameter("fldPercentChild", fldPercentChild) :
+                new ObjectParameter("fldPercentChild", typeof(decimal));
+    
+            var fldCountParameter = fldCount.HasValue ?
+                new ObjectParameter("fldCount", fldCount) :
+                new ObjectParameter("fldCount", typeof(byte));
+    
+            var fldUserIdParameter = fldUserId.HasValue ?
+                new ObjectParameter("fldUserId", fldUserId) :
+                new ObjectParameter("fldUserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spr_tblItemsMablghUpdate", fldIdParameter, fldHeaderIdParameter, fldItemsHoghughiIdParameter, fldMablaghParameter, fldPercentW_HParameter, fldPercentChildParameter, fldCountParameter, fldUserIdParameter);
+        }
+    
+        public virtual int spr_tbltblItemMablgh_HeaderActiveDate_fldDeactiveDate(Nullable<int> fldId, Nullable<int> fldDeactiveDate, Nullable<bool> fldActive, string fldIP, Nullable<int> fldUserId)
+        {
+            var fldIdParameter = fldId.HasValue ?
+                new ObjectParameter("fldId", fldId) :
+                new ObjectParameter("fldId", typeof(int));
+    
+            var fldDeactiveDateParameter = fldDeactiveDate.HasValue ?
+                new ObjectParameter("fldDeactiveDate", fldDeactiveDate) :
+                new ObjectParameter("fldDeactiveDate", typeof(int));
+    
+            var fldActiveParameter = fldActive.HasValue ?
+                new ObjectParameter("fldActive", fldActive) :
+                new ObjectParameter("fldActive", typeof(bool));
+    
+            var fldIPParameter = fldIP != null ?
+                new ObjectParameter("fldIP", fldIP) :
+                new ObjectParameter("fldIP", typeof(string));
+    
+            var fldUserIdParameter = fldUserId.HasValue ?
+                new ObjectParameter("fldUserId", fldUserId) :
+                new ObjectParameter("fldUserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spr_tbltblItemMablgh_HeaderActiveDate_fldDeactiveDate", fldIdParameter, fldDeactiveDateParameter, fldActiveParameter, fldIPParameter, fldUserIdParameter);
+        }
+    
+        public virtual int spr_tblItemMablgh_HeaderCopy(Nullable<int> fldHeaderID, Nullable<int> fldActiveDate, string fldIP, Nullable<int> fldUserId)
+        {
+            var fldHeaderIDParameter = fldHeaderID.HasValue ?
+                new ObjectParameter("fldHeaderID", fldHeaderID) :
+                new ObjectParameter("fldHeaderID", typeof(int));
+    
+            var fldActiveDateParameter = fldActiveDate.HasValue ?
+                new ObjectParameter("fldActiveDate", fldActiveDate) :
+                new ObjectParameter("fldActiveDate", typeof(int));
+    
+            var fldIPParameter = fldIP != null ?
+                new ObjectParameter("fldIP", fldIP) :
+                new ObjectParameter("fldIP", typeof(string));
+    
+            var fldUserIdParameter = fldUserId.HasValue ?
+                new ObjectParameter("fldUserId", fldUserId) :
+                new ObjectParameter("fldUserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spr_tblItemMablgh_HeaderCopy", fldHeaderIDParameter, fldActiveDateParameter, fldIPParameter, fldUserIdParameter);
+        }
     }
 }

@@ -3739,6 +3739,91 @@
       <Parameter Name="fldTarikh" Mode="In" Type="Int32" />
       <Parameter Name="fldUserId" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="spr_tblMoteghayerhayeHoghoghiItemsDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMoteghayerhayeHoghoghiItemsInsert">
+      <Parameter Name="fldMoteghayerhayeHoghoghiId" Mode="In" Type="Int32" />
+      <Parameter Name="fldItemEstekhdamId" Mode="In" Type="String" />
+      <Parameter Name="fldType" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMoteghayerhayeHoghoghiItemsSelect" ReturnType="Collection(RasaFMSPayRollDBModel.spr_tblMoteghayerhayeHoghoghiItemsSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblMoteghayerhayeHoghoghiItemsUpdate">
+      <Parameter Name="fldMoteghayerhayeHoghoghiId" Mode="In" Type="Int32" />
+      <Parameter Name="fldItemEstekhdamId" Mode="In" Type="String" />
+      <Parameter Name="fldType" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblItemMablgh_HeaderDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblItemMablgh_HeaderInsert">
+      <Parameter Name="fldActiveDate" Mode="In" Type="Int32" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblItemMablgh_HeaderSelect" ReturnType="Collection(RasaFMSPayRollDBModel.spr_tblItemMablgh_HeaderSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblItemMablgh_HeaderUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldActiveDate" Mode="In" Type="Int32" />
+      <Parameter Name="fldDeactiveDate" Mode="In" Type="Int32" />
+      <Parameter Name="fldActive" Mode="In" Type="Boolean" />
+      <Parameter Name="fldIp" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblItemsMablghDelete">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblItemsMablghInsert">
+      <Parameter Name="fldHeaderId" Mode="In" Type="Int32" />
+      <Parameter Name="fldItemsHoghughiId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMablagh" Mode="In" Type="Int32" />
+      <Parameter Name="fldPercentW_H" Mode="In" Type="Decimal" />
+      <Parameter Name="fldPercentChild" Mode="In" Type="Decimal" />
+      <Parameter Name="fldCount" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblItemsMablghSelect" ReturnType="Collection(RasaFMSPayRollDBModel.spr_tblItemsMablghSelect)">
+      <Parameter Name="fieldname" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="value2" Mode="In" Type="String" />
+      <Parameter Name="h" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblItemsMablghUpdate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldHeaderId" Mode="In" Type="Int32" />
+      <Parameter Name="fldItemsHoghughiId" Mode="In" Type="Int32" />
+      <Parameter Name="fldMablagh" Mode="In" Type="Int32" />
+      <Parameter Name="fldPercentW_H" Mode="In" Type="Decimal" />
+      <Parameter Name="fldPercentChild" Mode="In" Type="Decimal" />
+      <Parameter Name="fldCount" Mode="In" Type="Byte" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tbltblItemMablgh_HeaderActiveDate_fldDeactiveDate">
+      <Parameter Name="fldId" Mode="In" Type="Int32" />
+      <Parameter Name="fldDeactiveDate" Mode="In" Type="Int32" />
+      <Parameter Name="fldActive" Mode="In" Type="Boolean" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spr_tblItemMablgh_HeaderCopy">
+      <Parameter Name="fldHeaderID" Mode="In" Type="Int32" />
+      <Parameter Name="fldActiveDate" Mode="In" Type="Int32" />
+      <Parameter Name="fldIP" Mode="In" Type="String" />
+      <Parameter Name="fldUserId" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="spr_tblItemsEstekhdam_FiscalTitleSelect">
     <Property Type="Int32" Name="fldId" Nullable="false" />
@@ -6546,5 +6631,35 @@
     <Property Type="Int32" Name="tarmim" Nullable="false" />
     <Property Type="String" Name="fldHalateEstekhdam" Nullable="false" MaxLength="4" />
     <Property Type="Int32" Name="jame" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spr_tblMoteghayerhayeHoghoghiItemsSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldMoteghayerhayeHoghoghiId" Nullable="false" />
+    <Property Type="Int32" Name="fldItemEstekhdamId" Nullable="false" />
+    <Property Type="Byte" Name="fldType" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="spr_tblItemMablgh_HeaderSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldActiveDate" Nullable="false" />
+    <Property Type="Int32" Name="fldDeactiveDate" Nullable="true" />
+    <Property Type="Boolean" Name="fldActive" Nullable="false" />
+    <Property Type="String" Name="fldIp" Nullable="false" MaxLength="16" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldActiveName" Nullable="false" MaxLength="7" />
+  </ComplexType>
+  <ComplexType Name="spr_tblItemsMablghSelect">
+    <Property Type="Int32" Name="fldId" Nullable="false" />
+    <Property Type="Int32" Name="fldHeaderId" Nullable="true" />
+    <Property Type="Int32" Name="fldItemsHoghughiId" Nullable="false" />
+    <Property Type="Int32" Name="fldMablagh" Nullable="false" />
+    <Property Type="Decimal" Name="fldPercentW_H" Nullable="false" Precision="4" Scale="2" />
+    <Property Type="Decimal" Name="fldPercentChild" Nullable="false" Precision="4" Scale="2" />
+    <Property Type="Byte" Name="fldCount" Nullable="false" />
+    <Property Type="Int32" Name="fldUserId" Nullable="false" />
+    <Property Type="DateTime" Name="fldDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="fldItemHoghughiTitle" Nullable="false" MaxLength="400" />
   </ComplexType>
 </Schema>

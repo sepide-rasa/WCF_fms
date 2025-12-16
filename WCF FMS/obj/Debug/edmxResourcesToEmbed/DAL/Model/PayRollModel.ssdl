@@ -1202,6 +1202,63 @@
     <Parameter Name="fldUserId" Type="int" Mode="In" />
     <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
   </Function>
+  <Function Name="spr_tblItemMablgh_HeaderCopy" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+    <Parameter Name="fldHeaderID" Type="int" Mode="In" />
+    <Parameter Name="fldActiveDate" Type="int" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblItemMablgh_HeaderDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblItemMablgh_HeaderInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+    <Parameter Name="fldActiveDate" Type="int" Mode="In" />
+    <Parameter Name="fldIp" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblItemMablgh_HeaderSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblItemMablgh_HeaderUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldActiveDate" Type="int" Mode="In" />
+    <Parameter Name="fldDeactiveDate" Type="int" Mode="In" />
+    <Parameter Name="fldActive" Type="bit" Mode="In" />
+    <Parameter Name="fldIp" Type="nvarchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblItemsMablghDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblItemsMablghInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+    <Parameter Name="fldHeaderId" Type="int" Mode="In" />
+    <Parameter Name="fldItemsHoghughiId" Type="int" Mode="In" />
+    <Parameter Name="fldMablagh" Type="int" Mode="In" />
+    <Parameter Name="fldPercentW_H" Type="decimal" Mode="In" />
+    <Parameter Name="fldPercentChild" Type="decimal" Mode="In" />
+    <Parameter Name="fldCount" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblItemsMablghSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="value" Type="nvarchar" Mode="In" />
+    <Parameter Name="value2" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblItemsMablghUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldHeaderId" Type="int" Mode="In" />
+    <Parameter Name="fldItemsHoghughiId" Type="int" Mode="In" />
+    <Parameter Name="fldMablagh" Type="int" Mode="In" />
+    <Parameter Name="fldPercentW_H" Type="decimal" Mode="In" />
+    <Parameter Name="fldPercentChild" Type="decimal" Mode="In" />
+    <Parameter Name="fldCount" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
   <Function Name="spr_tblKarKardeMahaneDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
     <Parameter Name="fldID" Type="int" Mode="In" />
     <Parameter Name="fldUserID" Type="int" Mode="In" />
@@ -2516,6 +2573,27 @@
     <Parameter Name="fldUserId" Type="int" Mode="In" />
     <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
   </Function>
+  <Function Name="spr_tblMoteghayerhayeHoghoghiItemsDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMoteghayerhayeHoghoghiItemsInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+    <Parameter Name="fldMoteghayerhayeHoghoghiId" Type="int" Mode="In" />
+    <Parameter Name="fldItemEstekhdamId" Type="varchar(max)" Mode="In" />
+    <Parameter Name="fldType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMoteghayerhayeHoghoghiItemsSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+    <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value" Type="nvarchar" Mode="In" />
+    <Parameter Name="h" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spr_tblMoteghayerhayeHoghoghiItemsUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+    <Parameter Name="fldMoteghayerhayeHoghoghiId" Type="int" Mode="In" />
+    <Parameter Name="fldItemEstekhdamId" Type="varchar(max)" Mode="In" />
+    <Parameter Name="fldType" Type="tinyint" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
+  </Function>
   <Function Name="spr_tblMoteghayerhayeHoghoghiSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
     <Parameter Name="fieldname" Type="nvarchar" Mode="In" />
     <Parameter Name="Value" Type="nvarchar" Mode="In" />
@@ -2919,6 +2997,13 @@
     <Parameter Name="fldMonth" Type="tinyint" Mode="In" />
     <Parameter Name="fldUserId" Type="int" Mode="In" />
     <Parameter Name="fldDesc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spr_tbltblItemMablgh_HeaderActiveDate_fldDeactiveDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
+    <Parameter Name="fldId" Type="int" Mode="In" />
+    <Parameter Name="fldDeactiveDate" Type="int" Mode="In" />
+    <Parameter Name="fldActive" Type="bit" Mode="In" />
+    <Parameter Name="fldIP" Type="varchar" Mode="In" />
+    <Parameter Name="fldUserId" Type="int" Mode="In" />
   </Function>
   <Function Name="spr_tblTypeEstekhdam_UserGroupDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Pay">
     <Parameter Name="fldUseGroupId" Type="int" Mode="In" />

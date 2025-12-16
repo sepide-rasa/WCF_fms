@@ -1331,5 +1331,68 @@ namespace WCF_FMS
         [OperationContract]
         string DeleteCalcHeader(short Year, byte Month, int NobatPardakhtId, string TypeEstekhdam, string CostCenterId, int OrganId, string IP, out ClsError Error);
         #endregion
+
+        //MoteghayerhayeHoghoghiItems
+        #region MoteghayerhayeHoghoghiItems
+        [OperationContract]
+        OBJ_MoteghayerhayeHoghoghiItems GetMoteghayerhayeHoghoghiItemsDetail(int Id, string IP, out ClsError Error);
+        [OperationContract]
+        List<OBJ_MoteghayerhayeHoghoghiItems> GetMoteghayerhayeHoghoghiItemsWithFilter(string FieldName, string FilterValue, int Top, string IP, out ClsError Error);
+        [OperationContract]
+        string InsertMoteghayerhayeHoghoghiItems(int MoteghayerhayeHoghoghiId, string ItemEstekhdamId, byte fldType, string UserName, string Password, int OrganId, string IP, out ClsError Error);
+        [OperationContract]
+        string UpdateMoteghayerhayeHoghoghiItems(int MoteghayerhayeHoghoghiId, string ItemEstekhdamId, byte fldType, string UserName, string Password, int OrganId, string IP, out ClsError Error);
+        [OperationContract]
+        string DeleteMoteghayerhayeHoghoghiItems( int Id, string UserName, string Password, int OrganId, string IP, out ClsError Error);
+        #endregion
+
+        //ItemMablgh_Header
+        #region GetItemMablgh_HeaderDetail
+        [OperationContract]
+        OBJ_ItemMablgh_Header GetItemMablgh_HeaderDetail(int Id, string IP, out ClsError Error);
+        #endregion
+        #region GetItemMablgh_HeaderWithFilter
+        [OperationContract]
+        List<OBJ_ItemMablgh_Header> GetItemMablgh_HeaderWithFilter(string FieldName, string FilterValue, int Top, string IP, out ClsError Error);
+        #endregion
+        #region InsertItemMablgh_Header
+        [OperationContract]
+        string InsertItemMablgh_Header(int ActiveDate, string UserName, string Password, int OrganId, string IP, out ClsError Error);
+        #endregion
+        #region UpdateItemMablgh_Header
+        [OperationContract]
+        string UpdateItemMablgh_Header(int Id, int? DeactiveDate, bool Active, string UserName, string Password, int OrganId, string IP, out ClsError Error);
+        #endregion
+        #region DeleteItemMablgh_Header
+        [OperationContract]
+        string DeleteItemMablgh_Header(int Id, string UserName, string Password, int OrganId, string IP, out ClsError Error);
+        #endregion
+        #region CopyItemMablgh_Header
+        [OperationContract]
+        string CopyItemMablgh_Header(int HeaderId, int ActiveDate, string UserName, string Password, int OrganId, string IP, out ClsError Error);
+        #endregion
+
+
+        //ItemsMablgh
+        #region GetItemsMablghDetail
+        [OperationContract]
+        OBJ_ItemsMablgh GetItemsMablghDetail(int Id, string IP, out ClsError Error);
+        #endregion
+        #region GetItemsMablghWithFilter
+        [OperationContract]
+        List<OBJ_ItemsMablgh> GetItemsMablghWithFilter(string FieldName, string FilterValue, string FilterValue2, int Top, string IP, out ClsError Error);
+        #endregion
+        #region InsertItemsMablgh
+        [OperationContract]
+        string InsertItemsMablgh(int HeaderId, int ItemsHoghughiId, int Mablagh, decimal PercentW_H, decimal PercentChild, byte Count, string UserName, string Password, int OrganId, string IP, out ClsError Error);
+        #endregion
+        #region UpdateItemsMablgh
+        [OperationContract]
+        string UpdateItemsMablgh(int Id, int HeaderId, int ItemsHoghughiId, int Mablagh, decimal PercentW_H, decimal PercentChild, byte Count, string UserName, string Password, int OrganId, string IP, out ClsError Error);
+        #endregion
+        #region DeleteItemsMablgh
+        [OperationContract]
+        string DeleteItemsMablgh(int Id, string UserName, string Password, int OrganId, string IP, out ClsError Error);
+        #endregion
     }
 }
